@@ -1,18 +1,30 @@
-import Link from "next/link";
+import { HeaderHamburger } from "./header_hamburger";
+import { HeaderLogo } from "./header_logo";
+import { HeaderNavigationLinks } from "./header_nav_links";
+import { HeaderLanguage } from "./header_language";
+import { HeaderAuthentication } from "./header_auth";
 
 export default function Header() {
-    return(
-        <div className="border-black/10 border-b h-[40px] flex items-center justify-between px-5">
-            <div>Logo</div>
+  return (
+    <header className="w-full bg-white shadow-sm sticky top-0 z-50">
+      <div className="flex justify-between items-center py-4 px-6">
 
-            <ul className="flex items-center gap-3">
-                <li>
-                    <Link href="/">Home</Link>
-                </li>
-                <li>
-                    <Link href="/about">About</Link>
-                </li>
-            </ul>
+        {/* Left - Hamburger + Logo */}
+        <div className="flex items-center space-x-2 flex-shrink-0">
+          <HeaderHamburger />
+          <HeaderLogo />
         </div>
-    )
+
+        {/* Middle - Navigation (desktop only) */}
+        <HeaderNavigationLinks />
+
+        {/* Right - Language + Buttons */}
+        <div className="flex items-center space-x-4">
+          <HeaderLanguage />
+          <HeaderAuthentication />
+        </div>
+
+      </div>
+    </header>
+  );
 }
