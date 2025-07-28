@@ -7,7 +7,7 @@ export default function Footer() {
         
         {/* Left - Information */}
         <div className="flex flex-col gap-4 min-w-[150px]">
-          <h3 className="text-sm font-semibold uppercase tracking-wide">Information</h3>
+          <h4 className="text-base font-semibold uppercase tracking-wide">Information</h4>
           <div className="w-64 h-px bg-[#f5f5f5] mb-2" />
           <ul className="flex flex-col gap-2 text-sm text-[#f5f5f5]">
             <li>
@@ -24,7 +24,7 @@ export default function Footer() {
 
         {/* Middle - Connect */}
         <div className="flex flex-col gap-4 min-w-[150px]">
-          <h3 className="text-sm font-semibold uppercase tracking-wide">Connect</h3>
+          <h4 className="text-base font-semibold uppercase tracking-wide">Connect</h4>
           <div className="w-64 h-px bg-[#f5f5f5] mb-2" />
           <div className="flex gap-4">
             <a

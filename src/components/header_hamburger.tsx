@@ -14,7 +14,7 @@ export const HeaderHamburger = () => {
       {/* Mobile hamburger icon */}
       <button
         onClick={() => setMenuOpen(!menuOpen)}
-        className="lg:hidden flex items-center focus:outline-none pr-4"
+        className="lg:hidden flex items-center focus:outline-none pr-2"
         aria-label="Toggle menu"
       >
         <Image
