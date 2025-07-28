@@ -8,31 +8,30 @@ export default function Home() {
     <main className="flex flex-col items-center justify-start w-full bg-[#f5f5f5] text-gray-900">
 
       {/* Hero section */}
-      <section className="relative w-full h-[90vh] flex items-center justify-center text-center overflow-hidden">
-        {/* Background image */}
-        <Image
-          src="/homepage-photo.jpg"
-          alt="Forest background"
-          fill
-          sizes="100vw"
-          className="object-cover brightness-[0.5] z-0"
-          priority
-        />
+        <section className="relative w-full min-h-[90vh] flex justify-center text-center overflow-hidden px-4 py-10 md:py-16">
+          {/* Background image */}
+          <Image
+            src="/homepage-photo.jpg"
+            alt="Forest background"
+            fill
+            sizes="100vw"
+            className="object-cover brightness-[0.5] z-0"
+            priority
+          />
 
-        {/* Hero content */}
-        <div className="z-10 max-w-3xl px-4 text-white">
-          <h1 className="text-3xl md:text-4xl font-semibold mb-10">
-            Reconnect with Nature, Relax Your Mind
-          </h1>
-          <p className="text-base md:text-lg mb-30">
-            GreenTouch offers guided self-reflective exercises, outdoor challenges, and sustainable living tips to help you reduce stress, build mental resilience, and connect with nature.
-          </p>
-          <button className="bg-[#65a164] hover:bg-green-600 text-white font-semibold px-6 py-3 rounded transition">
-            View GreenTouch activities
-          </button>
-        </div>
-      </section>
-
+          {/* Hero content */}
+          <div className="z-10 max-w-3xl w-full text-white flex flex-col items-center justify-center">
+            <h1 className="text-3xl md:text-4xl font-semibold mb-10">
+              Reconnect with Nature, Relax Your Mind
+            </h1>
+            <p className="text-base md:text-lg mb-30">
+              GreenTouch offers guided self-reflective exercises, outdoor challenges, and sustainable living tips to help you reduce stress, build mental resilience, and connect with nature.
+            </p>
+            <button className="bg-[#65a164] hover:bg-green-600 text-white font-semibold px-6 py-3 rounded transition">
+              View GreenTouch activities
+            </button>
+          </div>
+        </section>
 
       {/* Project partners */}
       <section className="bg-[#0A3730] w-full py-12 px-6 flex flex-col items-center">
