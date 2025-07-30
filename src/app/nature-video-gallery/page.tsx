@@ -30,28 +30,19 @@ export default function NatureVideoGallery() {
 
       {/* Categories grid */}
       <section className="w-full max-w-5xl px-4 pb-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
             {[
-            { name: "Water", href: "/nature-video-gallery-water" },
-            { name: "Fire", href: "/nature-video-gallery-fire" },
-            { name: "Air", href: "/nature-video-gallery-air" },
-            { name: "Earth", href: "/nature-video-gallery-earth" },
-            { name: "Animals", href: "/nature-video-gallery-animals" },
+            { name: "Water", href: "/nature-video-gallery/water" },
+            { name: "Fire", href: "/nature-video-gallery/fire" },
+            { name: "Air", href: "/nature-video-gallery/air" },
+            { name: "Earth", href: "/nature-video-gallery/earth" },
+            { name: "Animals", href: "/nature-video-gallery/animals" },
             ].map((item) => (
-            <Link
-                key={item.name}
-                href={item.href}
-                className="relative w-full aspect-[4/5] rounded-lg overflow-hidden shadow-lg group"
-            >
-                <Image
-                src={`/nature-video-gallery-${item.name}.jpg`}
-                alt={`${item.name} image`}
-                fill
-                className="object-cover brightness-[0.9] will-change-transform group-hover:scale-110 transition-transform duration-300"
-                />
+            <Link key={item.name} href={item.href} className="relative w-full aspect-[4/5] rounded-lg overflow-hidden shadow-lg group">
+                <Image src={`/nature-video-gallery-${item.name}.jpg`} alt={`${item.name} image`} fill className="object-cover brightness-[0.9] will-change-transform group-hover:scale-110 transition-transform duration-300"/>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-[#f5f5f5]">
-                <h3 className="text-3xl font-semibold mb-2">{item.name}</h3>
-                <p className="text-base underline">See more</p>
+                  <h3 className="text-3xl font-semibold mb-2">{item.name}</h3>
+                  <p className="text-base underline">See more</p>
                 </div>
             </Link>
             ))}
