@@ -3,6 +3,9 @@ import Image from "next/image";
 export default function Home() {
 
   //console.log("Homepage rendered");
+  
+  // Simulate loading delay
+  // await new Promise(resolve => setTimeout(resolve, 5000)); 
 
   return (
     <main className="flex flex-col items-center justify-start w-full bg-[#f5f5f5] text-gray-900">
