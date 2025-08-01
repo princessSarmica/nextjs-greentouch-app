@@ -1,6 +1,9 @@
 import Image from "next/image";
 
 export default function DiscoverGreenTouch() {
+
+  //console.log("Discover GreenTouch Page rendered");
+
   return (
     <main className="w-full text-gray-900 bg-white">
       {/* Hero section */}
