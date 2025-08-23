@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -30,9 +32,9 @@ export default function Home() {
             <p className="text-base md:text-lg mb-30">
               GreenTouch offers guided self-reflective exercises, outdoor challenges, and sustainable living tips to help you reduce stress, build mental resilience, and connect with nature.
             </p>
-            <button className="bg-[#65a164] hover:bg-green-600 text-white font-semibold px-6 py-3 rounded transition">
-              View GreenTouch activities
-            </button>
+            <Button asChild variant={"default"} className="px-6 py-6">
+              <Link href="/discover-greentouch">View GreenTouch Activities</Link>
+            </Button> 
           </div>
         </section>
 

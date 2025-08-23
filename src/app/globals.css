@@ -1,1 +1,85 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: 0 0% 96%;
+  --foreground: 119 5% 0%;
+  --card: 0 0% 96%;
+  --card-foreground: 119 5% 10%;
+  --popover: 1, 53%, 45%;
+  --popover-foreground: 119 100% 0%;
+  --primary: 119, 24%, 51%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 119 30% 70%;
+  --secondary-foreground: 0 0% 0%;
+  --muted: 81 30% 85%;
+  --muted-foreground: 119 5% 35%;
+  --accent: 81 30% 80%;
+  --accent-foreground: 119 5% 10%;
+  --destructive: 0 100% 30%;
+  --destructive-foreground: 119 5% 90%;
+  --border: 119 30% 50%;
+  --input: 119 30% 18%;
+  --ring: 119, 24%, 51%;
+  --radius: 0.3rem;
+}
+
+.dark {
+  --background: 119 50% 5%;
+  --foreground: 119 5% 90%;
+  --card: 119 50% 0%;
+  --card-foreground: 119 5% 90%;
+  --popover: 1, 53%, 45%;
+  --popover-foreground: 119 5% 90%;
+  --primary: 119, 24%, 51%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 119 30% 10%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 81 30% 15%;
+  --muted-foreground: 119 5% 60%;
+  --accent: 81 30% 15%;
+  --accent-foreground: 119 5% 90%;
+  --destructive: 0 100% 30%;
+  --destructive-foreground: 119 5% 90%;
+  --border: 119 30% 18%;
+  --input: 119 30% 18%;
+  --ring: 142 44% 45%;
+  --radius: 0.3rem;
+}
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

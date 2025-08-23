@@ -2,7 +2,7 @@ import { HeaderHamburger } from "./header_hamburger";
 import { HeaderLogo } from "./header_logo";
 import { HeaderNavigationLinks } from "./header_nav_links";
 import { HeaderLanguage } from "./header_language";
-import { HeaderAuthentication } from "./header_auth";
+import UserButton from "./user-button";
 
 export default function Header() {
   return (
@@ -19,9 +19,9 @@ export default function Header() {
         <HeaderNavigationLinks />
 
         {/* Right - Language + Buttons */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center">
           <HeaderLanguage />
-          <HeaderAuthentication />
+          <UserButton />
         </div>
 
       </div>

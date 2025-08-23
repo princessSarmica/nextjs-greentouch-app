@@ -1,8 +1,19 @@
 import Image from "next/image";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
-export default function Resources() {
+export default async function Resources() {
 
   //console.log("Resources Page rendered");
+
+  const session = await auth.api.getSession({
+      headers: await headers()
+  })
+
+  if(!session) {
+      redirect("/sign-in")
+  }
 
   return (
     <main className="flex flex-col items-center justify-start w-full min-h-screen bg-[#f5f5f5] text-gray-900">
