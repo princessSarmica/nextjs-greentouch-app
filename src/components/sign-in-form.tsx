@@ -24,8 +24,11 @@ import {
 import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
-  email: z.string().email({
-    message: "Please enter a valid email address.",
+  username: z.string().min(3).max(30).trim().toLowerCase().refine((value) => {
+    // Allow only alphanumeric characters, underscores, and hyphens
+    return /^[a-zA-Z0-9_-]+$/.test(value);
+  }, {
+    message: "Username may only contain letters, numbers, underscores, and hyphens.",
   }),
   password: z.string().min(1, { message: "Password is required." }),
 });
@@ -47,7 +50,7 @@ export function SignInForm({
   const form = useForm<SignInFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      email: "",
+      username: "",
       password: "",
     },
   });
@@ -63,12 +66,12 @@ export function SignInForm({
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
               control={form.control}
-              name="email"
+              name="username"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>Username</FormLabel>
                   <FormControl>
-                    <Input type="email" {...field} disabled={isPending} />
+                    <Input type="text" {...field} disabled={isPending} />
                   </FormControl>
                   <FormMessage className="min-h-[20px]" />
                 </FormItem>

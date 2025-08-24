@@ -13,8 +13,8 @@ export default function SignInPage() {
     const handleSubmit = (values: SignInFormValues) => {
         //console.log("Form values:", values);
 
-        authClient.signIn.email({
-            email: values.email,
+        authClient.signIn.username({
+            username: values.username,
             password: values.password,
         },
         {

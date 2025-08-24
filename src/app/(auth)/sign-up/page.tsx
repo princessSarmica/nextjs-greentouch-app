@@ -13,6 +13,8 @@ export default function SignUpPage() {
     const handleSubmit = (values: SignUpFormValues) => {
         //console.log("Form values:", values);
 
+        //console.log("Username:", values.username);
+
         authClient.signUp.email({
             email: values.email,
             password: values.password,

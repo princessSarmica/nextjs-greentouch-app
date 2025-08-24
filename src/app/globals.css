@@ -24,6 +24,7 @@
   --input: 119 30% 18%;
   --ring: 119, 24%, 51%;
   --radius: 0.3rem;
+  --sonner-default: oklch(1 0 0);
 }
 
 .dark {
@@ -47,6 +48,7 @@
   --input: 119 30% 18%;
   --ring: 142 44% 45%;
   --radius: 0.3rem;
+  --sonner-default: oklch(0.2686 0 0);
 }
 
 @theme inline {
@@ -73,6 +75,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-sonner: var(--sonner-default);
 }
 
 @layer base {

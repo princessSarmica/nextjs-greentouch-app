@@ -6,6 +6,7 @@ import UserDropdown from "./user-dropdown";
 import { useRouter } from "next/navigation";
 
 export default function UserButton(){
+
     const session = authClient.useSession();
     const router = useRouter();
 

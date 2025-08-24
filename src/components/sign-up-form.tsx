@@ -41,7 +41,12 @@ const formSchema = z
         message: "Contain at least one special character.",
       }),
     confirmPassword: z.string(),
-    username: z.string().min(3, { message: "Username must be at least 3 characters." }),
+    username: z.string().min(3, { message: "Username must be at least 3 characters." }).max(30).trim().refine((value) => {
+        // Allow only alphanumeric characters, underscores, and hyphens
+        return /^[a-zA-Z0-9._-]+$/.test(value);
+      }, {
+        message: "Username may only contain letters, numbers, underscores, and hyphens.",
+      }),
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords don't match.",
