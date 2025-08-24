@@ -22,6 +22,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+
+const POSITIONS = ["student", "academic_staff", "other"] as const;
+const MOTIVATIONS = ["personal_interest", "professional_interest", "personal_and_professional_interest"] as const;
 
 const formSchema = z
   .object({
@@ -43,15 +47,20 @@ const formSchema = z
     confirmPassword: z.string(),
     username: z.string().min(3, { message: "Username must be at least 3 characters." }).max(30).trim().refine((value) => {
         // Allow only alphanumeric characters, underscores, and hyphens
-        return /^[a-zA-Z0-9._-]+$/.test(value);
+        return /^[a-zA-Z0-9_-]+$/.test(value);
       }, {
         message: "Username may only contain letters, numbers, underscores, and hyphens.",
       }),
+    position: z.enum(POSITIONS, { message: "Please select your position." }),
+    motivation: z.enum(MOTIVATIONS, { message: "Please select your motivation." }),
+    university: z.string().min(1, { message: "University is required." }),
+    specialization: z.string().min(1, { message: "Specialization is required." }),
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords don't match.",
     path: ["confirmPassword"],
   });
+
 
 export type SignUpFormValues = z.infer<typeof formSchema>;
 
@@ -76,6 +85,10 @@ export function SignUpForm({
       password: "",
       confirmPassword: "",
       username: "",
+      position: undefined,                 // default radio
+      motivation: undefined,   // default radio
+      university: "",
+      specialization: "",
     },
   });
 
@@ -167,7 +180,93 @@ export function SignUpForm({
                     <FormMessage />
                   </FormItem>
                 )}
-              />
+            />
+            <FormField
+              control={form.control}
+              name="university"
+              render={({ field }) => (
+                <FormItem className="flex-1">
+                  <FormLabel>University</FormLabel>
+                  <FormControl>
+                    <Input type="text" {...field} disabled={isPending} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="specialization"
+              render={({ field }) => (
+                <FormItem className="flex-1">
+                  <FormLabel>Specialization</FormLabel>
+                  <FormControl>
+                    <Input type="text" {...field} disabled={isPending} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="position"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Position</FormLabel>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={field.onChange}
+                      value={field.value}
+                      className="grid gap-2"
+                    >
+                      <div className="flex items-center gap-2">
+                        <RadioGroupItem value="student" id="pos-student" />
+                        <label htmlFor="pos-student" className="text-sm">Student</label>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <RadioGroupItem value="academic_staff" id="pos-academic" />
+                        <label htmlFor="pos-academic" className="text-sm">Academic staff</label>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <RadioGroupItem value="other" id="pos-other" />
+                        <label htmlFor="pos-other" className="text-sm">Other</label>
+                      </div>
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="motivation"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Motivation</FormLabel>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={field.onChange}
+                      value={field.value}
+                      className="grid gap-2"
+                    >
+                      <div className="flex items-center gap-2">
+                        <RadioGroupItem value="personal_interest" id="mot-personal" />
+                        <label htmlFor="mot-personal" className="text-sm">Personal interest</label>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <RadioGroupItem value="professional_interest" id="mot-prof" />
+                        <label htmlFor="mot-prof" className="text-sm">Professional interest</label>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <RadioGroupItem value="personal_and_professional_interest" id="mot-both" />
+                        <label htmlFor="mot-both" className="text-sm">Both of them</label>
+                      </div>
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
             <Button
               type="submit"
               disabled={isPending}

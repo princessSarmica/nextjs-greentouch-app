@@ -13,6 +13,31 @@ export const auth = betterAuth({
             maxAge: 5 * 60 // Cache duration in seconds (5 minutes)
         }
     },
+    user: {
+      additionalFields: {
+        position: {
+          type: "string",
+        required: true,
+        defaultValue: "other",
+        },
+        university: {
+          type: "string",
+          required: true,
+          defaultValue: "unknown",
+        },
+        specialization: {
+          type: "string",
+          required: true,
+          defaultValue: "unknown",
+        },
+        motivation: {
+          type: "string",
+          required: true,
+          defaultValue: "other",
+        }
+      }
+    },
+
     emailAndPassword: {
       enabled: true, 
     },

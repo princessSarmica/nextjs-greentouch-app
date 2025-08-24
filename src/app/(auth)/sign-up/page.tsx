@@ -20,6 +20,10 @@ export default function SignUpPage() {
             password: values.password,
             name: values.firstName + " " + values.lastName,
             username: values.username,
+            university: values.university,
+            specialization: values.specialization,
+            motivation: values.motivation,
+            position: values.position,
         },
         {
             onRequest: () => {

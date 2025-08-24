@@ -26,6 +26,11 @@ model User {
   sessions        Session[]
   accounts        Account[]
 
+  position       String
+  university     String
+  specialization String
+  motivation     String
+
   @@unique([email])
   @@unique([username])
   @@map("user")
