@@ -9,27 +9,28 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Loader2 } from "lucide-react";
+import { Eye, EyeOff, Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import z from "zod";
 import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { useState } from "react";
 
 const formSchema = z.object({
-  username: z.string().min(3).max(30).trim().toLowerCase().refine((value) => {
-    // Allow only alphanumeric characters, underscores, and hyphens
-    return /^[a-zA-Z0-9_-]+$/.test(value);
-  }, {
-    message: "Username may only contain letters, numbers, underscores, and hyphens.",
-  }),
+  username: z
+    .string()
+    .trim()
+    .min(3, { message: "Username must be at least 3 characters." })
+    .max(30, { message: "Username must be 30 characters or fewer." })
+    .toLowerCase()
+    .regex(/^[a-z0-9_-]+$/, {
+      message: "Username may only contain letters, numbers, underscores, and hyphens.",
+    }),
   password: z.string().min(1, { message: "Password is required." }),
 });
 
@@ -55,13 +56,11 @@ export function SignInForm({
     },
   });
 
+const [showPassword, setShowPassword] = useState(false);
+
   return (
     <Card className="w-full max-w-md">
-      <CardHeader>
-        <CardTitle>Sign in</CardTitle>
-        <CardDescription>Welcome back! Sign in to your account</CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 pt-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
@@ -84,7 +83,16 @@ export function SignInForm({
                 <FormItem>
                   <FormLabel>Password</FormLabel>
                   <FormControl>
-                    <Input type="password" {...field} disabled={isPending} />
+                    <div className="relative">
+                      <Input type={showPassword ? "text" :"password"} {...field} disabled={isPending} className="pr-10"/>
+                      <button type="button" 
+                        onClick={() => setShowPassword(!showPassword)} 
+                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400"
+                        tabIndex={-1}
+                        >
+                        {showPassword ? <Eye /> : <EyeOff />}
+                      </button>
+                    </div>
                   </FormControl>
                   <FormMessage className="min-h-[20px]" />
                 </FormItem>
@@ -93,13 +101,15 @@ export function SignInForm({
             <Button
               type="submit"
               disabled={isPending}
+              variant={"secondary"}
+              className="w-full"
             >
-              {isPending ? <Loader2 className="animate-spin" /> : "Continue"}
+              {isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : "Sign in"}
             </Button>
           </form>
         </Form>
       </CardContent>
-      <CardFooter className="flex justify-center">
+      <CardFooter className="flex justify-center pb-6">
         <span className="text-sm text-muted-foreground">
           Don&apos;t have an account?{" "}
           <a
