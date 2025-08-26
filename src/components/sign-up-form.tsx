@@ -99,21 +99,19 @@ export function SignUpForm({
 const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <Card className="w-full max-w-md">
-      <CardHeader>
-        <CardTitle>Sign up</CardTitle>
-        <CardDescription>Create a new account to get started</CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-4">
+    <Card className="w-full max-w-none rounded-xl border shadow-sm">
+      <CardContent className="space-y-8 p-6 md:p-10">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <div className="flex gap-4 items-start">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
               <FormField
                 control={form.control}
                 name="firstName"
                 render={({ field }) => (
-                  <FormItem className="flex-1">
-                    <FormLabel>First name</FormLabel>
+                  <FormItem>
+                    <FormLabel>
+                      Name <span className="text-[#2E7D5A]">*</span>
+                    </FormLabel>
                     <FormControl>
                       <Input type="text" {...field} disabled={isPending} />
                     </FormControl>
@@ -125,8 +123,10 @@ const [showPassword, setShowPassword] = useState(false);
                 control={form.control}
                 name="lastName"
                 render={({ field }) => (
-                  <FormItem className="flex-1">
-                    <FormLabel>Last name</FormLabel>
+                  <FormItem>
+                    <FormLabel>
+                      Surname <span className="text-[#2E7D5A]">*</span>
+                    </FormLabel>
                     <FormControl>
                       <Input type="text" {...field} disabled={isPending} />
                     </FormControl>
@@ -141,12 +141,14 @@ const [showPassword, setShowPassword] = useState(false);
               name="position"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Position</FormLabel>
+                  <FormLabel>
+                    Your position <span className="text-[#2E7D5A]">*</span>
+                  </FormLabel>
                   <FormControl>
                     <RadioGroup
                       onValueChange={field.onChange}
                       value={field.value}
-                      className="grid gap-2"
+                      className="mt-2 space-y-2"
                     >
                       <div className="flex items-center gap-2">
                         <RadioGroupItem value="student" id="pos-student" />
@@ -172,7 +174,9 @@ const [showPassword, setShowPassword] = useState(false);
               name="university"
               render={({ field }) => (
                 <FormItem className="flex-1">
-                  <FormLabel>University</FormLabel>
+                  <FormLabel>
+                    Title of the university where you study/work <span className="text-[#2E7D5A]">*</span>
+                  </FormLabel>
                   <FormControl>
                     <Input type="text" {...field} disabled={isPending} />
                   </FormControl>
@@ -186,7 +190,9 @@ const [showPassword, setShowPassword] = useState(false);
               name="specialization"
               render={({ field }) => (
                 <FormItem className="flex-1">
-                  <FormLabel>Specialization</FormLabel>
+                  <FormLabel>
+                    Your field of studies/work <span className="text-[#2E7D5A]">*</span>
+                  </FormLabel>
                   <FormControl>
                     <Input type="text" {...field} disabled={isPending} />
                   </FormControl>
@@ -200,7 +206,9 @@ const [showPassword, setShowPassword] = useState(false);
               name="motivation"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Motivation</FormLabel>
+                  <FormLabel>
+                    Your motivation for participation in GreenTouch <span className="text-[#2E7D5A]">*</span>
+                  </FormLabel>
                   <FormControl>
                     <RadioGroup
                       onValueChange={field.onChange}
@@ -231,7 +239,9 @@ const [showPassword, setShowPassword] = useState(false);
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>
+                    Email <span className="text-[#2E7D5A]">*</span>
+                  </FormLabel>
                   <FormControl>
                     <Input type="email" {...field} disabled={isPending} />
                   </FormControl>
@@ -245,7 +255,9 @@ const [showPassword, setShowPassword] = useState(false);
                 name="username"
                 render={({ field }) => (
                   <FormItem className="flex-1">
-                    <FormLabel>Username</FormLabel>
+                    <FormLabel>
+                      Username <span className="text-[#2E7D5A]">*</span>
+                    </FormLabel>
                     <FormControl>
                       <Input type="text" {...field} disabled={isPending} />
                     </FormControl>
@@ -254,13 +266,15 @@ const [showPassword, setShowPassword] = useState(false);
                 )}
             />
 
-            <div className="flex gap-4 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
               <FormField
                 control={form.control}
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Password</FormLabel>
+                    <FormLabel>
+                      Password
+                    </FormLabel>
                     <FormControl>
                       <div className="relative">
                         <Input type={showPassword ? "text" :"password"} {...field} disabled={isPending} className="pr-10"/>
@@ -301,30 +315,36 @@ const [showPassword, setShowPassword] = useState(false);
               />
             </div>
             
-            <Button
-              type="submit"
-              disabled={isPending}
-            >
-              {isPending ? <Loader2 className="animate-spin" /> : "Submit"}
-            </Button>
+            <div className="mt-4 h-px w-full bg-gray-300" />
+
+            <div className="flex items-center justify-end gap-4 pt-2">
+
+              <span className="text-sm text-muted-foreground">
+                Already have an account?{" "}
+                <a
+                  href={
+                    redirectUrl
+                      ? `/sign-in?redirect_url=${encodeURIComponent(redirectUrl)}`
+                      : "/sign-in"
+                  }
+                  className="text-primary underline hover:opacity-80"
+                >
+                  Sign in
+                </a>
+              </span>
+
+              <Button
+                type="submit"
+                disabled={isPending}
+                variant={"secondary"}
+              >
+                {isPending ? <Loader2 className="animate-spin" /> : "Submit"}
+              </Button>
+            </div>
+
           </form>
         </Form>
-      </CardContent>
-      <CardFooter className="flex justify-center">
-        <span className="text-sm text-muted-foreground">
-          Already have an account?{" "}
-          <a
-            href={
-              redirectUrl
-                ? `/sign-in?redirect_url=${encodeURIComponent(redirectUrl)}`
-                : "/sign-in"
-            }
-            className="text-primary underline hover:opacity-80"
-          >
-            Sign in
-          </a>
-        </span>
-      </CardFooter>
-    </Card>
+        </CardContent>
+      </Card>
   );
 }
