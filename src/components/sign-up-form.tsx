@@ -9,7 +9,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Loader2 } from "lucide-react";
+import { Eye, EyeOff, Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import z from "zod";
 import { Button } from "@/components/ui/button";
@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { useState } from "react";
 
 const POSITIONS = ["student", "academic_staff", "other"] as const;
 const MOTIVATIONS = ["personal_interest", "professional_interest", "personal_and_professional_interest"] as const;
@@ -44,7 +45,7 @@ const formSchema = z
       .regex(/[^a-zA-Z0-9]/, {
         message: "Contain at least one special character.",
       }),
-    confirmPassword: z.string(),
+    confirmPassword: z.string().min(1, { message: "Please confirm your password." }),
     username: z.string().min(3, { message: "Username must be at least 3 characters." }).max(30).trim().refine((value) => {
         // Allow only alphanumeric characters, underscores, and hyphens
         return /^[a-zA-Z0-9_-]+$/.test(value);
@@ -55,12 +56,15 @@ const formSchema = z
     motivation: z.enum(MOTIVATIONS, { message: "Please select your motivation." }),
     university: z.string().min(1, { message: "University is required." }),
     specialization: z.string().min(1, { message: "Specialization is required." }),
-  })
-  .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords don't match.",
-    path: ["confirmPassword"],
-  });
-
+  }).superRefine(({ confirmPassword, password }, ctx) => {
+  if (confirmPassword !== password) {
+    ctx.addIssue({
+      code: "custom",
+      message: "The passwords do not match",
+      path: ['confirmPassword']
+    });
+  }
+});
 
 export type SignUpFormValues = z.infer<typeof formSchema>;
 
@@ -92,6 +96,8 @@ export function SignUpForm({
     },
   });
 
+const [showPassword, setShowPassword] = useState(false);
+
   return (
     <Card className="w-full max-w-md">
       <CardHeader>
@@ -101,7 +107,7 @@ export function SignUpForm({
       <CardContent className="space-y-4">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <div className="flex gap-4">
+            <div className="flex gap-4 items-start">
               <FormField
                 control={form.control}
                 name="firstName"
@@ -129,84 +135,7 @@ export function SignUpForm({
                 )}
               />
             </div>
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input type="email" {...field} disabled={isPending} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="password"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Password</FormLabel>
-                  <FormControl>
-                    <Input type="password" {...field} disabled={isPending} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="confirmPassword"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Confirm password</FormLabel>
-                  <FormControl>
-                    <Input type="password" {...field} disabled={isPending} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-                control={form.control}
-                name="username"
-                render={({ field }) => (
-                  <FormItem className="flex-1">
-                    <FormLabel>Username</FormLabel>
-                    <FormControl>
-                      <Input type="text" {...field} disabled={isPending} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-            />
-            <FormField
-              control={form.control}
-              name="university"
-              render={({ field }) => (
-                <FormItem className="flex-1">
-                  <FormLabel>University</FormLabel>
-                  <FormControl>
-                    <Input type="text" {...field} disabled={isPending} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="specialization"
-              render={({ field }) => (
-                <FormItem className="flex-1">
-                  <FormLabel>Specialization</FormLabel>
-                  <FormControl>
-                    <Input type="text" {...field} disabled={isPending} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+
             <FormField
               control={form.control}
               name="position"
@@ -237,6 +166,35 @@ export function SignUpForm({
                 </FormItem>
               )}
             />
+
+            <FormField
+              control={form.control}
+              name="university"
+              render={({ field }) => (
+                <FormItem className="flex-1">
+                  <FormLabel>University</FormLabel>
+                  <FormControl>
+                    <Input type="text" {...field} disabled={isPending} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="specialization"
+              render={({ field }) => (
+                <FormItem className="flex-1">
+                  <FormLabel>Specialization</FormLabel>
+                  <FormControl>
+                    <Input type="text" {...field} disabled={isPending} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
             <FormField
               control={form.control}
               name="motivation"
@@ -267,11 +225,87 @@ export function SignUpForm({
                 </FormItem>
               )}
             />
+
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input type="email" {...field} disabled={isPending} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+                control={form.control}
+                name="username"
+                render={({ field }) => (
+                  <FormItem className="flex-1">
+                    <FormLabel>Username</FormLabel>
+                    <FormControl>
+                      <Input type="text" {...field} disabled={isPending} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+            />
+
+            <div className="flex gap-4 items-start">
+              <FormField
+                control={form.control}
+                name="password"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Password</FormLabel>
+                    <FormControl>
+                      <div className="relative">
+                        <Input type={showPassword ? "text" :"password"} {...field} disabled={isPending} className="pr-10"/>
+                        <button type="button" 
+                          onClick={() => setShowPassword(!showPassword)} 
+                          className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400"
+                          tabIndex={-1}
+                          >
+                          {showPassword ? <Eye /> : <EyeOff />}
+                        </button>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="confirmPassword"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Confirm password</FormLabel>
+                    <FormControl>
+                      <div className="relative">
+                        <Input type={showPassword ? "text" :"password"} {...field} disabled={isPending} className="pr-10"/>
+                        <button type="button" 
+                          onClick={() => setShowPassword(!showPassword)} 
+                          className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400"
+                          tabIndex={-1}
+                          >
+                          {showPassword ? <Eye /> : <EyeOff />}
+                        </button>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            
             <Button
               type="submit"
               disabled={isPending}
             >
-              {isPending ? <Loader2 className="animate-spin" /> : "Continue"}
+              {isPending ? <Loader2 className="animate-spin" /> : "Submit"}
             </Button>
           </form>
         </Form>
