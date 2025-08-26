@@ -15,11 +15,7 @@ import z from "zod";
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+  CardContent
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -100,7 +96,7 @@ const [showPassword, setShowPassword] = useState(false);
 
   return (
     <Card className="w-full max-w-none rounded-xl border shadow-sm">
-      <CardContent className="space-y-8 p-6 md:p-10">
+      <CardContent className="space-y-6 pt-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
