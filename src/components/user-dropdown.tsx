@@ -32,6 +32,8 @@ export type UserDropdownProps = {
 
 export default function UserDropdown({ onSignOut, user }: UserDropdownProps) {
 
+  //console.log("User Dropdown rendered");
+
   return (
     <div className="flex items-center gap-4">
       <DropdownMenu>

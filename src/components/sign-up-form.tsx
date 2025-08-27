@@ -269,7 +269,7 @@ const [showPassword, setShowPassword] = useState(false);
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>
-                      Password
+                      Password <span className="text-[#2E7D5A]">*</span>
                     </FormLabel>
                     <FormControl>
                       <div className="relative">
@@ -292,7 +292,9 @@ const [showPassword, setShowPassword] = useState(false);
                 name="confirmPassword"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Confirm password</FormLabel>
+                    <FormLabel>
+                      Confirm password <span className="text-[#2E7D5A]">*</span>
+                    </FormLabel>
                     <FormControl>
                       <div className="relative">
                         <Input type={showPassword ? "text" :"password"} {...field} disabled={isPending} className="pr-10"/>

@@ -8,6 +8,8 @@ import { Loader2 } from "lucide-react";
 
 export default function UserButton(){
 
+    //console.log("User Button rendered");
+
     const session = authClient.useSession();
     const router = useRouter();
 

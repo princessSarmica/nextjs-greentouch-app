@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export default function AuthButtons() {
 
-  //console.log("AuthButtons component rendered");
+  //console.log("AuthButtons rendered");
 
   return (
     <div className="flex items-center">
