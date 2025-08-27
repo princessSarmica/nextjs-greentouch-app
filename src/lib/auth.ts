@@ -6,8 +6,8 @@ import { username } from "better-auth/plugins"
 
 export const auth = betterAuth({
     session: {
-        expiresIn: 60 * 60, // 1 hour
-        updateAge: 60 * 30, // 30 minutes (every 30 minutes the session expiration is updated)
+        expiresIn: 60 * 60 * 24 * 7, // 7 days
+        updateAge: 60 * 60 * 24, // 1 day (every 1 day the session expiration is updated)
         cookieCache: {
             enabled: true,
             maxAge: 5 * 60 // Cache duration in seconds (5 minutes)
@@ -45,9 +45,9 @@ export const auth = betterAuth({
         provider: "postgresql", // or "mysql", "postgresql", ...etc
     }),
     plugins: [username({
-            displayUsernameValidator: (displayUsername) => {
-                // Allow only alphanumeric characters, underscores, and hyphens
-                return /^[a-zA-Z0-9_-]+$/.test(displayUsername)
-            }
-        }), nextCookies()] // make sure this is the last plugin in the array
+        displayUsernameValidator: (displayUsername) => {
+            // Allow only alphanumeric characters, underscores, and hyphens
+            return /^[a-zA-Z0-9_-]+$/.test(displayUsername)
+        }
+    }), nextCookies()] // make sure this is the last plugin in the array
 });

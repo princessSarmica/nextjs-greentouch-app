@@ -31,6 +31,7 @@ export type UserDropdownProps = {
 };
 
 export default function UserDropdown({ onSignOut, user }: UserDropdownProps) {
+
   return (
     <div className="flex items-center gap-4">
       <DropdownMenu>
@@ -50,7 +51,7 @@ export default function UserDropdown({ onSignOut, user }: UserDropdownProps) {
             </div>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <Link href="/account">
+          <Link href="/account/profile">
             <DropdownMenuItem className="cursor-pointer">
               <AccountIcon className="mr-2 h-4 w-4" />
               Account

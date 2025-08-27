@@ -2,7 +2,7 @@ import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
-export default async function Account() {
+export default async function MyDiary() {
 
     const session = await auth.api.getSession({
         headers: await headers()
@@ -14,7 +14,7 @@ export default async function Account() {
 
     return(
         <div className="text-center pt-12">
-            <h1 className="text-4xl font-bold">Account Page</h1>
+            <h1 className="text-4xl font-bold">My Diary Page</h1>
         </div>
     )
 }
