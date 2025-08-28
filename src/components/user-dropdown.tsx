@@ -10,10 +10,10 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import {
   LogOut as SignOutIcon,
-  SquareUserRoundIcon as AccountIcon,
-  NotebookIcon as NotebookIcon,
-  HeartIcon as HeartIcon,
-  ShieldUserIcon as ShieldUserIcon,
+  CircleUserRound as ProfileIcon,
+  NotebookIcon as DiaryIcon,
+  HeartIcon as FavoriteIcon,
+  ShieldUserIcon as SecurityIcon,
 } from "lucide-react";
 
 function initials(input: string) {
@@ -58,25 +58,25 @@ export default function UserDropdown({ onSignOut, user }: UserDropdownProps) {
           <DropdownMenuSeparator />
           <Link href="/account/profile">
             <DropdownMenuItem className="cursor-pointer">
-              <AccountIcon className="mr-2 h-4 w-4" />
+              <ProfileIcon className="mr-2 h-4 w-4" />
               Profile
             </DropdownMenuItem>
           </Link>
           <Link href="/account/my-diary">
             <DropdownMenuItem className="cursor-pointer">
-              <NotebookIcon className="mr-2 h-4 w-4" />
+              <DiaryIcon className="mr-2 h-4 w-4" />
               My Diary
             </DropdownMenuItem>
           </Link>
           <Link href="/account/favorites">
             <DropdownMenuItem className="cursor-pointer">
-              <HeartIcon className="mr-2 h-4 w-4" />
+              <FavoriteIcon className="mr-2 h-4 w-4" />
               Favorites
             </DropdownMenuItem>
           </Link>
           <Link href="/account/security">
             <DropdownMenuItem className="cursor-pointer">
-              <ShieldUserIcon className="mr-2 h-4 w-4" />
+              <SecurityIcon className="mr-2 h-4 w-4" />
               Security
             </DropdownMenuItem>
           </Link>
