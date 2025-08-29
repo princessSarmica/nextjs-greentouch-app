@@ -19,8 +19,8 @@ export default async function AccountHeader({ children }: { children?: ReactNode
   return (
     <section className="w-full bg-[#f5f5f5]">
       <div className="w-full h-40 bg-primary/60">
-        <div className="mx-auto w-full max-w-5xl h-full px-8 flex items-end">
-          <div className="flex items-end gap-8 pb-10">
+        <div className="mx-auto w-full max-w-5xl h-full px-8 flex items-start">
+          <div className="flex items-start gap-8 pt-10">
              {children ? <div>{children}</div> : null}
 
             <div>
