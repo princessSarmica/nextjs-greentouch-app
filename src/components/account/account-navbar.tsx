@@ -14,7 +14,7 @@ export default function AccountNavbar(){
   const pathname = usePathname();
   return (
     <div className="w-full bg-[#f5f5f5] text-gray-900">
-      <div className="mx-auto w-full max-w-5xl flex flex-col px-4 pt-4">
+      <div className="mx-auto w-full max-w-5xl flex flex-col px-8 pt-4">
       <NavigationMenu viewport={false} className="w-full max-w-none justify-start">
         <NavigationMenuList className="justify-start gap-2 flex-wrap">
           <NavigationMenuItem>
