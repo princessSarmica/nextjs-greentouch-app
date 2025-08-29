@@ -20,10 +20,10 @@ export default async function AccountHeader({ children }: { children?: ReactNode
     <section className="w-full bg-[#f5f5f5]">
       <div className="w-full h-40 bg-primary/60">
         <div className="mx-auto w-full max-w-5xl h-full px-8 flex items-end">
-          <div className="flex items-end gap-8">
-             {children ? <div className="pb-10 sm:pb-10">{children}</div> : null}
+          <div className="flex items-end gap-8 pb-10">
+             {children ? <div>{children}</div> : null}
 
-            <div className="pb-10 sm:pb-15">
+            <div>
               <h1 className="text-2xl font-semibold text-foreground">{name}</h1>
               <p className="text-base font-semibold text-foreground">{position}</p>
             </div>
