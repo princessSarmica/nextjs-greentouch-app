@@ -26,7 +26,7 @@ export default async function AccountPicture(){
     <nav>
       <Avatar className="size-20">
         <AvatarImage src="/path/to/image.jpg" alt="User Avatar" />
-        <AvatarFallback>{initials(session.user.name)}</AvatarFallback>
+        <AvatarFallback className="text-2xl font-semibold leading-none">{initials(session.user.name)}</AvatarFallback>
       </Avatar>
     </nav>
   );
