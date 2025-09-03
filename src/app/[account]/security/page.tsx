@@ -1,3 +1,4 @@
+import RevokeOtherSessions from "@/components/account/security/revoke-sessions-button";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
@@ -15,6 +16,7 @@ export default async function Security() {
     return(
         <div className="text-center pt-12">
             <h1 className="text-4xl font-bold">Security Page</h1>
+            <RevokeOtherSessions />
         </div>
     )
 }

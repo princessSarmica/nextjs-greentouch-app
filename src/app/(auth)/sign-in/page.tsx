@@ -3,13 +3,19 @@
 import { SignInForm, SignInFormValues } from "@/components/sign-in-form";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import Image from "next/image";
 
 export default function SignInPage() {
     const router = useRouter();
     const [isPending, setPending] = useState(false);
+
+    const session = authClient.useSession();
+
+    useEffect(() => {
+        session.refetch();
+    }, [session]);
 
     const handleSubmit = (values: SignInFormValues) => {
         //console.log("Form values:", values);

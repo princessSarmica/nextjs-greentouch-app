@@ -3,8 +3,8 @@
 import { authClient } from "@/lib/auth-client";
 import AuthButtons from "./auth-buttons";
 import UserDropdown from "./user-dropdown";
-import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function UserButton(){
 
@@ -23,5 +23,5 @@ export default function UserButton(){
         return <AuthButtons />;
     }
 
-    return <UserDropdown user={user} onSignOut={() => authClient.signOut({ fetchOptions: { onSuccess: () => {router.push("/")} } })} />;
+    return <UserDropdown user={user} onSignOut={() => authClient.signOut({ fetchOptions: { onSuccess: () => {router.push("/sign-in")}, onError: () => {session.refetch(); router.push("/sign-in")} } })} />;
 }
