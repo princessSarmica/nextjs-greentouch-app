@@ -11,11 +11,11 @@ export default function SignInPage() {
     const router = useRouter();
     const [isPending, setPending] = useState(false);
 
-    const session = authClient.useSession();
+    const { refetch } = authClient.useSession();
 
     useEffect(() => {
-        session.refetch();
-    }, [session]);
+        refetch();
+    }, [refetch]);
 
     const handleSubmit = (values: SignInFormValues) => {
         //console.log("Form values:", values);
