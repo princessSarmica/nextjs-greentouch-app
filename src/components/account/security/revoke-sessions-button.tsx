@@ -23,7 +23,7 @@ export default function RevokeOtherSessions(){
   return (
     <div>
       <Dialog>
-        <DialogTrigger>
+        <DialogTrigger asChild>
           <Button>Revoke Other Active Sessions</Button>
         </DialogTrigger>
         <DialogContent>
