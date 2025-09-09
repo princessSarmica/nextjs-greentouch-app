@@ -17,7 +17,7 @@ export default function AccountNavbar(){
       <div className="mx-auto w-full max-w-5xl flex flex-col pt-4">
       <div className="overflow-x-auto">
       <NavigationMenu viewport={false} className="w-full max-w-none justify-start">
-        <NavigationMenuList className="justify-start gap-6 px-8">
+        <NavigationMenuList className="justify-start gap-4 px-8">
           <NavigationMenuItem>
             <NavigationMenuLink asChild className={navigationMenuTriggerStyleSecondary()} data-active={pathname === "/account/profile" || undefined}>
               <Link href="/account/profile">Profile</Link>
