@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { authClient } from "@/lib/auth-client";
-import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import {
   Dialog,
@@ -18,7 +17,6 @@ import {
 export default function RevokeOtherSessions(){
 
   const session = authClient.useSession();
-  const router = useRouter();
 
   return (
     <div>
@@ -48,7 +46,7 @@ export default function RevokeOtherSessions(){
                     fetchOptions: {
                       onError: () => {
                         session.refetch();
-                        router.push("/sign-in"); // redirect to sign-in page
+                        window.location.replace('/sign-in') // redirect to sign-in page
                       },
                     },
                   })
