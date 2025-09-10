@@ -1,6 +1,5 @@
-import { auth } from "@/lib/auth";
+import { getServerSession } from "@/lib/get-session";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
 function initials(input: string) {
@@ -14,9 +13,7 @@ function initials(input: string) {
 
 export default async function AccountPicture(){
 
-  const session = await auth.api.getSession({
-      headers: await headers()
-  })
+  const session = await getServerSession();
 
   if(!session) {
       redirect("/sign-in")

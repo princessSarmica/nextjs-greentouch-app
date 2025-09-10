@@ -1,13 +1,10 @@
-import { auth } from "@/lib/auth"; // path to your Better Auth server instance
-import { headers } from "next/headers";
+import { getServerSession } from "@/lib/get-session";
 import { redirect } from "next/navigation";
 import type { ReactNode } from "react";
 
 export default async function AccountHeader({ children }: { children?: ReactNode }) {
 
-  const session = await auth.api.getSession({
-      headers: await headers()
-  })
+  const session = await getServerSession();
 
   if(!session) {
       redirect("/sign-in")

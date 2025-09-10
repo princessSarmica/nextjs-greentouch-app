@@ -1,13 +1,10 @@
 import RevokeOtherSessions from "@/components/account/security/revoke-sessions-button";
-import { auth } from "@/lib/auth";
-import { headers } from "next/headers";
+import { getServerSession } from "@/lib/get-session";
 import { redirect } from "next/navigation";
 
 export default async function Security() {
 
-    const session = await auth.api.getSession({
-        headers: await headers()
-    })
+    const session = await getServerSession();
 
     if(!session) {
         redirect("/sign-in")

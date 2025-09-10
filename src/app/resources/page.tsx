@@ -1,15 +1,12 @@
 import Image from "next/image";
-import { auth } from "@/lib/auth";
-import { headers } from "next/headers";
 import { redirect } from "next/navigation";
+import { getServerSession } from "@/lib/get-session";
 
 export default async function Resources() {
 
   //console.log("Resources Page rendered");
 
-  const session = await auth.api.getSession({
-      headers: await headers()
-  })
+  const session = await getServerSession();
 
   if(!session) {
       redirect("/sign-in")
