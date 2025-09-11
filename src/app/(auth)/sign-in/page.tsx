@@ -15,7 +15,8 @@ export default function SignInPage() {
 
     useEffect(() => {
         refetch();
-    }, [refetch]);
+        router.refresh()
+    }, [refetch, router]);
 
     const handleSubmit = (values: SignInFormValues) => {
         //console.log("Form values:", values);
