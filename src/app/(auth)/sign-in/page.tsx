@@ -1,47 +1,14 @@
-"use client";
-
-import { SignInForm, SignInFormValues } from "@/components/sign-in-form";
-import { authClient } from "@/lib/auth-client";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { toast } from "sonner";
 import Image from "next/image";
+import { Metadata } from "next";
+import { SignInForm } from "./sign-in-form";
+
+export const metadata: Metadata = {
+  title: "Sign in",
+};
 
 export default function SignInPage() {
-    const router = useRouter();
-    const [isPending, setPending] = useState(false);
 
-    const { refetch } = authClient.useSession();
-
-    useEffect(() => {
-        refetch();
-        router.refresh()
-    }, [refetch, router]);
-
-    const handleSubmit = (values: SignInFormValues) => {
-        //console.log("Form values:", values);
-
-        authClient.signIn.username({
-            username: values.username,
-            password: values.password,
-        },
-        {
-            onRequest: () => {
-            setPending(true);
-            },
-            onResponse: () => {
-            setPending(false);
-            },
-            onSuccess: () => {
-            // Redirect to home page after successful sign-in
-            router.push("/");
-            },
-            onError: ({ error }) => {
-            console.error("Sign-in error:", error);
-            toast.error("Error: " + error.message);
-            },
-        })
-    };
+	//console.log("Sign in Page rendered");
 
     return (
 			<main className="bg-[#f5f5f5]"> 
@@ -56,7 +23,7 @@ export default function SignInPage() {
 								Enter your account details and start exploring
 							</h1>
 
-							<SignInForm onSubmit={handleSubmit} isPending={isPending} />
+                                <SignInForm />
 
 							<p className="mt-6 text-xs text-muted-foreground max-w-md mx-auto lg:mx-0 text-center lg:text-left">
 								Disclaimer: In case of losing your username or password, please

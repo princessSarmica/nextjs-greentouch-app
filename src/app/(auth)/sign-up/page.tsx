@@ -1,47 +1,13 @@
-"use client";
+import type { Metadata } from "next";
+import { SignUpForm } from "./sign-up-form";
 
-import { SignUpForm, SignUpFormValues } from "@/components/sign-up-form";
-import { authClient } from "@/lib/auth-client";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { toast } from "sonner";
+export const metadata: Metadata = {
+  title: "Sign up",
+};
 
 export default function SignUpPage() {
-    const router = useRouter();
-    const [isPending, setPending] = useState(false);
 
-    const handleSubmit = (values: SignUpFormValues) => {
-        //console.log("Form values:", values);
-
-        //console.log("Username:", values.username);
-
-        authClient.signUp.email({
-            email: values.email,
-            password: values.password,
-            name: values.firstName + " " + values.lastName,
-            username: values.username,
-            university: values.university,
-            specialization: values.specialization,
-            motivation: values.motivation,
-            position: values.position,
-        },
-        {
-            onRequest: () => {
-            setPending(true);
-            },
-            onResponse: () => {
-            setPending(false);
-            },
-            onSuccess: () => {
-            // Redirect to home page after successful sign-up
-            router.push("/");
-            },
-            onError: ({ error }) => {
-            console.error("Sign-up error:", error);
-            toast.error("Error: " + error.message);
-            },
-        })
-    };
+    //console.log("Sign up Page rendered");
 
     return (
         <main className="min-h-screen bg-[#f5f5f5]">
@@ -58,7 +24,7 @@ export default function SignUpPage() {
                     </div>
 
                 </div>
-                    <SignUpForm onSubmit={handleSubmit} isPending={isPending} />
+                    <SignUpForm />
             </section>
         </main>
     );
