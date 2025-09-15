@@ -13,8 +13,8 @@ import {
   CircleUserRound as ProfileIcon,
   NotebookIcon as DiaryIcon,
   HeartIcon as FavoriteIcon,
-  ShieldUserIcon as SecurityIcon,
-  ShieldIcon as AdminIcon,
+  LockIcon as SecurityIcon,
+  ShieldUserIcon as AdminIcon,
 } from "lucide-react";
 
 function initials(input: string) {
