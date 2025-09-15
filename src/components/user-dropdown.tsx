@@ -14,6 +14,7 @@ import {
   NotebookIcon as DiaryIcon,
   HeartIcon as FavoriteIcon,
   ShieldUserIcon as SecurityIcon,
+  ShieldIcon as AdminIcon,
 } from "lucide-react";
 
 function initials(input: string) {
@@ -78,6 +79,12 @@ export default function UserDropdown({ onSignOut, user }: UserDropdownProps) {
             <DropdownMenuItem className="cursor-pointer">
               <SecurityIcon className="mr-2 h-4 w-4" />
               Security
+            </DropdownMenuItem>
+          </Link>
+          <Link href="/account/admin">
+            <DropdownMenuItem className="cursor-pointer">
+              <AdminIcon className="mr-2 h-4 w-4" />
+              Admin
             </DropdownMenuItem>
           </Link>
           <DropdownMenuItem onClick={onSignOut} className="cursor-pointer">
