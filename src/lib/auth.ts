@@ -3,6 +3,8 @@ import { prismaAdapter } from "better-auth/adapters/prisma";
 import { prisma } from "@/lib/prisma";
 import { nextCookies } from "better-auth/next-js";
 import { username } from "better-auth/plugins"
+import { APIError, createAuthMiddleware } from "better-auth/api";
+import { passwordSchema } from "./validation";
 
 export const auth = betterAuth({
     session: {
@@ -37,13 +39,23 @@ export const auth = betterAuth({
         }
       }
     },
-
     emailAndPassword: {
       enabled: true, 
     },
     database: prismaAdapter(prisma, {
         provider: "postgresql", // or "mysql", "postgresql", ...etc
     }),
+    hooks: {
+      before: createAuthMiddleware(async ctx => {
+        if (ctx.path === "/sign-up/email") {
+          const password = ctx.body.password;
+          const {error} = passwordSchema.safeParse(password);
+          if (error) {
+            throw new APIError("BAD_REQUEST", { message: "Password not strong enough." });
+          }
+        }
+      })
+    },
     plugins: [username({
         displayUsernameValidator: (displayUsername) => {
             // Allow only alphanumeric characters, underscores, and hyphens
