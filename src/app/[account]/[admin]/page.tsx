@@ -9,6 +9,10 @@ export default async function AdminPage() {
         redirect("/sign-in")
     }
 
+    if(session.user.role !== "admin") {
+        redirect("/account/profile")
+    }
+
     return(
         <div className="text-center pt-12">
             <h1 className="text-4xl font-bold">Admin Page</h1>

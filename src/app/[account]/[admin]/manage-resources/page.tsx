@@ -9,6 +9,10 @@ export default async function AddResourcesPage() {
         redirect("/sign-in")
     }
 
+    if(session.user.role !== "admin") {
+        redirect("/account/profile")
+    }
+
     return(
         <div className="text-center pt-12">
             <h1 className="text-4xl font-bold">Manage Resources Page</h1>

@@ -7,11 +7,16 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyleSecondary
 } from "@/components/ui/navigation-menu"
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link"
 import { usePathname } from "next/navigation";
 
 export default function AccountNavbar(){
   const pathname = usePathname();
+
+  const { data: session } = authClient.useSession();
+  const isAdmin = session?.user?.role === "admin";
+
   return (
     <div className="w-full bg-[#f5f5f5] text-gray-900">
       <div className="mx-auto w-full max-w-5xl flex flex-col pt-4">
@@ -38,11 +43,11 @@ export default function AccountNavbar(){
               <Link href="/account/security">Security</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
-          <NavigationMenuItem>
+           {isAdmin && <NavigationMenuItem>
             <NavigationMenuLink asChild className={navigationMenuTriggerStyleSecondary()} data-active={pathname === "/account/admin" || pathname.startsWith("/account/admin/") || undefined}>
               <Link href="/account/admin">Admin</Link>
             </NavigationMenuLink>
-          </NavigationMenuItem>
+          </NavigationMenuItem> }
         </NavigationMenuList>
       </NavigationMenu>
     </div>

@@ -31,6 +31,7 @@ export type UserDropdownProps = {
     name: string;
     image?: string | null;
     email: string;
+    role?: string | null
   };
 };
 
@@ -81,12 +82,14 @@ export default function UserDropdown({ onSignOut, user }: UserDropdownProps) {
               Security
             </DropdownMenuItem>
           </Link>
-          <Link href="/account/admin">
-            <DropdownMenuItem className="cursor-pointer">
-              <AdminIcon className="mr-2 h-4 w-4" />
-              Admin
-            </DropdownMenuItem>
-          </Link>
+          {user.role === "admin" &&
+            <Link href="/account/admin">
+              <DropdownMenuItem className="cursor-pointer">
+                <AdminIcon className="mr-2 h-4 w-4" />
+                Admin
+              </DropdownMenuItem>
+            </Link>
+          }
           <DropdownMenuItem onClick={onSignOut} className="cursor-pointer">
             <SignOutIcon className="mr-2 h-4 w-4" />
             <span>Sign out</span>
