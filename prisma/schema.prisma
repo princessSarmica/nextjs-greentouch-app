@@ -36,6 +36,10 @@ model User {
   banReason  String?
   banExpires DateTime?
 
+  // Relations:
+  newsArticles NewsArticle[] // One-to-many
+  resourcesArticles ResourcesArticle[] // One-to-many
+  
   @@unique([email])
   @@unique([username])
   @@map("user")
@@ -86,4 +90,35 @@ model Verification {
   updatedAt  DateTime?
 
   @@map("verification")
+}
+
+model NewsArticle {
+  id        String   @id @default(cuid())
+  authorId  String
+  title     String
+  content   String?
+  image     String[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  author User @relation(fields: [authorId], references: [id], onDelete: Cascade) // if user is deleted, their articles are deleted too
+
+  @@map("news_article")
+}
+
+model ResourcesArticle {
+  id        String   @id @default(cuid())
+  authorId  String
+  title     String
+  content   String?
+  image     String?
+  link      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  author User @relation(fields: [authorId], references: [id], onDelete: Cascade) // if user is deleted, their articles are deleted too
+
+  @@map("resources_article")
 }
