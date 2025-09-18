@@ -37,9 +37,9 @@ model User {
   banExpires DateTime?
 
   // Relations:
-  newsArticles NewsArticle[] // One-to-many
+  newsArticles      NewsArticle[] // One-to-many
   resourcesArticles ResourcesArticle[] // One-to-many
-  
+
   @@unique([email])
   @@unique([username])
   @@map("user")
