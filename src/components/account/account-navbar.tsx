@@ -43,11 +43,13 @@ export default function AccountNavbar(){
               <Link href="/account/security">Security</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
-           {isAdmin && <NavigationMenuItem>
-            <NavigationMenuLink asChild className={navigationMenuTriggerStyleSecondary()} data-active={pathname === "/account/admin" || pathname.startsWith("/account/admin/") || undefined}>
-              <Link href="/account/admin">Admin</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem> }
+           {isAdmin ? (
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild className={navigationMenuTriggerStyleSecondary()} data-active={pathname === "/account/admin" || pathname.startsWith("/account/admin/") || undefined}>
+                <Link href="/account/admin">Admin</Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+          ) : null}
         </NavigationMenuList>
       </NavigationMenu>
     </div>

@@ -82,14 +82,14 @@ export default function UserDropdown({ onSignOut, user }: UserDropdownProps) {
               Security
             </DropdownMenuItem>
           </Link>
-          {user.role === "admin" &&
+          {user.role === "admin" ? (
             <Link href="/account/admin">
               <DropdownMenuItem className="cursor-pointer">
                 <AdminIcon className="mr-2 h-4 w-4" />
                 Admin
               </DropdownMenuItem>
             </Link>
-          }
+          ) : null}
           <DropdownMenuItem onClick={onSignOut} className="cursor-pointer">
             <SignOutIcon className="mr-2 h-4 w-4" />
             <span>Sign out</span>
