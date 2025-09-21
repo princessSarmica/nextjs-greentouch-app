@@ -38,7 +38,7 @@ export default async function News() {
             </div>
 
             <div className="w-full max-w-5xl px-4 pb-20">
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-stretch">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-stretch">
                     {news.map((article) => (
                         <Link key={article.id} href={`/news/${article.id}`} className="h-full">
                             <NewsCard article={article} />
