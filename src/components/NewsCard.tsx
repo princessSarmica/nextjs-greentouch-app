@@ -6,7 +6,7 @@ function NewsCard({ article }: { article: NewsArticle }) {
   const imageSrc = article?.image?.[0] || "/news-article-default.png";
 
   return (
-    <Card className="p-0 flex flex-col overflow-hidden rounded-lg shadow-md transition-shadow bg-white border-0">
+    <Card className="p-0 flex flex-col h-full overflow-hidden rounded-lg shadow-md transition-shadow bg-white border-0">
       <div className="relative w-full h-40">
         <Image
           src={imageSrc}

@@ -34,6 +34,23 @@ export async function createNewsArticle(title: string, content: string) {
     }
 }
 
+export async function getNewsArticle(id: string) {
+    try {
+        const newsArticle = await prisma.newsArticle.findUnique({
+            where: { id },
+        })
+
+        if (!newsArticle) {
+            throw new Error("News article not found");
+        }
+
+        return newsArticle;
+    } catch (error) {
+        console.log("Error fetching news article:", error);
+        throw new Error("Failed to fetch news article");
+    }
+}
+
 export async function getAllNewsArticles() {
     try {
         const newsArticles = await prisma.newsArticle.findMany({
