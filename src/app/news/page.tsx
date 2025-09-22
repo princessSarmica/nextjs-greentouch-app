@@ -12,6 +12,8 @@ export default async function News() {
         redirect("/sign-in")
     }
 
+    const isAdmin = session?.user?.role === "admin";
+
     const news = await getAllNewsArticles();
     //console.log({news});
 
@@ -33,9 +35,11 @@ export default async function News() {
 
             <div className="w-full max-w-5xl px-4 pb-20">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-stretch">
-                    <Link href="/news/add-news">
-                        <AddContentCard />
-                    </Link>
+                    {isAdmin ? (
+                        <Link href="/news/add-news">
+                            <AddContentCard />
+                        </Link>
+                    ) : null}
                     {news.map((article) => (
                         <Link key={article.id} href={`/news/${article.id}`} className="h-full">
                             <NewsCard article={article} />
