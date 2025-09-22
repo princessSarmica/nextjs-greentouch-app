@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
 import { getServerSession } from "@/lib/get-session";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { getAllNewsArticles } from "@/actions/news-article";
 import NewsCard from "@/components/NewsCard";
+import AddContentCard from "@/components/addContentCard";
  
 export default async function News() {
     const session = await getServerSession();
@@ -31,14 +31,11 @@ export default async function News() {
                 <div className="max-w-5xl border-t border-gray-300 mt-8 mb-8 mx-auto" />
             </section>
 
-            <div className="text-center pt-12">
-                <Button asChild variant={"default"} className="px-6 py-6"> 
-                    <Link href="/news/add-news">Add News Article</Link>
-                </Button>
-            </div>
-
             <div className="w-full max-w-5xl px-4 pb-20">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-stretch">
+                    <Link href="/news/add-news">
+                        <AddContentCard />
+                    </Link>
                     {news.map((article) => (
                         <Link key={article.id} href={`/news/${article.id}`} className="h-full">
                             <NewsCard article={article} />
