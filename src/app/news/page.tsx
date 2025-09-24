@@ -41,9 +41,7 @@ export default async function News() {
                         </Link>
                     ) : null}
                     {news.map((article) => (
-                        <Link key={article.id} href={`/news/${article.id}`} className="h-full">
-                            <NewsCard article={article} />
-                        </Link>
+                        <NewsCard key={article.id} article={article} isAdmin={isAdmin} />
                     ))}
                 </div>
             </div>

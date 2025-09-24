@@ -64,3 +64,35 @@ export async function getAllNewsArticles() {
         throw new Error("Failed to fetch news articles");
     }
 }
+
+export async function deleteNewsArticle(newsArticleId: string) {
+    try {
+        const session = await getServerSession();
+
+        if(!session) {
+            throw new Error("Unauthenticated");
+        }
+        
+        if(session.user.role !== "admin") {
+            throw new Error("Unauthorized");
+        }
+
+        const newsArticle = await prisma.newsArticle.findUnique({
+            where: { id: newsArticleId },
+        })
+
+        if (!newsArticle) {
+            throw new Error("News article not found");
+        }
+
+        await prisma.newsArticle.delete({
+            where: { id: newsArticleId }
+        })
+
+        revalidatePath("/news");
+        return { success: true };
+    } catch (error) {
+        console.error("Error deleting news article:", error);
+        return { success: false, error: "Failed to delete news article" };
+    }
+}
