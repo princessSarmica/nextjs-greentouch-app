@@ -11,6 +11,9 @@ import { LoadingButton } from "../loading-button";
 import { toast } from "sonner";
 import { updateNewsArticle } from "@/actions/news-article";
 import { useRouter } from "next/navigation";
+import {
+  Pencil as EditIcon,
+} from "lucide-react";
 
 export type NewsArticleClient = {
     id: string;
@@ -114,6 +117,7 @@ export default function NewsArticleAdmin({article, backHref = "/news",}: {articl
             <div className="relative p-5 md:p-8">
                 {!isEditing && isAdmin && (
                 <Button className="absolute right-5 top-5" onClick={onClickEdit} variant="default">
+                    <EditIcon className="h-4 w-4" />
                     Edit
                 </Button>
                 )}
