@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { getServerSession } from "@/lib/get-session";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default async function Resources() {
 
@@ -40,9 +42,11 @@ export default async function Resources() {
             <p className="text-base mb-4">
               Explore more in-depth knowledge by reading peer-reviewed scientific articles on the role of nature and nature connectedness, as well as nature-based and digital nature-based interventions. Delve into research that highlights the benefits and impacts these approaches have on well-being and ecological awareness.
             </p>
-            <button className="bg-[#65a164] hover:bg-green-600 text-white font-semibold px-4 py-2 mt-4 rounded transition">
-              Explore articles →
-            </button>
+            <Button>
+              <Link href="/resources/articles">
+                Explore articles →
+              </Link>
+            </Button>
           </div>
 
           {/* Right - Icon */}
