@@ -65,6 +65,39 @@ export async function getAllNewsArticles() {
     }
 }
 
+export async function updateNewsArticle(id: string, title: string, content: string) {
+    try {
+        const session = await getServerSession();
+
+        if(!session) {
+            throw new Error("Unauthenticated");
+        }
+
+        if(session.user.role !== "admin") {
+            throw new Error("Unauthorized");
+        }
+
+        const newsArticle = await prisma.newsArticle.findUnique({
+            where: { id },
+        })
+
+        if (!newsArticle) {
+            throw new Error("News article not found");
+        }
+
+        const updatedArticle = await prisma.newsArticle.update({
+            where: { id },
+            data: { title, content },
+        })
+
+        revalidatePath("/news/" + id);
+        return { success: true, updatedArticle };
+    } catch (error) {
+        console.error("Error updating news article:", error);
+        return { success: false, error: "Failed to update news article" };
+    }
+}
+
 export async function deleteNewsArticle(newsArticleId: string) {
     try {
         const session = await getServerSession();

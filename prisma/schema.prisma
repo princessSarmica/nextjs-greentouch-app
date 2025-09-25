@@ -96,7 +96,7 @@ model NewsArticle {
   id        String   @id @default(cuid())
   authorId  String
   title     String
-  content   String?
+  content   String
   image     String[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
