@@ -2,8 +2,9 @@ import { getServerSession } from "@/lib/get-session";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { getAllNewsArticles } from "@/actions/news-article";
-import NewsCard from "@/components/NewsCard";
+
 import AddContentCard from "@/components/addContentCard";
+import NewsCard from "@/components/news/newsCard";
  
 export default async function News() {
     const session = await getServerSession();

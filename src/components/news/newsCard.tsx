@@ -1,8 +1,8 @@
-import { Card, CardContent, CardFooter } from "./ui/card";
+import { Card, CardContent, CardFooter } from "../ui/card";
 import Image from "next/image";
 import { NewsArticle } from "@prisma/client";
 import Link from "next/link";
-import { DeleteNewsAlertDialog } from "./deleteNewsAlertDialog";
+import { DeleteNewsAlertDialog } from "../deleteNewsAlertDialog";
 
 function NewsCard({ article, isAdmin = false }: { article: NewsArticle; isAdmin?: boolean }) {
   const imageSrc = article?.image?.[0] || "/news-article-default.png";
