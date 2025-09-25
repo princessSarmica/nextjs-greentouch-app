@@ -15,10 +15,6 @@ export default async function NewsArticlePage({params,}: {params: Promise<{ news
     const { newsArticleId } = await params;
     const article = await getNewsArticle(newsArticleId);
 
-    if (!article) {
-      redirect("/news");
-    }
-
     const clientArticle: NewsArticleClient = {
         id: article.id,
         title: article.title,
