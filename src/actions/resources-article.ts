@@ -34,3 +34,17 @@ export async function createResourcesArticle(title: string, content: string, lin
         return {success:false, error: "Failed to create resources article"};
     }
 }
+
+export async function getAllResourcesArticles() {
+    try {
+        const resourcesArticles = await prisma.resourcesArticle.findMany({
+            orderBy: { createdAt: 'desc' },
+            
+        })
+
+        return resourcesArticles;
+    } catch (error) {
+        console.log("Error fetching resources articles:", error);
+        throw new Error("Failed to fetch resources articles");
+    }
+}

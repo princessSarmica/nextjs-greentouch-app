@@ -1,4 +1,6 @@
+import { getAllResourcesArticles } from "@/actions/resources-article";
 import AddResourcesArticleDialog from "@/components/resources/addResourcesArticleDialog";
+import ResourcesCard from "@/components/resources/resourcesCard";
 import { getServerSession } from "@/lib/get-session";
 import Link from "next/link";
 import { redirect } from "next/navigation";
@@ -11,6 +13,8 @@ export default async function ResourcesArticles() {
     }
 
     const isAdmin = session?.user?.role === "admin";
+
+    const resources = await getAllResourcesArticles();
 
     return (
         <main className="flex flex-col items-center justify-start w-full min-h-screen bg-[#f5f5f5] text-gray-900">
@@ -28,10 +32,13 @@ export default async function ResourcesArticles() {
             </section>
 
             <div className="w-full max-w-5xl px-4 pb-20">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-stretch">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
                     {isAdmin ? (
                         <AddResourcesArticleDialog />
                     ) : null}
+                    {resources.map((article) => (
+                        <ResourcesCard key={article.id} article={article} isAdmin={isAdmin} />
+                    ))}
                 </div>
             </div>
 
