@@ -5,7 +5,7 @@ import Link from "next/link";
 import { DeleteNewsAlertDialog } from "../deleteNewsAlertDialog";
 
 function NewsCard({ article, isAdmin = false }: { article: NewsArticle; isAdmin?: boolean }) {
-  const imageSrc = article?.image?.[0] || "/news-article-default.png";
+  const imageSrc = article?.image?.[0] || "/article-default-picture.png";
 
   return (
     <Card className="p-0 flex flex-col h-full overflow-hidden rounded-lg shadow-md transition-shadow bg-white border-0">
