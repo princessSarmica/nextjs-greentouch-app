@@ -4,6 +4,7 @@ import { ResourcesArticle } from "@prisma/client";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { DeleteResourcesAlertDialog } from "../deleteResourcesAlertDialog";
+import EditResourcesArticleDialog from "./editResourcesArticleDialog";
 
 function ResourcesCard({ article, isAdmin = false }: { article: ResourcesArticle; isAdmin?: boolean }) {
   const imageSrc = article?.image?.[0] || "/article-default-picture.png";
@@ -33,9 +34,14 @@ function ResourcesCard({ article, isAdmin = false }: { article: ResourcesArticle
             </CardContent>
         </div>
         <CardFooter className="flex justify-end pb-4">
-            {isAdmin ? (
-                <DeleteResourcesAlertDialog resourcesArticleId={article.id} />
-            ) : null}
+            <div className="flex gap-6">
+                {isAdmin ? (
+                    <EditResourcesArticleDialog resourcesArticleId={article.id} initialTitle={article.title} initialContent={article.content} initialLink={article.link} />
+                ) : null}
+                {isAdmin ? (
+                    <DeleteResourcesAlertDialog resourcesArticleId={article.id} />
+                ) : null}
+            </div>
         </CardFooter>
     </Card>
   );

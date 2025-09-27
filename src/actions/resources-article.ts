@@ -49,6 +49,39 @@ export async function getAllResourcesArticles() {
     }
 }
 
+export async function updateResourcesArticle(id: string, title: string, content: string, link: string) {
+    try {
+        const session = await getServerSession();
+
+        if(!session) {
+            throw new Error("Unauthenticated");
+        }
+
+        if(session.user.role !== "admin") {
+            throw new Error("Unauthorized");
+        }
+
+        const resourcesArticle = await prisma.resourcesArticle.findUnique({
+            where: { id },
+        })
+
+        if (!resourcesArticle) {
+            throw new Error("Resources article not found");
+        }
+
+        const updatedArticle = await prisma.resourcesArticle.update({
+            where: { id },
+            data: { title, content, link },
+        })
+
+        revalidatePath("/resources/articles" + id);
+        return { success: true, updatedArticle };
+    } catch (error) {
+        console.error("Error updating resources article:", error);
+        return { success: false, error: "Failed to update resources article" };
+    }
+}
+
 export async function deleteResourcesArticle(resourcesArticleId: string) {
     try {
         const session = await getServerSession();
