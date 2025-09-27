@@ -22,7 +22,7 @@ function ResourcesCard({ article, isAdmin = false }: { article: ResourcesArticle
             </div>
 
             <CardContent className="px-4 pt-4">
-                <h2 className="text-lg font-semibold mb-2">
+                <h2 className="text-md font-semibold mb-2">
                 {article.title}
                 </h2>
                 <p className="text-sm text-gray-600 line-clamp-9 mb-4">
