@@ -48,3 +48,35 @@ export async function getAllResourcesArticles() {
         throw new Error("Failed to fetch resources articles");
     }
 }
+
+export async function deleteResourcesArticle(resourcesArticleId: string) {
+    try {
+        const session = await getServerSession();
+
+        if(!session) {
+            throw new Error("Unauthenticated");
+        }
+        
+        if(session.user.role !== "admin") {
+            throw new Error("Unauthorized");
+        }
+
+        const resourcesArticle = await prisma.resourcesArticle.findUnique({
+            where: { id: resourcesArticleId },
+        })
+
+        if (!resourcesArticle) {
+            throw new Error("Resources article not found");
+        }
+
+        await prisma.resourcesArticle.delete({
+            where: { id: resourcesArticleId }
+        })
+
+        revalidatePath("/resources/articles");
+        return { success: true };
+    } catch (error) {
+        console.error("Error deleting resources article:", error);
+        return { success: false, error: "Failed to delete resources article" };
+    }
+}
