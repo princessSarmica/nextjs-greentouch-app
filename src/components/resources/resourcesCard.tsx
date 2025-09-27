@@ -25,7 +25,7 @@ function ResourcesCard({ article, isAdmin = false }: { article: ResourcesArticle
                 <h2 className="text-lg font-semibold mb-2">
                 {article.title}
                 </h2>
-                <p className="text-sm text-gray-600 line-clamp-6 mb-4">
+                <p className="text-sm text-gray-600 line-clamp-9 mb-4">
                 {article.content}
                 </p>
                 <Button asChild variant="default" className="w-full">
@@ -36,7 +36,7 @@ function ResourcesCard({ article, isAdmin = false }: { article: ResourcesArticle
         <CardFooter className="flex justify-end pb-4">
             <div className="flex gap-6">
                 {isAdmin ? (
-                    <EditResourcesArticleDialog resourcesArticleId={article.id} initialTitle={article.title} initialContent={article.content} initialLink={article.link} />
+                    <EditResourcesArticleDialog resourcesArticleId={article.id} initialTopic={article.topic} initialTitle={article.title} initialContent={article.content} initialLink={article.link} />
                 ) : null}
                 {isAdmin ? (
                     <DeleteResourcesAlertDialog resourcesArticleId={article.id} />

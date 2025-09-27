@@ -21,12 +21,14 @@ import AddContentCard from "../addContentCard";
 import { LoadingButton } from "../loading-button";
 
 export default function AddResourcesArticleDialog(){ 
+    const [topic, setTopic] = useState(""); 
     const [title, setTitle] = useState(""); 
     const [content, setContent] = useState(""); 
     const [link, setLink] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = async () => { 
+        if (!topic.trim()) return 
         if (!title.trim()) return 
         if (!content.trim()) return 
         if (!link.trim()) return 
@@ -34,9 +36,10 @@ export default function AddResourcesArticleDialog(){
         setIsLoading(true); 
         
         try { 
-            const result = await createResourcesArticle(title, content, link); 
-            
+            const result = await createResourcesArticle(topic, title, content, link); 
+
             if(result.success){ 
+                setTopic(""); 
                 setTitle(""); 
                 setContent(""); 
                 setLink("");
@@ -63,6 +66,11 @@ export default function AddResourcesArticleDialog(){
                     </DialogHeader> 
                     <div className="grid gap-4"> 
                         <div className="grid gap-3"> 
+                            <Label htmlFor="topic">Topic</Label> 
+                            <Input id="topic" name="topic" value={topic} onChange={(e) => setTopic(e.target.value)} disabled={isLoading} /> 
+                        </div> 
+
+                        <div className="grid gap-3"> 
                             <Label htmlFor="title">Title</Label> 
                             <Input id="title" name="title" value={title} onChange={(e) => setTitle(e.target.value)} disabled={isLoading} /> 
                         </div> 
@@ -82,7 +90,7 @@ export default function AddResourcesArticleDialog(){
                         <DialogClose asChild> 
                             <Button variant="outline">Cancel</Button> 
                         </DialogClose> 
-                        <LoadingButton type="submit" onClick={handleSubmit} disabled={(!title.trim()) || (!content.trim()) || (!link.trim()) || isLoading} loading={isLoading}>Save changes</LoadingButton>
+                        <LoadingButton type="submit" onClick={handleSubmit} disabled={(!topic.trim()) || (!title.trim()) || (!content.trim()) || (!link.trim()) || isLoading} loading={isLoading}>Save changes</LoadingButton>
                     </DialogFooter> 
                 </DialogContent> 
             </form> 

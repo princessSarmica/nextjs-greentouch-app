@@ -110,6 +110,7 @@ model NewsArticle {
 model ResourcesArticle {
   id        String   @id @default(cuid())
   authorId  String
+  topic     String
   title     String
   content   String
   image     String?

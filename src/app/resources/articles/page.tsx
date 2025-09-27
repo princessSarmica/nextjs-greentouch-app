@@ -2,6 +2,7 @@ import { getAllResourcesArticles } from "@/actions/resources-article";
 import AddResourcesArticleDialog from "@/components/resources/addResourcesArticleDialog";
 import ResourcesCard from "@/components/resources/resourcesCard";
 import { getServerSession } from "@/lib/get-session";
+import { ResourcesArticle } from "@prisma/client";
 import Link from "next/link";
 import { redirect } from "next/navigation";
  
@@ -14,7 +15,25 @@ export default async function ResourcesArticles() {
 
     const isAdmin = session?.user?.role === "admin";
 
-    const resources = await getAllResourcesArticles();
+    const resources = (await getAllResourcesArticles()) as ResourcesArticle[];
+
+    const articlesWithTopic = resources.map((article) => ({
+        ...article,
+        topic: article.topic && article.topic.trim() ? article.topic : "Uncategorized",
+    }));
+
+    const resourcesByTopic = articlesWithTopic.reduce<Record<string, ResourcesArticle[]>>(
+        (groups, article) => {
+            const topic = article.topic as string;
+            if (!groups[topic]) {
+                groups[topic] = [];
+            }
+            groups[topic].push(article);
+            return groups;
+        }, 
+    {});
+
+    const topicOrder = Object.keys(resourcesByTopic).sort((a, b) => a.localeCompare(b));
 
     return (
         <main className="flex flex-col items-center justify-start w-full min-h-screen bg-[#f5f5f5] text-gray-900">
@@ -32,14 +51,29 @@ export default async function ResourcesArticles() {
             </section>
 
             <div className="w-full max-w-5xl px-4 pb-20">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
-                    {isAdmin ? (
-                        <AddResourcesArticleDialog />
-                    ) : null}
-                    {resources.map((article) => (
-                        <ResourcesCard key={article.id} article={article} isAdmin={isAdmin} />
-                    ))}
-                </div>
+
+                {/* Admin add new content section */}
+                    {isAdmin && (
+                        <section className="mb-12">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
+                                <AddResourcesArticleDialog />
+                            </div>
+                        </section>
+                )}
+
+                {/* Topics with articles */}
+                {topicOrder.map((topic) => (
+                    <section key={topic} className="mb-12">
+                        <h2 className="text-lg font-bold text-[#1F566E] mb-4">{topic}</h2>
+                        <hr className="border-t border-gray-300 mb-6" />
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
+                            {resourcesByTopic[topic].map((article) => (
+                                <ResourcesCard key={article.id} article={article} isAdmin={isAdmin} />
+                            ))}
+                        </div>
+                    </section>
+                ))}
             </div>
 
         </main>

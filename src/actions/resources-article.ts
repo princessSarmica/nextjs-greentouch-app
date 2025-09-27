@@ -4,7 +4,7 @@ import { getServerSession } from "@/lib/get-session";
 import { prisma } from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 
-export async function createResourcesArticle(title: string, content: string, link: string) {
+export async function createResourcesArticle(topic: string, title: string, content: string, link: string) {
     try {
         const session = await getServerSession();
 
@@ -20,6 +20,7 @@ export async function createResourcesArticle(title: string, content: string, lin
 
         const resourcesArticle = await prisma.resourcesArticle.create({
             data: {
+                topic,
                 title,
                 content,
                 link,
@@ -49,7 +50,7 @@ export async function getAllResourcesArticles() {
     }
 }
 
-export async function updateResourcesArticle(id: string, title: string, content: string, link: string) {
+export async function updateResourcesArticle(id: string, topic: string, title: string, content: string, link: string) {
     try {
         const session = await getServerSession();
 
@@ -71,7 +72,7 @@ export async function updateResourcesArticle(id: string, title: string, content:
 
         const updatedArticle = await prisma.resourcesArticle.update({
             where: { id },
-            data: { title, content, link },
+            data: { topic, title, content, link },
         })
 
         revalidatePath("/resources/articles" + id);
