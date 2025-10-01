@@ -19,8 +19,9 @@ import { toast } from "sonner";
 import { createResourcesArticle } from "@/actions/resources-article";
 import AddContentCard from "../addContentCard";
 import { LoadingButton } from "../loading-button";
+import ComboboxTopic from "../ui/combobox-topic";
 
-export default function AddResourcesArticleDialog(){ 
+export default function AddResourcesArticleDialog(existingTopics?: { topics: string[] }) { 
     const [topic, setTopic] = useState(""); 
     const [title, setTitle] = useState(""); 
     const [content, setContent] = useState(""); 
@@ -65,10 +66,16 @@ export default function AddResourcesArticleDialog(){
                         <DialogDescription> Fill in the details for the resources article you want to add. </DialogDescription> 
                     </DialogHeader> 
                     <div className="grid gap-4"> 
-                        <div className="grid gap-3"> 
-                            <Label htmlFor="topic">Topic</Label> 
-                            <Input id="topic" name="topic" value={topic} onChange={(e) => setTopic(e.target.value)} disabled={isLoading} /> 
-                        </div> 
+                        <div className="grid gap-3">
+                            <Label htmlFor="topic">Topic</Label>
+                            <ComboboxTopic
+                                value={topic}
+                                onChange={setTopic}
+                                topics={existingTopics?.topics}
+                                placeholder={"Select or add topic..."}
+                                widthClass="w-full"
+                            />
+                        </div>
 
                         <div className="grid gap-3"> 
                             <Label htmlFor="title">Title</Label> 

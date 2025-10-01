@@ -45,7 +45,7 @@ export async function getAllResourcesArticles() {
 
         return resourcesArticles;
     } catch (error) {
-        console.log("Error fetching resources articles:", error);
+        console.error("Error fetching resources articles:", error);
         throw new Error("Failed to fetch resources articles");
     }
 }
@@ -112,5 +112,22 @@ export async function deleteResourcesArticle(resourcesArticleId: string) {
     } catch (error) {
         console.error("Error deleting resources article:", error);
         return { success: false, error: "Failed to delete resources article" };
+    }
+}
+
+export async function getAllResourcesArticlesTopics() {
+    try {
+        // predpostavka: tabela se imenuje resourcesArticle ali podobno in ima polje 'topic'
+        const topics = await prisma.resourcesArticle.findMany({
+          distinct: ["topic"],
+          select: { topic: true },
+          orderBy: { topic: "asc" },
+        });
+    
+        const plain = topics.map((t) => t.topic).filter(Boolean);
+        return ({ success: true, topics: plain });
+    } catch (err) {
+        console.error("GET /api/topics error:", err);
+        return { success: false, topics: [] };
     }
 }

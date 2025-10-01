@@ -1,4 +1,4 @@
-import { getAllResourcesArticles } from "@/actions/resources-article";
+import { getAllResourcesArticles, getAllResourcesArticlesTopics } from "@/actions/resources-article";
 import AddResourcesArticleDialog from "@/components/resources/addResourcesArticleDialog";
 import ResourcesCard from "@/components/resources/resourcesCard";
 import { getServerSession } from "@/lib/get-session";
@@ -16,6 +16,8 @@ export default async function ResourcesArticles() {
     const isAdmin = session?.user?.role === "admin";
 
     const resources = (await getAllResourcesArticles()) as ResourcesArticle[];
+
+    const topics = await getAllResourcesArticlesTopics();
 
     const articlesWithTopic = resources.map((article) => ({
         ...article,
@@ -56,7 +58,7 @@ export default async function ResourcesArticles() {
                     {isAdmin && (
                         <section className="mb-12">
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
-                                <AddResourcesArticleDialog />
+                                <AddResourcesArticleDialog topics={topics.topics}/>
                             </div>
                         </section>
                 )}
@@ -69,7 +71,7 @@ export default async function ResourcesArticles() {
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
                             {resourcesByTopic[topic].map((article) => (
-                                <ResourcesCard key={article.id} article={article} isAdmin={isAdmin} />
+                                <ResourcesCard key={article.id} article={article} isAdmin={isAdmin} topics={topics.topics}/>
                             ))}
                         </div>
                     </section>

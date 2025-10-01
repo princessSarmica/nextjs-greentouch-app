@@ -21,6 +21,7 @@ import { updateResourcesArticle } from "@/actions/resources-article";
 import {
   Pencil as EditIcon,
 } from "lucide-react";
+import ComboboxTopic from "../ui/combobox-topic";
 
 interface EditResourcesArticleDialogProps {
     initialTopic: string;
@@ -28,9 +29,10 @@ interface EditResourcesArticleDialogProps {
     initialTitle: string;
     initialContent: string;
     initialLink: string;
+    existingTopics: string[];
 }
 
-export default function EditResourcesArticleDialog({ resourcesArticleId, initialTopic, initialTitle, initialContent, initialLink }: EditResourcesArticleDialogProps) {
+export default function EditResourcesArticleDialog({ resourcesArticleId, initialTopic, initialTitle, initialContent, initialLink, existingTopics }: EditResourcesArticleDialogProps) {
     const [topic, setTopic] = useState(initialTopic);
     const [title, setTitle] = useState(initialTitle);
     const [content, setContent] = useState(initialContent);
@@ -100,10 +102,16 @@ export default function EditResourcesArticleDialog({ resourcesArticleId, initial
                         <DialogDescription> Fill in the details for the resources article you want to edit. </DialogDescription> 
                     </DialogHeader> 
                     <div className="grid gap-4"> 
-                        <div className="grid gap-3"> 
-                            <Label htmlFor="topic">Topic</Label> 
-                            <Input id="topic" name="topic" value={topic} onChange={(e) => setTopic(e.target.value)} disabled={isLoading} /> 
-                        </div> 
+                        <div className="grid gap-3">
+                            <Label htmlFor="topic">Topic</Label>
+                            <ComboboxTopic
+                                value={topic}
+                                onChange={setTopic}
+                                topics={existingTopics}
+                                placeholder={"Select or add topic..."}
+                                widthClass="w-full"
+                            />
+                        </div>
 
                         <div className="grid gap-3"> 
                             <Label htmlFor="title">Title</Label> 

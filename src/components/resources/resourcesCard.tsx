@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 import { DeleteResourcesAlertDialog } from "../deleteResourcesAlertDialog";
 import EditResourcesArticleDialog from "./editResourcesArticleDialog";
 
-function ResourcesCard({ article, isAdmin = false }: { article: ResourcesArticle; isAdmin?: boolean }) {
+function ResourcesCard({ article, isAdmin = false, topics }: { article: ResourcesArticle; isAdmin?: boolean; topics: string[] }) {
   const imageSrc = article?.image?.[0] || "/article-default-picture.png";
 
   return (
@@ -36,7 +36,7 @@ function ResourcesCard({ article, isAdmin = false }: { article: ResourcesArticle
         <CardFooter className="flex justify-end pb-4">
             <div className="flex gap-6">
                 {isAdmin ? (
-                    <EditResourcesArticleDialog resourcesArticleId={article.id} initialTopic={article.topic} initialTitle={article.title} initialContent={article.content} initialLink={article.link} />
+                    <EditResourcesArticleDialog resourcesArticleId={article.id} initialTopic={article.topic} initialTitle={article.title} initialContent={article.content} initialLink={article.link} existingTopics={topics}/>
                 ) : null}
                 {isAdmin ? (
                     <DeleteResourcesAlertDialog resourcesArticleId={article.id} />
