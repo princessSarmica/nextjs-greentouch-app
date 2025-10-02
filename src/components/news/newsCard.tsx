@@ -3,6 +3,7 @@ import Image from "next/image";
 import { NewsArticle } from "@prisma/client";
 import Link from "next/link";
 import { DeleteNewsAlertDialog } from "../deleteNewsAlertDialog";
+import EditNewsArticleDialog from "./editNewsArticleDialog";
 
 function NewsCard({ article, isAdmin = false }: { article: NewsArticle; isAdmin?: boolean }) {
   const imageSrc = article?.image?.[0] || "/article-default-picture.png";
@@ -29,9 +30,14 @@ function NewsCard({ article, isAdmin = false }: { article: NewsArticle; isAdmin?
         </CardContent>
       </Link>
       <CardFooter className="flex justify-end pb-4">
-        {isAdmin ? (
-          <DeleteNewsAlertDialog newsArticleId={article.id} />
-        ) : null}
+        <div className="flex gap-4">
+            {isAdmin ? (
+              <EditNewsArticleDialog newsArticleId={article.id} initialTitle={article.title} initialContent={article.content} />
+            ) : null}
+            {isAdmin ? (
+              <DeleteNewsAlertDialog newsArticleId={article.id} />
+            ) : null}
+        </div>
       </CardFooter>
     </Card>
   );

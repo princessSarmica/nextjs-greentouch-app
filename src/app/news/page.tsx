@@ -1,10 +1,9 @@
 import { getServerSession } from "@/lib/get-session";
 import { redirect } from "next/navigation";
-import Link from "next/link";
 import { getAllNewsArticles } from "@/actions/news-article";
 
-import AddContentCard from "@/components/addContentCard";
 import NewsCard from "@/components/news/newsCard";
+import AddNewsArticleDialog from "@/components/news/addNewsArticleDialog";
  
 export default async function News() {
     const session = await getServerSession();
@@ -36,11 +35,10 @@ export default async function News() {
 
             <div className="w-full max-w-5xl px-4 pb-20">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-stretch">
-                    {isAdmin ? (
-                        <Link href="/news/add-news">
-                            <AddContentCard />
-                        </Link>
-                    ) : null}
+                    {/* Admin add new content section */}
+                    {isAdmin && (
+                        <AddNewsArticleDialog />
+                    )}
                     {news.map((article) => (
                         <NewsCard key={article.id} article={article} isAdmin={isAdmin} />
                     ))}
