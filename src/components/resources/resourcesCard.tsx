@@ -28,20 +28,18 @@ function ResourcesCard({ article, isAdmin = false, topics }: { article: Resource
                 <p className="text-sm text-gray-600 line-clamp-9 mb-4">
                 {article.content}
                 </p>
-                <Button asChild variant="default" className="w-full">
-                    <Link href={`${article.link}`}>Read Article</Link>
-                </Button>
             </CardContent>
         </div>
-        <CardFooter className="flex justify-end pb-4">
-            <div className="flex gap-6">
-                {isAdmin ? (
+        <CardFooter className="flex flex-col gap-4 p-4">
+            <Button asChild variant="default" className="w-full">
+                <Link href={`${article.link}`}>Read Article</Link>
+            </Button>
+            {isAdmin ? (
+                <div className="flex justify-end gap-3 w-full">
                     <EditResourcesArticleDialog resourcesArticleId={article.id} initialTopic={article.topic} initialTitle={article.title} initialContent={article.content} initialLink={article.link} existingTopics={topics}/>
-                ) : null}
-                {isAdmin ? (
                     <DeleteResourcesAlertDialog resourcesArticleId={article.id} />
-                ) : null}
-            </div>
+                </div>
+            ) : null}
         </CardFooter>
     </Card>
   );
