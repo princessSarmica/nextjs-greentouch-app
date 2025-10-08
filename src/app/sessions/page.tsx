@@ -108,18 +108,18 @@ export default async function Sessions() {
                 className="flex flex-row items-stretch bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden"
                 >
                 {/* Image section – raztegnjena do robov */}
-                <div className="relative w-48 min-w-[12rem] h-40">
+                <div className="relative w-32 sm:w-40 md:w-48 lg:w-56 h-36 sm:h-44 md:h-48 lg:h-52 flex-shrink-0">
                     <Image
                     src={session.image}
                     alt={session.title}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 25vw"
                     />
                 </div>
 
                 {/* Text section */}
-                <div className="flex flex-col justify-center px-6 py-4">
+                <div className="flex flex-col justify-center px-4 sm:px-6 py-4">
                     <h2 className="text-xl font-semibold">{session.title}</h2>
                     <p className="text-gray-600">{session.description}</p>
                 </div>
