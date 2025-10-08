@@ -117,7 +117,6 @@ export async function deleteResourcesArticle(resourcesArticleId: string) {
 
 export async function getAllResourcesArticlesTopics() {
     try {
-        // predpostavka: tabela se imenuje resourcesArticle ali podobno in ima polje 'topic'
         const topics = await prisma.resourcesArticle.findMany({
           distinct: ["topic"],
           select: { topic: true },
