@@ -108,7 +108,7 @@ export default async function Sessions() {
                 className="flex flex-row items-stretch bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden"
                 >
                 {/* Image section – raztegnjena do robov */}
-                <div className="relative w-32 sm:w-40 md:w-48 lg:w-56 h-36 sm:h-44 md:h-48 lg:h-52 flex-shrink-0">
+                <div className="relative w-32 sm:w-52 md:w-54 lg:w-56 h-46 flex-shrink-0">
                     <Image
                     src={session.image}
                     alt={session.title}
