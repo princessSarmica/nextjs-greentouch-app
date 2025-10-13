@@ -26,6 +26,16 @@ export default async function SessionSevenPage() {
                     <span>Session 7</span>
                 </div>
 
+                {/* Navigation link (previous only) */}
+                <div className="flex justify-start items-center mb-10 underline">
+                    <Link
+                        href="/sessions/session-6"
+                        className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
+                    >
+                        Go to Session 6
+                    </Link>
+                </div>
+
                 <p className="text-xl font-semibold mb-4 text-left text-green-800">SESSION 7</p>
                 <h1 className="text-3xl font-bold mb-8 text-left">Finding a Safe Space in Nature</h1>
                 <p className="text-lg mb-4 text-gray-700"></p>
@@ -136,6 +146,18 @@ export default async function SessionSevenPage() {
 
             <section className="w-full max-w-5xl mx-auto px-4 p-8 mb-10 mt-10">
                 <SessionsAccordion />
+            </section>
+
+            {/* Bottom navigation link */}
+            <section className="w-full max-w-5xl mx-auto px-4">
+                <div className="flex justify-start items-center mb-10 underline">
+                    <Link
+                    href="/sessions/session-1"
+                    className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
+                    >
+                    Go to Session 6
+                    </Link>
+                </div>
             </section>
 
         </main>

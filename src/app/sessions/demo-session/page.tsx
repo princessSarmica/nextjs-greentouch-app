@@ -17,6 +17,16 @@ export default async function DemoSessionPage() {
                     <span>Demo Session</span>
                 </div>
 
+                {/* Navigation link (next only) */}
+                <div className="flex justify-end items-center mb-10 underline">
+                    <Link
+                        href="/sessions/session-1"
+                        className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
+                    >
+                        Go to Session 1
+                    </Link>
+                </div>
+
                 <p className="text-xl font-semibold mb-4 text-left text-green-800">DEMO SESSION</p>
                 <h1 className="text-3xl font-bold mb-8 text-left">A Taste of GreenTouch</h1>
                 <p className="text-lg mb-4 text-gray-700"></p>
@@ -125,6 +135,18 @@ export default async function DemoSessionPage() {
                     Good luck and enjoy!
                     </p>
                 </div>
+            </section>
+
+            {/* Bottom navigation link */}
+            <section className="w-full max-w-5xl mx-auto px-4">
+            <div className="flex justify-end items-center mb-10 underline">
+                <Link
+                href="/sessions/session-1"
+                className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
+                >
+                Go to Session 1
+                </Link>
+            </div>
             </section>
 
         </main>

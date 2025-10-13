@@ -26,6 +26,23 @@ export default async function SessionTwoPage() {
                     <span>Session 2</span>
                 </div>
 
+                {/* Navigation links (prev/next) */}
+                <div className="flex justify-between items-center mb-10 underline">
+                    <Link
+                        href="/sessions/session-1"
+                        className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
+                    >
+                        Go to Session 1
+                    </Link>
+
+                    <Link
+                        href="/sessions/session-3"
+                        className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
+                    >
+                        Go to Session 3
+                    </Link>
+                </div>
+
                 <p className="text-xl font-semibold mb-4 text-left text-green-800">SESSION 2</p>
                 <h1 className="text-3xl font-bold mb-8 text-left">Exploring a Pleasant Natural Object</h1>
                 <p className="text-lg mb-4 text-gray-700"></p>
@@ -137,6 +154,25 @@ export default async function SessionTwoPage() {
 
             <section className="w-full max-w-5xl mx-auto px-4 p-8 mb-10 mt-10">
                 <SessionsAccordion />
+            </section>
+
+            {/* Bottom navigation links (prev/next) */}
+            <section className="w-full max-w-5xl mx-auto px-4">
+                <div className="flex justify-between items-center mb-10 underline">
+                    <Link
+                    href="/sessions/session-1"
+                    className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
+                    >
+                    Go to Session 1
+                    </Link>
+
+                    <Link
+                    href="/sessions/session-3"
+                    className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
+                    >
+                    Go to Session 3
+                    </Link>
+                </div>
             </section>
 
         </main>

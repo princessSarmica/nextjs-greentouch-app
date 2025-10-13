@@ -26,6 +26,23 @@ export default async function SessionFivePage() {
                     <span>Session 5</span>
                 </div>
 
+                {/* Navigation links (prev/next) */}
+                <div className="flex justify-between items-center mb-10 underline">
+                    <Link
+                        href="/sessions/session-4"
+                        className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
+                    >
+                        Go to Session 4
+                    </Link>
+
+                    <Link
+                        href="/sessions/session-6"
+                        className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
+                    >
+                        Go to Session 6
+                    </Link>
+                </div>
+
                 <p className="text-xl font-semibold mb-4 text-left text-green-800">SESSION 5</p>
                 <h1 className="text-3xl font-bold mb-8 text-left">Breathing with a Natural Object</h1>
                 <p className="text-lg mb-4 text-gray-700"></p>
@@ -137,6 +154,25 @@ export default async function SessionFivePage() {
 
             <section className="w-full max-w-5xl mx-auto px-4 p-8 mb-10 mt-10">
                 <SessionsAccordion />
+            </section>
+
+            {/* Bottom navigation links (prev/next) */}
+            <section className="w-full max-w-5xl mx-auto px-4">
+                <div className="flex justify-between items-center mb-10 underline">
+                    <Link
+                    href="/sessions/session-4"
+                    className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
+                    >
+                    Go to Session 4
+                    </Link>
+
+                    <Link
+                    href="/sessions/session-6"
+                    className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
+                    >
+                    Go to Session 6
+                    </Link>
+                </div>
             </section>
 
         </main>
