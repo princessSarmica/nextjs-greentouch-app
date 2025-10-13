@@ -11,7 +11,6 @@ export function SessionsAccordion() {
       type="single"
       collapsible
       className="w-full"
-      defaultValue="item-1"
     >
       <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg">Why keep a diary?</AccordionTrigger>
