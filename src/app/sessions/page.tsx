@@ -59,7 +59,7 @@ export default async function Sessions() {
     
     if (!session) { 
         return (
-            //dispaly only demo session if not logged in
+            //display only demo session if not logged in
             <main className="flex flex-col items-center justify-start w-full min-h-screen bg-[#f5f5f5] text-gray-900">
             {/* Hero section */}
             <section className="w-full max-w-5xl px-4 pt-20 pb-20">
@@ -96,37 +96,37 @@ export default async function Sessions() {
 
     return (
         <main className="flex flex-col items-center justify-start w-full min-h-screen bg-[#f5f5f5] text-gray-900">
-        {/* Hero section */}
-        <section className="w-full max-w-5xl px-4 pt-20 pb-20">
-            <h1 className="text-3xl font-bold mb-8 text-left">Sessions</h1>
+            {/* Hero section */}
+            <section className="w-full max-w-5xl px-4 pt-20 pb-20">
+                <h1 className="text-3xl font-bold mb-8 text-left">Sessions</h1>
 
-            <div className="flex flex-col gap-6">
-            {sessions.map((session) => (
-                <Link
-                key={session.id}
-                href={`/sessions/${session.id}`}
-                className="flex flex-row items-stretch bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden"
-                >
-                {/* Image section – raztegnjena do robov */}
-                <div className="relative w-32 sm:w-52 md:w-54 lg:w-56 h-46 flex-shrink-0">
-                    <Image
-                    src={session.image}
-                    alt={session.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 25vw"
-                    />
-                </div>
+                <div className="flex flex-col gap-6">
+                {sessions.map((session) => (
+                    <Link
+                    key={session.id}
+                    href={`/sessions/${session.id}`}
+                    className="flex flex-row items-stretch bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden"
+                    >
+                    {/* Image section – raztegnjena do robov */}
+                    <div className="relative w-32 sm:w-52 md:w-54 lg:w-56 h-46 flex-shrink-0">
+                        <Image
+                        src={session.image}
+                        alt={session.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 25vw"
+                        />
+                    </div>
 
-                {/* Text section */}
-                <div className="flex flex-col justify-center px-4 sm:px-6 py-4">
-                    <h2 className="text-xl font-semibold">{session.title}</h2>
-                    <p className="text-gray-600">{session.description}</p>
+                    {/* Text section */}
+                    <div className="flex flex-col justify-center px-4 sm:px-6 py-4">
+                        <h2 className="text-xl font-semibold">{session.title}</h2>
+                        <p className="text-gray-600">{session.description}</p>
+                    </div>
+                    </Link>
+                ))}
                 </div>
-                </Link>
-            ))}
-            </div>
-        </section>
+            </section>
         </main>
     );
 }
