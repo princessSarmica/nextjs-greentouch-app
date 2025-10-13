@@ -1,7 +1,8 @@
 import { getServerSession } from "@/lib/get-session";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { TreeDeciduous } from "lucide-react";
+import { TreeDeciduous, HouseIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default async function SessionOnePage() {
     
@@ -87,6 +88,37 @@ export default async function SessionOnePage() {
                     <p className="text-base mb-4 text-gray-700 mt-4">
                         Good luck and enjoy!
                     </p>
+                </div>
+            </section>
+
+            {/* Indoor Task Card */}
+            <section className="w-full max-w-5xl mx-auto px-4">
+                <div className="bg-white rounded-lg shadow p-8 mb-10">
+                    <div className="flex items-center gap-2 mb-6">
+                        <HouseIcon className="w-6 h-6" />
+                        <h3 className="text-xl font-semibold">Indoor task</h3>
+                        <span className="ml-3 text-xs font-semibold bg-amber-200 text-amber-600 px-2 py-0.5 rounded-full border border-amber-600 text-center">
+                            Alternative
+                        </span>
+                    </div>
+
+                    <p className="text-base mb-4 text-gray-700">
+                        Here is an alternative task using the nature video gallery if going outdoors is challenging. Complete the task and write about it in your diary.
+                    </p>
+
+                    <ul className="list-disc mb-4 pl-6 space-y-2 text-gray-700">
+                        <li>
+                            Watch a video from any section (Water, Earth, Fire, Air, or Animals) and focus on your senses—what do you see, hear, and feel while watching? Let the imagery and sounds guide your thoughts, memories, and emotions, noticing how your body responds to the experience.
+                        </li>
+                    </ul>
+
+                    <div className="flex justify-end">
+                        <Button asChild variant={"secondary"}>
+                            <Link href="/nature-video-gallery">
+                                Nature Video Gallery &rarr;
+                            </Link>
+                        </Button>
+                    </div>
                 </div>
             </section>
         </main>

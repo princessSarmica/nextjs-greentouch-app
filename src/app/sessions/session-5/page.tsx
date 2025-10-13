@@ -1,7 +1,8 @@
 import { getServerSession } from "@/lib/get-session";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { TreeDeciduous } from "lucide-react";
+import { HouseIcon, TreeDeciduous } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default async function SessionFivePage() {
     
@@ -99,6 +100,37 @@ export default async function SessionFivePage() {
                     <p className="text-base mb-4 text-gray-700 mt-4">
                         Good luck and enjoy!
                     </p>
+                </div>
+            </section>
+
+            {/* Indoor Task Card */}
+            <section className="w-full max-w-5xl mx-auto px-4">
+                <div className="bg-white rounded-lg shadow p-8 mb-10">
+                    <div className="flex items-center gap-2 mb-6">
+                        <HouseIcon className="w-6 h-6" />
+                        <h3 className="text-xl font-semibold">Indoor task</h3>
+                        <span className="ml-3 text-xs font-semibold bg-amber-200 text-amber-600 px-2 py-0.5 rounded-full border border-amber-600 text-center">
+                            Alternative
+                        </span>
+                    </div>
+
+                    <p className="text-base mb-4 text-gray-700">
+                        Here is an alternative task using the nature video gallery if going outdoors is challenging. Complete the task and write about it in your diary.
+                    </p>
+
+                    <ul className="list-disc mb-4 pl-6 space-y-2 text-gray-700">
+                        <li>
+                            Choose a video from the <Link href="/nature-video-gallery/earth" className="font-semibold"><u>Earth section</u></Link> or <Link href="/nature-video-gallery/water" className="font-semibold"><u>Water section</u></Link> and focus on a natural object within the scene, such as a rock, tree, or flowing stream. As you watch, practice 4-7 breathing—inhale for four seconds, exhale for seven—imagining that you and the object are breathing together, exchanging energy with each breath. After the video, reflect on how this experience made you feel and consider what might prevent you from connecting with nature in real life, as well as ways to overcome those barriers.
+                        </li>
+                    </ul>
+
+                    <div className="flex justify-end">
+                        <Button asChild variant={"secondary"}>
+                            <Link href="/nature-video-gallery">
+                                Nature Video Gallery &rarr;
+                            </Link>
+                        </Button>
+                    </div>
                 </div>
             </section>
         </main>
