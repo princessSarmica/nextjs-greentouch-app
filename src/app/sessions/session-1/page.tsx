@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { TreeDeciduous, HouseIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SessionsAccordion } from "@/components/sessions-accordion";
 
 export default async function SessionOnePage() {
     
@@ -121,6 +122,11 @@ export default async function SessionOnePage() {
                     </div>
                 </div>
             </section>
+            
+            <section className="w-full max-w-5xl mx-auto px-4 p-8 mb-10 mt-10">
+                <SessionsAccordion />
+            </section>
+            
         </main>
     )
 }
