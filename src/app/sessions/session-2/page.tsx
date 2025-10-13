@@ -61,7 +61,7 @@ export default async function SessionTwoPage() {
                     <div className="flex items-center gap-2 mb-6">
                         <TreeDeciduous className="w-6 h-6" />
                         <h3 className="text-xl font-semibold">Outdoor task</h3>
-                        <span className="ml-3 text-xs font-semibold bg-blue-100 text-green-700 px-2 py-0.5 rounded-full border border-green-700 text-center">
+                        <span className="ml-3 text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-center">
                             Required to complete
                         </span>
                     </div>
@@ -110,7 +110,7 @@ export default async function SessionTwoPage() {
                     <div className="flex items-center gap-2 mb-6">
                         <HouseIcon className="w-6 h-6" />
                         <h3 className="text-xl font-semibold">Indoor task</h3>
-                        <span className="ml-3 text-xs font-semibold bg-amber-200 text-amber-600 px-2 py-0.5 rounded-full border border-amber-600 text-center">
+                        <span className="ml-3 text-xs font-semibold bg-amber-200 text-amber-600 px-2 py-0.5 rounded-full text-center">
                             Alternative
                         </span>
                     </div>
@@ -138,7 +138,7 @@ export default async function SessionTwoPage() {
             <section className="w-full max-w-5xl mx-auto px-4 p-8 mb-10 mt-10">
                 <SessionsAccordion />
             </section>
-            
+
         </main>
     )
 }

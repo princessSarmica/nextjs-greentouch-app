@@ -49,7 +49,7 @@ export default async function DemoSessionPage() {
                     <div className="flex items-center gap-2 mb-6">
                         <TreeDeciduous className="w-6 h-6" />
                         <h3 className="text-xl font-semibold">Outdoor task</h3>
-                        <span className="ml-3 text-xs font-semibold bg-blue-100 text-green-700 px-2 py-0.5 rounded-full border border-green-700 text-center">
+                        <span className="ml-3 text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-center">
                             Required to complete
                         </span>
                     </div>
