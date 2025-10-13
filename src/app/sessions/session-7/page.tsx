@@ -54,50 +54,52 @@ export default async function SessionSevenPage() {
             </section>
 
             {/* Outdoor Task Card */}
-            <div className="w-full max-w-5xl bg-white rounded-lg shadow p-8 mb-10 mt-10">
-                <div className="flex items-center gap-2 mb-6">
-                    <TreeDeciduous className="w-6 h-6" />
-                    <h3 className="text-xl font-semibold">Outdoor task</h3>
-                    <span className="ml-3 text-xs font-semibold bg-blue-100 text-green-700 px-2 py-0.5 rounded-full border border-green-700">
-                        Required to complete
-                    </span>
+            <section className="w-full max-w-5xl mx-auto px-4">
+                <div className="bg-white rounded-lg shadow p-8 mb-10 mt-10">
+                    <div className="flex items-center gap-2 mb-6">
+                        <TreeDeciduous className="w-6 h-6" />
+                        <h3 className="text-xl font-semibold">Outdoor task</h3>
+                        <span className="ml-3 text-xs font-semibold bg-blue-100 text-green-700 px-2 py-0.5 rounded-full border border-green-700 text-center">
+                            Required to complete
+                        </span>
+                    </div>
+
+                    {/* Video placeholder */}
+                    <div className="w-full mb-8 aspect-video bg-gray-200 rounded-lg overflow-hidden">
+                        <iframe
+                            className="w-full h-full"
+                            src="https://www.youtube.com/embed/1mcaucCXCJU"
+                            title="Outdoor Task Video"
+                            allowFullScreen
+                        />
+                    </div>
+
+                    <h4 className="text-xl font-semibold mb-3">Task</h4>
+                    <p className="text-base mb-4 text-gray-700">
+                        Here is a brief summary of your task (listen carefully to the video
+                        indications):
+                    </p>
+
+                    <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                        <li>
+                            <span className="font-semibold text-green-800">Step 1:</span><br/> 
+                            Mindful walk. Slowly observe your surroundings, noticing sights, smells, and sounds.
+                        </li>
+                        <li>
+                            <span className="font-semibold text-green-800">Step 2:</span><br/> 
+                            Find a natural space that feels safe and inviting. Spend time there, noticing how different areas make you feel—open, enclosed, peaceful. Allow yourself to fully experience the space.
+                        </li>
+                        <li>
+                            <span className="font-semibold text-green-800">Step 3:</span><br/>
+                            Reflective walk. Consider what this experience reveals about your relationship with nature.
+                        </li>
+                    </ul>
+
+                    <p className="text-base mb-4 text-gray-700 mt-4">
+                        Good luck and enjoy!
+                    </p>
                 </div>
-
-                {/* Video placeholder */}
-                <div className="w-full mb-8 aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                    <iframe
-                        className="w-full h-full"
-                        src="https://www.youtube.com/embed/1mcaucCXCJU"
-                        title="Outdoor Task Video"
-                        allowFullScreen
-                    />
-                </div>
-
-                <h4 className="text-xl font-semibold mb-3">Task</h4>
-                <p className="text-base mb-4 text-gray-700">
-                    Here is a brief summary of your task (listen carefully to the video
-                    indications):
-                </p>
-
-                <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                    <li>
-                        <span className="font-semibold text-green-800">Step 1:</span><br/> 
-                        Mindful walk. Slowly observe your surroundings, noticing sights, smells, and sounds.
-                    </li>
-                    <li>
-                        <span className="font-semibold text-green-800">Step 2:</span><br/> 
-                        Find a natural space that feels safe and inviting. Spend time there, noticing how different areas make you feel—open, enclosed, peaceful. Allow yourself to fully experience the space.
-                    </li>
-                    <li>
-                        <span className="font-semibold text-green-800">Step 3:</span><br/>
-                        Reflective walk. Consider what this experience reveals about your relationship with nature.
-                    </li>
-                </ul>
-
-                <p className="text-base mb-4 text-gray-700 mt-4">
-                    Good luck and enjoy!
-                </p>
-            </div>
+            </section>
 
         </main>
     )
