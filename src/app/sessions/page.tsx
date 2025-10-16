@@ -1,10 +1,13 @@
+import { getAllGreentouchSessions } from "@/actions/greentouch-session";
+import { ReleaseDateDialog } from "@/components/greentouch_sessions/releaseDateDialog";
 import { getServerSession } from "@/lib/get-session";
+import { LockIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default async function Sessions() {
     
-    const sessions = [
+    const greentouchSessions = [
         {
             id: "demo-session",
             title: "Demo Session",
@@ -56,7 +59,21 @@ export default async function Sessions() {
     ];
 
     const session = await getServerSession();
-    
+    const dbGreentouchSessions = await getAllGreentouchSessions();
+
+    const isUnlocked = (title: string) => {
+
+        if (title === "Demo Session"){
+            return true;
+        }
+
+        const dbGreentouchSession = dbGreentouchSessions.find((s) => s.name === title);
+        if (!dbGreentouchSession || !dbGreentouchSession.releaseDate) {
+            return false;
+        }
+        return new Date(dbGreentouchSession.releaseDate) <= new Date();
+    };
+
     if (!session) { 
         return (
             //display only demo session if not logged in
@@ -65,17 +82,17 @@ export default async function Sessions() {
             <section className="w-full max-w-5xl px-4 pt-20 pb-20">
                 <h1 className="text-3xl font-bold mb-8 text-left">Sessions</h1>
                 <div className="flex flex-col gap-6">
-                {sessions.filter(s => s.id === "demo-session").map((session) => (
+                {greentouchSessions.filter(s => s.id === "demo-session").map((greentouchSession) => (
                     <Link
-                    key={session.id}
-                    href={`/sessions/${session.id}`}
+                    key={greentouchSession.id}
+                    href={`/sessions/${greentouchSession.id}`}
                     className="flex flex-row items-stretch bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden"
                     >
                     {/* Image section – raztegnjena do robov */}
                     <div className="relative w-48 min-w-[12rem] h-40">
                         <Image
-                        src={session.image}
-                        alt={session.title}
+                        src={greentouchSession.image}
+                        alt={greentouchSession.title}
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 33vw"
@@ -83,8 +100,8 @@ export default async function Sessions() {
                     </div>
                     {/* Text section */}
                     <div className="flex flex-col justify-center px-6 py-4">
-                        <h2 className="text-xl font-semibold">{session.title}</h2>
-                        <p className="text-gray-600">{session.description}</p>
+                        <h2 className="text-xl font-semibold">{greentouchSession.title}</h2>
+                        <p className="text-gray-600">{greentouchSession.description}</p>
                     </div>
                     </Link>
                 ))}
@@ -101,30 +118,99 @@ export default async function Sessions() {
                 <h1 className="text-3xl font-bold mb-8 text-left">Sessions</h1>
 
                 <div className="flex flex-col gap-6">
-                {sessions.map((session) => (
-                    <Link
-                    key={session.id}
-                    href={`/sessions/${session.id}`}
-                    className="flex flex-row items-stretch bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden"
-                    >
-                    {/* Image section – raztegnjena do robov */}
-                    <div className="relative w-32 sm:w-52 md:w-54 lg:w-56 h-46 flex-shrink-0">
-                        <Image
-                        src={session.image}
-                        alt={session.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 25vw"
-                        />
-                    </div>
+                {greentouchSessions.map((greentouchSession) => {
+                    const unlocked = isUnlocked(greentouchSession.title);
 
-                    {/* Text section */}
-                    <div className="flex flex-col justify-center px-4 sm:px-6 py-4">
-                        <h2 className="text-xl font-semibold">{session.title}</h2>
-                        <p className="text-gray-600">{session.description}</p>
-                    </div>
-                    </Link>
-                ))}
+                    return (
+                        <div
+                            key={greentouchSession.id}
+                            className={`relative flex flex-row items-stretch rounded-xl shadow transition overflow-hidden ${
+                            unlocked
+                                ? "bg-white hover:shadow-md"
+                                : "bg-gray-200 opacity-70 cursor-not-allowed"
+                            }`}
+                        >
+                            {unlocked ? (
+                            <Link
+                                href={`/sessions/${greentouchSession.id}`}
+                                className="flex flex-row flex-1"
+                            >
+                                {/* Image */}
+                                <div className="relative w-32 sm:w-52 md:w-54 lg:w-56 h-46 flex-shrink-0">
+                                <Image
+                                    src={greentouchSession.image}
+                                    alt={greentouchSession.title}
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 25vw"
+                                />
+                                </div>
+
+                                {/* Text */}
+                                <div className="flex flex-col justify-center px-4 sm:px-6 py-4">
+                                <h2 className="text-xl font-semibold">
+                                    {greentouchSession.title}
+                                </h2>
+                                <p className="text-gray-600">
+                                    {greentouchSession.description}
+                                </p>
+                                </div>
+                            </Link>
+                            ) : session.user.role === "admin" ? (
+                            <Link
+                                href={`/sessions/${greentouchSession.id}`}
+                                className="flex flex-row flex-1"
+                            >
+                                <div className="relative w-32 sm:w-52 md:w-54 lg:w-56 h-46 flex-shrink-0">
+                                    <Image
+                                        src={greentouchSession.image}
+                                        alt={greentouchSession.title}
+                                        fill
+                                        className="object-cover grayscale"
+                                        sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 25vw"
+                                    />
+                                </div>
+                                <div className="flex flex-col justify-center px-4 sm:px-6 py-4">
+                                    <h2 className="text-xl font-semibold flex items-center gap-2">
+                                        {greentouchSession.title}
+                                        <LockIcon className="w-4 h-4 text-gray-600" />
+                                    </h2>
+                                    <p className="text-gray-600 italic">Coming soon...</p>
+                                </div>
+                            </Link>
+                            ) : (
+                            <div className="flex flex-row flex-1">
+                                <div className="relative w-32 sm:w-52 md:w-54 lg:w-56 h-46 flex-shrink-0">
+                                <Image
+                                    src={greentouchSession.image}
+                                    alt={greentouchSession.title}
+                                    fill
+                                    className="object-cover grayscale"
+                                    sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 25vw"
+                                />
+                                </div>
+                                <div className="flex flex-col justify-center px-4 sm:px-6 py-4">
+                                <h2 className="text-xl font-semibold flex items-center gap-2">
+                                    {greentouchSession.title}
+                                    <LockIcon className="w-4 h-4 text-gray-600" />
+                                </h2>
+                                <p className="text-gray-600 italic">Coming soon...</p>
+                                </div>
+                            </div>
+                            )}
+
+                            {/* Admin release date button */}
+                            {session.user.role === "admin" &&
+                            greentouchSession.id !== "demo-session" && (
+                                <div className="absolute bottom-3 right-3">
+                                <ReleaseDateDialog
+                                    sessionName={greentouchSession.title}
+                                />
+                                </div>
+                            )}
+                        </div>
+                    );
+                })}
                 </div>
             </section>
         </main>

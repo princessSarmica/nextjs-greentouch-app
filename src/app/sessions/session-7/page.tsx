@@ -4,6 +4,8 @@ import Link from "next/link";
 import { HouseIcon, TreeDeciduous } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SessionsAccordion } from "@/components/sessions-accordion";
+import { getGreentouchSessionByName } from "@/actions/greentouch-session";
+import NotAvailable from "@/components/greentouch_sessions/notAvailable";
 
 export default async function SessionSevenPage() {
     
@@ -11,6 +13,17 @@ export default async function SessionSevenPage() {
 
     if (!session) { 
         redirect("/sign-in"); 
+    }
+
+    const dbSession = await getGreentouchSessionByName("Session 7");
+        
+    const now = new Date();
+    const releaseDate = dbSession?.releaseDate ? new Date(dbSession.releaseDate) : null;
+
+    if ((!releaseDate || releaseDate > now) && session.user.role !== "admin") {
+        return (
+            <NotAvailable />
+        )
     }
 
     return(

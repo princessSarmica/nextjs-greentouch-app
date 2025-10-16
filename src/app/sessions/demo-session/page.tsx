@@ -139,14 +139,14 @@ export default async function DemoSessionPage() {
 
             {/* Bottom navigation link */}
             <section className="w-full max-w-5xl mx-auto px-4">
-            <div className="flex justify-end items-center mb-10 underline">
-                <Link
-                href="/sessions/session-1"
-                className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
-                >
-                Go to Session 1
-                </Link>
-            </div>
+                <div className="flex justify-end items-center mb-10 underline">
+                    <Link
+                    href="/sessions/session-1"
+                    className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
+                    >
+                    Go to Session 1
+                    </Link>
+                </div>
             </section>
 
         </main>
