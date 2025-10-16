@@ -125,7 +125,7 @@ export default async function Sessions() {
                         <div
                             key={greentouchSession.id}
                             className={`relative flex flex-row items-stretch rounded-xl shadow transition overflow-hidden ${
-                            unlocked
+                            unlocked || session.user.role === "admin"
                                 ? "bg-white hover:shadow-md"
                                 : "bg-gray-200 opacity-70 cursor-not-allowed"
                             }`}
