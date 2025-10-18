@@ -7,6 +7,8 @@ import { SessionsAccordion } from "@/components/sessions-accordion";
 import NotAvailable from "@/components/greentouch_sessions/notAvailable";
 import { getGreentouchSessionByName } from "@/actions/greentouch-session";
 import NatureConnectednessCard from "@/components/greentouch_sessions/natureConnectednessCard";
+import DiaryCard from "@/components/greentouch_sessions/diaryCard";
+import { getDiaryEntry } from "@/actions/greentouch-session-user-data";
 
 export default async function SessionThreePage() {
     
@@ -18,6 +20,8 @@ export default async function SessionThreePage() {
 
     const dbSession = await getGreentouchSessionByName("Session 3");
         
+    const diaryEntry = dbSession ? await getDiaryEntry(dbSession.id) : null;
+    
     const now = new Date();
     const releaseDate = dbSession?.releaseDate ? new Date(dbSession.releaseDate) : null;
 
@@ -168,6 +172,9 @@ export default async function SessionThreePage() {
                     </div>
                 </div>
             </section>
+
+            {/* Diary Card */}
+            <DiaryCard greentouchSessionId={dbSession?.id} greentouchSessionName={dbSession?.name} initialDiaryText={diaryEntry ?? undefined} />
 
             <section className="w-full max-w-5xl mx-auto px-4 p-8 mb-10 mt-10">
                 <SessionsAccordion />
