@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { SessionsAccordion } from "@/components/sessions-accordion";
 import { getGreentouchSessionByName } from "@/actions/greentouch-session";
 import NotAvailable from "@/components/greentouch_sessions/notAvailable";
+import NatureConnectednessCard from "@/components/greentouch_sessions/natureConnectednessCard";
 
 export default async function SessionOnePage() {
     
@@ -80,7 +81,13 @@ export default async function SessionOnePage() {
                 <p className="text-base mb-4 text-gray-700"> 
                     Step into your journey of connecting with nature. This session focuses on exploring your personal connection with nature through sensory awareness, thoughts, and feelings.
                 </p>
+                <p className="text-base mb-4 text-gray-700"> 
+                    Before moving forward, place the human figure where you feel you currently are on your path toward connecting with nature.
+                </p>
             </section>
+
+            {/* Nature Connectedness Card */}
+            <NatureConnectednessCard greentouchSessionId={dbSession?.id} />
 
             {/* Outdoor Task Card */}
             <section className="w-full max-w-5xl mx-auto px-4">

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { SessionsAccordion } from "@/components/sessions-accordion";
 import NotAvailable from "@/components/greentouch_sessions/notAvailable";
 import { getGreentouchSessionByName } from "@/actions/greentouch-session";
+import NatureConnectednessCard from "@/components/greentouch_sessions/natureConnectednessCard";
 
 export default async function SessionFivePage() {
     
@@ -84,6 +85,9 @@ export default async function SessionFivePage() {
                     Before moving forward, place the human figure where you feel you currently are on your path toward connecting with nature.
                 </p>
             </section>
+
+            {/* Nature Connectedness Card */}
+            <NatureConnectednessCard greentouchSessionId={dbSession?.id} />
 
             {/* Outdoor Task Card */}
             <section className="w-full max-w-5xl mx-auto px-4">

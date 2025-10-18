@@ -139,6 +139,7 @@ model GreentouchSession {
 model GreentouchSessionUserData {
   greentouchSessionId String
   userId              String
+  natureConnectedness Int
 
   // Relations
   greentouchSession GreentouchSession @relation(fields: [greentouchSessionId], references: [id], onDelete: Cascade)
