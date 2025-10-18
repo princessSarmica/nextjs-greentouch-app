@@ -2,7 +2,6 @@
 
 import { getServerSession } from "@/lib/get-session";
 import { prisma } from "@/lib/prisma";
-import { revalidatePath } from "next/cache";
 
 export async function saveUserNatureConnectedness(greentouchSessionId: string, value: number) {
     try {   
@@ -30,7 +29,6 @@ export async function saveUserNatureConnectedness(greentouchSessionId: string, v
             });
         }
 
-        revalidatePath(`/nature-connectedness/${greentouchSessionId}`);
         return {success:true}
     } catch (error) {
         console.error("Error saving user nature connectedness:", error);
