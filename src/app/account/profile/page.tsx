@@ -25,6 +25,7 @@ export default async function Profile() {
                                 key={card.id}
                                 greentouchSessionName={card.greentouchSessionName}
                                 natureConnectednessValue={card.natureConnectednessValue}
+                                natureConnectednessCreatedAt={card.natureConnectednessCreatedAt}
                             />
                         ))}
                     </div>

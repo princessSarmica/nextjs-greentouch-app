@@ -1,6 +1,6 @@
 import { Card, CardContent } from "../../ui/card";
 
-function NatureConnectednessInfoCard({ natureConnectednessValue, greentouchSessionName }: { natureConnectednessValue: number; greentouchSessionName: string }) {
+function NatureConnectednessInfoCard({ natureConnectednessValue, greentouchSessionName, natureConnectednessCreatedAt }: { natureConnectednessValue: number; greentouchSessionName: string; natureConnectednessCreatedAt: Date }) {
 
   return (
     <Card className="flex flex-col items-center justify-center text-center rounded-2xl shadow-sm border border-gray-200 bg-white py-6">
@@ -11,6 +11,9 @@ function NatureConnectednessInfoCard({ natureConnectednessValue, greentouchSessi
         <p className="text-sm text-gray-500 mt-1">Your answer</p>
         <p className="text-4xl font-bold text-green-700 mt-3">
           {natureConnectednessValue}
+        </p>
+        <p className="text-sm text-gray-500 mt-6">
+          {natureConnectednessCreatedAt.toLocaleDateString()}
         </p>
       </CardContent>
     </Card>

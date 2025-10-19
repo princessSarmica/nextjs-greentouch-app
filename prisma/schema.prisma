@@ -137,10 +137,11 @@ model GreentouchSession {
 }
 
 model GreentouchSessionUserData {
-  greentouchSessionId String
-  userId              String
-  natureConnectedness Int?
-  diaryEntry          String[] @default([])
+  greentouchSessionId          String
+  userId                       String
+  natureConnectedness          Int?
+  natureConnectednessCreatedAt DateTime @default(now())
+  diaryEntry                   String[] @default([])
 
   // Relations
   greentouchSession GreentouchSession @relation(fields: [greentouchSessionId], references: [id], onDelete: Cascade)

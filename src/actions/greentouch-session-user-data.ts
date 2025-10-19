@@ -18,14 +18,14 @@ export async function saveUserNatureConnectedness(greentouchSessionId: string, v
         if (existingData) {
             await prisma.greentouchSessionUserData.update({
                 where: { greentouchSessionId_userId: { greentouchSessionId, userId } },
-                data: { natureConnectedness: value },
+                data: { natureConnectedness: value, natureConnectednessCreatedAt: new Date() },
             });
         } else {
             await prisma.greentouchSessionUserData.create({
                 data: {
                 userId,
-                greentouchSessionId,
-                natureConnectedness: value
+                    greentouchSessionId,
+                    natureConnectedness: value,
                 }
             });
         }
@@ -41,6 +41,7 @@ type NatureConnectednessInfo = {
   id: number;
   greentouchSessionName: string;
   natureConnectednessValue: number;
+  natureConnectednessCreatedAt: Date;
 };
 
 export async function getAllNatureConnectednessInfo(): Promise<NatureConnectednessInfo[]> {
@@ -48,11 +49,11 @@ export async function getAllNatureConnectednessInfo(): Promise<NatureConnectedne
     if (!session) throw new Error("User not authenticated");
 
     const userId = session.user.id;
-
     const userData = await prisma.greentouchSessionUserData.findMany({
         where: { userId, natureConnectedness: { not: null } },
         select: {
         natureConnectedness: true,
+        natureConnectednessCreatedAt: true,
         greentouchSession: { select: { name: true } },
         },
     });
@@ -61,6 +62,7 @@ export async function getAllNatureConnectednessInfo(): Promise<NatureConnectedne
         id: index,
         greentouchSessionName: data.greentouchSession.name,
         natureConnectednessValue: data.natureConnectedness ?? 0,
+        natureConnectednessCreatedAt: data.natureConnectednessCreatedAt,
     }));
 }
 
