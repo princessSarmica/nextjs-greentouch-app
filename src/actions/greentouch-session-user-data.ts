@@ -113,3 +113,25 @@ export async function getDiaryEntry(greentouchSessionId: string) {
 
     return existingData?.diaryEntry ?? [];
 }
+
+export async function getAllDiaryEntries() {
+    const session = await getServerSession();
+    if (!session) throw new Error("User not authenticated");
+
+    const userId = session.user.id;
+
+    const userData = await prisma.greentouchSessionUserData.findMany({
+        where: { userId, diaryEntry: { isEmpty: false } },
+        select: {
+            greentouchSessionId: true,
+            greentouchSession: { select: { name: true } },
+            diaryEntry: true,
+        },
+    });
+
+    return userData.map((item) => ({
+        greentouchSessionId: item.greentouchSessionId,
+        greentouchSessionName: item.greentouchSession.name,
+        initialDiaryText: item.diaryEntry,
+    }));
+}
