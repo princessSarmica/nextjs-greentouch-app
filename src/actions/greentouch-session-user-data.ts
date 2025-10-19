@@ -37,6 +37,33 @@ export async function saveUserNatureConnectedness(greentouchSessionId: string, v
     }
 }
 
+type NatureConnectednessInfo = {
+  id: number;
+  greentouchSessionName: string;
+  natureConnectednessValue: number;
+};
+
+export async function getAllNatureConnectednessInfo(): Promise<NatureConnectednessInfo[]> {
+    const session = await getServerSession();
+    if (!session) throw new Error("User not authenticated");
+
+    const userId = session.user.id;
+
+    const userData = await prisma.greentouchSessionUserData.findMany({
+        where: { userId, natureConnectedness: { not: null } },
+        select: {
+        natureConnectedness: true,
+        greentouchSession: { select: { name: true } },
+        },
+    });
+
+    return userData.map((data, index) => ({
+        id: index,
+        greentouchSessionName: data.greentouchSession.name,
+        natureConnectednessValue: data.natureConnectedness ?? 0,
+    }));
+}
+
 export async function saveDiaryEntry(greentouchSessionId: string, greentouchSessionName: string, diaryTexts: string[]) {
     try {
         const session = await getServerSession();
