@@ -56,6 +56,7 @@ export async function getAllNatureConnectednessInfo(): Promise<NatureConnectedne
         natureConnectednessCreatedAt: true,
         greentouchSession: { select: { name: true } },
         },
+        orderBy: { greentouchSession: { name: 'asc' } },
     });
 
     return userData.map((data, index) => ({
@@ -127,6 +128,7 @@ export async function getAllDiaryEntries() {
             greentouchSession: { select: { name: true } },
             diaryEntry: true,
         },
+        orderBy: { greentouchSession: { name: 'asc' } },
     });
 
     return userData.map((item) => ({
