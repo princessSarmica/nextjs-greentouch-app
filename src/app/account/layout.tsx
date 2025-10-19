@@ -10,7 +10,7 @@ export default function Layout ({children}: Readonly<{children: React.ReactNode;
       </AccountHeader>
       <AccountNavbar />
       <main className="w-full  min-h-screen bg-[#f5f5f5] text-gray-900">
-        <div className="mx-auto w-full max-w-5xl px-8">
+        <div className="mx-auto w-full max-w-5xl px-4">
           {children}
         </div>
       </main>

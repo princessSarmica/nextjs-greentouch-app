@@ -23,7 +23,7 @@ export default async function MyDiary() {
   }
 
   return (
-    <div className="w-full max-w-5xl mx-auto py-12 px-4 space-y-12">
+    <div className="w-full max-w-5xl mx-auto py-12 space-y-12">
       {allSessionData.map((sessionData) => (
         <AccountDiaryCard
           key={sessionData.greentouchSessionName}

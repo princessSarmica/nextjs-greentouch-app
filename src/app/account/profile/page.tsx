@@ -19,7 +19,7 @@ export default async function Profile() {
             {natureConnectednessInfoCards.length !== 0 && (
                 <>
                     <h1 className="text-base font-bold">Nature Connectedness (rated 1 - 10)</h1>
-                    <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-4 mt-6">
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-6">
                         {natureConnectednessInfoCards.map((card) => (
                             <NatureConnectednessInfoCard
                                 key={card.id}
