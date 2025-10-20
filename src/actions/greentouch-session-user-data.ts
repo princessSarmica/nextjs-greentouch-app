@@ -183,3 +183,16 @@ export async function favoriteSession(greentouchSessionId: string, isFavorite: b
         return { success: false, error: "Failed to favorite session." };
     }
 }
+
+export async function getAllFavoriteSessions() {
+    const session = await getServerSession();
+    if (!session) throw new Error("User not authenticated");
+
+    const userId = session.user.id;
+
+    const favoriteSessions = await prisma.greentouchSession.findMany({
+        where: { users: { some: { userId, isFavorite: true } } },
+    });
+
+    return favoriteSessions;
+}

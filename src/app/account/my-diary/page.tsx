@@ -16,7 +16,7 @@ export default async function MyDiary() {
     return (
       <div className="text-center pt-12">
         <p className="text-gray-500 italic">
-          You don’t have any diary entries yet.
+          You don&apos;t have any diary entries yet.
         </p>
       </div>
     );
