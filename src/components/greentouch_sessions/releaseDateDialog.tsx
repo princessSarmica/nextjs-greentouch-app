@@ -24,7 +24,7 @@ import {
   CalendarClockIcon
 } from "lucide-react";
 
-export function ReleaseDateDialog({ sessionName }: { sessionName: string }) {
+export function ReleaseDateDialog({ sessionName, sessionDescription, sessionCoverImage }: { sessionName: string, sessionDescription: string, sessionCoverImage: string }) {
   const [open, setOpen] = useState(false);
   const [date, setDate] = useState<Date | undefined>(undefined);
   const [time, setTime] = useState<string>("12:00");
@@ -39,7 +39,7 @@ export function ReleaseDateDialog({ sessionName }: { sessionName: string }) {
     finalDate.setMinutes(minutes);
 
     startTransition(async () => {
-      const result = await setGreentouchSessionReleaseDate(sessionName, finalDate);
+      const result = await setGreentouchSessionReleaseDate(sessionName, sessionDescription, sessionCoverImage, finalDate);
       if (result.success) {
         toast.success("Release date set successfully.");
         setOpen(false);

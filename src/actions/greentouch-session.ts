@@ -4,7 +4,7 @@ import { getServerSession } from "@/lib/get-session";
 import { prisma } from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 
-export async function setGreentouchSessionReleaseDate(name: string, releaseDate: Date) {
+export async function setGreentouchSessionReleaseDate(name: string, description: string, coverImage: string, releaseDate: Date) {
   try {
     const session = await getServerSession();
 
@@ -19,8 +19,8 @@ export async function setGreentouchSessionReleaseDate(name: string, releaseDate:
     // Elegantna enovrstična rešitev
     const greentouchSession = await prisma.greentouchSession.upsert({
       where: { name },
-      update: { releaseDate },
-      create: { name, releaseDate },
+      update: { description, coverImage, releaseDate },
+      create: { name, description, coverImage, releaseDate },
     });
 
     revalidatePath("/sessions");

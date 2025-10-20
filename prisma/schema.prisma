@@ -128,6 +128,8 @@ model ResourcesArticle {
 model GreentouchSession {
   id          String   @id @default(cuid())
   name        String   @unique
+  description String
+  coverImage  String
   releaseDate DateTime
 
   // Relations
