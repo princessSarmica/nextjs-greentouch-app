@@ -1,8 +1,9 @@
-import { Card, CardContent } from "../../ui/card";
+import { Card, CardContent, CardFooter } from "../../ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import FavoriteIconButton from "./favoriteIconButton";
 
-function FavoritedSessionCard({greentouchSessionName, greentouchSessionDescription, greentouchSessionCoverPhoto }: { greentouchSessionName: string; greentouchSessionDescription: string; greentouchSessionCoverPhoto: string }) {
+function FavoritedSessionCard({greentouchSessionId, greentouchSessionName, greentouchSessionDescription, greentouchSessionCoverPhoto }: { greentouchSessionId: string; greentouchSessionName: string; greentouchSessionDescription: string; greentouchSessionCoverPhoto: string }) {
 
   const imageSrc = greentouchSessionCoverPhoto || "/article-default-picture.png";
 
@@ -27,6 +28,11 @@ function FavoritedSessionCard({greentouchSessionName, greentouchSessionDescripti
           </p>
         </CardContent>
       </Link>
+      <CardFooter className="flex justify-end">
+        <div className="flex gap-4">
+            <FavoriteIconButton greentouchSessionId={greentouchSessionId} />
+        </div>
+      </CardFooter>
     </Card>
   );
 }

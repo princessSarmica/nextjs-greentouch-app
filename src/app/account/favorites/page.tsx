@@ -30,6 +30,7 @@ export default async function Favorites() {
                         {favoritedSessions.map((card) => (
                             <FavoritedSessionCard
                                 key={card.id}
+                                greentouchSessionId={card.id}
                                 greentouchSessionName={card.name}
                                 greentouchSessionDescription={card.description}
                                 greentouchSessionCoverPhoto={card.coverImage}

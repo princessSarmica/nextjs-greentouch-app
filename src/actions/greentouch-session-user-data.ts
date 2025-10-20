@@ -196,3 +196,20 @@ export async function getAllFavoriteSessions() {
 
     return favoriteSessions;
 }
+
+export async function removeFavoriteSession(greentouchSessionId: string) {
+    try {
+        const session = await getServerSession();
+        if (!session) throw new Error("User not authenticated");
+        const userId = session.user.id;
+        await prisma.greentouchSessionUserData.updateMany({
+            where: { greentouchSessionId, userId },
+            data: { isFavorite: false },
+        });
+        revalidatePath("/account/favorites");
+        return { success: true };
+    } catch (error) {
+        console.error("Error removing favorite session:", error);
+        return { success: false, error: "Failed to remove favorite session." };
+    }
+}
