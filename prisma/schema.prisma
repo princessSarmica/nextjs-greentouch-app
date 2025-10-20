@@ -142,6 +142,7 @@ model GreentouchSessionUserData {
   natureConnectedness          Int?
   natureConnectednessCreatedAt DateTime @default(now())
   diaryEntry                   String[] @default([])
+  isFavorite                   Boolean  @default(false)
 
   // Relations
   greentouchSession GreentouchSession @relation(fields: [greentouchSessionId], references: [id], onDelete: Cascade)

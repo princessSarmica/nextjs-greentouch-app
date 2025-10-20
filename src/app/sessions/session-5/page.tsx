@@ -8,7 +8,8 @@ import NotAvailable from "@/components/greentouch_sessions/notAvailable";
 import { getGreentouchSessionByName } from "@/actions/greentouch-session";
 import NatureConnectednessCard from "@/components/greentouch_sessions/natureConnectednessCard";
 import DiaryCard from "@/components/greentouch_sessions/diaryCard";
-import { getDiaryEntry } from "@/actions/greentouch-session-user-data";
+import { getCurrentGreentouchSessionUserData, getDiaryEntry } from "@/actions/greentouch-session-user-data";
+import FavoriteButton from "@/components/greentouch_sessions/favoriteButton";
 
 export default async function SessionFivePage() {
     
@@ -19,6 +20,8 @@ export default async function SessionFivePage() {
     }
 
     const dbSession = await getGreentouchSessionByName("Session 5");
+
+    const userData = dbSession ? await getCurrentGreentouchSessionUserData(dbSession.id) : null;
     
     const diaryEntry = dbSession ? await getDiaryEntry(dbSession.id) : null;
 
@@ -70,11 +73,18 @@ export default async function SessionFivePage() {
                 <p className="text-lg mb-4 text-gray-700"> 
                     To recognize personal barriers to nature connection and practice mindful breathing as a way to gently overcome them.
                 </p>
+
+                <div className="flex mb-8">
+                    <FavoriteButton
+                        greentouchSessionId={dbSession?.id || ""}
+                        initialIsFavorite={userData?.isFavorite ?? false}
+                    />
+                </div>
             </section>
 
             {/* Line divider */}
             <section className="w-full px-4">
-                <div className="max-w-5xl border-t border-gray-300 mt-10 mb-10 mx-auto" />
+                <div className="max-w-5xl border-t border-gray-300 mb-10 mx-auto" />
             </section>
 
             {/* Welcome section */}

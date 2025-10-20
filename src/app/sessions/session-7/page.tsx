@@ -7,6 +7,8 @@ import { SessionsAccordion } from "@/components/sessions-accordion";
 import { getGreentouchSessionByName } from "@/actions/greentouch-session";
 import NotAvailable from "@/components/greentouch_sessions/notAvailable";
 import NatureConnectednessCard from "@/components/greentouch_sessions/natureConnectednessCard";
+import { getCurrentGreentouchSessionUserData } from "@/actions/greentouch-session-user-data";
+import FavoriteButton from "@/components/greentouch_sessions/favoriteButton";
 
 export default async function SessionSevenPage() {
     
@@ -17,6 +19,8 @@ export default async function SessionSevenPage() {
     }
 
     const dbSession = await getGreentouchSessionByName("Session 7");
+
+    const userData = dbSession ? await getCurrentGreentouchSessionUserData(dbSession.id) : null;
         
     const now = new Date();
     const releaseDate = dbSession?.releaseDate ? new Date(dbSession.releaseDate) : null;
@@ -58,12 +62,19 @@ export default async function SessionSevenPage() {
                 </p>
                 <p className="text-lg mb-4 text-gray-700"> 
                     To discover or imagine a natural space where you feel safe, calm, and grounded—a personal sanctuary for future reconnection.  
-                </p>  
+                </p>
+
+                <div className="flex mb-8">
+                    <FavoriteButton
+                        greentouchSessionId={dbSession?.id || ""}
+                        initialIsFavorite={userData?.isFavorite ?? false}
+                    />
+                </div>  
             </section>
 
             {/* Line divider */}
             <section className="w-full px-4">
-                <div className="max-w-5xl border-t border-gray-300 mt-10 mb-10 mx-auto" />
+                <div className="max-w-5xl border-t border-gray-300 mb-10 mx-auto" />
             </section>
 
             {/* Welcome section */}
