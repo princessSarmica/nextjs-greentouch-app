@@ -49,11 +49,11 @@ export default function SurveyCard({
     ];
 
     const agreementOptions = [
-        "Strongly agree",
-        "Agree",
-        "Neither agree nor disagree",
-        "Disagree",
         "Strongly disagree",
+        "Disagree",
+        "Neither agree nor disagree",
+        "Agree",
+        "Strongly agree",
         "Not applicable",
     ];
 
