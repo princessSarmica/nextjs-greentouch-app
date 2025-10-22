@@ -146,6 +146,17 @@ model GreentouchSessionUserData {
   diaryEntry                   String[] @default([])
   isFavorite                   Boolean  @default(false)
 
+  // Survey fields
+  // "Never" | "Once" | "Twice" | "ThreeTimes" | "MoreThanThreeTimes"
+  outdoorTasksCount          String?
+  indoorTasksCount           String?
+  // "StronglyAgree" | "Agree" | "Neutral" | "Disagree" | "StronglyDisagree" | "NotApplicable"
+  physicalHealthResponse     String?
+  mentalHealthResponse       String?
+  friendsFamilyResponse      String?
+  learntSomethingNewResponse String?
+  closerToNatureResponse     String?
+
   // Relations
   greentouchSession GreentouchSession @relation(fields: [greentouchSessionId], references: [id], onDelete: Cascade)
   user              User              @relation(fields: [userId], references: [id], onDelete: Cascade)

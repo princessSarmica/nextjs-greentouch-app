@@ -10,6 +10,7 @@ import NatureConnectednessCard from "@/components/greentouch_sessions/natureConn
 import DiaryCard from "@/components/greentouch_sessions/diaryCard";
 import { getCurrentGreentouchSessionUserData, getDiaryEntry } from "@/actions/greentouch-session-user-data";
 import FavoriteButton from "@/components/greentouch_sessions/favoriteButton";
+import SurveyCard from "@/components/greentouch_sessions/surveyCard";
 
 export default async function SessionTwoPage() {
     
@@ -186,6 +187,18 @@ export default async function SessionTwoPage() {
             {/* Diary Card */}
             <DiaryCard greentouchSessionId={dbSession?.id} greentouchSessionName={dbSession?.name} initialDiaryText={diaryEntry ?? undefined} />
 
+            {/* Survey Card */}
+            <SurveyCard
+                greentouchSessionId={dbSession?.id}
+                initialOutdoorTasksResponse={userData?.outdoorTasksCount ?? undefined}
+                initialIndoorTasksResponse={userData?.indoorTasksCount ?? undefined}
+                initialPhysicalHealthResponse={userData?.physicalHealthResponse ?? undefined}
+                initialMentalHealthResponse={userData?.mentalHealthResponse ?? undefined}
+                initialFriendsFamilyResponse={userData?.friendsFamilyResponse ?? undefined}
+                initialLearntSomethingNewResponse={userData?.learntSomethingNewResponse ?? undefined}
+                initialCloserToNatureResponse={userData?.closerToNatureResponse ?? undefined}
+            />
+            
             <section className="w-full max-w-5xl mx-auto px-4 p-8 mb-10 mt-10">
                 <SessionsAccordion />
             </section>

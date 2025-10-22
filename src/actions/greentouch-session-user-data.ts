@@ -213,3 +213,48 @@ export async function removeFavoriteSession(greentouchSessionId: string) {
         return { success: false, error: "Failed to remove favorite session." };
     }
 }
+
+export async function saveSurveyData(greentouchSessionId: string, outdoorTasksCount: string, indoorTasksCount: string, physicalHealthResponse: string, mentalHealthResponse: string, friendsFamilyResponse: string, learntSomethingNewResponse: string, closerToNatureResponse: string) {
+    try {
+        const session = await getServerSession();
+        if (!session) throw new Error("User not authenticated");
+        const userId = session.user.id;
+
+        const existingData = await prisma.greentouchSessionUserData.findUnique({
+            where: { greentouchSessionId_userId: { greentouchSessionId, userId } },
+        });
+        if (existingData) {
+            await prisma.greentouchSessionUserData.update({
+                where: { greentouchSessionId_userId: { greentouchSessionId, userId } },
+                data: {
+                        outdoorTasksCount,
+                        indoorTasksCount,
+                        physicalHealthResponse,
+                        mentalHealthResponse,
+                        friendsFamilyResponse,
+                        learntSomethingNewResponse,
+                        closerToNatureResponse,
+                },
+            });
+        } else {
+            await prisma.greentouchSessionUserData.create({
+                data: {
+                    userId,
+                    greentouchSessionId,
+                    outdoorTasksCount,
+                    indoorTasksCount,
+                    physicalHealthResponse,
+                    mentalHealthResponse,
+                    friendsFamilyResponse,
+                    learntSomethingNewResponse,
+                    closerToNatureResponse,
+                },
+            });
+        }
+
+        return { success: true };
+    } catch (error) {
+        console.error("Error saving survey data:", error);
+        throw new Error("Failed to save survey data.");
+    }
+}
