@@ -7,14 +7,19 @@ export default function DiscoverGreenTouch() {
   return (
     <main className="w-full text-gray-900 bg-[#f5f5f5]  min-h-screen">
       <div>
+        {/* Top gradient header */}
+        <section className="bg-gradient-to-r from-[#0A3730] to-[#1F6E4C] text-white pb-10 pt-20">
+          <div className="max-w-5xl mx-auto px-4">
+            <h1 className="text-3xl font-bold text-left">Welcome to GreenTouch</h1>
+          </div>
+        </section>
 
         {/* Hero section (textual content + tree) */}
         <div className="relative bg-[#f5f5f5] overflow-hidden pb-20">
-          <div className="max-w-5xl mx-auto text-left pt-20 w-full px-4 space-y-10 relative z-10">
+          <div className="max-w-5xl mx-auto text-left pt-6 w-full px-4 space-y-10 relative z-10">
             {/* Hero text */}
             <div>
-              <h1 className="text-3xl font-bold mb-8 text-left">Welcome to GreenTouch</h1>
-              <p className="text-base mt-8 mb-12">
+              <p className="text-lg mt-8 mb-12">
                 GreenTouch is all about helping you connect with nature, boost your well-being, and build a more sustainable future—all through interactive digital tools and hands-on experiences. Our Erasmus+ cooperation partnership project, &quot;GreenTouch: EcoMind Development for Higher Education Future&quot; (Project ID: 2023-1-LV01-KA220-HED-000154847), brings together universities and experts from across Europe to create innovative ways to integrate nature into education and everyday life.
               </p>
             </div>

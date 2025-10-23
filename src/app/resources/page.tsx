@@ -15,11 +15,17 @@ export default async function Resources() {
   }
 
   return (
-    <main className="flex flex-col items-center justify-start w-full min-h-screen bg-[#f5f5f5] text-gray-900">
+    <main className="w-full min-h-screen bg-[#f5f5f5] text-gray-900">
+
+      {/* Top gradient header */}
+      <section className="bg-gradient-to-r from-[#0A3730] to-[#1F6E4C] text-white pb-10 pt-20">
+          <div className="max-w-5xl mx-auto px-4">
+              <h1 className="text-3xl font-bold text-left">Resources</h1>
+          </div>
+      </section>
 
       {/* Hero section (textual content) */}
-      <section className="w-full max-w-5xl px-4 pt-20">
-        <h1 className="text-3xl font-bold mb-8 text-left">Resources</h1>
+      <section className="w-full max-w-5xl px-4 pt-12 mx-auto">
         <p className="text-lg mb-4 text-gray-700">
           Get ready to explore the resources we are developing as part of the GreenTouch project and consider how they could enrich your professional practice. Whether you are a faculty member, non-formal educator, or practitioner in the helping professions, these resources are designed to foster a deeper connection to nature and integrate ecological awareness into your work.
         </p>
@@ -34,7 +40,7 @@ export default async function Resources() {
       </section>
 
       {/* Articles card */}
-      <section className="w-full max-w-5xl px-4 pb-20">
+      <section className="w-full max-w-5xl px-4 pt-6 pb-60 mx-auto">
         <div className="bg-[#0A3730] text-white rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow">
           {/* Left - Text content */}
           <div className="flex-1">

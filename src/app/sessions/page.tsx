@@ -77,46 +77,59 @@ export default async function Sessions() {
     if (!session) { 
         return (
             //display only demo session if not logged in
-            <main className="flex flex-col items-center justify-start w-full min-h-screen bg-[#f5f5f5] text-gray-900">
-            {/* Hero section */}
-            <section className="w-full max-w-5xl px-4 pt-20 pb-20">
-                <h1 className="text-3xl font-bold mb-8 text-left">Sessions</h1>
-                <div className="flex flex-col gap-6">
-                {greentouchSessions.filter(s => s.id === "demo-session").map((greentouchSession) => (
-                    <Link
-                    key={greentouchSession.id}
-                    href={`/sessions/${greentouchSession.id}`}
-                    className="flex flex-row items-stretch bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden"
-                    >
-                    {/* Image section – raztegnjena do robov */}
-                    <div className="relative w-48 min-w-[12rem] h-40">
-                        <Image
-                        src={greentouchSession.image}
-                        alt={greentouchSession.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        />
+            <main className="w-full min-h-screen bg-[#f5f5f5] text-gray-900">
+
+                {/* Top gradient header */}
+                <section className="bg-gradient-to-r from-[#0A3730] to-[#1F6E4C] text-white pb-10 pt-20">
+                    <div className="max-w-5xl mx-auto px-4">
+                        <h1 className="text-3xl font-bold text-left">Sessions</h1>
                     </div>
-                    {/* Text section */}
-                    <div className="flex flex-col justify-center px-6 py-4">
-                        <h2 className="text-xl font-semibold">{greentouchSession.title}</h2>
-                        <p className="text-gray-600">{greentouchSession.description}</p>
+                </section>
+
+                {/* Hero section */}
+                <section className="w-full max-w-5xl px-4 pt-20 pb-20 mx-auto">
+                    <div className="flex flex-col gap-6">
+                    {greentouchSessions.filter(s => s.id === "demo-session").map((greentouchSession) => (
+                        <Link
+                        key={greentouchSession.id}
+                        href={`/sessions/${greentouchSession.id}`}
+                        className="flex flex-row items-stretch bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden"
+                        >
+                        {/* Image section – raztegnjena do robov */}
+                        <div className="relative w-48 min-w-[12rem] h-40">
+                            <Image
+                            src={greentouchSession.image}
+                            alt={greentouchSession.title}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                            />
+                        </div>
+                        {/* Text section */}
+                        <div className="flex flex-col justify-center px-6 py-4">
+                            <h2 className="text-xl font-semibold">{greentouchSession.title}</h2>
+                            <p className="text-gray-600">{greentouchSession.description}</p>
+                        </div>
+                        </Link>
+                    ))}
                     </div>
-                    </Link>
-                ))}
-                </div>
-            </section>
+                </section>
             </main>
         ) 
     }
 
     return (
-        <main className="flex flex-col items-center justify-start w-full min-h-screen bg-[#f5f5f5] text-gray-900">
-            {/* Hero section */}
-            <section className="w-full max-w-5xl px-4 pt-20 pb-20">
-                <h1 className="text-3xl font-bold mb-8 text-left">Sessions</h1>
+        <main className="w-full min-h-screen bg-[#f5f5f5] text-gray-900">
 
+            {/* Top gradient header */}
+            <section className="bg-gradient-to-r from-[#0A3730] to-[#1F6E4C] text-white pb-10 pt-20">
+                <div className="max-w-5xl mx-auto px-4">
+                    <h1 className="text-3xl font-bold text-left">Sessions</h1>
+                </div>
+            </section>
+
+            {/* Hero section */}
+            <section className="w-full max-w-5xl px-4 pt-20 pb-20 mx-auto">
                 <div className="flex flex-col gap-6">
                 {greentouchSessions.map((greentouchSession) => {
                     const unlocked = isUnlocked(greentouchSession.title);
