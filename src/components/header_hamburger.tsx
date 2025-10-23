@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
+import { Menu, X } from "lucide-react"
 
 export const HeaderHamburger = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,12 +17,11 @@ export const HeaderHamburger = () => {
         className="lg:hidden flex items-center focus:outline-none pr-2"
         aria-label="Toggle menu"
       >
-        <Image
-          src={menuOpen ? "/x.svg" : "/hamburger-menu.svg"}
-          alt="Menu toggle"
-          width={24}
-          height={24}
-        />
+        {menuOpen ? (
+          <X className="w-6 h-6" />
+        ) : (
+          <Menu className="w-6 h-6" />
+        )}
       </button>
 
       {/* Mobile dropdown menu */}
