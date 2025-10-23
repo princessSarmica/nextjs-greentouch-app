@@ -11,6 +11,9 @@ export default async function AnimalsPage() {
   if(!session) {
       redirect("/sign-in")
   }
+  
+  // Simulate a short delay for loading state
+  //await new Promise((resolve) => setTimeout(resolve, 10000));
 
   return <NatureGalleryPage slug="animals" />;
 }
