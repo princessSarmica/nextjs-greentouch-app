@@ -51,14 +51,7 @@ export async function saveUserNatureConnectedness(greentouchSessionId: string, v
     }
 }
 
-type NatureConnectednessInfo = {
-  id: number;
-  greentouchSessionName: string;
-  natureConnectednessValue: number;
-  natureConnectednessCreatedAt: Date;
-};
-
-export async function getAllNatureConnectednessInfo(): Promise<NatureConnectednessInfo[]> {
+export async function getAllNatureConnectednessInfo() {
     const session = await getServerSession();
     if (!session) throw new Error("User not authenticated");
 
