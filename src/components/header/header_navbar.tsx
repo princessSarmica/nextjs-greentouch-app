@@ -1,30 +1,49 @@
-import { HeaderHamburger } from "./header_hamburger";
-import { HeaderLogo } from "./header_logo";
-import { HeaderNavigationLinks } from "./header_nav_links";
-import { HeaderLanguage } from "./header_language";
-import UserButton from "./user-button";
+"use client";
 
-export default function Header() {
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLinkGhost,
+  NavigationMenuList,
+  navigationMenuTriggerStyleGhost,
+} from "@/components/ui/navigation-menu"
+import Link from "next/link"
+import { usePathname } from "next/navigation";
+
+export default function HeaderNavbar(){
+  const pathname = usePathname();
+
   return (
-    <header className="w-full bg-white shadow-sm sticky top-0 z-50">
-      <div className="flex justify-between items-center py-4 px-6">
-
-        {/* Left - Hamburger + Logo */}
-        <div className="flex items-center space-x-2 flex-shrink-0">
-          <HeaderHamburger />
-          <HeaderLogo />
+        <div className="hidden lg:flex items-stretch w-full max-w-5xl justify-center text-gray-900">
+          <NavigationMenu viewport={false} className="w-full max-w-none items-stretch justify-center">
+            <NavigationMenuList className="flex items-stretch justify-start gap-4 px-8">
+              <NavigationMenuItem>
+                <NavigationMenuLinkGhost asChild className={navigationMenuTriggerStyleGhost()} data-active={pathname.startsWith("/discover-greentouch") || undefined}>
+                  <Link href="/discover-greentouch">Discover GreenTouch</Link>
+                </NavigationMenuLinkGhost>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLinkGhost asChild className={navigationMenuTriggerStyleGhost()} data-active={pathname.startsWith("/sessions") || undefined}>
+                  <Link href="/sessions">Sessions</Link>
+                </NavigationMenuLinkGhost>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLinkGhost asChild className={navigationMenuTriggerStyleGhost()} data-active={pathname.startsWith("/nature-video-gallery") || undefined}>
+                  <Link href="/nature-video-gallery">Nature Video Gallery</Link>
+                </NavigationMenuLinkGhost>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLinkGhost asChild className={navigationMenuTriggerStyleGhost()} data-active={pathname.startsWith("/news") || undefined}>
+                  <Link href="/news">News</Link>
+                </NavigationMenuLinkGhost>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLinkGhost asChild className={navigationMenuTriggerStyleGhost()} data-active={pathname.startsWith("/resources") || undefined}>
+                  <Link href="/resources">Resources</Link>
+                </NavigationMenuLinkGhost>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
         </div>
-
-        {/* Middle - Navigation (desktop only) */}
-        <HeaderNavigationLinks />
-
-        {/* Right - Language + Buttons */}
-        <div className="flex items-center">
-          <HeaderLanguage />
-          <UserButton />
-        </div>
-
-      </div>
-    </header>
   );
 }

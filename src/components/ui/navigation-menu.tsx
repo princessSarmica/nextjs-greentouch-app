@@ -66,6 +66,25 @@ const navigationMenuTriggerStyleSecondary = cva(
   "group inline-flex h-9 w-max items-center justify-center rounded-full bg-background px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground disabled:pointer-events-none disabled:opacity-50 data-[state=open]:hover:bg-accent data-[state=open]:text-accent-foreground data-[state=open]:focus:bg-accent data-[state=open]:bg-accent/50 focus-visible:ring-ring/50 outline-none transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1"
 )
 
+const navigationMenuTriggerStyleGhost = cva(
+  // basic ghost style
+  "relative inline-flex items-center justify-center px-3 py-8 text-sm font-medium text-gray-700 " +
+  "transition-all duration-200 bg-transparent hover:bg-transparent focus:bg-transparent " +
+  "hover:text-green-600 " +
+
+  // green line below
+  "after:absolute after:bottom-0 after:left-0 after:h-[6px] after:w-0 after:bg-green-600 " +
+  "after:transition-all after:duration-300 " +
+  "hover:after:w-full data-[active=true]:after:w-full " +
+
+  // text color when active
+  "data-[active=true]:text-green-600 " +
+
+  // accessibility and focus
+  "focus-visible:outline-none focus-visible:ring-0"
+);
+
+
 function NavigationMenuTrigger({
   className,
   children,
@@ -141,6 +160,20 @@ function NavigationMenuLink({
   )
 }
 
+function NavigationMenuLinkGhost({
+  className,
+  ...props
+}: React.ComponentProps<typeof NavigationMenuPrimitive.Link>) {
+  return (
+    <NavigationMenuPrimitive.Link
+      data-slot="navigation-menu-link"
+      className={cn(navigationMenuTriggerStyleGhost(), className)}
+      {...props}
+    />
+  );
+}
+
+
 function NavigationMenuIndicator({
   className,
   ...props
@@ -166,8 +199,10 @@ export {
   NavigationMenuContent,
   NavigationMenuTrigger,
   NavigationMenuLink,
+  NavigationMenuLinkGhost,
   NavigationMenuIndicator,
   NavigationMenuViewport,
   navigationMenuTriggerStylePrimary,
   navigationMenuTriggerStyleSecondary,
+  navigationMenuTriggerStyleGhost,
 }
