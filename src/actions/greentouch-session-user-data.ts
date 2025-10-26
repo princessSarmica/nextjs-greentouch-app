@@ -251,3 +251,68 @@ export async function saveSurveyData(greentouchSessionId: string, outdoorTasksCo
         throw new Error("Failed to save survey data.");
     }
 }
+
+export async function sessionIsCompleted(greentouchSessionId: string) {
+    try {
+        const session = await getServerSession();
+        if (!session) throw new Error("User not authenticated");
+        const userId = session.user.id;
+
+        const existingData = await prisma.greentouchSessionUserData.findUnique({
+            where: { greentouchSessionId_userId: { greentouchSessionId, userId } },
+        });
+
+        const sessionRecord = await prisma.greentouchSession.findUnique({
+            where: { id: greentouchSessionId },
+            select: { name: true },
+        });
+
+        if (existingData?.sessionCompleted) {
+            throw new Error("Session already completed");
+        }
+
+        const sessionName = sessionRecord?.name ?? "";
+        const isSession1to6 = /^Session\s*[1-6]$/i.test(sessionName);
+
+        if (isSession1to6) {
+            if (
+                existingData?.natureConnectedness !== null &&
+                existingData?.diaryEntry &&
+                existingData?.diaryEntry.length > 0 &&
+                existingData?.outdoorTasksCount !== null &&
+                existingData?.indoorTasksCount !== null &&
+                existingData?.physicalHealthResponse !== null &&
+                existingData?.mentalHealthResponse !== null &&
+                existingData?.friendsFamilyResponse !== null &&
+                existingData?.learntSomethingNewResponse !== null &&
+                existingData?.closerToNatureResponse !== null
+            ) {
+                await prisma.greentouchSessionUserData.update({
+                    where: { greentouchSessionId_userId: { greentouchSessionId, userId } },
+                    data: {
+                        sessionCompleted: true,
+                    },
+                });
+                return { success: true };
+            } else {
+                throw new Error("Cannot complete session. All required data not provided.");
+            }
+        } else {
+            // For other sessions, just require natureConnectedness
+            if (existingData?.natureConnectedness !== null) {
+                await prisma.greentouchSessionUserData.update({
+                    where: { greentouchSessionId_userId: { greentouchSessionId, userId } },
+                    data: {
+                        sessionCompleted: true,
+                    },
+                });
+                return { success: true };
+            } else {
+                throw new Error("Cannot complete session. User data not found.");
+            }
+        }
+    } catch (error) {
+        console.error("Error marking session as completed:", error);
+        return { success: false, error: "Failed to mark session as completed. Make sure all required data is provided." };
+    }
+}

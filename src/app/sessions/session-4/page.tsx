@@ -11,6 +11,7 @@ import DiaryCard from "@/components/greentouch_sessions/diaryCard";
 import { getCurrentGreentouchSessionUserData, getDiaryEntry } from "@/actions/greentouch-session-user-data";
 import FavoriteButton from "@/components/greentouch_sessions/favoriteButton";
 import SurveyCard from "@/components/greentouch_sessions/surveyCard";
+import SessionCompletedCard from "@/components/greentouch_sessions/sessionCompletedCard";
 
 export default async function SessionFourPage() {
     
@@ -198,6 +199,9 @@ export default async function SessionFourPage() {
                 initialLearntSomethingNewResponse={userData?.learntSomethingNewResponse ?? undefined}
                 initialCloserToNatureResponse={userData?.closerToNatureResponse ?? undefined}
             />
+
+            {/* Session Completed Card */}
+            <SessionCompletedCard greentouchSessionId={dbSession?.id} sessionCompleted={userData?.sessionCompleted} />
 
             <section className="w-full max-w-5xl mx-auto px-4 p-8 mb-10 mt-10">
                 <SessionsAccordion />

@@ -9,6 +9,7 @@ import NotAvailable from "@/components/greentouch_sessions/notAvailable";
 import NatureConnectednessCard from "@/components/greentouch_sessions/natureConnectednessCard";
 import { getCurrentGreentouchSessionUserData } from "@/actions/greentouch-session-user-data";
 import FavoriteButton from "@/components/greentouch_sessions/favoriteButton";
+import SessionCompletedCard from "@/components/greentouch_sessions/sessionCompletedCard";
 
 export default async function SessionSevenPage() {
     
@@ -171,6 +172,9 @@ export default async function SessionSevenPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Session Completed Card */}
+            <SessionCompletedCard greentouchSessionId={dbSession?.id} sessionCompleted={userData?.sessionCompleted} />
 
             <section className="w-full max-w-5xl mx-auto px-4 p-8 mb-10 mt-10">
                 <SessionsAccordion />
