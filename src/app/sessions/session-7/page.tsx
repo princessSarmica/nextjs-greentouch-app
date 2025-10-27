@@ -7,7 +7,7 @@ import { SessionsAccordion } from "@/components/sessions-accordion";
 import { getGreentouchSessionByName } from "@/actions/greentouch-session";
 import NotAvailable from "@/components/greentouch_sessions/notAvailable";
 import NatureConnectednessCard from "@/components/greentouch_sessions/natureConnectednessCard";
-import { getCurrentGreentouchSessionUserData } from "@/actions/greentouch-session-user-data";
+import { getAllCompletedGreentouchSessions, getCurrentGreentouchSessionUserData } from "@/actions/greentouch-session-user-data";
 import FavoriteButton from "@/components/greentouch_sessions/favoriteButton";
 import SessionCompletedCard from "@/components/greentouch_sessions/sessionCompletedCard";
 
@@ -21,12 +21,16 @@ export default async function SessionSevenPage() {
 
     const dbSession = await getGreentouchSessionByName("Session 7");
 
+    const completedSessions = await getAllCompletedGreentouchSessions();
+    const previousSession = await getGreentouchSessionByName("Session 6");
+    const previousSessionCompleted = completedSessions.some(completedSession => completedSession.greentouchSession.name === previousSession?.name);
+
     const userData = dbSession ? await getCurrentGreentouchSessionUserData(dbSession.id) : null;
         
     const now = new Date();
     const releaseDate = dbSession?.releaseDate ? new Date(dbSession.releaseDate) : null;
 
-    if ((!releaseDate || releaseDate > now) && session.user.role !== "admin") {
+    if ((!releaseDate || releaseDate > now || !previousSessionCompleted) && session.user.role !== "admin") {
         return (
             <NotAvailable />
         )

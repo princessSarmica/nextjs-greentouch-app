@@ -8,7 +8,7 @@ import NotAvailable from "@/components/greentouch_sessions/notAvailable";
 import { getGreentouchSessionByName } from "@/actions/greentouch-session";
 import NatureConnectednessCard from "@/components/greentouch_sessions/natureConnectednessCard";
 import DiaryCard from "@/components/greentouch_sessions/diaryCard";
-import { getCurrentGreentouchSessionUserData, getDiaryEntry } from "@/actions/greentouch-session-user-data";
+import { getAllCompletedGreentouchSessions, getCurrentGreentouchSessionUserData, getDiaryEntry } from "@/actions/greentouch-session-user-data";
 import FavoriteButton from "@/components/greentouch_sessions/favoriteButton";
 import SurveyCard from "@/components/greentouch_sessions/surveyCard";
 import SessionCompletedCard from "@/components/greentouch_sessions/sessionCompletedCard";
@@ -23,6 +23,10 @@ export default async function SessionThreePage() {
 
     const dbSession = await getGreentouchSessionByName("Session 3");
 
+    const completedSessions = await getAllCompletedGreentouchSessions();
+    const previousSession = await getGreentouchSessionByName("Session 2");
+    const previousSessionCompleted = completedSessions.some(completedSession => completedSession.greentouchSession.name === previousSession?.name);
+
     const userData = dbSession ? await getCurrentGreentouchSessionUserData(dbSession.id) : null;
         
     const diaryEntry = dbSession ? await getDiaryEntry(dbSession.id) : null;
@@ -30,7 +34,7 @@ export default async function SessionThreePage() {
     const now = new Date();
     const releaseDate = dbSession?.releaseDate ? new Date(dbSession.releaseDate) : null;
 
-    if ((!releaseDate || releaseDate > now) && session.user.role !== "admin") {
+    if ((!releaseDate || releaseDate > now || !previousSessionCompleted) && session.user.role !== "admin") {
         return (
             <NotAvailable />
         )

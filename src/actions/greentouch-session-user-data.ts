@@ -316,3 +316,21 @@ export async function sessionIsCompleted(greentouchSessionId: string) {
         return { success: false, error: "Failed to mark session as completed. Make sure all required data is provided." };
     }
 }
+
+export async function getAllCompletedGreentouchSessions () {
+    try {
+        const session = await getServerSession();
+        if (!session) throw new Error("User not authenticated");
+        const userId = session.user.id;
+
+        const completedSessions = await prisma.greentouchSessionUserData.findMany({
+            where: { userId, sessionCompleted: true },
+            include: { greentouchSession: true },
+        });
+
+        return completedSessions;
+    } catch (error) {
+        console.error("Error fetching completed greentouch sessions:", error);
+        throw new Error("Failed to fetch completed greentouch sessions");
+    }
+}
