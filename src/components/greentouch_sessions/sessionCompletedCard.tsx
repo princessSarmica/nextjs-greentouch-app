@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { LoadingButton } from "../loading-button";
 import { toast } from "sonner";
 import { sessionIsCompleted } from "@/actions/greentouch-session-user-data";
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";
+import { Button } from "../ui/button";
 
 interface SaveDiaryProps {
     greentouchSessionId?: string;
@@ -57,15 +59,31 @@ function SessionCompletedCard({ greentouchSessionId, sessionCompleted }: SaveDia
                 <p className="text-sm text-gray-700 max-w-md">
                     Mark this session as completed and move on to other sessions.
                 </p>
-                <LoadingButton
-                    variant="secondary"
-                    type="submit"
-                    onClick={handleSubmit}
-                    disabled={isLoading || isCompleted}
-                    loading={isLoading}
-                >
-                    {isCompleted ? "Completed" : "Complete"}
-                </LoadingButton>
+                <Dialog>
+                    <DialogTrigger asChild> 
+                        <Button variant="default" disabled={isLoading || isCompleted}>{isCompleted ? "Completed" : "Mark as completed"}</Button>
+                    </DialogTrigger> 
+                    <DialogContent className="sm:max-w-[425px]"> 
+                        <DialogHeader> 
+                            <DialogTitle> Mark this session as completed? </DialogTitle> 
+                            <DialogDescription> Data such as your nature connectedness and survey responses will be saved and can&apos;t be changed afterward. </DialogDescription> 
+                        </DialogHeader> 
+                        <DialogFooter> 
+                            <DialogClose asChild> 
+                                <Button variant="outline">Cancel</Button> 
+                            </DialogClose>
+                            <LoadingButton
+                                variant="default"
+                                type="submit"
+                                onClick={handleSubmit}
+                                disabled={isLoading || isCompleted}
+                                loading={isLoading}
+                            >
+                                {isCompleted ? "Completed" : "Mark as completed"}
+                            </LoadingButton>
+                        </DialogFooter>
+                    </DialogContent> 
+                </Dialog>
                 </div>
             </div>
         </section>
