@@ -5,59 +5,9 @@ import { getServerSession } from "@/lib/get-session";
 import { LockIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { greentouchSessions } from "@/app/data/greentouch-sessions-data";
 
 export default async function Sessions() {
-    
-    const greentouchSessions = [
-        {
-            id: "demo-session",
-            title: "Demo Session",
-            description: "A taste of the GreenTouch program",
-            image: "/demo-session.png",
-        },
-        {
-            id: "session-1",
-            title: "Session 1",
-            description: "Noticing senses, thoughts, feelings, and memories related to nature",
-            image: "/session-1.png",
-        },
-        {
-            id: "session-2",
-            title: "Session 2",
-            description: "Exploring a pleasant natural object",
-            image: "/session-2.png",
-        },
-        {
-            id: "session-3",
-            title: "Session 3",
-            description: "Immersing in nature sounds",
-            image: "/session-3.png",
-        },
-        {
-            id: "session-4",
-            title: "Session 4",
-            description: "Observing people in nature",
-            image: "/session-4.png",
-        },
-        {
-            id: "session-5",
-            title: "Session 5",
-            description: "Breathing with a natural object",
-            image: "/session-5.png",
-        },
-        {
-            id: "session-6",
-            title: "Session 6",
-            description: "Dancing with nature",
-            image: "/session-6.png",
-        },
-        {
-            id: "session-7",
-            title: "Session 7",
-            description: "Finding a safe space in nature",
-            image: "/session-7.png",
-        },
-    ];
 
     const session = await getServerSession();
 
@@ -157,12 +107,12 @@ export default async function Sessions() {
                 {greentouchSessions.map((greentouchSession) => {
                     const unlocked = isUnlocked(greentouchSession.id, greentouchSession.title);
 
-                    // poiščemo DB session za release date
+                    // find corresponding db session to get release date
                     const dbSession = dbGreentouchSessions.find(
                         (s) => s.name === greentouchSession.title
                     );
 
-                    // pripravimo lep format datuma (če obstaja)
+                    // prepare nice date format (if exists)
                     const formattedReleaseDate =
                         dbSession?.releaseDate
                             ? new Date(dbSession.releaseDate).toLocaleDateString("en-GB", {

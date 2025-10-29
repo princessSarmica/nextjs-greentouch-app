@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { LoadingButton } from "../../loading-button";
 import { toast } from "sonner";
 import { saveDiaryEntry } from "@/actions/greentouch-session-user-data";
+import { greentouchSessions } from "@/app/data/greentouch-sessions-data";
 
 interface SaveDiaryProps {
     greentouchSessionId?: string;
@@ -55,29 +56,11 @@ function AccountDiaryCard({ greentouchSessionId, greentouchSessionName, initialD
         } 
     } 
 
-    const diaryQuestions: Record<string, string[]> = {
-        "Session 1": [
-        "As I immerse myself in a natural environment, what thoughts, feelings, or memories arise?",
-        ],
-        "Session 2": [
-        "What does this experience tell me about myself and nature?",
-        ],
-        "Session 3": [
-        "How do the sounds of nature affect my thoughts and feelings?",
-        ],
-        "Session 4": [
-        "How do my social surroundings influence the time I spend in nature?",
-        ],
-        "Session 5": [
-        "What obstacles prevent me from spending time in nature, and how can I overcome them?",
-        "Which solutions feel realistic for my lifestyle?",
-        ],
-        "Session 6": [
-        "What would I commit to doing over the next three months to spend more time in nature?",
-        ],
-    };
+    const currentSession = greentouchSessions.find(
+        (s) => s.title === greentouchSessionName || s.id === greentouchSessionId
+    );
 
-    const questions = greentouchSessionName ? diaryQuestions[greentouchSessionName] : [];
+    const questions = currentSession?.diaryQuestions ?? [];
 
     const hasChanges = diaryTexts.some((t, i) => t !== (initialDiaryText?.[i] ?? ""))
     const hasContent = diaryTexts.some((t) => t.trim())
