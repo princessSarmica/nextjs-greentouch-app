@@ -218,8 +218,6 @@ export default async function Sessions() {
                                     <div className="absolute bottom-3 right-3">
                                         <ReleaseDateDialog
                                             sessionName={greentouchSession.title}
-                                            sessionDescription={greentouchSession.description}
-                                            sessionCoverImage={greentouchSession.image}
                                         />
                                     </div>
                                 )}

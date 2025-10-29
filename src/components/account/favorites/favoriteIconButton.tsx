@@ -7,22 +7,21 @@ import { removeFavoriteSession } from "@/actions/greentouch-session-user-data";
 import { Button } from "../../ui/button";
 
 interface FavoriteIconButtonProps {
-  greentouchSessionId: string;
+  greentouchSessionName: string;
 }
 
-export default function FavoriteIconButton({greentouchSessionId}: FavoriteIconButtonProps) {
+export default function FavoriteIconButton({greentouchSessionName}: FavoriteIconButtonProps) {
   const [isPending, startTransition] = useTransition();
 
   const handleClick = () => {
     startTransition(async () => {
 
-
-        if(!greentouchSessionId){
-            toast.error("Session ID is missing. Make sure the session is already available.");
+        if(!greentouchSessionName){
+            toast.error("Session name is missing. Make sure the session is already available.");
             return;
         }
 
-        const result = await removeFavoriteSession(greentouchSessionId);
+        const result = await removeFavoriteSession(greentouchSessionName);
 
         if (!result.success) {
             toast.error("Something went wrong while updating favorite.");
