@@ -5,7 +5,7 @@ import { Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { favoriteSession } from "@/actions/greentouch-session-user-data";
-import { Button } from "../ui/button";
+import { LoadingButton } from "../loading-button";
 
 interface FavoriteButtonProps {
   greentouchSessionId: string;
@@ -43,10 +43,11 @@ export default function FavoriteButton({greentouchSessionId, initialIsFavorite}:
   };
 
   return (
-    <Button
+    <LoadingButton
       onClick={handleClick}
       disabled={isPending}
       variant="outline"
+      loading={isPending}
       className={cn(
         "transition-all duration-200 flex items-center gap-2 px-4 py-4 text-sm font-medium shadow-none",
         isFavorite
@@ -62,6 +63,6 @@ export default function FavoriteButton({greentouchSessionId, initialIsFavorite}:
           isFavorite ? "fill-white text-white" : "text-gray-500"
         )}
       />
-    </Button>
+    </LoadingButton>
   );
 }
