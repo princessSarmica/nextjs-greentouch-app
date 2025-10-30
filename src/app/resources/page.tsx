@@ -48,7 +48,7 @@ export default async function Resources() {
             <p className="text-base mb-4">
               Explore more in-depth knowledge by reading peer-reviewed scientific articles on the role of nature and nature connectedness, as well as nature-based and digital nature-based interventions. Delve into research that highlights the benefits and impacts these approaches have on well-being and ecological awareness.
             </p>
-            <Button>
+            <Button asChild variant={"default"} className="px-4 py-4">
               <Link href="/resources/articles">
                 Explore articles →
               </Link>
