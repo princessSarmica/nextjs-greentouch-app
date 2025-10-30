@@ -108,20 +108,6 @@ export async function saveDiaryEntry(greentouchSessionId: string, greentouchSess
     }
 }
 
-export async function getDiaryEntry(greentouchSessionId: string) {
-    const session = await getServerSession();
-    if (!session) throw new Error("User not authenticated");
-
-    const userId = session.user.id;
-
-    const existingData = await prisma.greentouchSessionUserData.findUnique({
-        where: { greentouchSessionId_userId: { greentouchSessionId, userId } },
-        select: { diaryEntry: true },
-    });
-
-    return existingData?.diaryEntry ?? [];
-}
-
 export async function getAllDiaryEntries() {
     const session = await getServerSession();
     if (!session) throw new Error("User not authenticated");
