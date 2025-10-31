@@ -16,6 +16,7 @@ interface SurveyCardProps {
     initialFriendsFamilyResponse?: string;
     initialLearntSomethingNewResponse?: string;
     initialCloserToNatureResponse?: string;
+    greentouchSessionCompleted?: boolean;
 }
 
 export default function SurveyCard({
@@ -27,6 +28,7 @@ export default function SurveyCard({
     initialFriendsFamilyResponse,
     initialLearntSomethingNewResponse,
     initialCloserToNatureResponse,
+    greentouchSessionCompleted
 }: SurveyCardProps) {
     const [isLoading, setIsLoading] = useState(false);
 
@@ -250,7 +252,7 @@ export default function SurveyCard({
             <div className="flex justify-end mt-10">
             <LoadingButton
                 variant="secondary"
-                disabled={!responses.outdoorTasks || !responses.indoorTasks || !responses.physicalHealth || !responses.mentalHealth || !responses.friendsFamily || !responses.learntSomethingNew || !responses.closerToNature || !hasChanges || isLoading}
+                disabled={!responses.outdoorTasks || !responses.indoorTasks || !responses.physicalHealth || !responses.mentalHealth || !responses.friendsFamily || !responses.learntSomethingNew || !responses.closerToNature || !hasChanges || isLoading || greentouchSessionCompleted}
                 onClick={handleSubmit}
                 loading={isLoading}
             >

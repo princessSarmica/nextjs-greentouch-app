@@ -96,7 +96,7 @@ export default async function SessionSevenPage() {
             </section>
 
             {/* Nature Connectedness Card */}
-            <NatureConnectednessCard greentouchSessionId={dbSession?.id} />
+            <NatureConnectednessCard greentouchSessionId={dbSession?.id} greentouchSessionCompleted={userData?.sessionCompleted} />
 
             {/* Outdoor Task Card */}
             <section className="w-full max-w-5xl mx-auto px-4">

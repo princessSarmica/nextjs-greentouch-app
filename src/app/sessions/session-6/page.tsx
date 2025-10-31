@@ -107,7 +107,7 @@ export default async function SessionSixPage() {
             </section>
 
             {/* Nature Connectedness Card */}
-            <NatureConnectednessCard greentouchSessionId={dbSession?.id} />
+            <NatureConnectednessCard greentouchSessionId={dbSession?.id} greentouchSessionCompleted={userData?.sessionCompleted} />
 
             {/* Outdoor Task Card */}
             <section className="w-full max-w-5xl mx-auto px-4">
@@ -202,6 +202,7 @@ export default async function SessionSixPage() {
                 initialFriendsFamilyResponse={userData?.friendsFamilyResponse ?? undefined}
                 initialLearntSomethingNewResponse={userData?.learntSomethingNewResponse ?? undefined}
                 initialCloserToNatureResponse={userData?.closerToNatureResponse ?? undefined}
+                greentouchSessionCompleted={userData?.sessionCompleted}
             />
 
             {/* Session Completed Card */}

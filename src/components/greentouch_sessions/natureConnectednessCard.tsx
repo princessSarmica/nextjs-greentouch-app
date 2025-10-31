@@ -9,9 +9,10 @@ import { saveUserNatureConnectedness } from "@/actions/greentouch-session-user-d
 
 interface SaveNatureConnectednessProps {
     greentouchSessionId?: string;
+    greentouchSessionCompleted?: boolean;
 }
 
-function NatureConnectednessCard({ greentouchSessionId }: SaveNatureConnectednessProps) {
+function NatureConnectednessCard({ greentouchSessionId, greentouchSessionCompleted }: SaveNatureConnectednessProps) {
 
     const natureConnectednessExpansions = ["Fully disconnected from nature", "Closely connected to nature"];
 
@@ -72,7 +73,7 @@ function NatureConnectednessCard({ greentouchSessionId }: SaveNatureConnectednes
                 </div>
 
                 <div className="flex justify-end">
-                    <LoadingButton type="submit" onClick={handleSubmit} disabled={isLoading} loading={isLoading}>Save changes</LoadingButton>
+                    <LoadingButton type="submit" onClick={handleSubmit} disabled={isLoading || greentouchSessionCompleted} loading={isLoading}>Save changes</LoadingButton>
                 </div>
             </div>
         </section>

@@ -279,6 +279,7 @@ export async function sessionIsCompleted(greentouchSessionId: string) {
                         sessionCompleted: true,
                     },
                 });
+                revalidatePath(`/sessions/`);
                 return { success: true };
             } else {
                 throw new Error("Cannot complete session. All required data not provided.");
@@ -292,6 +293,7 @@ export async function sessionIsCompleted(greentouchSessionId: string) {
                         sessionCompleted: true,
                     },
                 });
+                revalidatePath(`/sessions/`);
                 return { success: true };
             } else {
                 throw new Error("Cannot complete session. User data not found.");
