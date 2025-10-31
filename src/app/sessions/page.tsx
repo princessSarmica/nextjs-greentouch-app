@@ -60,6 +60,8 @@ export default async function Sessions() {
     const isUnlocked = (id: string, title: string) => {
         if (id === "demo-session") return true;
 
+        if (session.user.role === "admin") return true;
+
         // check if session is released
         const dbGreentouchSession = dbGreentouchSessions.find((s) => s.name === title);
         if (!dbGreentouchSession || !dbGreentouchSession.releaseDate) {
@@ -82,8 +84,6 @@ export default async function Sessions() {
         const previousSessionCompleted = completedSessions.some(
             (completed) => completed.greentouchSession.name === previousSession.title
         );
-
-        if (session.user.role === "admin") return true;
 
         // access is only possible if the previous session is completed
         return previousSessionCompleted;
@@ -155,6 +155,16 @@ export default async function Sessions() {
                                         <p className="text-gray-600">
                                             {greentouchSession.description}
                                         </p>
+                                        {greentouchSession.id !== "demo-session" && (
+                                            (unlocked && completedSessions.some(
+                                                (completed) =>
+                                                    completed.greentouchSession.name === greentouchSession.title
+                                            )) ? (
+                                                <p className="mt-2 text-green-600 font-semibold">Completed</p>
+                                            ) : (
+                                                <p className="mt-2 text-gray-600 font-semibold">In Progress</p>
+                                            )
+                                        )}
                                     </div>
                                 </Link>
                             ) : session.user.role === "admin" ? (
@@ -208,6 +218,7 @@ export default async function Sessions() {
                                         ) : (
                                             <p className="text-gray-600 italic">Coming soon...</p>
                                         )}
+                                        <p className="mt-2 text-gray-600 font-semibold">To be completed</p>
                                     </div>
                                 </div>
                             )}
