@@ -171,6 +171,7 @@ export async function getAllFavoriteSessions() {
 
     const favoriteSessions = await prisma.greentouchSession.findMany({
         where: { users: { some: { userId, isFavorite: true } } },
+        orderBy: { name: 'asc' },
     });
 
     return favoriteSessions;
