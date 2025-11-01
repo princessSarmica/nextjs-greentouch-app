@@ -30,10 +30,10 @@ export default async function Sessions() {
                         <Link
                         key={greentouchSession.id}
                         href={`/sessions/${greentouchSession.id}`}
-                        className="flex flex-row items-stretch bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden"
+                        className="flex flex-col sm:flex-row items-stretch bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden"
                         >
                         {/* Image section – raztegnjena do robov */}
-                        <div className="relative w-48 min-w-[12rem] h-40">
+                        <div className="relative w-full sm:w-52 md:w-54 lg:w-56 h-40 sm:h-46 flex-shrink-0">
                             <Image
                             src={greentouchSession.image}
                             alt={greentouchSession.title}
@@ -44,8 +44,8 @@ export default async function Sessions() {
                         </div>
                         {/* Text section */}
                         <div className="flex flex-col justify-center px-6 py-4">
-                            <h2 className="text-xl font-semibold">{greentouchSession.title}</h2>
-                            <p className="text-gray-600">{greentouchSession.description}</p>
+                            <h2 className="text-lg sm:text-xl font-semibold">{greentouchSession.title}</h2>
+                            <p className="text-sm sm:text-base text-gray-600">{greentouchSession.description}</p>
                         </div>
                         </Link>
                     ))}
@@ -117,9 +117,10 @@ export default async function Sessions() {
                     );
 
                     // prepare nice date format (if exists)
+                    const releaseDateObj = dbSession?.releaseDate ? new Date(dbSession.releaseDate) : null;
                     const formattedReleaseDate =
-                        dbSession?.releaseDate
-                            ? new Date(dbSession.releaseDate).toLocaleDateString("en-GB", {
+                        releaseDateObj
+                            ? releaseDateObj.toLocaleDateString("en-GB", {
                                 day: "numeric",
                                 month: "long",
                                 year: "numeric",
@@ -138,10 +139,10 @@ export default async function Sessions() {
                             {session.user.role === "admin" ? (
                                 <Link
                                     href={`/sessions/${greentouchSession.id}`}
-                                    className="flex flex-row flex-1"
+                                    className="flex flex-col sm:flex-row flex-1 pb-10"
                                 >
                                     {unlocked ? (
-                                        <div className="relative w-32 sm:w-52 md:w-54 lg:w-56 h-46 flex-shrink-0">
+                                        <div className="relative w-full sm:w-52 md:w-54 lg:w-56 h-40 sm:h-46 flex-shrink-0">
                                             <Image
                                                 src={greentouchSession.image}
                                                 alt={greentouchSession.title}
@@ -151,7 +152,7 @@ export default async function Sessions() {
                                             />
                                         </div>
                                     ) : (
-                                        <div className="relative w-32 sm:w-52 md:w-54 lg:w-56 h-46 flex-shrink-0">
+                                        <div className="relative w-full sm:w-52 md:w-54 lg:w-56 h-40 sm:h-46 flex-shrink-0">
                                             <Image
                                                 src={greentouchSession.image}
                                                 alt={greentouchSession.title}
@@ -163,23 +164,23 @@ export default async function Sessions() {
                                     )}
 
                                     <div className="flex flex-col justify-center px-4 sm:px-6 py-4">
-                                        <h2 className="text-xl font-semibold flex items-center gap-2">
+                                        <h2 className="text-lg sm:text-xl font-semibold flex items-center gap-2">
                                             {greentouchSession.title}
                                             {!unlocked ? (
                                                 <LockIcon className="w-4 h-4 text-gray-600" />
                                             ) : (null)}
                                         </h2>
-                                        <p className="text-gray-600">
+                                        <p className="text-sm sm:text-base text-gray-600">
                                             {greentouchSession.description}
                                         </p>
                                         {greentouchSession.id !== "demo-session" && (
                                             <>
                                                 {formattedReleaseDate ? (
-                                                    <p className="text-gray-600 italic">
+                                                    <p className="text-sm sm:text-base text-gray-600 italic">
                                                         Releasing on {formattedReleaseDate}
                                                     </p>
                                                 ) : (
-                                                    <p className="text-gray-600 italic">Coming soon...</p>
+                                                    <p className="text-sm sm:text-base text-gray-600 italic">Coming soon...</p>
                                                 )}
                                             </>
                                         )}
@@ -188,10 +189,10 @@ export default async function Sessions() {
                             ) : unlocked ? (
                                 <Link
                                     href={`/sessions/${greentouchSession.id}`}
-                                    className="flex flex-row flex-1"
+                                    className="flex flex-col sm:flex-row flex-1"
                                 >
                                     {/* Image */}
-                                    <div className="relative w-32 sm:w-52 md:w-54 lg:w-56 h-46 flex-shrink-0">
+                                    <div className="relative w-full sm:w-52 md:w-54 lg:w-56 h-40 sm:h-46 flex-shrink-0">
                                         <Image
                                             src={greentouchSession.image}
                                             alt={greentouchSession.title}
@@ -203,10 +204,10 @@ export default async function Sessions() {
 
                                     {/* Text */}
                                     <div className="flex flex-col justify-center px-4 sm:px-6 py-4">
-                                        <h2 className="text-xl font-semibold">
+                                        <h2 className="text-lg sm:text-xl font-semibold">
                                             {greentouchSession.title}
                                         </h2>
-                                        <p className="text-gray-600">
+                                        <p className="text-sm sm:text-base text-gray-600">
                                             {greentouchSession.description}
                                         </p>
                                         {greentouchSession.id !== "demo-session" && (
@@ -214,16 +215,16 @@ export default async function Sessions() {
                                                 (completed) =>
                                                     completed.greentouchSession.name === greentouchSession.title
                                             )) ? (
-                                                <p className="mt-2 text-green-600 font-semibold">Completed</p>
+                                                <p className="text-sm sm:text-base mt-2 text-green-600 font-semibold">Completed</p>
                                             ) : (
-                                                <p className="mt-2 text-gray-600 font-semibold">In Progress</p>
+                                                <p className="text-sm sm:text-base mt-2 text-gray-600 font-semibold">In Progress</p>
                                             )
                                         )}
                                     </div>
                                 </Link>
                             ) : (
-                                <div className="flex flex-row flex-1">
-                                    <div className="relative w-32 sm:w-52 md:w-54 lg:w-56 h-46 flex-shrink-0">
+                                <div className="flex flex-col sm:flex-row flex-1">
+                                    <div className="relative w-full sm:w-52 md:w-54 lg:w-56 h-40 sm:h-46 flex-shrink-0">
                                         <Image
                                             src={greentouchSession.image}
                                             alt={greentouchSession.title}
@@ -233,31 +234,35 @@ export default async function Sessions() {
                                         />
                                     </div>
                                     <div className="flex flex-col justify-center px-4 sm:px-6 py-4">
-                                        <h2 className="text-xl font-semibold flex items-center gap-2">
+                                        <h2 className="text-lg sm:text-xl font-semibold flex items-center gap-2">
                                             {greentouchSession.title}
-                                            <LockIcon className="w-4 h-4 text-gray-600" />
+                                                <LockIcon className="w-4 h-4 text-gray-600" />
                                         </h2>
-                                        {formattedReleaseDate ? (
-                                            <p className="text-gray-600 italic">
-                                                Releasing on {formattedReleaseDate}
+                                        {releaseDateObj && releaseDateObj < new Date() ? (
+                                            <p className="text-sm sm:text-base text-gray-600 italic">
+                                                Previous sessions must be completed to unlock new ones.
+                                            </p>
+                                        ) : releaseDateObj && releaseDateObj > new Date() ? (
+                                            <p className="text-sm sm:text-base text-gray-600 italic">
+                                                Release date: {formattedReleaseDate}
                                             </p>
                                         ) : (
-                                            <p className="text-gray-600 italic">Coming soon...</p>
+                                            <p className="text-sm sm:text-base text-gray-600 italic">Coming soon...</p>
                                         )}
-                                        <p className="mt-2 text-gray-600 font-semibold">To be completed</p>
+                                        <p className="text-sm sm:text-base mt-2 text-gray-600 font-semibold">To be completed</p>
                                     </div>
                                 </div>
                             )}
 
                             {/* Admin release date button */}
                             {session.user.role === "admin" &&
-                                greentouchSession.id !== "demo-session" && (
-                                    <div className="absolute bottom-3 right-3">
-                                        <ReleaseDateDialog
-                                            sessionName={greentouchSession.title}
-                                        />
-                                    </div>
-                                )}
+                            greentouchSession.id !== "demo-session" && (
+                                <div className="absolute bottom-3 right-3">
+                                    <ReleaseDateDialog
+                                        sessionName={greentouchSession.title}
+                                    />
+                                </div>
+                            )}
                         </div>
                     );
                 })}
