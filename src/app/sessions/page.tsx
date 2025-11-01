@@ -60,8 +60,6 @@ export default async function Sessions() {
     const isUnlocked = (id: string, title: string) => {
         if (id === "demo-session") return true;
 
-        if (session.user.role === "admin") return true;
-
         // check if session is released
         const dbGreentouchSession = dbGreentouchSessions.find((s) => s.name === title);
         if (!dbGreentouchSession || !dbGreentouchSession.releaseDate) {
@@ -69,24 +67,30 @@ export default async function Sessions() {
         }
 
         const isReleased = new Date(dbGreentouchSession.releaseDate) <= new Date();
+
         if (!isReleased) return false;
 
-        // find the index of the current session
-        const sessionIndex = greentouchSessions.findIndex((s) => s.id === id);
+        if (session.user.role !== "admin") {
+            // find the index of the current session
+            const sessionIndex = greentouchSessions.findIndex((s) => s.id === id);
 
-        // if it's the first real session (Session 1), no conditions apply
-        if (sessionIndex <= 1) return true;
+            // if it's the first real session (Session 1), no conditions apply
+            if (sessionIndex <= 1) return true;
 
-        // find the previous session (not demo)
-        const previousSession = greentouchSessions[sessionIndex - 1];
+            // find the previous session (not demo)
+            const previousSession = greentouchSessions[sessionIndex - 1];
 
-        // check if user completed previous session
-        const previousSessionCompleted = completedSessions.some(
-            (completed) => completed.greentouchSession.name === previousSession.title
-        );
+            // check if user completed previous session
+            const previousSessionCompleted = completedSessions.some(
+                (completed) => completed.greentouchSession.name === previousSession.title
+            );
 
-        // access is only possible if the previous session is completed
-        return previousSessionCompleted;
+            // access is only possible if the previous session is completed
+            return previousSessionCompleted;
+        }
+        else {
+            return true
+        }
     };
 
     const completedSessions = await getAllCompletedGreentouchSessions();
@@ -131,7 +135,57 @@ export default async function Sessions() {
                                     : "bg-gray-200 opacity-70 cursor-not-allowed"
                             }`}
                         >
-                            {unlocked ? (
+                            {session.user.role === "admin" ? (
+                                <Link
+                                    href={`/sessions/${greentouchSession.id}`}
+                                    className="flex flex-row flex-1"
+                                >
+                                    {unlocked ? (
+                                        <div className="relative w-32 sm:w-52 md:w-54 lg:w-56 h-46 flex-shrink-0">
+                                            <Image
+                                                src={greentouchSession.image}
+                                                alt={greentouchSession.title}
+                                                fill
+                                                className="object-cover"
+                                                sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 25vw"
+                                            />
+                                        </div>
+                                    ) : (
+                                        <div className="relative w-32 sm:w-52 md:w-54 lg:w-56 h-46 flex-shrink-0">
+                                            <Image
+                                                src={greentouchSession.image}
+                                                alt={greentouchSession.title}
+                                                fill
+                                                className="object-cover grayscale"
+                                                sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 25vw"
+                                            />
+                                        </div>
+                                    )}
+
+                                    <div className="flex flex-col justify-center px-4 sm:px-6 py-4">
+                                        <h2 className="text-xl font-semibold flex items-center gap-2">
+                                            {greentouchSession.title}
+                                            {!unlocked ? (
+                                                <LockIcon className="w-4 h-4 text-gray-600" />
+                                            ) : (null)}
+                                        </h2>
+                                        <p className="text-gray-600">
+                                            {greentouchSession.description}
+                                        </p>
+                                        {greentouchSession.id !== "demo-session" && (
+                                            <>
+                                                {formattedReleaseDate ? (
+                                                    <p className="text-gray-600 italic">
+                                                        Releasing on {formattedReleaseDate}
+                                                    </p>
+                                                ) : (
+                                                    <p className="text-gray-600 italic">Coming soon...</p>
+                                                )}
+                                            </>
+                                        )}
+                                    </div>
+                                </Link>
+                            ) : unlocked ? (
                                 <Link
                                     href={`/sessions/${greentouchSession.id}`}
                                     className="flex flex-row flex-1"
@@ -164,34 +218,6 @@ export default async function Sessions() {
                                             ) : (
                                                 <p className="mt-2 text-gray-600 font-semibold">In Progress</p>
                                             )
-                                        )}
-                                    </div>
-                                </Link>
-                            ) : session.user.role === "admin" ? (
-                                <Link
-                                    href={`/sessions/${greentouchSession.id}`}
-                                    className="flex flex-row flex-1"
-                                >
-                                    <div className="relative w-32 sm:w-52 md:w-54 lg:w-56 h-46 flex-shrink-0">
-                                        <Image
-                                            src={greentouchSession.image}
-                                            alt={greentouchSession.title}
-                                            fill
-                                            className="object-cover grayscale"
-                                            sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 25vw"
-                                        />
-                                    </div>
-                                    <div className="flex flex-col justify-center px-4 sm:px-6 py-4">
-                                        <h2 className="text-xl font-semibold flex items-center gap-2">
-                                            {greentouchSession.title}
-                                            <LockIcon className="w-4 h-4 text-gray-600" />
-                                        </h2>
-                                        {formattedReleaseDate ? (
-                                            <p className="text-gray-600 italic">
-                                                Releasing on {formattedReleaseDate}
-                                            </p>
-                                        ) : (
-                                            <p className="text-gray-600 italic">Coming soon...</p>
                                         )}
                                     </div>
                                 </Link>
