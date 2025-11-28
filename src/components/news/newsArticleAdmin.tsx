@@ -22,7 +22,17 @@ export type NewsArticleClient = {
     createdAt: string; // ISO string
 };
 
-export default function NewsArticleAdmin({article, backHref = "/news",}: {article: NewsArticleClient; backHref?: string;}) {
+export type NewsArticleAdminTranslations = {
+    breadcrumbItem1: string;
+    backButton: string;
+    editNewsArticleDialog: {
+        title: string;
+        cancelButton: string;
+        actionButton: string;
+    };
+};
+
+export default function NewsArticleAdmin({newsArticleAdminTranslations, article, backHref = "/news",}: {newsArticleAdminTranslations: NewsArticleAdminTranslations; article: NewsArticleClient; backHref?: string;}) {
 
     //console.log("NewsArticleAdmin Component rendered");
 
@@ -107,7 +117,7 @@ export default function NewsArticleAdmin({article, backHref = "/news",}: {articl
         <div className="mx-auto w-full max-w-5xl px-4 md:px-6 lg:px-8 py-6 md:py-10">
             <div className="text-sm text-gray-500 mb-2">
             <Link href="/news" className="text-[#1F566E] hover:underline font-medium">
-                News and Events
+                {newsArticleAdminTranslations.breadcrumbItem1}
             </Link>
             <span className="mx-2">&gt;</span>
             <span>{title}</span>
@@ -118,7 +128,7 @@ export default function NewsArticleAdmin({article, backHref = "/news",}: {articl
                 {!isEditing && isAdmin && (
                 <Button className="absolute right-5 top-5" onClick={onClickEdit} variant="default">
                     <EditIcon className="h-4 w-4" />
-                    Edit
+                    {newsArticleAdminTranslations.editNewsArticleDialog.title}
                 </Button>
                 )}
 
@@ -128,7 +138,7 @@ export default function NewsArticleAdmin({article, backHref = "/news",}: {articl
                     className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900"
                 >
                     <ArrowLeft className="size-4" />
-                    Back
+                    {newsArticleAdminTranslations.backButton}
                 </Link>
                 </nav>
 
@@ -156,7 +166,7 @@ export default function NewsArticleAdmin({article, backHref = "/news",}: {articl
                     {isAdmin && (
                     <div className="flex items-center justify-end gap-4 pt-6">
                         <Button variant="outline" type="button" onClick={onClickCancel} disabled={isLoading}>
-                        Cancel
+                        {newsArticleAdminTranslations.editNewsArticleDialog.cancelButton}
                         </Button>
                         <LoadingButton
                         type="button"
@@ -164,7 +174,7 @@ export default function NewsArticleAdmin({article, backHref = "/news",}: {articl
                         disabled={!draftTitle.trim() || !draftContent.trim() || draftTitle === title && draftContent === content || isLoading}
                         loading={isLoading}
                         >
-                        Save changes
+                        {newsArticleAdminTranslations.editNewsArticleDialog.actionButton}
                         </LoadingButton>
                     </div>
                     )}

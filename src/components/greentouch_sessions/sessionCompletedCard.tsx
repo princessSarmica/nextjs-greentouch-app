@@ -8,11 +8,23 @@ import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, Di
 import { Button } from "../ui/button";
 
 interface SaveDiaryProps {
+    sessionCompletedCardTranslations: {
+        title: string;
+        description: string;
+        markAsCompleted: string;
+        completed: string;
+        dialog: {
+            title: string;
+            description: string;
+            cancelButton: string;
+            actionButton: string;
+        };
+    };
     greentouchSessionId?: string;
     sessionCompleted?: boolean;
 }
 
-function SessionCompletedCard({ greentouchSessionId, sessionCompleted }: SaveDiaryProps) {
+function SessionCompletedCard({ sessionCompletedCardTranslations, greentouchSessionId, sessionCompleted }: SaveDiaryProps) {
 
     const [isLoading, setIsLoading] = useState(false);
     const [isCompleted, setIsCompleted] = useState<boolean>(false);
@@ -55,22 +67,22 @@ function SessionCompletedCard({ greentouchSessionId, sessionCompleted }: SaveDia
         <section className="w-full max-w-5xl mx-auto px-4">
             <div className="bg-white rounded-lg shadow p-8">
                 <div className="flex flex-col items-center text-center gap-4">
-                <h3 className="text-xl font-semibold">Finished your session?</h3>
+                <h3 className="text-xl font-semibold">{sessionCompletedCardTranslations.title}</h3>
                 <p className="text-sm text-gray-700 max-w-md">
-                    Mark this session as completed and move on to other sessions.
+                    {sessionCompletedCardTranslations.description}
                 </p>
                 <Dialog>
                     <DialogTrigger asChild> 
-                        <Button variant="default" disabled={isLoading || isCompleted}>{isCompleted ? "Completed" : "Mark as completed"}</Button>
+                        <Button variant="default" disabled={isLoading || isCompleted}>{isCompleted ? sessionCompletedCardTranslations.completed : sessionCompletedCardTranslations.markAsCompleted}</Button>
                     </DialogTrigger> 
                     <DialogContent className="sm:max-w-[425px]"> 
                         <DialogHeader> 
-                            <DialogTitle> Mark this session as completed? </DialogTitle> 
-                            <DialogDescription> Data such as your nature connectedness and survey responses will be saved and can&apos;t be changed afterward. </DialogDescription> 
+                            <DialogTitle> {sessionCompletedCardTranslations.dialog.title} </DialogTitle> 
+                            <DialogDescription> {sessionCompletedCardTranslations.dialog.description} </DialogDescription> 
                         </DialogHeader> 
                         <DialogFooter> 
                             <DialogClose asChild> 
-                                <Button variant="outline">Cancel</Button> 
+                                <Button variant="outline">{sessionCompletedCardTranslations.dialog.cancelButton}</Button> 
                             </DialogClose>
                             <LoadingButton
                                 variant="default"
@@ -79,7 +91,7 @@ function SessionCompletedCard({ greentouchSessionId, sessionCompleted }: SaveDia
                                 disabled={isLoading || isCompleted}
                                 loading={isLoading}
                             >
-                                {isCompleted ? "Completed" : "Mark as completed"}
+                                {isCompleted ? sessionCompletedCardTranslations.completed : sessionCompletedCardTranslations.markAsCompleted}
                             </LoadingButton>
                         </DialogFooter>
                     </DialogContent> 

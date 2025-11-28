@@ -24,6 +24,18 @@ import {
 import ComboboxTopic from "../ui/combobox-topic";
 
 interface EditResourcesArticleDialogProps {
+    editResourceArticleDialogTranslations: {
+        title: string;
+        description: string;
+        labelArticleTopic: string;
+        labelArticleTopicPlaceholder: string;
+        labelArticleTopicCommandInput: string;
+        labelArticleTitle: string;
+        labelArticleContent: string;
+        labelArticleLink: string;
+        cancelButton: string;
+        actionButton: string;
+    };
     initialTopic: string;
     resourcesArticleId: string;
     initialTitle: string;
@@ -32,7 +44,7 @@ interface EditResourcesArticleDialogProps {
     existingTopics: string[];
 }
 
-export default function EditResourcesArticleDialog({ resourcesArticleId, initialTopic, initialTitle, initialContent, initialLink, existingTopics }: EditResourcesArticleDialogProps) {
+export default function EditResourcesArticleDialog({ editResourceArticleDialogTranslations, resourcesArticleId, initialTopic, initialTitle, initialContent, initialLink, existingTopics }: EditResourcesArticleDialogProps) {
     const [topic, setTopic] = useState(initialTopic);
     const [title, setTitle] = useState(initialTitle);
     const [content, setContent] = useState(initialContent);
@@ -93,47 +105,48 @@ export default function EditResourcesArticleDialog({ resourcesArticleId, initial
                 <DialogTrigger asChild> 
                     <Button variant="outline" size="sm" className="text-muted-foreground hover:text-primary -mr-2">
                         <EditIcon className="h-4 w-4" />
-                        Edit
+                        {editResourceArticleDialogTranslations.title}
                     </Button>
                 </DialogTrigger> 
                 <DialogContent className="sm:max-w-[425px]"> 
                     <DialogHeader> 
-                        <DialogTitle>Edit Resources Article</DialogTitle> 
-                        <DialogDescription> Fill in the details for the resources article you want to edit. </DialogDescription> 
+                        <DialogTitle>{editResourceArticleDialogTranslations.title}</DialogTitle> 
+                        <DialogDescription>{editResourceArticleDialogTranslations.description}</DialogDescription> 
                     </DialogHeader> 
                     <div className="grid gap-4"> 
                         <div className="grid gap-3">
-                            <Label htmlFor="topic">Topic</Label>
+                            <Label htmlFor="topic">{editResourceArticleDialogTranslations.labelArticleTopic}</Label>
                             <ComboboxTopic
                                 value={topic}
                                 onChange={setTopic}
                                 topics={existingTopics}
-                                placeholder={"Select or add topic..."}
+                                placeholder={`${editResourceArticleDialogTranslations.labelArticleTopicPlaceholder}`}
+                                commandInput={`${editResourceArticleDialogTranslations.labelArticleTopicCommandInput}`}
                                 widthClass="w-full"
                             />
                         </div>
 
                         <div className="grid gap-3"> 
-                            <Label htmlFor="title">Title</Label> 
+                            <Label htmlFor="title">{editResourceArticleDialogTranslations.labelArticleTitle}</Label> 
                             <Input id="title" name="title" value={title} onChange={(e) => setTitle(e.target.value)} disabled={isLoading} /> 
                         </div> 
                         
                         <div className="grid gap-3"> 
-                            <Label htmlFor="content">Content</Label> 
+                            <Label htmlFor="content">{editResourceArticleDialogTranslations.labelArticleContent}</Label> 
                             <Textarea id="content" name="content" value={content} onChange={(e) => setContent(e.target.value)} disabled={isLoading}/> 
                         </div>
 
                         <div className="grid gap-3"> 
-                            <Label htmlFor="link">Link</Label> 
+                            <Label htmlFor="link">{editResourceArticleDialogTranslations.labelArticleLink}</Label> 
                             <Input id="link" name="link" value={link} onChange={(e) => setLink(e.target.value)} disabled={isLoading} /> 
                         </div> 
                     </div> 
                     
                     <DialogFooter> 
                         <DialogClose asChild> 
-                            <Button variant="outline" onClick={onClickCancel} disabled={isLoading}>Cancel</Button> 
+                            <Button variant="outline" onClick={onClickCancel} disabled={isLoading}>{editResourceArticleDialogTranslations.cancelButton}</Button> 
                         </DialogClose> 
-                        <LoadingButton type="submit" onClick={handleSubmit} disabled={(!topic.trim()) || (!title.trim()) || (!content.trim()) || (!link.trim()) || (initialTopic === topic && initialTitle === title && initialContent === content && initialLink === link) || isLoading} loading={isLoading}>Save changes</LoadingButton>
+                        <LoadingButton type="submit" onClick={handleSubmit} disabled={(!topic.trim()) || (!title.trim()) || (!content.trim()) || (!link.trim()) || (initialTopic === topic && initialTitle === title && initialContent === content && initialLink === link) || isLoading} loading={isLoading}>{editResourceArticleDialogTranslations.actionButton}</LoadingButton>
                     </DialogFooter> 
                 </DialogContent> 
             </form> 

@@ -23,12 +23,20 @@ import {
 import { updateNewsArticle } from "@/actions/news-article";
 
 interface EditNewsArticleDialogProps {
+    editNewsArticleDialogTranslations: {
+        title: string;
+        description: string;
+        labelArticleTitle: string;
+        labelArticleContent: string;
+        cancelButton: string;
+        actionButton: string;
+    };
     newsArticleId: string;
     initialTitle: string;
     initialContent: string;
 }
 
-export default function EditNewsArticleDialog({ newsArticleId, initialTitle, initialContent }: EditNewsArticleDialogProps) {
+export default function EditNewsArticleDialog({ editNewsArticleDialogTranslations, newsArticleId, initialTitle, initialContent }: EditNewsArticleDialogProps) {
     const [title, setTitle] = useState(initialTitle);
     const [content, setContent] = useState(initialContent);
     const [isLoading, setIsLoading] = useState(false);
@@ -79,30 +87,30 @@ export default function EditNewsArticleDialog({ newsArticleId, initialTitle, ini
                 <DialogTrigger asChild> 
                     <Button variant="outline" size="sm" className="text-muted-foreground hover:text-primary -mr-2">
                         <EditIcon className="h-4 w-4" />
-                        Edit
+                        {editNewsArticleDialogTranslations.title}
                     </Button>
                 </DialogTrigger> 
                 <DialogContent className="sm:max-w-[425px]"> 
                     <DialogHeader> 
-                        <DialogTitle>Edit News Article</DialogTitle> 
-                        <DialogDescription> Fill in the details for the news article you want to edit. </DialogDescription> 
+                        <DialogTitle>{editNewsArticleDialogTranslations.title}</DialogTitle> 
+                        <DialogDescription> {editNewsArticleDialogTranslations.description} </DialogDescription> 
                     </DialogHeader> 
                     <div className="grid gap-4"> 
                         <div className="grid gap-3"> 
-                            <Label htmlFor="title">Title</Label> 
+                            <Label htmlFor="title">{editNewsArticleDialogTranslations.labelArticleTitle}</Label> 
                             <Input id="title" name="title" value={title} onChange={(e) => setTitle(e.target.value)} disabled={isLoading} /> 
                         </div> 
                         
                         <div className="grid gap-3"> 
-                            <Label htmlFor="content">Content</Label> 
+                            <Label htmlFor="content">{editNewsArticleDialogTranslations.labelArticleContent}</Label> 
                             <Textarea id="content" name="content" value={content} onChange={(e) => setContent(e.target.value)} disabled={isLoading}/> 
                         </div>
                     </div>
                     <DialogFooter> 
                         <DialogClose asChild> 
-                            <Button variant="outline" onClick={onClickCancel} disabled={isLoading}>Cancel</Button> 
+                            <Button variant="outline" onClick={onClickCancel} disabled={isLoading}>{editNewsArticleDialogTranslations.cancelButton}</Button> 
                         </DialogClose> 
-                        <LoadingButton type="submit" onClick={handleSubmit} disabled={(!title.trim()) || (!content.trim()) || (initialTitle === title && initialContent === content) || isLoading} loading={isLoading}>Save changes</LoadingButton>
+                        <LoadingButton type="submit" onClick={handleSubmit} disabled={(!title.trim()) || (!content.trim()) || (initialTitle === title && initialContent === content) || isLoading} loading={isLoading}>{editNewsArticleDialogTranslations.actionButton}</LoadingButton>
                     </DialogFooter> 
                 </DialogContent> 
             </form> 

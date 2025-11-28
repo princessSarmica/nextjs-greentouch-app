@@ -1,106 +1,151 @@
-"use client"; 
+"use client";
 
-import { Button } from "@/components/ui/button"; 
-import { 
-    Dialog, 
-    DialogClose, 
-    DialogContent, 
-    DialogDescription, 
-    DialogFooter, 
-    DialogHeader, 
-    DialogTitle, 
-    DialogTrigger, 
-} from "@/components/ui/dialog" 
-import { Input } from "../ui/input"; 
-import { Label } from "../ui/label"; 
-import { Textarea } from "../ui/textarea"; 
-import { useState } from "react"; 
-import { toast } from "sonner"; 
+import { Button } from "@/components/ui/button";
+import {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger
+} from "@/components/ui/dialog";
+import { Input } from "../ui/input";
+import { Label } from "../ui/label";
+import { Textarea } from "../ui/textarea";
+import { useState } from "react";
+import { toast } from "sonner";
 import { createResourcesArticle } from "@/actions/resources-article";
 import AddContentCard from "../addContentCard";
 import { LoadingButton } from "../loading-button";
 import ComboboxTopic from "../ui/combobox-topic";
 
-export default function AddResourcesArticleDialog(existingTopics?: { topics: string[] }) { 
-    const [topic, setTopic] = useState(""); 
-    const [title, setTitle] = useState(""); 
-    const [content, setContent] = useState(""); 
+export default function AddResourcesArticleDialog({
+    addResourceArticleDialogTranslations,
+    topics
+}: {
+    addResourceArticleDialogTranslations: {
+        title: string;
+        description: string;
+        labelArticleTopic: string;
+        labelArticleTopicPlaceholder: string;
+        labelArticleTopicCommandInput: string;
+        labelArticleTitle: string;
+        labelArticleContent: string;
+        labelArticleLink: string;
+        cancelButton: string;
+        actionButton: string;
+    };
+    topics: string[];
+}) {
+    const [topic, setTopic] = useState("");
+    const [title, setTitle] = useState("");
+    const [content, setContent] = useState("");
     const [link, setLink] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleSubmit = async () => { 
-        if (!topic.trim()) return 
-        if (!title.trim()) return 
-        if (!content.trim()) return 
-        if (!link.trim()) return 
+    const handleSubmit = async () => {
+        if (!topic.trim() || !title.trim() || !content.trim() || !link.trim()) return;
 
-        setIsLoading(true); 
-        
-        try { 
-            const result = await createResourcesArticle(topic, title, content, link); 
+        setIsLoading(true);
 
-            if(result.success){ 
-                setTopic(""); 
-                setTitle(""); 
-                setContent(""); 
+        try {
+            const result = await createResourcesArticle(topic, title, content, link);
+
+            if (result.success) {
+                setTopic("");
+                setTitle("");
+                setContent("");
                 setLink("");
-                toast.success("Resources article created successfully."); 
-            } 
-        } catch (error) { 
-                console.error("Error posting resources article:", error); 
-                toast.error("Failed to create resources article."); 
-        } finally { 
-            setIsLoading(false); 
-        } 
-    } 
-    
-    return ( 
-        <Dialog> 
-            <form onSubmit={handleSubmit}> 
-                <DialogTrigger asChild> 
+                toast.success("Resources article created successfully.");
+            }
+        } catch (error) {
+            console.error("Error posting resources article:", error);
+            toast.error("Failed to create resources article.");
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    return (
+        <Dialog>
+            <form onSubmit={handleSubmit}>
+                <DialogTrigger asChild>
                     <AddContentCard />
-                </DialogTrigger> 
-                <DialogContent className="sm:max-w-[425px]"> 
-                    <DialogHeader> 
-                        <DialogTitle>Add Resources Article</DialogTitle> 
-                        <DialogDescription> Fill in the details for the resources article you want to add. </DialogDescription> 
-                    </DialogHeader> 
-                    <div className="grid gap-4"> 
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[425px]">
+                    <DialogHeader>
+                        <DialogTitle>
+                            {addResourceArticleDialogTranslations.title}
+                        </DialogTitle>
+                        <DialogDescription>
+                            {addResourceArticleDialogTranslations.description}
+                        </DialogDescription>
+                    </DialogHeader>
+
+                    <div className="grid gap-4">
                         <div className="grid gap-3">
-                            <Label htmlFor="topic">Topic</Label>
+                            <Label htmlFor="topic">
+                                {addResourceArticleDialogTranslations.labelArticleTopic}
+                            </Label>
                             <ComboboxTopic
                                 value={topic}
                                 onChange={setTopic}
-                                topics={existingTopics?.topics}
-                                placeholder={"Select or add topic..."}
+                                topics={topics}
+                                placeholder={`${addResourceArticleDialogTranslations.labelArticleTopicPlaceholder}`}
+                                commandInput={`${addResourceArticleDialogTranslations.labelArticleTopicCommandInput}`}
                                 widthClass="w-full"
                             />
                         </div>
 
-                        <div className="grid gap-3"> 
-                            <Label htmlFor="title">Title</Label> 
-                            <Input id="title" name="title" value={title} onChange={(e) => setTitle(e.target.value)} disabled={isLoading} /> 
-                        </div> 
-                        
-                        <div className="grid gap-3"> 
-                            <Label htmlFor="content">Content</Label> 
-                            <Textarea id="content" name="content" value={content} onChange={(e) => setContent(e.target.value)} disabled={isLoading}/> 
+                        <div className="grid gap-3">
+                            <Label htmlFor="title">
+                                {addResourceArticleDialogTranslations.labelArticleTitle}
+                            </Label>
+                            <Input
+                                id="title"
+                                value={title}
+                                onChange={(e) => setTitle(e.target.value)}
+                                disabled={isLoading}
+                            />
                         </div>
 
-                        <div className="grid gap-3"> 
-                            <Label htmlFor="link">Link</Label> 
-                            <Input id="link" name="link" value={link} onChange={(e) => setLink(e.target.value)} disabled={isLoading} /> 
-                        </div> 
-                    </div> 
-                    
-                    <DialogFooter> 
-                        <DialogClose asChild> 
-                            <Button variant="outline">Cancel</Button> 
-                        </DialogClose> 
-                        <LoadingButton type="submit" onClick={handleSubmit} disabled={(!topic.trim()) || (!title.trim()) || (!content.trim()) || (!link.trim()) || isLoading} loading={isLoading}>Save changes</LoadingButton>
-                    </DialogFooter> 
-                </DialogContent> 
-            </form> 
-        </Dialog> 
-    ) 
+                        <div className="grid gap-3">
+                            <Label htmlFor="content">
+                                {addResourceArticleDialogTranslations.labelArticleContent}
+                            </Label>
+                            <Textarea
+                                id="content"
+                                value={content}
+                                onChange={(e) => setContent(e.target.value)}
+                                disabled={isLoading}
+                            />
+                        </div>
+
+                        <div className="grid gap-3">
+                            <Label htmlFor="link">
+                                {addResourceArticleDialogTranslations.labelArticleLink}
+                            </Label>
+                            <Input
+                                id="link"
+                                value={link}
+                                onChange={(e) => setLink(e.target.value)}
+                                disabled={isLoading}
+                            />
+                        </div>
+                    </div>
+
+                    <DialogFooter>
+                        <DialogClose asChild>
+                            <Button variant="outline">
+                                {addResourceArticleDialogTranslations.cancelButton}
+                            </Button>
+                        </DialogClose>
+                        <LoadingButton type="submit" onClick={handleSubmit} disabled={(!topic.trim()) || (!title.trim()) || (!content.trim()) || (!link.trim()) || isLoading} loading={isLoading}>{addResourceArticleDialogTranslations.actionButton}</LoadingButton>
+                    </DialogFooter>
+                </DialogContent>
+            </form>
+        </Dialog>
+    );
 }

@@ -3,13 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import FavoriteIconButton from "./favoriteIconButton";
 
-function FavoritedSessionCard({greentouchSessionName, greentouchSessionDescription, greentouchSessionCoverPhoto }: { greentouchSessionName: string; greentouchSessionDescription: string; greentouchSessionCoverPhoto: string }) {
+function FavoritedSessionCard({greentouchSessionLocalName, greentouchSessionName, greentouchSessionDescription, greentouchSessionCoverPhoto }: { greentouchSessionLocalName: string; greentouchSessionName: string; greentouchSessionDescription: string; greentouchSessionCoverPhoto: string }) {
 
   const imageSrc = greentouchSessionCoverPhoto || "/article-default-picture.png";
 
   return (
     <Card className="p-0 flex flex-col h-full overflow-hidden rounded-lg shadow-md transition-shadow bg-white border-0 pb-6">
-      <Link key={greentouchSessionName} href={`/sessions/${greentouchSessionName.toLowerCase().replace(/\s+/g, "-")}`} className="h-full">
+      <Link key={greentouchSessionLocalName} href={`/sessions/${greentouchSessionLocalName}`} className="h-full">
         <div className="relative w-full h-40">
           <Image
             src={imageSrc}
@@ -30,7 +30,7 @@ function FavoritedSessionCard({greentouchSessionName, greentouchSessionDescripti
       </Link>
       <CardFooter className="flex justify-end">
         <div className="flex gap-4">
-            <FavoriteIconButton greentouchSessionName={greentouchSessionName} />
+            <FavoriteIconButton greentouchSessionName={greentouchSessionLocalName} />
         </div>
       </CardFooter>
     </Card>

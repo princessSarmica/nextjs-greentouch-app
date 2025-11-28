@@ -1,0 +1,153 @@
+"use client";
+
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import z from "zod";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+import Link from "next/link";
+import { LoadingButton } from "@/components/loading-button";
+import { PasswordInput } from "@/components/password-input";
+import { useRouter } from "next/navigation";
+import { authClient } from "@/lib/auth-client";
+
+interface SignInFormProps {
+	signInFormTranslations: {
+        labelUsername: string;
+        labelPassword: string;
+        buttonSignIn: string;
+        noAccountText: string;
+        signUpLink: string;
+        formMessages: {
+            usernameTooShort: string;
+            usernameTooLong: string;
+            usernameInvalidCharacters: string;
+            passwordRequired: string;
+            unknownError: string;
+	    };
+    };
+}
+
+export function SignInForm({ signInFormTranslations }: SignInFormProps) {
+
+    const formSchema = z.object({
+        username: z
+            .string()
+            .trim()
+            .min(3, { message: `${signInFormTranslations.formMessages.usernameTooShort}` })
+            .max(30, { message: `${signInFormTranslations.formMessages.usernameTooLong}` })
+            .toLowerCase()
+            .regex(/^[a-z0-9_-]+$/, {
+                message: `${signInFormTranslations.formMessages.usernameInvalidCharacters}`,
+        }),
+        password: z.string().min(1, { message: `${signInFormTranslations.formMessages.passwordRequired}` }),
+    });
+
+    type SignInFormValues = z.infer<typeof formSchema>;
+
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+
+    const router = useRouter();
+
+    const form = useForm<SignInFormValues>({
+        resolver: zodResolver(formSchema),
+        defaultValues: {
+            username: "",
+            password: "",
+        },
+    });
+
+    async function onSubmit({ username, password }: SignInFormValues) {
+
+        setError(null);
+        setLoading(true);
+
+        const {error} = await authClient.signIn.username({ 
+            username, 
+            password 
+        });
+
+        setLoading(false);
+
+        if (error) {
+            setError(error.message || signInFormTranslations.formMessages.unknownError)
+        } else {
+            router.push("/");  
+        }
+    }
+
+    return (
+        <Card className="w-full max-w-md">
+        <CardContent className="space-y-6 pt-6">
+            <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                <FormField
+                control={form.control}
+                name="username"
+                render={({ field }) => (
+                    <FormItem>
+                    <FormLabel>{signInFormTranslations.labelUsername}</FormLabel>
+                    <FormControl>
+                        <Input type="text" placeholder={signInFormTranslations.labelUsername} {...field} />
+                    </FormControl>
+                    <FormMessage className="min-h-[20px]" />
+                    </FormItem>
+                )}
+                />
+                <FormField
+                control={form.control}
+                name="password"
+                render={({ field }) => (
+                    <FormItem>
+                    <FormLabel>{signInFormTranslations.labelPassword}</FormLabel>
+                    <FormControl>
+                        <div className="relative">
+                        <PasswordInput
+                            autoComplete="current-password"
+                            placeholder={signInFormTranslations.labelPassword}
+                            {...field}
+                        />
+                        </div>
+                    </FormControl>
+                    <FormMessage className="min-h-[20px]" />
+                    </FormItem>
+                )}
+                />
+
+                {error && (
+                    <div role="alert" className="text-sm text-red-600">
+                        {error}
+                    </div>
+                )}
+
+                <LoadingButton type="submit" className="w-full" loading={loading}>
+                    {signInFormTranslations.buttonSignIn}
+                </LoadingButton>
+            </form>
+            </Form>
+        </CardContent>
+        <CardFooter className="flex justify-center pb-6">
+            <span className="text-sm text-muted-foreground">
+            {signInFormTranslations.noAccountText}{" "}
+            <Link href="/sign-up" className="underline">
+              {signInFormTranslations.signUpLink}
+            </Link>
+            </span>
+        </CardFooter>
+        </Card>
+    );
+}

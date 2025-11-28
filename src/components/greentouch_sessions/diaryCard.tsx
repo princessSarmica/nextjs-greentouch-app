@@ -6,15 +6,24 @@ import { useEffect, useState } from "react";
 import { LoadingButton } from "../loading-button";
 import { toast } from "sonner";
 import { saveDiaryEntry } from "@/actions/greentouch-session-user-data";
-import { greentouchSessions } from "@/app/data/greentouch-sessions-data";
 
 interface SaveDiaryProps {
+    diaryCardTranslations:{
+        cardTitle: string;
+        requiredLabel: string;
+        cardDescription: string;
+        cardSubtitle: string;
+        noQuestionsAvailable: string;
+        actionButton: string;
+        localName: string;
+        diaryQuestions: string[];
+    };
     greentouchSessionId?: string;
     greentouchSessionName?: string;
     initialDiaryText?: string[];
 }
 
-function DiaryCard({ greentouchSessionId, greentouchSessionName, initialDiaryText }: SaveDiaryProps) {
+function DiaryCard({ diaryCardTranslations, greentouchSessionId, greentouchSessionName, initialDiaryText }: SaveDiaryProps) {
 
     const [diaryTexts, setDiaryTexts] = useState<string[]>(initialDiaryText ?? []);
     const [isLoading, setIsLoading] = useState(false);
@@ -23,11 +32,7 @@ function DiaryCard({ greentouchSessionId, greentouchSessionName, initialDiaryTex
         setDiaryTexts(initialDiaryText ?? []);
     }, [initialDiaryText]);
 
-    const currentSession = greentouchSessions.find(
-        (s) => s.id === greentouchSessionId || s.title === greentouchSessionName
-    );
-
-    const questions = currentSession?.diaryQuestions ?? [];
+    const questions = diaryCardTranslations.diaryQuestions;
 
 
     const handleSubmit = async (e?: React.FormEvent) => {
@@ -72,18 +77,18 @@ function DiaryCard({ greentouchSessionId, greentouchSessionName, initialDiaryTex
             <div className="bg-white rounded-lg shadow p-8">
                 <div className="flex items-center gap-2 mb-6">
                     <NotebookIcon className="w-6 h-6" />
-                    <h3 className="text-xl font-semibold">Diary</h3>
+                    <h3 className="text-xl font-semibold">{diaryCardTranslations.cardTitle}</h3>
                     <span className="ml-3 text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-center">
-                        Required to complete
+                        {diaryCardTranslations.requiredLabel}
                     </span>
                 </div>
 
                 <p className="text-base mb-4 text-gray-700">
-                    Once you have completed the session, please answer the following questions.
+                    {diaryCardTranslations.cardDescription}
                 </p>
 
                 <p className="text-sm font-semibold mt-10 text-green-800">
-                    OPEN QUESTIONS
+                    {diaryCardTranslations.cardSubtitle}
                 </p>
 
                 {/* Line divider */}
@@ -112,7 +117,7 @@ function DiaryCard({ greentouchSessionId, greentouchSessionName, initialDiaryTex
                         </div>
                         ))
                     ) : (
-                        <p className="text-gray-500 italic">No diary questions available for this session.</p>
+                        <p className="text-gray-500 italic">{diaryCardTranslations.noQuestionsAvailable}</p>
                     )}
                 </div>
 

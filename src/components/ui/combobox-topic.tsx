@@ -19,6 +19,7 @@ type ComboboxTopicProps = {
   onChange: (v: string) => void;
   topics?: string[]; // reactive prop
   placeholder?: string;
+  commandInput?: string;
   widthClass?: string;
 };
 
@@ -27,6 +28,7 @@ export default function ComboboxTopic({
   onChange,
   topics = [],
   placeholder = "Select or add topic...",
+  commandInput = "Search or type to add...",
   widthClass = "w-[full]",
 }: ComboboxTopicProps) {
   const [open, setOpen] = React.useState(false);
@@ -69,7 +71,7 @@ export default function ComboboxTopic({
       <PopoverContent className={cn(widthClass, "p-0")}>
         <Command>
           <CommandInput
-            placeholder="Search or type to add..."
+            placeholder={commandInput}
             className="h-9"
             value={inputValue}
             onValueChange={(v) => setInputValue(v)}

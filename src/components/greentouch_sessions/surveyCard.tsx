@@ -8,6 +8,41 @@ import { toast } from "sonner";
 import { saveSurveyData } from "@/actions/greentouch-session-user-data";
 
 interface SurveyCardProps {
+    surveyCardTranslations: {
+        cardTitle: string;
+        requiredLabel: string;
+        cardDescription: string;
+        cardSubtitle: string;
+        cardSubdescription1: string;
+        frequencyScale: {
+            never: string;
+            once: string;
+            twice: string;
+            threeTimes: string;
+            moreThanThreeTimes: string;
+        };
+        frequencyQuestions: {
+            outdoorTasks: string;
+            indoorTasks: string;
+        };
+        cardSubdescription2: string;
+        agreementScale: {
+            stronglyDisagree: string;
+            disagree: string;
+            neutral: string;
+            agree: string;
+            stronglyAgree: string;
+            notApplicable: string;
+        };
+        impactStatements: {
+            physicalHealth: string;
+            mentalHealth: string;
+            socialOpportunity: string;
+            learningChallenge: string;
+            closerToNature: string;
+        };
+        actionButton: string;
+    };
     greentouchSessionId?: string;
     initialOutdoorTasksResponse?: string;
     initialIndoorTasksResponse?: string;
@@ -20,6 +55,7 @@ interface SurveyCardProps {
 }
 
 export default function SurveyCard({
+    surveyCardTranslations,
     greentouchSessionId, 
     initialOutdoorTasksResponse,
     initialIndoorTasksResponse,
@@ -43,20 +79,20 @@ export default function SurveyCard({
     });
 
     const frequencyOptions = [
-        "Never",
-        "Once",
-        "Twice",
-        "Three times",
-        "More than three times",
+        { label: `${surveyCardTranslations.frequencyScale.never}`, value: "never" },
+        { label: `${surveyCardTranslations.frequencyScale.once}`, value: "once" },
+        { label: `${surveyCardTranslations.frequencyScale.twice}`, value: "twice" },
+        { label: `${surveyCardTranslations.frequencyScale.threeTimes}`, value: "threeTimes" },
+        { label: `${surveyCardTranslations.frequencyScale.moreThanThreeTimes}`, value: "moreThanThreeTimes" },
     ];
 
     const agreementOptions = [
-        "Strongly disagree",
-        "Disagree",
-        "Neither agree nor disagree",
-        "Agree",
-        "Strongly agree",
-        "Not applicable",
+        { label: `${surveyCardTranslations.agreementScale.stronglyDisagree}`, value: "stronglyDisagree" },
+        { label: `${surveyCardTranslations.agreementScale.disagree}`, value: "disagree" },
+        { label: `${surveyCardTranslations.agreementScale.neutral}`, value: "neutral" },
+        { label: `${surveyCardTranslations.agreementScale.agree}`, value: "agree" },
+        { label: `${surveyCardTranslations.agreementScale.stronglyAgree}`, value: "stronglyAgree" },
+        { label: `${surveyCardTranslations.agreementScale.notApplicable}`, value: "notApplicable" },
     ];
 
     const handleSubmit = async (e?: React.FormEvent) => {
@@ -113,27 +149,26 @@ export default function SurveyCard({
             {/* Header */}
             <div className="flex items-center gap-2 mb-6">
             <ClipboardCheckIcon className="w-6 h-6" />
-            <h3 className="text-xl font-semibold">Survey</h3>
+            <h3 className="text-xl font-semibold">{surveyCardTranslations.cardTitle}</h3>
             <span className="ml-3 text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-center">
-                Required to complete
+                {surveyCardTranslations.requiredLabel}
             </span>
             </div>
 
             <p className="text-base mb-4 text-gray-700">
-            When you finish writing in your Diary, please answer the following
-            questions.
+            {surveyCardTranslations.cardDescription}
             </p>
 
             {/* Closed Questions */}
             <p className="text-sm font-semibold mt-10 text-green-800">
-            CLOSED QUESTIONS
+            {surveyCardTranslations.cardSubtitle}
             </p>
             <div className="border-t-2 border-green-800 mt-2 mb-6 mx-auto" />
 
             {/* --- FIRST TABLE SECTION --- */}
             <div className="space-y-6 mb-10">
             <p className="font-medium text-gray-800">
-                How many times during this session did you dedicate time ...
+                {surveyCardTranslations.cardSubdescription1}
             </p>
 
             <div className="overflow-x-auto">
@@ -143,10 +178,10 @@ export default function SurveyCard({
                             <th className="text-left w-1/3 py-2"></th>
                             {frequencyOptions.map((opt) => (
                             <th
-                                key={opt}
+                                key={opt.value}
                                 className="text-center px-2 py-1 font-medium whitespace-normal break-words text-xs sm:text-sm min-w-[80px]"
                             >
-                                {opt}
+                                {opt.label}
                             </th>
                             ))}
                         </tr>
@@ -154,13 +189,13 @@ export default function SurveyCard({
                 <tbody>
                     {[
                     {
-                        label: "to outdoor tasks?",
+                        label: `${surveyCardTranslations.frequencyQuestions.outdoorTasks}`,
                         value: responses.outdoorTasks,
                         setter: (val: string) =>
                             setResponses((prev) => ({ ...prev, outdoorTasks: val })),
                     },
                     {
-                        label: "to indoor tasks?",
+                        label: `${surveyCardTranslations.frequencyQuestions.indoorTasks}`,
                         value: responses.indoorTasks,
                         setter: (val: string) =>
                             setResponses((prev) => ({ ...prev, indoorTasks: val })),
@@ -169,15 +204,15 @@ export default function SurveyCard({
                     <tr key={label} className="border-b">
                         <td className="py-2 font-medium">{label}</td>
                         {frequencyOptions.map((opt) => (
-                        <td key={opt} className="text-center py-3">
+                        <td key={opt.value} className="text-center py-3">
                             <RadioGroup
                             value={value}
                             onValueChange={setter}
                             className="flex justify-center"
                             >
                             <RadioGroupItem
-                                value={opt}
-                                id={`${label}-${opt}`}
+                                value={opt.value}
+                                id={`${label}-${opt.value}`}
                                 className="mx-auto"
                             />
                             </RadioGroup>
@@ -192,7 +227,7 @@ export default function SurveyCard({
 
             {/* --- SECOND TABLE SECTION --- */}
             <div className="space-y-6">
-            <p className="font-medium text-gray-800">I felt …</p>
+            <p className="font-medium text-gray-800">{surveyCardTranslations.cardSubdescription2}</p>
 
             <div className="overflow-x-auto">
                 <table className="w-full border-collapse text-sm text-gray-700 table-auto sm:table-fixed">
@@ -201,28 +236,26 @@ export default function SurveyCard({
                             <th className="text-left w-1/3 py-2"></th>
                             {agreementOptions.map((opt) => (
                             <th
-                                key={opt}
+                                key={opt.value}
                                 className="text-center px-2 py-1 font-medium whitespace-normal break-words text-xs sm:text-sm min-w-[80px]"
                             >
-                                {opt}
+                                {opt.label}
                             </th>
                             ))}
                         </tr>
                     </thead>
                 <tbody>
                     {Object.entries({
-                    "it was good for my physical health": "physicalHealth",
-                    "it was good for my mental health": "mentalHealth",
-                    "it was a good opportunity to spend time with friends or family":
-                        "friendsFamily",
-                    "I learnt something new / I challenged myself":
-                        "learntSomethingNew",
-                    "closer to nature": "closerToNature",
+                    [surveyCardTranslations.impactStatements.physicalHealth]: "physicalHealth",
+                    [surveyCardTranslations.impactStatements.mentalHealth]: "mentalHealth",
+                    [surveyCardTranslations.impactStatements.socialOpportunity]: "friendsFamily",
+                    [surveyCardTranslations.impactStatements.learningChallenge]: "learntSomethingNew",
+                    [surveyCardTranslations.impactStatements.closerToNature]: "closerToNature",
                     }).map(([label, key]) => (
                     <tr key={key} className="border-b">
                         <td className="py-2 font-medium">{label}</td>
                         {agreementOptions.map((opt) => (
-                        <td key={opt} className="text-center py-3">
+                        <td key={opt.value} className="text-center py-3">
                             <RadioGroup
                             value={responses[key as keyof typeof responses]}
                             onValueChange={(val) =>
@@ -234,8 +267,8 @@ export default function SurveyCard({
                             className="flex justify-center"
                             >
                             <RadioGroupItem
-                                value={opt}
-                                id={`${key}-${opt}`}
+                                value={opt.value}
+                                id={`${key}-${opt.value}`}
                                 className="mx-auto"
                             />
                             </RadioGroup>

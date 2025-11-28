@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,6 +15,8 @@ import {
   LockIcon as SecurityIcon,
   ShieldUserIcon as AdminIcon,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 function initials(input: string) {
   return input
@@ -39,6 +40,8 @@ export default function UserDropdown({ onSignOut, user }: UserDropdownProps) {
 
   //console.log("User Dropdown rendered");
 
+  const t = useTranslations('header.userDropdown');
+  
   return (
     <div className="flex items-center gap-4">
       <DropdownMenu>
@@ -61,38 +64,38 @@ export default function UserDropdown({ onSignOut, user }: UserDropdownProps) {
           <Link href="/account/profile">
             <DropdownMenuItem className="cursor-pointer">
               <ProfileIcon className="mr-2 h-4 w-4" />
-              Profile
+              {t('profile')}
             </DropdownMenuItem>
           </Link>
           <Link href="/account/my-diary">
             <DropdownMenuItem className="cursor-pointer">
               <DiaryIcon className="mr-2 h-4 w-4" />
-              My Diary
+              {t('myDiary')}
             </DropdownMenuItem>
           </Link>
           <Link href="/account/favorites">
             <DropdownMenuItem className="cursor-pointer">
               <FavoriteIcon className="mr-2 h-4 w-4" />
-              Favorites
+              {t('favorites')}
             </DropdownMenuItem>
           </Link>
           <Link href="/account/security">
             <DropdownMenuItem className="cursor-pointer">
               <SecurityIcon className="mr-2 h-4 w-4" />
-              Security
+              {t('security')}
             </DropdownMenuItem>
           </Link>
           {user.role === "admin" ? (
             <Link href="/account/admin">
               <DropdownMenuItem className="cursor-pointer">
                 <AdminIcon className="mr-2 h-4 w-4" />
-                Admin
+                {t('admin')}
               </DropdownMenuItem>
             </Link>
           ) : null}
           <DropdownMenuItem onClick={onSignOut} className="cursor-pointer">
             <SignOutIcon className="mr-2 h-4 w-4" />
-            <span>Sign out</span>
+            <span>{t('signOut')}</span>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

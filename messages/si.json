@@ -1,0 +1,835 @@
+{
+  "header": {
+    "navLinks": {
+      "discoverGreenTouch": "Odkrij GreenTouch",
+      "sessions": "Seje",
+      "natureVideoGallery": "Video galerija narave",
+      "news": "Novice",
+      "resources": "Viri"
+    },
+    "authButtons": {
+      "signUp": "Registracija",
+      "signIn": "Prijava"
+    },
+    "userDropdown": {
+      "profile": "Profil",
+      "myDiary": "Moj dnevnik",
+      "favorites": "Priljubljeno",
+      "security": "Varnost",
+      "admin": "Admin",
+      "signOut": "Odjava"
+    }
+  },
+  "signInPage": {
+    "title": "Vnesite podatke svojega računa in začnite raziskovati",
+    "disclaimer": "V primeru izgube uporabniškega imena ali gesla se obrnite na skrbnika strežnika za pomoč.",
+    "signInForm": {
+      "labelUsername": "Uporabniško ime",
+      "labelPassword": "Geslo",
+      "buttonSignIn": "Prijava",
+      "noAccountText": "Nimate računa?",
+      "signUpLink": "Registriraj se",
+      "formMessages": {
+        "usernameTooShort": "Uporabniško ime mora biti dolgo vsaj 3 znake.",
+        "usernameTooLong": "Uporabniško ime mora biti dolgo največ 30 znakov.",
+        "usernameInvalidCharacters": "Uporabniško ime sme vsebovati le črke, številke, podčrtaje in vezaje.",
+        "passwordRequired": "Geslo je obvezno.",
+        "unknownError": "Nekaj je šlo narobe."
+      }
+    }
+  },
+  "signUpPage": {
+    "title": "Registriraj se za program",
+    "labelRequired": "* je obvezno za izpolnitev",
+    "signUpForm": {
+      "labelName": "Ime",
+      "labelSurname": "Priimek",
+      "labelPosition": "Tvoj položaj",
+      "labelStudent": "Študent",
+      "labelAcademicStaff": "Akademsko osebje",
+      "labelOther": "Drugo",
+      "labelUniversityTitle": "Naziv univerze, kjer študiraš/delaš",
+      "labelUniversity": "Univerza",
+      "labelFieldOfWork": "Področje študija/dela",
+      "labelSpecialization": "Specializacija",
+      "labelMotivation": "Tvoja motivacija za sodelovanje v GreenTouch",
+      "labelPersonalInterest": "Osebni interes",
+      "labelProfessionalInterest": "Poklicni interes",
+      "labelBothOfThem": "Oba",
+      "labelEmail": "Email",
+      "labelUsername": "Uporabniško ime",
+      "labelPassword": "Geslo",
+      "labelConfirmPassword": "Potrdi geslo",
+      "buttonSignUp": "Pošlji",
+      "haveAccountText": "Že imate račun?",
+      "signInLink": "Prijava",
+      "formMessages": {
+        "firstNameRequired": "Ime je obvezno.",
+        "lastNameRequired": "Priimek je obvezen.",
+        "validEmailRequired": "Prosimo, vnesite veljaven e-poštni naslov.",
+        "confirmPasswordRequired": "Prosimo, potrdite svoje geslo.",
+        "usernameTooShort": "Uporabniško ime mora biti dolgo vsaj 3 znake.",
+        "usernameTooLong": "Uporabniško ime mora biti dolgo največ 30 znakov.",
+        "usernameInvalidCharacters": "Uporabniško ime sme vsebovati le črke, številke, podčrtaje in vezaje.",
+        "selectPositionRequired": "Prosimo, izberite svoj položaj.",
+        "selectMotivationRequired": "Prosimo, izberite svojo motivacijo.",
+        "selectUniversityRequired": "Univerza je obvezna.",
+        "selectSpecializationRequired": "Specializacija je obvezna.",
+        "passwordsDoNotMatch": "Gesli se ne ujemata.",
+        "unknownError": "Nekaj je šlo narobe. Prosimo poskusite znova."
+      }
+    }
+  },
+  "accountPage": {
+    "additionalData": {
+        "navbar": {
+        "profile": "Profil",
+        "myDiary": "Moj dnevnik",
+        "favorites": "Priljubljeno",
+        "security": "Varnost",
+        "admin": "Admin"
+      }
+    },
+    "profilePage": {
+      "trackYourProgress": "Spremljaj svoj napredek",
+      "natureConnectednessOverTime": "Povezanost z naravo (ocenjeno od 1 do 10)",
+      "yourAnswer": "Tvoj odgovor"
+    },
+    "myDiaryPage": {
+      "noEntriesMessage": "Niste še naredili nobenih vnosov v dnevnik."
+    },
+    "favoritesPage": {
+      "noFavoritesMessage": "Niste še dodali nobenih sej med priljubljene."
+    }
+  },
+  "homePage": {
+    "heroSection": {
+      "title": "Ponovno se poveži z naravo in umiri svoj um",
+      "description": "GreenTouch ponuja vodene vaje za samorefleksijo, izzive na prostem in nasvete za trajnostno življenje, ki ti pomagajo zmanjšati stres, razviti duševno odpornost in se globlje povezati z naravo.",
+      "buttonGetStarted": "Oglej si GreenTouch aktivnosti"
+    },
+    "projectPartnersSection": {
+      "title": "Naši projektni partnerji"
+    }
+  },
+  "discoverGreenTouchPage": {
+    "header": {
+      "title": "Dobrodošli v GreenTouch"
+    },
+    "heroSection": {
+      "heroText": "GreenTouch ti pomaga, da se ponovno povežeš s naravo, izboljšaš svoje počutje in gradiš bolj trajnostno prihodnost — vse to prek interaktivnih digitalnih orodij in praktičnih izkušenj. Naš Erasmus+ projekt sodelovanja »GreenTouch: Razvoj EcoMind za prihodnost visokošolskega izobraževanja« (ID projekta: 2023-1-LV01-KA220-HED-000154847) združuje univerze in strokovnjake z vse Evrope, da skupaj ustvarjamo inovativne načine vključevanja narave v izobraževanje in vsakdanje življenje.",
+      "card1": {
+        "title": "Kdo stoji za GreenTouch?",
+        "paragraph1": "Smo ekipa strastnih izobraževalcev, raziskovalcev in inovatorjev iz:",
+        "list": [
+          "Univerza Riga Stradiņš (Latvija)",
+          "Univerza v Mariboru (Slovenija)",
+          "FOREHUB LDA (Portugalska)",
+          "Tehnološka univerza Cipra (Ciper)"
+        ]
+      },
+      "card2": {
+        "title": "Kakšno je naše poslanstvo?",
+        "paragraph1": "Želimo olajšati študentom, učiteljem in skupnostim, da se z naravo povežejo na smiseln način.",
+        "paragraph2": "To pomeni:",
+        "list": [
+          "Razvijamo GreenTouch — digitalno orodje, polno interaktivnih vaj, videov in ustvarjalnih nalog.",
+          "Ustvarjamo spletni tečaj EcoMind, ki združuje teorijo z izkušnjami v naravi.",
+          "Gradimo mrežo za izmenjavo idej, raziskav in najboljših praks na področju dobrega počutja v naravi."
+        ],
+        "paragraph3": "Pridruži se nam! Spremljaj in sodeluj v naših aktivnostih!"
+      }
+    },
+    "projectPhilosophySection": {
+      "title": "Filozofija projekta",
+      "paragraph1": "Projekt GreenTouch temelji na ideji, da povezovanje z naravo izboljšuje dobro počutje, krepi odpornost in podpira trajnost. Verjamemo, da ima narava ključno vlogo pri duševnem, čustvenem in družbenem zdravju — in da lahko že majhni trenutki povezanosti pustijo trajen vpliv.",
+      "paragraph2": "Z združevanjem izkušenj v naravi z digitalnimi inovacijami omogočamo, da je ta povezanost dostopna posameznikom v različnih okoljih ter jim pomagamo vzpostaviti globlji odnos z naravnim svetom.",
+      "paragraph3": "Skozi raziskave, izobraževanje in interaktivna orodja GreenTouch spodbuja povezanost z naravo in dobro počutje ter spodbuja trajnosten življenjski slog in celostne pristope k duševnemu zdravju.",
+      "paragraph4": "Zanima te znanstveno ozadje? Razišči raziskave o vplivu narave na dobro počutje, povezanosti z naravo in digitalnih naravnih intervencijah."
+    },
+    "ecoMindSection": {
+      "title": "EcoMind",
+      "paragraph1": "Pripravi se na prihajajoči <b>spletni tečaj EcoMind</b>, ki bo izšel v <b>2026</b> kot del <b>Erasmus+ projekta GreenTouch</b>. Tečaj bo ponudil priložnost, da poglobiš svojo povezanost z naravo z obsežnim znanjem in večjo ekološko odgovornostjo.",
+      "paragraph2": "Tečaj bo raziskoval tudi, kako je sodobna družba s svojim oddaljevanjem od narave povzročila odtujenost, ki vpliva tako na človekovo kot tudi na ekološko zdravje. Ne glede na to, ali želiš obogatiti svoje študije, vključiti te vpoglede v svoj življenjski slog ali napredovati v karieri, te bo ta tečaj vodil k bolj zavestni in trajnostni povezanosti z naravo."
+    }
+  },
+  "sessionsPage": {
+    "header": {
+      "title": "Seje"
+    },
+    "additionalData": {
+      "releaseDateStatus": {
+        "previousSessionsCompletionRequired": "Za odklep novih sej je potrebno dokončati prejšnje seje.",
+        "releaseDate": "Datum izdaje: ",
+        "comingSoon": "Kmalu na voljo"
+      },
+      "sessionStatus": {
+        "completed": "Dokončano",
+        "inProgress": "V teku",
+        "toBeCompleted": "Za dokončanje"
+      },
+      "setReleaseDateDialog": {
+        "title": "Nastavi datum izdaje",
+        "description1": "Izberi datum in čas, ko bo ",
+        "description2": " na voljo.",
+        "labelDate": "Datum",
+        "labelTime": "Čas",
+        "actionButton": "Shrani"
+      },
+      "favoriteButton": {
+        "addToFavorites": "Dodaj med priljubljene",
+        "inFavorites": "Med priljubljenimi"
+      },
+      "natureConnectednessCard": {
+        "cardTitle": "Povezanost z naravo",
+        "requiredLabel": "Obvezno za dokončanje",
+        "cardDescription": "Zbirali bomo vaše subjektivne občutke povezanosti z naravo od seje do seje, ki bodo združeni v Sledilnik povezanosti z naravo, da boste lahko vi in mi spremljali napredek skozi čas.",
+        "cardSubtitle": "Premaknite figurico",
+        "leftSliderLabel": "Popolnoma nepovezan z naravo",
+        "rightSliderLabel": "Tesno povezan z naravo",
+        "actionButton": "Shrani spremembe"
+      },
+      "diaryCard": {
+        "diaryNote": "DNEVNIK",
+        "cardTitle": "Dnevnik",
+        "requiredLabel": "Obvezno za dokončanje",
+        "cardDescription": "Ko končaš z zapisom v svoj Dnevnik, prosim odgovori še na naslednja vprašanja.",
+        "cardSubtitle": "ODPRTA VPRAŠANJA",
+        "noQuestionsAvailable": "Za to sejo ni na voljo vprašanj za dnevnik.",
+        "actionButton": "Shrani"
+      },
+      "surveyCard": {
+          "cardTitle": "Vprašalnik",
+          "requiredLabel": "Obvezno za dokončanje",
+          "cardDescription": "Ko končaš z zapisom v svoj Dnevnik, prosim odgovori še na naslednja vprašanja.",
+          "cardSubtitle": "ZAPRTA VPRAŠANJA",
+          "cardSubdescription1": "Kolikokrat si med to seanso namenil/a čas ...",
+          
+          "frequencyScale": {
+              "never": "Nikoli",
+              "once": "Enkrat",
+              "twice": "Dvakrat",
+              "threeTimes": "Trikrat",
+              "moreThanThreeTimes": "Več kot trikrat"
+          },
+
+          "frequencyQuestions": {
+              "outdoorTasks": "Kolikokrat si opravil/a naloge v naravi?",
+              "indoorTasks": "Kolikokrat si opravil/a naloge v notranjem prostoru?"
+          },
+
+          "cardSubdescription2": "Počutil/a sem se …",
+
+          "agreementScale": {
+              "stronglyDisagree": "Močno se ne strinjam",
+              "disagree": "Ne strinjam se",
+              "neutral": "Niti se strinjam niti ne",
+              "agree": "Strinjam se",
+              "stronglyAgree": "Močno se strinjam",
+              "notApplicable": "Ni mogoče oceniti"
+          },
+
+          "impactStatements": {
+              "physicalHealth": "Dobro je vplivalo na moje fizično zdravje",
+              "mentalHealth": "Dobro je vplivalo na moje duševno zdravje",
+              "socialOpportunity": "Bila je dobra priložnost za preživljanje časa s prijatelji ali družino",
+              "learningChallenge": "Naučil/a sem se nečesa novega / postavil/a sem si izziv",
+              "closerToNature": "Čutil/a sem bližino z naravo"
+          },
+
+          "actionButton": "Shrani"
+      },
+      "sessionCompletedCard": {
+        "title": "Ste končali svojo sejo?",
+        "description": "Označite to sejo kot dokončano in nadaljujte z drugimi sejami.",
+        "markAsCompleted": "Označi kot dokončano",
+        "completed": "Dokončano",
+        "dialog": {
+          "title": "Označite to sejo kot dokončano?",
+          "description": "Podatki, kot so vaša povezanost z naravo in odgovori na vprašalnik, bodo shranjeni in jih pozneje ni mogoče spremeniti.",
+          "cancelButton": "Prekliči",
+          "actionButton": "Shrani"
+        }
+      },
+      "sessionsAccordion": {
+        "accordionItem1": {
+          "title": "Zakaj voditi dnevnik?",
+          "content": "Pisanje v dnevnik ti pomaga pridobiti vse koristi uporabe GreenTouch. Podpira globlje zavedanje samega sebe in ti omogoča, da razmisliš o svojih mislih in občutkih ter jih spremljaš skozi čas."
+        },
+        "accordionItem2": {
+          "title": "Kako deluje?",
+          "content": "Vnosi v dnevnik so osebni in vidni samo tebi. Ne bodo deljeni z drugimi, raziskovalna ekipa pa bo do njih dostopala za analizo v anonimni, zaupni obliki. Med sejami boš prejemal refleksivne napotke, vendar lahko zabeležiš tudi katere koli misli, čustva ali vpoglede – še posebej med časom preživetim v naravi."
+        },
+        "accordionItem3": {
+          "title": "Kaj če ne pišem v dnevnik?",
+          "content": "Vnos v dnevnik, tudi kratek, je potreben za napredovanje na naslednjo sejo."
+        }
+      }
+    },
+    "greentouchSessions": {
+      "demoSession": {
+        "localName": "demo-session",
+        "title": "Demo seja",
+        "titleCapitals": "DEMO SEJA",
+        "description": "Kratek vpogled v GreenTouch program",
+        "labelGoal": "Cilj:",
+        "paragraph1": "Ponuditi kratko in dostopno uvodno izkušnjo GreenTouch programa, ki udeležencem omogoča, da raziskujejo prisoten trenutek v naravi in razmislijo o svoji povezanosti, preden začnejo celoten program.",
+        "welcomeTitle": "Dobrodošli v GreenTouch",
+        "welcomeParagraph1": "Ta kratka seja vam ponuja vpogled v program, preden začnete svojo pot.",
+        "outdoorTaskCard": {
+          "cardTitle": "Naloga na prostem",
+          "requiredLabel": "Obvezno za dokončanje",
+          "taskTitle": "Naloga",
+          "taskDescription": "Tukaj je kratek povzetek vaše naloge (pozorno poslušajte navodila v videu):",
+          "step1": "Korak 1",
+          "step1taskInstructions": "Odpravite se na čuječo hojo, ki traja vsaj pet minut. Premikajte se počasi in opazujte prizore, vonje ter zvoke.",
+          "step2": "Korak 2",
+          "step2taskInstructions": "Izberite naravni predmet, ki pritegne vašo pozornost. Opazujte njegovo barvo, teksturo, vonj in zvok deset ali več minut. Tiho razmišljajte.",
+          "step3": "Korak 3",
+          "step3taskInstructions": "Odpravite se na reflektivni sprehod, ki traja vsaj pet minut. Razmislite, kaj vam izkušnja pove o vaši povezanosti z naravo."
+        },
+        "reflectionCard": {
+          "cardTitle": "Razmislek",
+          "paragraph1": "Vaše vprašanje za razmislek:",
+          "reflectionQuestion": "Kako sem doživel/-a to izkušnjo? Kaj sem opazil/-a?",
+          "paragraph2": "Po opravljeni nalogi si zapišite misli v zvezek ali v telefon. Ko se prijavite v program, boste lahko svoje razmisleke zapisovali v osebni GreenTouch dnevnik.",
+          "endMessage": "Veliko sreče in prijetno izkušnjo!"
+        },
+        "image": "/demo-session.png",
+        "breadcrumbItem1": "Seje",
+        "breadcrumbItem2": "Demo seja",
+        "rightNavigationLink": "Pojdi na Sejo 1"
+      },
+      "session1": {
+        "localName": "session-1",
+        "title": "Seja 1",
+        "titleCapitals": "SEJA 1",
+        "description": "Opazovanje čutov, misli, občutkov in spominov povezanih z naravo",
+        "labelGoal": "Cilj:",
+        "paragraph1": "Prebuditi nežno zavedanje s tem, da opazujete svoje senzorične, čustvene in kognitivne odzive v naravnem okolju.",
+        "welcomeTitle": "Dobrodošli v GreenTouch Seji 1!",
+        "welcomeParagraph1": "Vstopite v svojo pot povezovanja z naravo. Ta seja je osredotočena na raziskovanje vaše osebne povezanosti z naravo skozi čutno zavedanje, misli in občutke.",
+        "welcomeParagraph2": "Preden nadaljujete, postavite človeško figuro tja, kjer menite, da se trenutno nahajate na svoji poti povezovanja z naravo.",
+        "outdoorTaskCard": {
+          "cardTitle": "Naloga na prostem",
+          "requiredLabel": "Obvezno za dokončanje",
+          "taskTitle": "Naloga",
+          "taskDescription": "Tukaj je kratek povzetek vaše naloge (pozorno poslušajte navodila v videu):",
+          "step1taskInstructions": "Bodite pozorni na misli, občutke ali spomine, ki se pojavijo, ko se potopite v naravno okolje. Razmislite, kaj izstopa v vaši izkušnji bivanja v naravi. V naslednjih treh dneh nadaljujte z opazovanjem svojih odzivov na naravo in jih zapisujte v svoj GreenTouch dnevnik.",
+          "endMessage": "Veliko sreče in prijetno izkušnjo!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Naloga v notranjem prostoru",
+          "requiredLabel": "Alternativa",
+          "taskDescription": "Tukaj je alternativna naloga z uporabo galerije naravnih videov, če je odhod na prosto otežen. Opravite nalogo in o njej pišite v svoj dnevnik.",
+          "taskInstructions": "Oglejte si video iz kateregakoli razdelka (voda, zemlja, ogenj, zrak ali živali) in se osredotočite na čute — kaj vidite, slišite in čutite med gledanjem? Naj vas slike in zvoki vodijo skozi misli, spomine in občutke, medtem ko opazujete, kako se vaše telo odziva na izkušnjo.",
+          "natureVideoGalleryLink": "Video Galerija Narave"
+        },
+        "image": "/session-1.png",
+        "breadcrumbItem1": "Seje",
+        "breadcrumbItem2": "Seja 1",
+        "leftNavigationLink": "Nazaj na Demo sejo",
+        "rightNavigationLink": "Pojdi na Sejo 2",
+        "diaryQuestions": {
+          "question1": "Katere misli, občutki ali spomini se pojavijo, ko se potopim v naravno okolje?"
+        }
+      },
+      "session2": {
+        "localName": "session-2",
+        "title": "Seja 2",
+        "titleCapitals": "SEJA 2",
+        "description": "Raziskovanje prijetnega naravnega predmeta",
+        "labelGoal": "Cilj:",
+        "paragraph1": "Poglobiti čuječnost in povezanost z naravo s podrobnim opazovanjem enega samega naravnega predmeta.",
+        "welcomeTitle": "Dobrodošli v GreenTouch Seji 2!",
+        "welcomeParagraph1": "Ponovno vstopite v svojo naravno izkušnjo. Ta seja je osredotočena na to, kako lahko preprosti stiki z naravo poglobijo čuječnost in občutek povezanosti.",
+        "welcomeParagraph2": "Preden nadaljujete, postavite človeško figuro tja, kjer menite, da se trenutno nahajate na svoji poti povezovanja z naravo.",
+        "outdoorTaskCard": {
+          "cardTitle": "Naloga na prostem",
+          "requiredLabel": "Obvezno za dokončanje",
+          "taskTitle": "Naloga",
+          "taskDescription": "Tukaj je kratek povzetek vaše naloge (pozorno poslušajte navodila v videu):",
+          "step1": "Korak 1",
+          "step1taskInstructions": "Čuječa hoja. Počasi opazujte okolico — prizore, vonje in zvoke.",
+          "step2": "Korak 2",
+          "step2taskInstructions": "Najdite naravni predmet, ki pritegne vašo pozornost. Raziskujte njegove podrobnosti — dotik, barvo, teksturo in vonj — ter se prepustite tihemu razmisleku.",
+          "step3": "Korak 3",
+          "step3taskInstructions": "Reflektivni sprehod. Razmislite, kaj vam izkušnja razkriva o vašem odnosu z naravo. Vprašanje za razmislek: Kaj mi ta izkušnja pove o meni in naravi?",
+          "endMessage": "Veliko sreče in prijetno izkušnjo!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Naloga v notranjem prostoru",
+          "requiredLabel": "Alternativa",
+          "taskDescription": "Tukaj je alternativna naloga z uporabo galerije naravnih videov, če je odhod na prosto otežen. Opravite nalogo in o njej pišite v svoj dnevnik.",
+          "taskInstructions": "Izberite video iz razdelka Zemlja in se osredotočite na določen element na posnetku — drevo, kamen ali podrobnost pokrajine. Opazujte njegove podrobnosti — barve, teksture, oblike — in razmislite, kako se ob njem počutite ter kaj razkriva o vaši povezavi z naravo.",
+          "natureVideoGalleryLink": "Video Galerija Narave"
+        },
+        "image": "/session-2.png",
+        "breadcrumbItem1": "Seje",
+        "breadcrumbItem2": "Seja 2",
+        "leftNavigationLink": "Nazaj na Sejo 1",
+        "rightNavigationLink": "Pojdi na Sejo 3",
+        "diaryQuestions": {
+          "question1": "Kaj mi ta izkušnja pove o meni in naravi?"
+        }
+      },
+      "session3": {
+        "localName": "session-3",
+        "title": "Seja 3",
+        "titleCapitals": "SEJA 3",
+        "description": "Potop v naravne zvoke",
+        "labelGoal": "Cilj:",
+        "paragraph1": "Raziskati, kako naravni zvoki vplivajo na vaše duševno in čustveno stanje ter spodbujajo globljo prisotnost in umirjenost.",
+        "welcomeTitle": "Dobrodošli v GreenTouch Seji 3!",
+        "welcomeParagraph1": "Ponovno vstopite v svojo naravno izkušnjo. Ta seja je osredotočena na zvoke narave ter njihov vpliv na vaše misli in občutke.",
+        "welcomeParagraph2": "Preden nadaljujete, postavite človeško figuro tja, kjer menite, da se trenutno nahajate na svoji poti povezovanja z naravo.",
+        "outdoorTaskCard": {
+          "cardTitle": "Naloga na prostem",
+          "requiredLabel": "Obvezno za dokončanje",
+          "taskTitle": "Naloga",
+          "taskDescription": "Tukaj je kratek povzetek vaše naloge (pozorno poslušajte navodila v videu):",
+          "step1": "Korak 1",
+          "step1taskInstructions": "Čuječa hoja. Počasi opazujte okolico — prizore, vonje in zvoke.",
+          "step2": "Korak 2",
+          "step2taskInstructions": "Sedite ali stojte na udobnem mestu. Pozorno poslušajte zvoke okoli sebe. Izberite naravni zvok, ki vam vzbuja prijetna občutja — ptice, veter, vodo — in se nanj osredotočite pet minut. Opazujte misli ali občutke, ki se ob tem pojavijo.",
+          "step3": "Korak 3",
+          "step3taskInstructions": "Reflektivni sprehod. Razmislite, kaj vam izkušnja razkriva o vašem odnosu z naravo. Vprašanje za razmislek: Kako naravni zvoki vplivajo na moje misli in občutke?",
+          "endMessage": "Veliko sreče in prijetno izkušnjo!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Naloga v notranjem prostoru",
+          "requiredLabel": "Alternativa",
+          "taskDescription": "Tukaj je alternativna naloga z uporabo galerije naravnih videov, če je odhod na prosto otežen. Opravite nalogo in o njej pišite v svoj dnevnik.",
+          "taskInstructions": "Poglejte si video iz razdelka Voda ali Zrak in zaprite oči, medtem ko poslušate zvoke — z glasbo ali brez nje. Bodite pozorni na to, kako ti naravni zvoki vplivajo na vaše misli in občutke — ali vas umirjajo, energizirajo, ali pa obujajo spomine?",
+          "natureVideoGalleryLink": "Video Galerija Narave"
+        },
+        "image": "/session-3.png",
+        "breadcrumbItem1": "Seje",
+        "breadcrumbItem2": "Seja 3",
+        "leftNavigationLink": "Nazaj na Sejo 2",
+        "rightNavigationLink": "Pojdi na Sejo 4",
+        "diaryQuestions": {
+          "question1": "Kako naravni zvoki vplivajo na moje misli in občutke?"
+        }
+      },
+      "session4": {
+        "localName": "session-4",
+        "title": "Seja 4",
+        "titleCapitals": "SEJA 4",
+        "description": "Opazovanje ljudi v naravi",
+        "labelGoal": "Cilj:",
+        "paragraph1": "Razmisliti o vplivu družbenega okolja na čas in izkušnje v naravi ter se zavedati svojih osebnih preferenc.",
+        "welcomeTitle": "Dobrodošli v GreenTouch Seji 4!",
+        "welcomeParagraph1": "Ponovno vstopite v svojo naravno izkušnjo. Ta seja se osredotoča na to, kako družbeno okolje vpliva na vaš čas, preživet v naravi.",
+        "welcomeParagraph2": "Preden nadaljujete, postavite človeško figuro tja, kjer trenutno občutite, da ste na svoji poti povezovanja z naravo.",
+        "outdoorTaskCard": {
+          "cardTitle": "Zunanja naloga",
+          "requiredLabel": "Obvezno za dokončanje",
+          "taskTitle": "Naloga",
+          "taskDescription": "Tukaj je kratek povzetek vaše naloge (pozorno poslušajte video navodila):",
+          "step1": "Korak 1",
+          "step1taskInstructions": "Čuječ sprehod. Počasi opazujte okolico ter bodite pozorni na prizore, vonje in zvoke.",
+          "step2": "Korak 2",
+          "step2taskInstructions": "Opazujte ljudi v naravi. Najdite mesto, kjer lahko vidite, kako drugi delujejo v okolju. Opazujte njihove aktivnosti—hojo, sedenje, igro. Razmislite o svojih navadah. Ali imate raje naravo sami ali v družbi?",
+          "step3": "Korak 3",
+          "step3taskInstructions": "Reflektivni sprehod. Razmislite, kaj vam ta izkušnja razkriva o vašem odnosu do narave. Refleksijsko vprašanje: Kako moje družbeno okolje vpliva na čas, ki ga preživim v naravi?",
+          "endMessage": "Srečno in uživajte!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Notranja naloga",
+          "requiredLabel": "Alternativa",
+          "taskDescription": "Tukaj je alternativa z uporabo galerije naravnih videov, če je odhod na prosto težaven. Opravite nalogo in zapišite svoje misli v dnevnik.",
+          "taskInstructions": "Izberite video, ki prikazuje ljudi v naravi—na primer hojo po gozdu, sedenje ob reki ali opazovanje živali. Opazujte njihovo vedenje—kako se povezujejo z okoljem? Razmislite tudi, kako prisotnost drugih vpliva na vaše doživljanje narave.",
+          "natureVideoGalleryLink": "Video Galerija Narave"
+        },
+        "image": "/session-4.png",
+        "breadcrumbItem1": "Seje",
+        "breadcrumbItem2": "Seja 4",
+        "leftNavigationLink": "Nazaj na Sejo 3",
+        "rightNavigationLink": "Naprej na Sejo 5",
+        "diaryQuestions": {
+          "question1": "Kako moje družbeno okolje vpliva na čas, ki ga preživim v naravi?"
+        }
+      },
+      "session5": {
+        "localName": "session-5",
+        "title": "Seja 5",
+        "titleCapitals": "SEJA 5",
+        "description": "Dihanje z naravnim objektom",
+        "labelGoal": "Cilj:",
+        "paragraph1": "Prepoznati osebne ovire pri povezovanju z naravo ter vaditi čuječe dihanje kot način za njihovo postopno premagovanje.",
+        "welcomeTitle": "Dobrodošli v GreenTouch Seji 5!",
+        "welcomeParagraph1": "Ponovno vstopite v svojo naravno izkušnjo. Ta seja se osredotoča na ovire, ki vam lahko preprečujejo preživljanje časa v naravi, ter kako jih premagati.",
+        "welcomeParagraph2": "Preden nadaljujete, postavite človeško figuro tja, kjer trenutno občutite, da ste na svoji poti povezovanja z naravo.",
+        "outdoorTaskCard": {
+          "cardTitle": "Zunanja naloga",
+          "requiredLabel": "Obvezno za dokončanje",
+          "taskTitle": "Naloga",
+          "taskDescription": "Tukaj je kratek povzetek vaše naloge (pozorno poslušajte video navodila):",
+          "step1": "Korak 1",
+          "step1taskInstructions": "Čuječ sprehod. Počasi opazujte okolico ter bodite pozorni na prizore, vonje in zvoke.",
+          "step2": "Korak 2",
+          "step2taskInstructions": "Najdite naravni objekt in dihajte z njim. Primite ga v roke, občutite njegovo teksturo ter uskladite dih z njim—vdih za štiri sekunde, izdih za sedem. Opazujte, kako to vpliva na občutek povezanosti.",
+          "step3": "Korak 3",
+          "step3taskInstructions": "Reflektivni sprehod. Razmislite, kaj vam ta izkušnja razkriva o vašem odnosu do narave. Refleksijski vprašanji: Katere ovire mi preprečujejo, da bi več časa preživel v naravi, in kako jih lahko premagam? Katere rešitve so realne za moj življenjski slog?",
+          "endMessage": "Srečno in uživajte!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Notranja naloga",
+          "requiredLabel": "Alternativa",
+          "taskDescription": "Tukaj je alternativa z uporabo galerije naravnih videov, če je odhod na prosto težaven. Opravite nalogo in zapišite svoje misli v dnevnik.",
+          "taskInstructions": "Izberite video iz kategorije Zemlja ali Voda in se osredotočite na naravni objekt v prizoru, na primer kamen, drevo ali tekoči potok. Med gledanjem vadite dihanje 4-7—vdih štiri sekunde, izdih sedem—ter si predstavljajte, da dihata skupaj, izmenjujoč energijo. Po videu razmislite, kako ste se počutili in katere ovire vam morda preprečujejo povezovanje z naravo v resničnem življenju ter kako jih lahko premagate.",
+          "natureVideoGalleryLink": "Video Galerija Narave"
+        },
+        "image": "/session-5.png",
+        "breadcrumbItem1": "Seje",
+        "breadcrumbItem2": "Seja 5",
+        "leftNavigationLink": "Nazaj na Sejo 4",
+        "rightNavigationLink": "Naprej na Sejo 6",
+        "diaryQuestions": {
+          "question1": "Katere ovire mi preprečujejo, da bi več časa preživel v naravi, in kako jih lahko premagam?",
+          "question2": "Katere rešitve so realne za moj življenjski slog?"
+        }
+      },
+      "session6": {
+        "localName": "session-6",
+        "title": "Seja 6",
+        "titleCapitals": "SEJA 6",
+        "description": "Ples z naravo",
+        "labelGoal": "Cilj:",
+        "paragraph1": "Izraziti svojo povezanost z naravo skozi gibanje ter postaviti osebni namen za krepitev tega odnosa skozi čas.",
+        "welcomeTitle": "Dobrodošli v GreenTouch Seji 6!",
+        "welcomeParagraph1": "Ponovno vstopite v svojo naravno izkušnjo. Ta seja se osredotoča na postavljanje namena za vključevanje narave v vsakdanje življenje.",
+        "welcomeParagraph2": "Preden nadaljujete, postavite človeško figuro tja, kjer trenutno občutite, da ste na svoji poti povezovanja z naravo.",
+        "outdoorTaskCard": {
+          "cardTitle": "Zunanja naloga",
+          "requiredLabel": "Obvezno za dokončanje",
+          "taskTitle": "Naloga",
+          "taskDescription": "Tukaj je kratek povzetek vaše naloge (pozorno poslušajte video navodila):",
+          "step1": "Korak 1",
+          "step1taskInstructions": "Čuječ sprehod. Počasi opazujte okolico ter bodite pozorni na prizore, vonje in zvoke.",
+          "step2": "Korak 2",
+          "step2taskInstructions": "Izberite drevo ali rastlino in opazujte njeno gibanje. Posnemajte njene gibe z rokami ali telesom—gibajte se svobodno, kot da plešete z naravo. Opazujte, kako se ob tem počutite.",
+          "step3": "Korak 3",
+          "step3taskInstructions": "Reflektivni sprehod. Razmislite, kaj vam ta izkušnja razkriva o vašem odnosu do narave. Refleksijsko vprašanje: Čemu bi se zavezal v naslednjih treh mesecih, da bom več časa preživel v naravi?",
+          "endMessage": "Srečno in uživajte!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Notranja naloga",
+          "requiredLabel": "Alternativa",
+          "taskDescription": "Tukaj je alternativa z uporabo galerije naravnih videov, če je odhod na prosto težaven. Opravite nalogo in zapišite svoje misli v dnevnik.",
+          "taskInstructions": "Izberite video iz kategorij Ogenj, Voda ali Zrak in se osredotočite na gibanje—valovi, plameni, veter ali tekoče živali. Poskusite posnemati te gibe z rokami ali telesom, prepustite se ritmu narave in razmislite, kako se ob tem počutite.",
+          "natureVideoGalleryLink": "Video Galerija Narave"
+        },
+        "image": "/session-6.png",
+        "breadcrumbItem1": "Seje",
+        "breadcrumbItem2": "Seja 6",
+        "leftNavigationLink": "Nazaj na Sejo 5",
+        "rightNavigationLink": "Naprej na Sejo 7",
+        "diaryQuestions": {
+          "question1": "Čemu bi se zavezal v naslednjih treh mesecih, da bom več časa preživel v naravi?"
+        }
+      },
+      "session7": {
+        "localName": "session-7",
+        "title": "Seja 7",
+        "titleCapitals": "SEJA 7",
+        "description": "Iskanje varnega prostora v naravi",
+        "labelGoal": "Cilj:",
+        "paragraph1": "Ugotoviti ali si predstavljati naravni prostor, kjer se počutite varno, umirjeno in prizemljeno — osebno zatočišče za prihodnje ponovno povezovanje.",
+        "welcomeTitle": "Dobrodošli v GreenTouch Seji 7!",
+        "welcomeParagraph1": "Ponovno vstopite v svojo naravno izkušnjo. Ta seja se osredotoča na iskanje varnega, udobnega prostora v naravi, kjer se počutite kot doma.",
+        "welcomeParagraph2": "Preden nadaljujete, postavite človeško figuro tja, kjer trenutno občutite, da ste na svoji poti povezovanja z naravo.",
+        "outdoorTaskCard": {
+          "cardTitle": "Zunanja naloga",
+          "requiredLabel": "Obvezno za dokončanje",
+          "taskTitle": "Naloga",
+          "taskDescription": "Tukaj je kratek povzetek vaše naloge (pozorno poslušajte video navodila):",
+          "step1": "Korak 1",
+          "step1taskInstructions": "Čuječ sprehod. Počasi opazujte okolico ter bodite pozorni na prizore, vonje in zvoke.",
+          "step2": "Korak 2",
+          "step2taskInstructions": "Najdite naravni prostor, ki se vam zdi varen in prijeten. Preživite nekaj časa tam in opazujte, kako se počutite v različnih delih—odprtih, zaprtih, mirnih. Dovolite si popolnoma doživeti prostor.",
+          "step3": "Korak 3",
+          "step3taskInstructions": "Reflektivni sprehod. Razmislite, kaj vam ta izkušnja razkriva o vašem odnosu do narave.",
+          "endMessage": "Srečno in uživajte!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Notranja naloga",
+          "requiredLabel": "Alternativa",
+          "taskDescription": "Tukaj je alternativa z uporabo galerije naravnih videov, če je odhod na prosto težaven. Opravite nalogo in zapišite svoje misli v dnevnik.",
+          "taskInstructions": "Izberite video iz katere koli kategorije, ki vam vzbuja občutek miru in udobja, kot da je vaš osebni umik. Predstavljajte si, da stopite v to okolje, občutite njegovo zaščitno energijo in opazujte, kako vaše telo reagira, ko ste potopljeni v ta pozitiven prostor.",
+          "natureVideoGalleryLink": "Video Galerija Narave"
+        },
+        "image": "/session-7.png",
+        "breadcrumbItem1": "Seje",
+        "breadcrumbItem2": "Seja 7",
+        "leftNavigationLink": "Nazaj na Sejo 6"
+      }
+    }
+  },
+  "natureVideoGalleryPage": {
+    "header": {
+      "title": "Video galerija narave"
+    },
+    "heroSection": {
+      "paragraph1": "Dobrodošli v video galerijo narave GreenTouch!",
+      "paragraph2": "Tu najdeš zbirko zvokov in podob narave, pri čemer vsaka razkriva edinstveno lepoto različnih naravnih elementov. Ne glede na to, ali te pomirja nežno tekoča voda ali privlači živahna energija rek in slapov, galerija ponuja nekaj za vsako razpoloženje. Ogenj poki in žari ter ogreje tvojega duha, zrak šepeta skozi listje in šelesti veje, zemlja oživi s tihim škripanjem stopinj in živahnim šumenjem podrasti. Doživi živali v njihovi naravni simfoniji — od živalskih klicev in ptičjega petja do brnenja pridnih čebel.",
+      "paragraph3": "Uporabite te posnetke, da prinesete naravo v notranje prostore — primerni so za sprostitev, učenje ali izboljšanje notranjih aktivnosti, ki temeljijo na naravi. Raziščite, shranite svoje priljubljene posnetke v dnevnik in dovolite, da vam bistvo narave prinese trenutke miru in navdiha v vaš dan. Uživajte v edinstveni čarobnosti vsakega elementa in naj osveži vaš um ter duha.",
+      "label1": "Kategorije",
+      "label2": "Oglej si več"
+    },
+    "categoryPage": {
+      "breadcrumbItem1": "Video galerija narave",
+      "soundsWithMusicTitle": "Zvoki z glasbo",
+      "soundsWithoutMusicTitle": "Zvoki brez glasbe",
+      "withMusicLabel": "Z GLASBO",
+      "withoutMusicLabel": "BREZ GLASBE",
+      "categories": {
+        "water": {
+          "title": "Voda",
+          "heroSection": {
+            "paragraph1": "Zakaj imamo radi vodo? V sebi nosi starodavno magijo, ki s svojimi pomirjujočimi ritmi kliče dušo. Voda močno prispeva k našemu dobremu počutju – raztaplja napetost in vabi v spokojnost. Ko hodimo ob oceanu, sedimo ob nežnem šumenju dežja ali občudujemo mogočen slap, nas njena moč in mirnost ovijeta v občutek tišine in občudovanja. Vsak potoček, val in kapljica postane pesem prenove. Začuti spokojnost hladnih potokov, ki oblivajo utrujene noge, in prisluhni nežnemu žuborenju – trenutkom, ki nas prizemljijo v sedanji trenutek ter navdihujejo čuječnost in mir. Poslušati vodno glasbo pomeni občutiti obnovitev, kot bi te narava nežno objela.",
+            "paragraph2": "Uživaj v zvokih in podobah narave, samih ali z glasbeno spremljavo."
+          },
+          "videos": [
+            {
+              "title": "Nežen potoček",
+              "description": "Vstopi v spokojnost in prisluhni nežnim šepetom potočka, ki pleše preko gladkih kamnov in te zaziba v mirno melodijo.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=fK1MdfyVV0o",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=q9PIoMiuuKQ"
+            },
+            {
+              "title": "Morski valovi",
+              "description": "Prepusti misli toku in dovoli ritmičnim valovom, da objamejo obalo – mogočna, a pomirjajoča simfonija narave.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=CFoYa1EEUQs",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=t9S1ialTSpE"
+            },
+            {
+              "title": "Slap",
+              "description": "Občuti moč, ko se slap z vso energijo vali navzdol in z odmevi napolni zrak s surovo naravno močjo.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=vBvBOrjVgT4",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=OHnlqo7QieE"
+            }
+          ]
+        },
+
+        "fire": {
+          "title": "Ogenj",
+          "heroSection": {
+            "paragraph1": "Ogenj pooseblja toplino, življenjsko energijo in očarljiv ples svetlobe. Ljubimo ga zaradi njegove topline in zgodb, ki jih nosi v migetajočem žaru. Njegovo prasketanje prebuja spomine in v nas vzbudi nostalgijo ter občutek čudenja. Ogenj prižge udobje in toplino, ki nas povabi v svoj hipnotičen ples. Predstavljaj si, da sediš ob taborniškem ognju pod zvezdnim nebom – toplota odganja nočni hlad, žerjavica pa utripa kot srce v tišini. Tudi majhen plamen sveče prinaša občutek miru. Zvoki ognja nas tolažijo, prebudijo občutke varnosti, razmisleka in veselja. Ogenj nas objame z globoko toplino, ki sega do samega duha.",
+            "paragraph2": "Uživaj v zvokih in podobah narave, samih ali z glasbeno spremljavo."
+          },
+          "videos": [
+            {
+              "title": "Prasketajoč taborni ogenj",
+              "description": "Zberi se ob ognju in uživaj v toplem, domačem prasketanju, kjer vsak pok in šum pripoveduje zgodbo udobja in nostalgije.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=dOl65rSHhxw",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=YxQjCtvMpN8"
+            },
+            {
+              "title": "Pokajoči ognjemet",
+              "description": "Opazuj, kako se noč razsvetli z ognjemetom, kjer vsak pok in sijaj zablesti kot praznovanje na nebu.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=Ld-Grq9kUzo",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=vVmaddeotBc"
+            },
+            {
+              "title": "Plamen sveče",
+              "description": "Sprosti se ob nežnem migetanju plamena sveče, katerega subtilen zvok prinaša mir v preproste trenutke.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=f_F7Gz8nChg",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=ZwXK3My8cpk"
+            }
+          ]
+        },
+
+        "air": {
+          "title": "Zrak",
+          "heroSection": {
+            "paragraph1": "Zrak, neviden in globok, vdihuje življenje v naš svet. Ljubimo ga zaradi njegovih šepetov, nežnega dotika vetra na koži in divjih, osvobajajočih sunkov. K našemu dobremu počutju prispeva s svojo čistostjo, svežino in sposobnostjo, da razbistri misli ter dvigne duha. Prisluhni vetru, ki poje med drevesi, listju, ki šelesti v zgodbah, ki pomirjajo in vzbujajo radovednost. Veter v zvončkih ustvari mirne, melodijske trenutke čudenja. Začuti, kako trava valovi v vetru na odprtem travniku – nežna simfonija za dušo. V njegovi objemu doživimo radost, svobodo in globoko povezanost z ogromnim prostranstvom življenja.",
+            "paragraph2": "Uživaj v zvokih in podobah narave, samih ali z glasbeno spremljavo."
+          },
+          "videos": [
+            {
+              "title": "Šelestenje listja",
+              "description": "Sprehodi se pod drevesi in prisluhni listju, ki v vetru šumi kot nežni šepeti.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=XwBe2Cvl2-k",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=JTBBP2AYpQg"
+            },
+            {
+              "title": "Tuljenje vetra",
+              "description": "Stopi na rob pečin in začuti silovit veter, ki tuli skozi kanjon – divja, neukročena pesem naravne moči.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=3SM3fjhlI1E",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=C8DYOG9vOEw"
+            },
+            {
+              "title": "Veter v travi",
+              "description": "Ulezi se na travnik in prisluhni vetru, ki potuje skozi visoko travo – nežna pesem, ki pomiri um.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=c3IznVa9YPk",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=peRSFmdX6ho"
+            }
+          ]
+        },
+
+        "earth": {
+          "title": "Zemlja",
+          "heroSection": {
+            "paragraph1": "Zemlja nosi stabilno, negovalno moč, ki jo globoko cenimo. K našemu dobremu počutju prispeva s svojo prizemljitvijo, povezanostjo z našimi koreninami in ritmi življenja. Zvok korakov, ki šume listje ali odmevajo na kamnih, v nas prebudi prastari občutek pripadnosti. Na gozdnih poteh nas obda vonj zemlje, lubja in zelenja, kar nas napolni z mirom. Prisluhni škripanju starodavnih vej nad seboj in začuti uteho, ki jo prinašajo. Nežen šum zemlje pod nogami in njena tiha vztrajnost nas povabita, da se ustavimo, razmislimo in ponovno najdemo ravnovesje. Zemlja nas objame, nas pomiri in spomni na stabilnost, obnovo in dom.",
+            "paragraph2": "Uživaj v zvokih in podobah narave, samih ali z glasbeno spremljavo."
+          },
+          "videos": [
+            {
+              "title": "Odeja listja",
+              "description": "Potopi se v naravo, kjer nežno šelestenje listja ustvari posebno simfonijo, ki te povabi, da se ustaviš, zadihaš in povežeš s trenutkom.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY"
+            },
+            {
+              "title": "Koraki po listju",
+              "description": "Hodi po gozdnih tleh in dovoli, da ti šumenje listja pod nogami pripoveduje zgodbe narave in menjavanja letnih časov.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY"
+            },
+            {
+              "title": "Koraki po kamnih",
+              "description": "Stopaj po kamniti poti in prisluhni ritmičnim korakom, ki te prizemljijo in povežejo z brezčasnim duhom zemlje.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=RzXQb2zrP54",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY"
+            }
+          ]
+        },
+
+        "animals": {
+          "title": "Živali",
+          "heroSection": {
+            "paragraph1": "Zakaj imamo radi bitja, ki polnijo gozdove in travnike? Njihovi zvoki napolnijo pokrajino z življenjem, radostjo in povezanostjo. Živali prispevajo k našemu dobremu počutju, saj nas spomnijo na živahen utrip narave. Prisluhni nežnim šumom v podrasti – vsak šum je zgodba skrivnosti in energije. Oddaljeni klici nevidnih ptic vzbudijo občutek čudenja, medtem ko čebele brenčijo z vztrajnim, marljivim ritmom narave. Predstavljaj si, da sediš ob ribniku ob mraku, ko žabe zajedno regljajo, ali da se zbudiš ob jutranjem ptičjem petju, ki veselo pozdravlja nov dan. Ti trenutki navdihujejo, dvigujejo razpoloženje in v nas odmevajo kot skupna esenca življenja. Uživaj v zvokih in podobah narave, samih ali z glasbeno spremljavo.",
+            "paragraph2": "Uživaj v zvokih in podobah narave, samih ali z glasbeno spremljavo."
+          },
+          "videos": [
+            {
+              "title": "Brenčanje čebel",
+              "description": "Zapri oči in prisluhni zadovoljni melodiji čebel, ki plešejo med cvetovi – nežnemu opomniku harmonije narave.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=WiwK6mxsOzw",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=YFwFFDFjIzc"
+            },
+            {
+              "title": "Regljanje žab",
+              "description": "Naj te ob vodi spremlja ritmično regljanje žab – naravna serenada ob sončnem zahodu.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=NwbfPUVtpuk",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=hMsPl53ztaM"
+            },
+            {
+              "title": "Ptičje petje",
+              "description": "Pozdravi jutro z živahno ptičjo pesmijo, ko vsak klic napolni zrak z radostjo.",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=QhgdlSbdwgo",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=2pYeRg16Vxc"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "newsPage": {
+    "header": {
+      "title": "Novice in dogodki"
+    },
+    "heroSection": {
+      "paragraph1": "Sledi zgodbi projekta GreenTouch, ki je združil bogate delavnice in poglobljene izkušnje na prostem. Pobuda je povezala predavatelje in študente iz Latvije, Portugalske, Cipra in Slovenije v sodelovalno mrežo, ki spodbuja ekološko ozaveščenost in globljo povezanost z naravo.",
+      "label1": "Razišči"
+    },
+    "addNewsArticleDialog": {
+      "title": "Dodaj novo novico",
+      "description": "Izpolni podatke za novo novico, ki jo želiš dodati.",
+      "labelArticleTitle": "Naslov",
+      "labelArticleContent": "Vsebina",
+      "cancelButton": "Prekliči",
+      "actionButton": "Shrani spremembe"
+    },
+    "newsArticleCard": {
+      "editNewsArticleDialog": {
+        "title": "Uredi novico",
+        "description": "Izpolni podatke za novico, ki jo želiš urediti.",
+        "labelArticleTitle": "Naslov",
+        "labelArticleContent": "Vsebina",
+        "cancelButton": "Prekliči",
+        "actionButton": "Shrani spremembe"
+      },
+      "deleteNewsArticleAlertDialog": {
+        "title": "Izbriši novico",
+        "description": "Ali si prepričan, da želiš izbrisati to novico? Tega dejanja ni mogoče razveljaviti.",
+        "cancelButton": "Prekliči",
+        "actionButton": "Izbriši"
+      }
+    },
+    "newsArticleAdmin": {
+      "breadcrumbItem1": "Novice in dogodki",
+      "backButton": "Nazaj",
+      "editNewsArticleDialog": {
+        "title": "Uredi novico",
+        "cancelButton": "Prekliči",
+        "actionButton": "Shrani spremembe"
+      }
+    }
+  },
+  "resourcesPage": {
+    "header": {
+      "title": "Viri"
+    },
+    "heroSection": {
+      "paragraph1": "Pripravi se na raziskovanje virov, ki jih razvijamo kot del projekta GreenTouch, in razmisli, kako bi lahko obogatili tvojo profesionalno prakso. Ne glede na to, ali si visokošolski učitelj, neformalni izobraževalec ali strokovnjak na področju pomoči ljudem, so ti viri zasnovani tako, da spodbujajo globljo povezanost z naravo in vključujejo ekološko zavedanje v tvoje delo.",
+      "paragraph2": "Še posebej spodbujamo psihologe, zdravstvene delavce ter strokovnjake na področju duševnega zdravja in dobrega počutja, da te vire uporabijo za izboljšanje terapevtskih pristopov in promocijo celostne skrbi.",
+      "paragraph3": "Upamo, da te bomo navdihnili in opolnomočili, da v svoje profesionalno okolje vneseš ekološko odgovornost in dobro počutje."
+    },
+    "card1": {
+      "title": "Članki",
+      "paragraph1": "Raziskuj poglobljeno znanje z branjem znanstveno recenziranih člankov o vlogi narave in povezanosti z naravo ter o naravnih in digitalnih naravi temelječih intervencijah. Poglobi se v raziskave, ki izpostavljajo koristi in vplive teh pristopov na dobro počutje in ekološko ozaveščenost.",
+      "button": "Razišči članke ->"
+    },
+    "resourcesArticlesPage": {
+      "breadcrumbItem1": "Viri",
+      "breadcrumbItem2": "Članki",
+      "header": {
+        "title": "Članki"
+      },
+      "addResourceArticleDialog": {
+        "title": "Dodaj nov članek",
+        "description": "Izpolni podatke za članek, ki ga želiš dodati.",
+        "labelArticleTopic": "Tema",
+        "labelArticleTopicPlaceholder": "Izberi ali dodaj temo...",
+        "labelArticleTopicCommandInput": "Išči ali vnesi za dodajanje...",
+        "labelArticleTitle": "Naslov",
+        "labelArticleContent": "Vsebina",
+        "labelArticleLink": "Povezava",
+        "cancelButton": "Prekliči",
+        "actionButton": "Shrani spremembe"
+      },
+      "resourceArticleCard": {
+        "readArticleButton": "Preberi članek",
+        "editResourceArticleDialog": {
+          "title": "Uredi članek",
+          "description": "Izpolni podatke za članek, ki ga želiš urediti.",
+          "labelArticleTopic": "Tema",
+          "labelArticleTopicPlaceholder": "Izberi ali dodaj temo...",
+          "labelArticleTopicCommandInput": "Išči ali vnesi za dodajanje...",
+          "labelArticleTitle": "Naslov",
+          "labelArticleContent": "Vsebina",
+          "labelArticleLink": "Povezava",
+          "cancelButton": "Prekliči",
+          "actionButton": "Shrani spremembe"
+        },
+        "deleteResourceArticleAlertDialog": {
+          "title": "Izbriši članek",
+          "description": "Ali si prepričan, da želiš izbrisati ta članek? Tega dejanja ni mogoče razveljaviti.",
+          "cancelButton": "Prekliči",
+          "actionButton": "Izbriši"
+        }
+      }
+    }
+  },
+  "footer": {
+    "information": "Informacije",
+    "terms": "Pogoji",
+    "privacyPolicy": "Politika zasebnosti",
+    "support": "Podpora",
+    "connect": "Poveži se",
+    "europeanFunding": "Ta projekt financira EU."
+  }
+}

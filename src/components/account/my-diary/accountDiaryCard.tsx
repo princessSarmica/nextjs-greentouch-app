@@ -5,15 +5,21 @@ import { useEffect, useState } from "react";
 import { LoadingButton } from "../../loading-button";
 import { toast } from "sonner";
 import { saveDiaryEntry } from "@/actions/greentouch-session-user-data";
-import { greentouchSessions } from "@/app/data/greentouch-sessions-data";
 
 interface SaveDiaryProps {
+    accountDiaryCardTranslations: {
+        diaryNote: string;
+        noQuestionsAvailable: string;
+        actionButton: string;
+        title: string;
+        diaryQuestions: string[];
+    };
     greentouchSessionId?: string;
     greentouchSessionName?: string;
     initialDiaryText?: string[];
 }
 
-function AccountDiaryCard({ greentouchSessionId, greentouchSessionName, initialDiaryText }: SaveDiaryProps) {
+function AccountDiaryCard({ accountDiaryCardTranslations, greentouchSessionId, greentouchSessionName, initialDiaryText }: SaveDiaryProps) {
 
     const [diaryTexts, setDiaryTexts] = useState<string[]>(initialDiaryText ?? []);
     const [isLoading, setIsLoading] = useState(false);
@@ -54,13 +60,9 @@ function AccountDiaryCard({ greentouchSessionId, greentouchSessionName, initialD
         } finally { 
             setIsLoading(false); 
         } 
-    } 
+    }
 
-    const currentSession = greentouchSessions.find(
-        (s) => s.title === greentouchSessionName || s.id === greentouchSessionId
-    );
-
-    const questions = currentSession?.diaryQuestions ?? [];
+    const questions = accountDiaryCardTranslations.diaryQuestions;
 
     const hasChanges = diaryTexts.some((t, i) => t !== (initialDiaryText?.[i] ?? ""))
     const hasContent = diaryTexts.some((t) => t.trim())
@@ -69,11 +71,11 @@ function AccountDiaryCard({ greentouchSessionId, greentouchSessionName, initialD
         <section className="w-full max-w-5xl mx-auto px-4">
             <div className="bg-white rounded-lg shadow p-8">
                 <div className="flex items-center gap-2 mb-6">
-                    <h3 className="text-xs font-semibold">DIARY NOTE</h3>
+                    <h3 className="text-xs font-semibold">{accountDiaryCardTranslations.diaryNote}</h3>
                 </div>
 
                 <p className="text-xl font-semibold mt-1">
-                    {greentouchSessionName}
+                    {accountDiaryCardTranslations.title}
                 </p>
 
                 <div className="space-y-6 my-6">
@@ -97,12 +99,12 @@ function AccountDiaryCard({ greentouchSessionId, greentouchSessionName, initialD
                         </div>
                         ))
                     ) : (
-                        <p className="text-gray-500 italic">No diary questions available for this session.</p>
+                        <p className="text-gray-500 italic">{accountDiaryCardTranslations.noQuestionsAvailable}</p>
                     )}
                 </div>
 
                 <div className="flex justify-end">
-                    <LoadingButton variant={"secondary"} type="submit" onClick={handleSubmit} disabled={!hasContent || !hasChanges || isLoading} loading={isLoading}>Save</LoadingButton>
+                    <LoadingButton variant={"secondary"} type="submit" onClick={handleSubmit} disabled={!hasContent || !hasChanges || isLoading} loading={isLoading}>{accountDiaryCardTranslations.actionButton}</LoadingButton>
                 </div>
             </div>
         </section>

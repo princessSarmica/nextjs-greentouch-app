@@ -4,9 +4,12 @@ import { NewsArticle } from "@prisma/client";
 import Link from "next/link";
 import { DeleteNewsAlertDialog } from "../deleteNewsAlertDialog";
 import EditNewsArticleDialog from "./editNewsArticleDialog";
+import { useTranslations } from "next-intl";
 
 function NewsCard({ article, isAdmin = false }: { article: NewsArticle; isAdmin?: boolean }) {
   const imageSrc = article?.image?.[0] || "/article-default-picture.png";
+
+  const t = useTranslations('newsPage.newsArticleCard');
 
   return (
     <Card className="p-0 flex flex-col h-full overflow-hidden rounded-lg shadow-md transition-shadow bg-white border-0">
@@ -32,10 +35,28 @@ function NewsCard({ article, isAdmin = false }: { article: NewsArticle; isAdmin?
       <CardFooter className="flex justify-end pb-4">
         <div className="flex gap-4">
             {isAdmin ? (
-              <EditNewsArticleDialog newsArticleId={article.id} initialTitle={article.title} initialContent={article.content} />
+              <EditNewsArticleDialog 
+              editNewsArticleDialogTranslations={{
+                  title: t("editNewsArticleDialog.title"),
+                  description: t("editNewsArticleDialog.description"),
+                  labelArticleTitle: t("editNewsArticleDialog.labelArticleTitle"),
+                  labelArticleContent: t("editNewsArticleDialog.labelArticleContent"),
+                  cancelButton: t("editNewsArticleDialog.cancelButton"),
+                  actionButton: t("editNewsArticleDialog.actionButton"),
+              }}
+              newsArticleId={article.id} initialTitle={article.title} initialContent={article.content} 
+              />
             ) : null}
             {isAdmin ? (
-              <DeleteNewsAlertDialog newsArticleId={article.id} />
+              <DeleteNewsAlertDialog 
+              deleteNewsArticleDialogTranslations={{
+                  title: t("deleteNewsArticleAlertDialog.title"),
+                  description: t("deleteNewsArticleAlertDialog.description"),
+                  cancelButton: t("deleteNewsArticleAlertDialog.cancelButton"),
+                  actionButton: t("deleteNewsArticleAlertDialog.actionButton"),
+              }}
+              newsArticleId={article.id} 
+              />
             ) : null}
         </div>
       </CardFooter>

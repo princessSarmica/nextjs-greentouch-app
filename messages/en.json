@@ -1,0 +1,831 @@
+{
+  "header": {
+    "navLinks": {
+      "discoverGreenTouch": "Discover GreenTouch",
+      "sessions": "Sessions",
+      "natureVideoGallery": "Nature Video Gallery",
+      "news": "News",
+      "resources": "Resources"
+    },
+    "authButtons": {
+      "signUp": "Register",
+      "signIn": "Sign In"
+    },
+    "userDropdown": {
+      "profile": "Profile",
+      "myDiary": "My Diary",
+      "favorites": "Favorites",
+      "security": "Security",
+      "admin": "Admin",
+      "signOut": "Log Out"
+    }
+  },
+  "signInPage": {
+    "title": "Enter your account details and start exploring",
+    "disclaimer": "In case of losing your username or password, please contact the server administrator for assistance.",
+    "signInForm": {
+      "labelUsername": "Username",
+      "labelPassword": "Password",
+      "buttonSignIn": "Sign In",
+      "noAccountText": "Don't have an account?",
+      "signUpLink": "Sign up",
+      "formMessages": {
+        "usernameTooShort": "Username must be at least 3 characters.",
+        "usernameTooLong": "Username must be be 30 characters or fewer.",
+        "usernameInvalidCharacters": "Username may only contain letters, numbers, underscores, and hyphens.",
+        "passwordRequired": "Password is required.",
+        "unknownError": "Something went wrong."
+      }
+    }
+  },
+  "signUpPage": {
+    "title": "Register for the program",
+    "labelRequired": "* is required to fill",
+    "signUpForm": {
+      "labelName": "Name",
+      "labelSurname": "Surname",
+      "labelPosition": "Your position",
+      "labelStudent": "Student",
+      "labelAcademicStaff": "Academic Staff",
+      "labelOther": "Other",
+      "labelUniversityTitle": "Title of the university where you study/work",
+      "labelUniversity": "University",
+      "labelFieldOfWork": "Field of studies/work",
+      "labelSpecialization": "Specialization",
+      "labelMotivation": "Your motivation for participating in GreenTouch",
+      "labelPersonalInterest": "Personal Interest",
+      "labelProfessionalInterest": "Professional Interest",
+      "labelBothOfThem": "Both of them",
+      "labelEmail": "Email",
+      "labelUsername": "Username",
+      "labelPassword": "Password",
+      "labelConfirmPassword": "Confirm Password",
+      "buttonSignUp": "Submit",
+      "haveAccountText": "Already have an account?",
+      "signInLink": "Sign in",
+      "formMessages": {
+        "firstNameRequired": "First name is required.",
+        "lastNameRequired": "Last name is required.",
+        "validEmailRequired": "Please enter a valid email address.",
+        "confirmPasswordRequired": "Please confirm your password.",
+        "usernameTooShort": "Username must be at least 3 characters.",
+        "usernameTooLong": "Username must be be 30 characters or fewer.",
+        "usernameInvalidCharacters": "Username may only contain letters, numbers, underscores, and hyphens.",
+        "selectPositionRequired": "Please select your position.",
+        "selectMotivationRequired": "Please select your motivation.",
+        "selectUniversityRequired": "University is required.",
+        "selectSpecializationRequired": "Specialization is required.",
+        "passwordsDoNotMatch": "The passwords do not match",
+        "unknownError": "Something went wrong. Please try again."
+      }
+    }
+  },
+  "accountPage": {
+    "additionalData": {
+      "navbar": {
+        "profile": "Profile",
+        "myDiary": "My Diary",
+        "favorites": "Favorites",
+        "security": "Security",
+        "admin": "Admin"
+      }
+    },
+    "profilePage": {
+      "trackYourProgress": "Track your progress",
+      "natureConnectednessOverTime": "Nature Connectedness (rated 1-10)",
+      "yourAnswer": "Your answer"
+    },
+    "myDiaryPage": {
+      "noEntriesMessage": "You have not made any diary entries yet."
+    },
+    "favoritesPage": {
+      "noFavoritesMessage": "You have not added any sessions to your favorites yet."
+    }
+  },
+  "homePage": {
+    "heroSection": {
+      "title": "Reconnect with Nature, Relax Your Mind",
+      "description": "GreenTouch offers guided self-reflective exercises, outdoor challenges, and sustainable living tips to help you reduce stress, build mental resilience, and connect with nature.",
+      "buttonGetStarted": "View GreenTouch Activities"
+    },
+    "projectPartnersSection": {
+      "title": "Our project partners"
+    }
+  },
+  "discoverGreenTouchPage": {
+    "header": {
+      "title": "Welcome to GreenTouch"
+    },
+    "heroSection" : {
+      "heroText": "GreenTouch is all about helping you connect with nature, boost your well-being, and build a more sustainable future—all through interactive digital tools and hands-on experiences. Our Erasmus+ cooperation partnership project, \"GreenTouch: EcoMind Development for Higher Education Future\" (Project ID: 2023-1-LV01-KA220-HED-000154847), brings together universities and experts from across Europe to create innovative ways to integrate nature into education and everyday life.",
+      "card1": {
+        "title": "Who's Behind GreenTouch?",
+        "paragraph1": "We're a team of passionate educators, researchers, and innovators from:",
+        "list": [
+          "Riga Stradiņš University (Latvia)",
+          "University of Maribor (Slovenia)",
+          "FOREHUB LDA (Portugal)",
+          "Cyprus University of Technology (Cyprus)"
+        ]
+      },
+      "card2": {
+        "title": "What's Our Mission?",
+        "paragraph1": "We want to make it easier for students, educators, and communities to engage with nature in meaningful ways.",
+        "paragraph2": "That means:",
+        "list": [
+          "Developing GreenTouch, a digital tool packed with interactive exercises, videos, and creative tasks.",
+          "Creating an EcoMind e-course that blends theory with outdoor experiences.",
+          "Building a network to share ideas, research, and best practices for nature-based well-being."
+        ],
+        "paragraph3": "Join us! Follow along and take part in our activities!"
+      }
+    },
+    "projectPhilosophySection": {
+      "title": "Projects philosophy",
+      "paragraph1": "The GreenTouch project is built on the idea that connecting with nature enhances well-being, fosters resilience, and supports sustainability. We believe that nature plays a vital role in mental, emotional, and social health, and even small moments of connection can have a lasting impact.",
+      "paragraph2": "By integrating nature-based experiences with digital innovation, we make this connection accessible to individuals in diverse environments, helping them build a deeper relationship with the natural world.",
+      "paragraph3": "Through research, education, and interactive tools, GreenTouch promotes nature connectedness and well-being, encouraging sustainable lifestyles and holistic approaches to mental health.",
+      "paragraph4": "Curious about the science behind it? Explore research on nature's impact on well-being, nature connectedness, and digital nature-based interventions."
+    },
+    "ecoMindSection": {
+      "title": "EcoMind",
+      "paragraph1": "Get ready for the upcoming <b>EcoMind e-course</b>, set to launch in <b>2026</b> as part of the <b>Erasmus+ GreenTouch project</b>. This course will provide an opportunity to deepen your connection with nature through comprehensive knowledge and heightened ecological responsibility.",
+      "paragraph2": "The course will also explore how modern society's shift away from nature has led to a disconnection impacting both human and ecological health. Whether you wish to enrich your studies, integrate these insights into your lifestyle, or advance your career, this course will guide you toward a more mindful, sustainable connection with nature."
+    }
+  },
+  "sessionsPage": {
+    "header": {
+      "title": "Sessions"
+    },
+    "additionalData": {
+      "releaseDateStatus": {
+        "previousSessionsCompletionRequired": "Previous sessions must be completed to unlock new ones.",
+        "releaseDate": "Release Date: ",
+        "comingSoon": "Coming Soon"
+      },
+      "sessionStatus": {
+        "completed": "Completed",
+        "inProgress": "In Progress",
+        "toBeCompleted": "To Be Completed"
+      },
+      "setReleaseDateDialog": {
+        "title": "Set Release Date",
+        "description1": "Choose the date and time when ",
+        "description2": " should become available.",
+        "labelDate": "Date",
+        "labelTime": "Time",
+        "actionButton": "Save"
+      },
+      "favoriteButton": {
+        "addToFavorites": "Add to Favorites",
+        "inFavorites": "In Favorites"
+      },
+      "natureConnectednessCard": {
+        "cardTitle": "Nature Connectedness",
+        "requiredLabel": "Required to complete",
+        "cardDescription": "We will collect your subjective feelings of connection with nature from session to session, which will be compiled in the Nature Connectedness Tracker for both you and us to track over time.",
+        "cardSubtitle": "Move the figure",
+        "leftSliderLabel": "Fully disconnected from nature",
+        "rightSliderLabel": "Closely connected to nature",
+        "actionButton": "Save changes"
+      },
+      "diaryCard": {
+        "diaryNote": "DIARY NOTE",
+        "cardTitle": "Diary",
+        "requiredLabel": "Required to complete",
+        "cardDescription": "Once you have completed the session, please answer the following questions.",
+        "cardSubtitle": "OPEN QUESTIONS",
+        "noQuestionsAvailable": "No diary questions available for this session.",
+        "actionButton": "Save"
+      },
+      "surveyCard": {
+        "cardTitle": "Survey",
+        "requiredLabel": "Required to complete",
+        "cardDescription": "When you finish writing in your Diary, please answer the following questions.",
+        "cardSubtitle": "CLOSED QUESTIONS",
+        "cardSubdescription1": "How many times during this session did you dedicate time ...",
+        "frequencyScale": {
+            "never": "Never",
+            "once": "Once",
+            "twice": "Twice",
+            "threeTimes": "Three times",
+            "moreThanThreeTimes": "More than three times"
+        },
+        "frequencyQuestions": {
+            "outdoorTasks": "How many times did you do outdoor tasks?",
+            "indoorTasks": "How many times did you do indoor tasks?"
+        },
+        "cardSubdescription2": "I felt …",
+        "agreementScale": {
+          "stronglyDisagree": "Strongly disagree",
+          "disagree": "Disagree",
+          "neutral": "Neither agree nor disagree",
+          "agree": "Agree",
+          "stronglyAgree": "Strongly agree",
+          "notApplicable": "Not applicable"
+        },
+        "impactStatements": {
+          "physicalHealth": "It was good for my physical health",
+          "mentalHealth": "It was good for my mental health",
+          "socialOpportunity": "It was a good opportunity to spend time with friends or family",
+          "learningChallenge": "I learnt something new / I challenged myself",
+          "closerToNature": "I felt closer to nature"
+        },
+        "actionButton": "Save"
+      },
+      "sessionCompletedCard": {
+        "title": "Finished your session?",
+        "description": "Mark this session as completed and move on to other sessions.",
+        "markAsCompleted": "Mark as completed",
+        "completed": "Completed",
+        "dialog": {
+          "title": "Mark this session as completed?",
+          "description": "Data such as your nature connectedness and survey responses will be saved and can't be changed afterward.",
+          "cancelButton": "Cancel",
+          "actionButton": "Save"
+        }
+      },
+      "sessionsAccordion": {
+        "accordionItem1": {
+          "title": "Why keep a diary?",
+          "content": "Writing in your diary helps you gain the full benefits of using GreenTouch. It supports deeper self-awareness and allows you to reflect on and track your thoughts and feelings over time."
+        },
+        "accordionItem2": {
+          "title": "How does it work?",
+          "content": "Your diary entries are personal and only visible to you. They won&apos;t be shared with others, though the research team will access them for analysis in anonymous, confidential form. You&apos;ll receive reflective prompts during sessions but are also free to record any thoughts, emotions, or insights—especially from time spent in nature."
+        },
+        "accordionItem3": {
+          "title": "What if I don't write in the diary?",
+          "content": "A diary entry, even a brief one, is required to move on to the next session."
+        }
+      }
+    },
+    "greentouchSessions": {
+      "demoSession": {
+        "localName": "demo-session",
+        "title": "Demo Session",
+        "titleCapitals": "DEMO SESSION",
+        "description": "A taste of the GreenTouch program",
+        "labelGoal": "Goal:",
+        "paragraph1": "To offer a short and accessible introduction to the GreenTouch experience, allowing participants to explore a mindful moment in nature and reflect on their connection before starting the full program.",
+        "welcomeTitle": "Welcome to GreenTouch",
+        "welcomeParagraph1": "This short session gives you a taste of the program before you begin your journey.",
+        "outdoorTaskCard": {
+          "cardTitle": "Outdoor Task",
+          "requiredLabel": "Required to complete",
+          "taskTitle": "Task",
+          "taskDescription": "Here is a brief summary of your task (listen carefully to the video indications):",
+          "step1": "Step 1",
+          "step1taskInstructions": "Take a mindful walk for at least five minutes. Move slowly, noticing sights, smells, and sounds.",
+          "step2": "Step 2",
+          "step2taskInstructions": "Choose a natural object that draws your attention. Observe its colour, texture, scent, and sound for ten or more minutes. Engage in silent reflection.",
+          "step3": "Step 3",
+          "step3taskInstructions": "Take a reflective walk for at least five minutes. Consider what this experience tells you about your connection with nature."
+        },
+        "reflectionCard": {
+          "cardTitle": "Reflection",
+          "paragraph1": "Your question for reflection:",
+          "reflectionQuestion": "How was this experience for me? What did I notice?",
+          "paragraph2": "After completing the task, write down any thoughts in a notebook or on your phone. Once you enroll in the program, you will be able to record your reflections in your personal GreenTouch diary.",
+          "endMessage": "Good luck and enjoy!"
+        },
+        "image": "/demo-session.png",
+        "breadcrumbItem1": "Sessions",
+        "breadcrumbItem2": "Demo Session",
+        "rightNavigationLink": "Go to Session 1"
+      },
+      "session1": {
+        "localName": "session-1",
+        "title": "Session 1",
+        "titleCapitals": "SESSION 1",
+        "description": "Noticing senses, thoughts, feelings, and memories related to nature",
+        "labelGoal": "Goal:",
+        "paragraph1": "To awaken gentle awareness by noticing your sensory, emotional, and cognitive responses in a natural environment.",
+        "welcomeTitle": "Welcome to GreenTouch Session 1!",
+        "welcomeParagraph1": "Step into your journey of connecting with nature. This session focuses on exploring your personal connection with nature through sensory awareness, thoughts, and feelings.",
+        "welcomeParagraph2": "Before moving forward, place the human figure where you feel you currently are on your path toward connecting with nature.",
+        "outdoorTaskCard": {
+          "cardTitle": "Outdoor Task",
+          "requiredLabel": "Required to complete",
+          "taskTitle": "Task",
+          "taskDescription": "Here is a brief summary of your task (listen carefully to the video indications):",
+          "step1taskInstructions": "Take note of any thoughts, feelings, or memories that arise as you immerse yourself in a natural environment. Consider what stands out in your experience of being in nature. Over the next three days, continue noticing your responses to nature and jot them down in your GreenTouch diary.",
+          "endMessage": "Good luck and enjoy!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Indoor Task",
+          "requiredLabel": "Alternative",
+          "taskDescription": "Here is an alternative task using the nature video gallery if going outdoors is challenging. Complete the task and write about it in your diary.",
+          "taskInstructions": "Watch a video from any section (Water, Earth, Fire, Air, or Animals) and focus on your senses—what do you see, hear, and feel while watching? Let the imagery and sounds guide your thoughts, memories, and emotions, noticing how your body responds to the experience.",
+          "natureVideoGalleryLink": "Nature Video Gallery"        
+        },
+        "image": "/session-1.png",
+        "breadcrumbItem1": "Sessions",
+        "breadcrumbItem2": "Session 1",
+        "leftNavigationLink": "Back to Demo Session",
+        "rightNavigationLink": "Go to Session 2",
+        "diaryQuestions": {
+          "question1": "As I immerse myself in a natural environment, what thoughts, feelings, or memories arise?"
+        }
+      },
+      "session2": {
+        "localName": "session-2",
+        "title": "Session 2",
+        "titleCapitals": "SESSION 2",
+        "description": "Exploring a pleasant natural object",
+        "labelGoal": "Goal:",
+        "paragraph1": "To deepen your mindfulness and connection with nature by closely observing and reflecting on a single natural object.",
+        "welcomeTitle": "Welcome to GreenTouch Session 2!",
+        "welcomeParagraph1": "Step again into your nature experience. This session focuses on how simple interactions with nature can enhance mindfulness and deepen your connection with the natural world.",
+        "welcomeParagraph2": "Before moving forward, place the human figure where you feel you currently are on your path toward connecting with nature.",
+        "outdoorTaskCard": {
+          "cardTitle": "Outdoor Task",
+          "requiredLabel": "Required to complete",
+          "taskTitle": "Task",
+          "taskDescription": "Here is a brief summary of your task (listen carefully to the video indications):",
+          "step1": "Step 1",
+          "step1taskInstructions": "Mindful walk. Slowly observe your surroundings, noticing sights, smells, and sounds.",
+          "step2": "Step 2",
+          "step2taskInstructions": "Find a natural object that draws your attention. Spend time exploring its details—touch, colour, texture, and scent—while engaging in silent reflection.",
+          "step3": "Step 3",
+          "step3taskInstructions": "Reflective walk. Consider what this experience reveals about your relationship with nature. Reflection question: What does this experience tell me about myself and nature?",
+          "endMessage": "Good luck and enjoy!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Indoor Task",
+          "requiredLabel": "Alternative",
+          "taskDescription": "Here is an alternative task using the nature video gallery if going outdoors is challenging. Complete the task and write about it in your diary.",
+          "taskInstructions": "Choose a video from the Earth section and focus on a specific element in the scene, such as a tree, rock, or landscape feature. Observe its details—colours, textures, shapes—and reflect on how this natural object makes you feel and what it reveals about your connection to nature.",        
+          "natureVideoGalleryLink": "Nature Video Gallery"        
+        },
+        "image": "/session-2.png",
+        "breadcrumbItem1": "Sessions",
+        "breadcrumbItem2": "Session 2",
+        "leftNavigationLink": "Back to Session 1",
+        "rightNavigationLink": "Go to Session 3",
+        "diaryQuestions": {
+            "question1": "What does this experience tell me about myself and nature?"
+        }
+      },
+      "session3": {
+        "localName": "session-3",
+        "title": "Session 3",
+        "titleCapitals": "SESSION 3",
+        "description": "Immersing in nature sounds",
+        "labelGoal": "Goal:",
+        "paragraph1": "To explore how natural sounds influence your mental and emotional state, fostering deeper presence and calm.",
+        "welcomeTitle": "Welcome to GreenTouch Session 3!",
+        "welcomeParagraph1": "Step again into your nature experience. This session focuses on the sounds of nature and how they influence your thoughts and feelings.",
+        "welcomeParagraph2": "Before moving forward, place the human figure where you feel you currently are on your path toward connecting with nature.",
+        "outdoorTaskCard": {
+          "cardTitle": "Outdoor Task",
+          "requiredLabel": "Required to complete",
+          "taskTitle": "Task",
+          "taskDescription": "Here is a brief summary of your task (listen carefully to the video indications):",
+          "step1": "Step 1",
+          "step1taskInstructions": "Mindful walk. Slowly observe your surroundings, noticing sights, smells, and sounds.",
+          "step2": "Step 2",
+          "step2taskInstructions": "Sit or stand in a comfortable place. Listen carefully to the sounds around you. Choose a natural sound that brings you pleasant feelings—birds, wind, water—and focus on it for five minutes. Notice any thoughts or emotions it evokes.",
+          "step3": "Step 3",
+          "step3taskInstructions": "Reflective walk. Consider what this experience reveals about your relationship with nature. Reflection question: How do the sounds of nature affect my thoughts and feelings?",
+          "endMessage": "Good luck and enjoy!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Indoor Task",
+          "requiredLabel": "Alternative",
+          "taskDescription": "Here is an alternative task using the nature video gallery if going outdoors is challenging. Complete the task and write about it in your diary.",
+          "taskInstructions": "Watch a video from the Water section or Air section and close your eyes while listening to the sounds, either with or without musical accompaniment. Pay attention to how these natural sounds influence your thoughts and emotions—do they calm you, energize you, or bring back memories?",
+          "natureVideoGalleryLink": "Nature Video Gallery"                
+        },
+        "image": "/session-3.png",
+        "breadcrumbItem1": "Sessions",
+        "breadcrumbItem2": "Session 3",
+        "leftNavigationLink": "Back to Session 2",
+        "rightNavigationLink": "Go to Session 4",
+        "diaryQuestions": {
+            "question1": "How do the sounds of nature affect my thoughts and feelings?"
+        }
+      },
+      "session4": {
+        "localName": "session-4",
+        "title": "Session 4",
+        "titleCapitals": "SESSION 4",
+        "description": "Observing people in nature",
+        "labelGoal": "Goal:",
+        "paragraph1": "To reflect on the impact of social surroundings on your time and experience in nature, and to become aware of your personal preferences.",
+        "welcomeTitle": "Welcome to GreenTouch Session 4!",
+        "welcomeParagraph1": "Step again into your nature experience. This session focuses on how social surroundings influence the time you spend in nature.",
+        "welcomeParagraph2": "Before moving forward, place the human figure where you feel you currently are on your path toward connecting with nature.",
+        "outdoorTaskCard": {
+          "cardTitle": "Outdoor Task",
+          "requiredLabel": "Required to complete",
+          "taskTitle": "Task",
+          "taskDescription": "Here is a brief summary of your task (listen carefully to the video indications):",
+          "step1": "Step 1",
+          "step1taskInstructions": "Mindful walk. Slowly observe your surroundings, noticing sights, smells, and sounds.",
+          "step2": "Step 2",
+          "step2taskInstructions": "Observe people in nature. Find a place where you can watch how others interact with the environment. Notice their activities—walking, sitting, playing. Reflect on your own habits. Do you enjoy nature alone or with others?",
+          "step3": "Step 3",
+          "step3taskInstructions": "Reflective walk. Consider what this experience reveals about your relationship with nature. Reflection question: How do my social surroundings influence the time I spend in nature?",
+          "endMessage": "Good luck and enjoy!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Indoor Task",
+          "requiredLabel": "Alternative",
+          "taskDescription": "Here is an alternative task using the nature video gallery if going outdoors is challenging. Complete the task and write about it in your diary.",
+          "taskInstructions": "Choose a video that includes people interacting with nature, such as walking in a forest, sitting by a river, or watching animals. Observe their behaviour—how do they engage with the environment? Reflect on how the presence of others influences your own perception of nature.",
+          "natureVideoGalleryLink": "Nature Video Gallery"        
+        },
+        "image": "/session-4.png",
+        "breadcrumbItem1": "Sessions",
+        "breadcrumbItem2": "Session 4",
+        "leftNavigationLink": "Back to Session 3",
+        "rightNavigationLink": "Go to Session 5",
+        "diaryQuestions": {
+            "question1": "How do my social surroundings influence the time I spend in nature?"
+        }
+      },
+      "session5": {
+        "localName": "session-5",
+        "title": "Session 5",
+        "titleCapitals": "SESSION 5",
+        "description": "Breathing with a natural object",
+        "labelGoal": "Goal:",
+        "paragraph1": "To recognize personal barriers to nature connection and practice mindful breathing as a way to gently overcome them.",
+        "welcomeTitle": "Welcome to GreenTouch Session 5!",
+        "welcomeParagraph1": "Step again into your nature experience. This session focuses on barriers that may prevent you from spending time in nature and how to overcome them.",
+        "welcomeParagraph2": "Before moving forward, place the human figure where you feel you currently are on your path toward connecting with nature.",
+        "outdoorTaskCard": {
+          "cardTitle": "Outdoor Task",
+          "requiredLabel": "Required to complete",
+          "taskTitle": "Task",
+          "taskDescription": "Here is a brief summary of your task (listen carefully to the video indications):",
+          "step1": "Step 1",
+          "step1taskInstructions": "Mindful walk. Slowly observe your surroundings, noticing sights, smells, and sounds.",
+          "step2": "Step 2",
+          "step2taskInstructions": "Find a natural object and breathe with it. Hold it in your hands, feel its texture, and sync your breath with it—inhale for four seconds, exhale for seven. Observe how this affects your sense of connection.",
+          "step3": "Step 3",
+          "step3taskInstructions": "Reflective walk. Consider what this experience reveals about your relationship with nature. Reflection questions: What obstacles prevent me from spending time in nature, and how can I overcome them? Which solutions feel realistic for my lifestyle?",
+          "endMessage": "Good luck and enjoy!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Indoor Task",
+          "requiredLabel": "Alternative",
+          "taskDescription": "Here is an alternative task using the nature video gallery if going outdoors is challenging. Complete the task and write about it in your diary.",
+          "taskInstructions": "Choose a video from the Earth section or Water section and focus on a natural object within the scene, such as a rock, tree, or flowing stream. As you watch, practice 4-7 breathing—inhale for four seconds, exhale for seven—imagining that you and the object are breathing together, exchanging energy with each breath. After the video, reflect on how this experience made you feel and consider what might prevent you from connecting with nature in real life, as well as ways to overcome those barriers.",        
+          "natureVideoGalleryLink": "Nature Video Gallery"
+        },
+        "image": "/session-5.png",
+        "breadcrumbItem1": "Sessions",
+        "breadcrumbItem2": "Session 5",
+        "leftNavigationLink": "Back to Session 4",
+        "rightNavigationLink": "Go to Session 6",
+        "diaryQuestions": {
+            "question1": "What obstacles prevent me from spending time in nature, and how can I overcome them?",
+            "question2": "Which solutions feel realistic for my lifestyle?"
+        }
+      },
+      "session6": {
+        "localName": "session-6",
+        "title": "Session 6",
+        "titleCapitals": "SESSION 6",
+        "description": "Dancing with nature",
+        "labelGoal": "Goal:",
+        "paragraph1": "To express your connection with nature through movement and to set a personal intention to strengthen this relationship over time.",
+        "welcomeTitle": "Welcome to GreenTouch Session 6!",
+        "welcomeParagraph1": "Step again into your nature experience. This session focuses on setting an intention to integrate nature into your life.",
+        "welcomeParagraph2": "Before moving forward, place the human figure where you feel you currently are on your path toward connecting with nature.",
+        "outdoorTaskCard": {
+          "cardTitle": "Outdoor Task",
+          "requiredLabel": "Required to complete",
+          "taskTitle": "Task",
+          "taskDescription": "Here is a brief summary of your task (listen carefully to the video indications):",
+          "step1": "Step 1",
+          "step1taskInstructions": "Mindful walk. Slowly observe your surroundings, noticing sights, smells, and sounds.",
+          "step2": "Step 2",
+          "step2taskInstructions": "Choose a tree or plant and observe its movements. Mirror its motion with your hands or body—move freely, as if dancing with nature. Notice how this makes you feel.",
+          "step3": "Step 3",
+          "step3taskInstructions": "Reflective walk. Consider what this experience reveals about your relationship with nature. Reflection question: What would I commit to doing over the next three months to spend more time in nature?",
+          "endMessage": "Good luck and enjoy!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Indoor Task",
+          "requiredLabel": "Alternative",
+          "taskDescription": "Here is an alternative task using the nature video gallery if going outdoors is challenging. Complete the task and write about it in your diary.",
+          "taskInstructions": "Select a video from the Fire, Water, or Air section and focus on the movement within it—waves, flames, wind, or flowing animals. Try mirroring these movements with your hands or body, letting yourself flow with nature's rhythm, and reflect on how this movement makes you feel.",        
+          "natureVideoGalleryLink": "Nature Video Gallery"
+        },
+        "image": "/session-6.png",
+        "breadcrumbItem1": "Sessions",
+        "breadcrumbItem2": "Session 6",
+        "leftNavigationLink": "Back to Session 5",
+        "rightNavigationLink": "Go to Session 7",
+        "diaryQuestions": {
+            "question1": "What would I commit to doing over the next three months to spend more time in nature?"
+        }
+      },
+      "session7": {
+        "localName": "session-7",
+        "title": "Session 7",
+        "titleCapitals": "SESSION 7",
+        "description": "Finding a safe space in nature",
+        "labelGoal": "Goal:",
+        "paragraph1": "To discover or imagine a natural space where you feel safe, calm, and grounded—a personal sanctuary for future reconnection.",
+        "welcomeTitle": "Welcome to GreenTouch Session 7!",
+        "welcomeParagraph1": "Step again into your nature experience. This session focuses on finding a safe and comfortable space in nature where you feel at home.",
+        "welcomeParagraph2": "Before moving forward, place the human figure where you feel you currently are on your path toward connecting with nature.",
+        "outdoorTaskCard": {
+          "cardTitle": "Outdoor Task",
+          "requiredLabel": "Required to complete",
+          "taskTitle": "Task",
+          "taskDescription": "Here is a brief summary of your task (listen carefully to the video indications):",
+          "step1": "Step 1",
+          "step1taskInstructions": "Mindful walk. Slowly observe your surroundings, noticing sights, smells, and sounds.",
+          "step2": "Step 2",
+          "step2taskInstructions": "Find a natural space that feels safe and inviting. Spend time there, noticing how different areas make you feel—open, enclosed, peaceful. Allow yourself to fully experience the space.",
+          "step3": "Step 3",
+          "step3taskInstructions": "Reflective walk. Consider what this experience reveals about your relationship with nature.",
+          "endMessage": "Good luck and enjoy!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Indoor Task",
+          "requiredLabel": "Alternative",
+          "taskDescription": "Here is an alternative task using the nature video gallery if going outdoors is challenging. Complete the task and write about it in your diary.",
+          "taskInstructions": "Choose a video from any section that makes you feel calm and comfortable, as if it were your personal retreat. Imagine stepping into this environment, feeling its protective energy, and noticing how your body responds when immersed in this positive space.",
+          "natureVideoGalleryLink": "Nature Video Gallery"
+        },
+        "image": "/session-7.png",
+        "breadcrumbItem1": "Sessions",
+        "breadcrumbItem2": "Session 7",
+        "leftNavigationLink": "Back to Session 6"
+      }
+    }
+  },
+  "natureVideoGalleryPage": {
+    "header": {
+      "title": "Nature Video Gallery"
+    },
+    "heroSection": {
+      "paragraph1": "Welcome to the GreenTouch Nature Video Gallery!",
+      "paragraph2": "Here, you'll find a collection of nature's sounds and sights, each one showcasing the unique beauty of different natural elements. Whether you're drawn to the calming flow of water or the lively energy of rivers and waterfalls, the gallery has something for every mood. Fire crackles and glows to warm your spirit, air whispers through leaves and rustles branches, and earth comes alive with the soft crunch of footsteps and the vibrant rustle of underbrush. Experience animals in their natural symphony, from animal calls and birdsong to the hum of busy bees.",
+      "paragraph3": "Use these recordings to bring the outdoors inside, perfect for unwinding, studying, or enhancing indoor nature-based activities. Explore, save your favorite tracks in your diary, and let the essence of nature bring moments of peace and inspiration to your day. Enjoy every element's unique magic and let it refresh your mind and spirit.",
+      "label1": "Categories",
+      "label2": "See more"
+    },
+    "categoryPage": {
+      "breadcrumbItem1": "Nature Video Gallery",
+      "soundsWithMusicTitle": "Sounds with Music",
+      "soundsWithoutMusicTitle": "Sounds without Music",
+      "withMusicLabel": "WITH MUSIC",
+      "withoutMusicLabel": "WITHOUT MUSIC",
+      "categories": {
+        "water": {
+          "title": "Water",
+          "heroSection": {
+            "paragraph1": "Why do we love water? It holds an ancient magic, calling to the soul with its soothing rhythms. Water contributes deeply to our well-being, dissolving tension and inviting tranquility. Whether walking by the ocean, sitting in rain's gentle patter, or marveling at a waterfall's roar, we are lulled into calmness and awe. Each stream, wave, and droplet becomes a song of renewal. Feel the serenity of cool streams washing over tired feet and hear the gentle gurgle of a brook—moments that ground us in the present, inspiring mindfulness and peace. Listening to water's music is to feel restored, cradled in nature's gentle embrace.", 
+            "paragraph2": "Enjoy nature's sounds and sights, whether on their own or accompanied by music."
+          },
+          "videos": [
+            {
+              "title": "Gentle stream",
+              "description": "Step into tranquility and listen to the gentle whispers of a brook as it dances over smooth stones, lulling you with its serene melody",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=fK1MdfyVV0o",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=q9PIoMiuuKQ"
+            },
+            {
+              "title": "Ocean waves",
+              "description":
+                "Let your thoughts drift as the ocean's rhythmic waves embrace the shore, a powerful yet soothing symphony of nature",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=CFoYa1EEUQs",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=t9S1ialTSpE"
+            },
+            {
+              "title": "Waterfall",
+              "description":
+                "Stand in awe as the mighty waterfall rushes down with an invigorating force, its echoes filling the air with raw energy",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=vBvBOrjVgT4",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=OHnlqo7QieE"
+            }
+          ]
+        },
+
+        "fire": {
+          "title": "Fire",
+          "heroSection": {
+            "paragraph1": "Fire embodies warmth, vitality, and a mesmerizing dance of light. We love fire for its warmth and for the stories it holds in its flickering glow. Its crackle stirs memories of shared moments, sparking nostalgia and wonder. Fire kindles comfort and vitality, drawing us into its hypnotic dance. Imagine sitting by a campfire under a canopy of stars, feeling its heat soothe the night chill, or watching smoldering embers pulse like a heartbeat in the quiet dark. Even a candle's small, steady flame whispers peace to the soul. Fire's sounds cradle us, evoking feelings of safety, reflection, and joy. Listening to it invites a warmth that reaches deep, touching the spirit.",
+            "paragraph2": "Enjoy nature's sounds and sights, whether on their own or accompanied by music."
+          },
+          "videos": [
+            {
+              "title": "Crackling campfire",
+              "description": "Gather around and enjoy the warm, cozy crackle of a campfire, where every pop and hiss tells a story of comfort and nostalgia",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=dOl65rSHhxw",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=YxQjCtvMpN8"
+            },
+            {
+              "title": "Sizzling fireworks",
+              "description": "Watch the night come alive with the explosive sizzle of fireworks, each burst shimmering like a celebration in the sky",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=Ld-Grq9kUzo",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=vVmaddeotBc"
+            },
+            {
+              "title": "Candle flame",
+              "description": "Relax with the delicate flicker of a candle flame, its subtle sound a reminder of peace in the simplest moments",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=f_F7Gz8nChg",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=ZwXK3My8cpk"
+            }
+          ]
+        },
+
+        "air": {
+          "title": "Air",
+          "heroSection": {
+            "paragraph1": "The air, invisible yet profound, breathes life into our world. We love it for its whispers, the caress of a breeze on warm skin, and the wild, exhilarating sweep of gusts. Air contributes to our well-being with its pure, energizing touch, clearing the mind and lifting the spirit. Hear the wind's song in the trees, leaves rustling with stories that soothe and spark curiosity. Wind chimes, delicate and melodic, create moments of serene wonder. Feel the grass move with the wind in an open meadow, a gentle symphony for the soul. In its embrace, we experience joy, freedom, and a deep connection to life's vast expanse.",
+            "paragraph2": "Enjoy nature's sounds and sights, whether on their own or accompanied by music."
+          },
+          "videos": [
+            {
+              "title": "Rustling leaves",
+              "description": "Stroll beneath the trees and hear leaves flutter like whispered secrets in the soft embrace of a breeze",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=XwBe2Cvl2-k",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=JTBBP2AYpQg"
+            },
+            {
+              "title": "Howling wind",
+              "description": "Stand atop the cliffs and feel the force of wind howling through a canyon, a wild, untamed song echoing nature's might",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=3SM3fjhlI1E",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=C8DYOG9vOEw"
+            },
+            {
+              "title": "Wind in the grass",
+              "description": "Rest in an open meadow and listen as the wind sweeps through tall grasses, a gentle song that soothes the mind",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=c3IznVa9YPk",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=peRSFmdX6ho"
+            }
+          ]
+        },
+
+        "earth": {
+          "title": "Earth",
+          "heroSection": {
+            "paragraph1": "Earth holds a steady, nurturing power that we deeply love. It contributes to our well-being through its grounding presence, connecting us to our roots and life's cycles. The sound of footsteps crunching leaves or echoing on stones resonates with a primal sense of belonging. As we walk forest paths, the rich scent of soil and green growth surrounds us, infusing us with peace. Listen to the creak of ancient branches overhead and feel the deep comfort it brings. Earth's soft rustle underfoot and its quiet resilience invite us to pause, reflect, and find balance. The earth embraces, reminding us of stability, renewal, and being home.",
+            "paragraph2": "Enjoy nature's sounds and sights, whether on their own or accompanied by music."
+          },
+          "videos": [
+            {
+              "title": "Blanket of leaves",
+              "description": "Enveloped in nature, the gentle rustling of leaves forms a particular symphony that invites you to pause, breathe, and connect with the present moment",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY"
+            },
+            {
+              "title": "Footsteps on leaves",
+              "description": "Walk across the forest floor and let the crunch of leaves beneath your feet remind you of nature's gentle cycles and the stories each season leaves behind",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY"
+            },
+            {
+              "title": "Footsteps on stones",
+              "description": "Step along a stony path and listen to the rhythmic sound of your footsteps, each echo grounding you, connecting you to the timeless, enduring spirit of the earth",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=RzXQb2zrP54",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY"
+            }
+          ]
+        },
+
+        "animals": {
+          "title": "Animals",
+          "heroSection": {
+            "paragraph1": "Why do we love the creatures that fill the forest and field? Their sounds infuse the landscape with life, sparking joy and connection. Animals contribute to our well-being by reminding us of nature's vibrant heartbeat. Hear the subtle rustles of movement through the underbrush—each sound a tale of mystery and energy. The distant calls of unseen birds evoke wonder, while bees hum with diligent purpose, their buzzing a gentle, persistent song. Picture sitting by a pond at dusk as frogs croak in harmony, or waking to birds' morning chorus, joyfully welcoming the day. These moments uplift and inspire, resonating with a shared essence of life.",
+            "paragraph2": "Enjoy nature's sounds and sights, whether on their own or accompanied by music."
+          },
+          "videos": [
+            {
+              "title": "Buzzing bees",
+              "description": "Close your eyes and hear the content hum of bees dancing between blooms, a gentle reminder of nature's harmony",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=WiwK6mxsOzw",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=YFwFFDFjIzc"
+            },
+            {
+              "title": "Frog croaks",
+              "description": "Let the deep, rhythmic croaks of frogs accompany you by the water's edge, a natural serenade as the sun sets",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=NwbfPUVtpuk",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=hMsPl53ztaM"
+            },
+            {
+              "title": "Birdsong",
+              "description": "Welcome the morning chorus as birds sing their vibrant songs, each call painting the air with joy",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=QhgdlSbdwgo",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=2pYeRg16Vxc"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "newsPage": {
+    "header": {
+      "title": "News and Events"
+    },
+    "heroSection": {
+      "paragraph1": "Follow the journey shared through the GreenTouch project, which brought together enriching workshops and immersive outdoor experiences. This initiative united faculty and students from Latvia, Portugal, Cyprus, and Slovenia into a collaborative network, fostering ecological awareness and a deeper connection with nature.",
+      "label1": "Discover"
+    },
+    "addNewsArticleDialog": {
+      "title": "Add New Article",
+      "description": "Fill in the details for the news article you want to add.",
+      "labelArticleTitle": "Title",
+      "labelArticleContent": "Content",
+      "cancelButton": "Cancel",
+      "actionButton": "Save changes"
+    },
+    "newsArticleCard": {
+      "editNewsArticleDialog": {
+        "title": "Edit Article",
+        "description": "Fill in the details for the news article you want to edit.",
+        "labelArticleTitle": "Title",
+        "labelArticleContent": "Content",
+        "cancelButton": "Cancel",
+        "actionButton": "Save changes"
+      },
+      "deleteNewsArticleAlertDialog": {
+        "title": "Delete News Article",
+        "description": "Are you sure you want to delete this article? This action cannot be undone.",
+        "cancelButton": "Cancel",
+        "actionButton": "Delete"
+      }
+    },
+    "newsArticleAdmin": {
+      "breadcrumbItem1": "News and Events",
+      "backButton": "Back",
+      "editNewsArticleDialog": {
+        "title": "Edit Article",
+        "cancelButton": "Cancel",
+        "actionButton": "Save changes"
+      }
+    }
+  },  
+  "resourcesPage": {
+    "header": {
+      "title": "Resources"
+    },
+    "heroSection": {
+      "paragraph1": "Get ready to explore the resources we are developing as part of the GreenTouch project and consider how they could enrich your professional practice. Whether you are a faculty member, non-formal educator, or practitioner in the helping professions, these resources are designed to foster a deeper connection to nature and integrate ecological awareness into your work.",
+      "paragraph2": "We especially encourage prospective and practicing psychologists, healthcare professionals, and those in the mental health and well-being sectors to leverage these resources to enhance therapeutic approaches and promote holistic care.",
+      "paragraph3": "We hope to inspire and empower you to bring ecological responsibility and well-being into your professional landscape."
+    },
+    "card1": {
+      "title": "Articles",
+      "paragraph1": "Explore more in-depth knowledge by reading peer-reviewed scientific articles on the role of nature and nature connectedness, as well as nature-based and digital nature-based interventions. Delve into research that highlights the benefits and impacts these approaches have on well-being and ecological awareness.",
+      "button": "Explore Articles ->"
+    },
+    "resourcesArticlesPage": {
+      "breadcrumbItem1": "Resources",
+      "breadcrumbItem2": "Articles",
+      "header": {
+        "title": "Articles"
+      },
+      "addResourceArticleDialog": {
+        "title": "Add New Article",
+        "description": "Fill in the details for the resources article you want to add.",
+        "labelArticleTopic": "Topic",
+        "labelArticleTopicPlaceholder": "Select or add topic...",
+        "labelArticleTopicCommandInput": "Search or type to add...",
+        "labelArticleTitle": "Title",
+        "labelArticleContent": "Content",
+        "labelArticleLink": "Link",
+        "cancelButton": "Cancel",
+        "actionButton": "Save changes"
+      },
+      "resourceArticleCard": {
+        "readArticleButton": "Read Article",
+        "editResourceArticleDialog": {
+          "title": "Edit Article",
+          "description": "Fill in the details for the resources article you want to edit.",
+          "labelArticleTopic": "Topic",
+          "labelArticleTopicPlaceholder": "Select or add topic...",
+          "labelArticleTopicCommandInput": "Search or type to add...",
+          "labelArticleTitle": "Title",
+          "labelArticleContent": "Content",
+          "labelArticleLink": "Link",
+          "cancelButton": "Cancel",
+          "actionButton": "Save changes"
+        },
+        "deleteResourceArticleAlertDialog": {
+          "title": "Delete Resources Article",
+          "description": "Are you sure you want to delete this article? This action cannot be undone.",
+          "cancelButton": "Cancel",
+          "actionButton": "Delete"
+        }
+      }
+    }
+  },
+  "footer": {
+    "information": "Information",
+    "terms": "Terms",
+    "privacyPolicy": "Privacy Policy",
+    "support": "Support",
+    "connect": "Connect",
+    "europeanFunding": "This project is funded by the EU."
+  }
+}

@@ -8,11 +8,15 @@ import { favoriteSession } from "@/actions/greentouch-session-user-data";
 import { LoadingButton } from "../loading-button";
 
 interface FavoriteButtonProps {
+  favoriteButtonTranslations: {
+    addToFavorites: string;
+    inFavorites: string;
+  };
   greentouchSessionId: string;
   initialIsFavorite: boolean;
 }
 
-export default function FavoriteButton({greentouchSessionId, initialIsFavorite}: FavoriteButtonProps) {
+export default function FavoriteButton({favoriteButtonTranslations, greentouchSessionId, initialIsFavorite}: FavoriteButtonProps) {
   const [isFavorite, setIsFavorite] = useState(initialIsFavorite);
   const [isPending, startTransition] = useTransition();
 
@@ -56,7 +60,7 @@ export default function FavoriteButton({greentouchSessionId, initialIsFavorite}:
         isPending && "opacity-70 cursor-not-allowed"
       )}
     >
-      <span>{isFavorite ? "In Favorites" : "Add to Favorites"}</span>
+      <span>{isFavorite ? favoriteButtonTranslations.inFavorites : favoriteButtonTranslations.addToFavorites}</span>
       <Heart
         className={cn(
           "h-4 w-4 transition-transform",

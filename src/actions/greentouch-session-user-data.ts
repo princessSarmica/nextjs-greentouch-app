@@ -259,7 +259,7 @@ export async function sessionIsCompleted(greentouchSessionId: string) {
         }
 
         const sessionName = sessionRecord?.name ?? "";
-        const isSession1to6 = /^Session\s*[1-6]$/i.test(sessionName);
+        const isSession1to6 = /^session-([1-6])$/i.test(sessionName);
 
         if (isSession1to6) {
             if (

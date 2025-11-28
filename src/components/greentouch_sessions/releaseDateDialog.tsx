@@ -19,12 +19,25 @@ import { CalendarIcon } from "lucide-react";
 import { setGreentouchSessionReleaseDate } from "@/actions/greentouch-session";
 import { useTransition } from "react";
 import { toast } from "sonner";
-import error from "@/app/error";
 import {
   CalendarClockIcon
 } from "lucide-react";
+import error from "@/app/[locale]/error";
 
-export function ReleaseDateDialog({ sessionName }: { sessionName: string }) {
+interface setReleaseDateDialogProps {
+    setReleaseDateDialogTranslations: {
+        sessionTitle: string;
+        title: string;
+        description1: string;
+        description2: string;
+        labelDate: string;
+        labelTime: string;
+        actionButton: string;
+    },
+    sessionName: string;
+}
+
+export function ReleaseDateDialog({ setReleaseDateDialogTranslations, sessionName }: setReleaseDateDialogProps) {
   const [open, setOpen] = useState(false);
   const [date, setDate] = useState<Date | undefined>(undefined);
   const [time, setTime] = useState<string>("12:00");
@@ -55,22 +68,22 @@ export function ReleaseDateDialog({ sessionName }: { sessionName: string }) {
         <DialogTrigger asChild>
         <Button variant="outline" size="sm">
             <CalendarClockIcon className="h-4 w-4" />
-            Set Release Date
+            {setReleaseDateDialogTranslations.title}
         </Button>
         </DialogTrigger>
 
         <DialogContent className="sm:max-w-[400px]">
             <DialogHeader>
-            <DialogTitle>Set release date</DialogTitle>
+            <DialogTitle>{setReleaseDateDialogTranslations.title}</DialogTitle>
             <DialogDescription>
-                Choose the date and time when <b>{sessionName}</b> should become available.
+                {setReleaseDateDialogTranslations.description1} <b>{setReleaseDateDialogTranslations.sessionTitle}</b> {setReleaseDateDialogTranslations.description2}
             </DialogDescription>
             </DialogHeader>
 
             <div className="flex flex-col gap-4">
             {/* Date Picker */}
             <div className="flex flex-col gap-2">
-                <label className="text-sm font-medium">Date</label>
+                <label className="text-sm font-medium">{setReleaseDateDialogTranslations.labelDate}</label>
                 <Popover>
                 <PopoverTrigger asChild>
                     <Button
@@ -94,7 +107,7 @@ export function ReleaseDateDialog({ sessionName }: { sessionName: string }) {
 
             {/* Time Input */}
             <div className="flex flex-col gap-2">
-                <label className="text-sm font-medium">Time</label>
+                <label className="text-sm font-medium">{setReleaseDateDialogTranslations.labelTime}</label>
                 <Input
                 type="time"
                 value={time}
@@ -105,7 +118,7 @@ export function ReleaseDateDialog({ sessionName }: { sessionName: string }) {
 
             <DialogFooter>
             <Button onClick={handleSave} disabled={isPending || !date}>
-                {isPending ? "Saving..." : "Save"}
+                {isPending ? setReleaseDateDialogTranslations.actionButton : setReleaseDateDialogTranslations.actionButton}
             </Button>
             </DialogFooter>
         </DialogContent>

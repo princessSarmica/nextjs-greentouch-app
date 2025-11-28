@@ -20,7 +20,18 @@ import AddContentCard from "../addContentCard";
 import { LoadingButton } from "../loading-button";
 import { createNewsArticle } from "@/actions/news-article";
 
-export default function AddNewsArticleDialog() { 
+interface AddNewsArticleDialogProps {
+    addNewsArticleDialogTranslations: {
+        title: string;
+        description: string;
+        labelArticleTitle: string;
+        labelArticleContent: string;
+        cancelButton: string;
+        actionButton: string;
+    };
+}
+
+export default function AddNewsArticleDialog({addNewsArticleDialogTranslations} : AddNewsArticleDialogProps) { 
     const [title, setTitle] = useState(""); 
     const [content, setContent] = useState(""); 
     const [isLoading, setIsLoading] = useState(false);
@@ -55,26 +66,26 @@ export default function AddNewsArticleDialog() {
                 </DialogTrigger> 
                 <DialogContent className="sm:max-w-[425px]"> 
                     <DialogHeader> 
-                        <DialogTitle>Add News Article</DialogTitle> 
-                        <DialogDescription> Fill in the details for the news article you want to add. </DialogDescription> 
+                        <DialogTitle>{addNewsArticleDialogTranslations.title}</DialogTitle> 
+                        <DialogDescription> {addNewsArticleDialogTranslations.description} </DialogDescription> 
                     </DialogHeader> 
                     <div className="grid gap-4"> 
                         <div className="grid gap-3"> 
-                            <Label htmlFor="title">Title</Label> 
+                            <Label htmlFor="title">{addNewsArticleDialogTranslations.labelArticleTitle}</Label> 
                             <Input id="title" name="title" value={title} onChange={(e) => setTitle(e.target.value)} disabled={isLoading} /> 
                         </div> 
                         
                         <div className="grid gap-3"> 
-                            <Label htmlFor="content">Content</Label> 
+                            <Label htmlFor="content">{addNewsArticleDialogTranslations.labelArticleContent}</Label> 
                             <Textarea id="content" name="content" value={content} onChange={(e) => setContent(e.target.value)} disabled={isLoading}/> 
                         </div>
                     </div> 
                     
                     <DialogFooter> 
                         <DialogClose asChild> 
-                            <Button variant="outline">Cancel</Button> 
+                            <Button variant="outline">{addNewsArticleDialogTranslations.cancelButton}</Button> 
                         </DialogClose> 
-                        <LoadingButton type="submit" onClick={handleSubmit} disabled={(!title.trim()) || (!content.trim()) || isLoading} loading={isLoading}>Save changes</LoadingButton>
+                        <LoadingButton type="submit" onClick={handleSubmit} disabled={(!title.trim()) || (!content.trim()) || isLoading} loading={isLoading}>{addNewsArticleDialogTranslations.actionButton}</LoadingButton>
                     </DialogFooter> 
                 </DialogContent> 
             </form> 

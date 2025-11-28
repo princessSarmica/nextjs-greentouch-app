@@ -18,10 +18,16 @@ import { deleteNewsArticle } from "@/actions/news-article";
 import { toast } from "sonner";
 
 interface DeleteNewsAlertDialogProps {
+  deleteNewsArticleDialogTranslations: {
+    title: string;
+    description: string;
+    cancelButton: string;
+    actionButton: string;
+  };
   newsArticleId: string;
 }
 
-export function DeleteNewsAlertDialog({ newsArticleId }: DeleteNewsAlertDialogProps) {
+export function DeleteNewsAlertDialog({ deleteNewsArticleDialogTranslations, newsArticleId }: DeleteNewsAlertDialogProps) {
 
   const [isDeleting, setIsDeleting] = useState(false);
   
@@ -60,17 +66,17 @@ export function DeleteNewsAlertDialog({ newsArticleId }: DeleteNewsAlertDialogPr
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Delete News Article</AlertDialogTitle>
-          <AlertDialogDescription>This action cannot be undone.</AlertDialogDescription>
+          <AlertDialogTitle>{deleteNewsArticleDialogTranslations.title}</AlertDialogTitle>
+          <AlertDialogDescription>{deleteNewsArticleDialogTranslations.description}</AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogCancel>{deleteNewsArticleDialogTranslations.cancelButton}</AlertDialogCancel>
           <AlertDialogAction
             onClick={handleDeleteNewsArticle}
             className="bg-red-500 hover:bg-red-600"
             disabled={isDeleting}
           >
-            {isDeleting ? "Deleting..." : "Delete"}
+            {isDeleting ? deleteNewsArticleDialogTranslations.actionButton : deleteNewsArticleDialogTranslations.actionButton}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

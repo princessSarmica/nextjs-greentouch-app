@@ -2,11 +2,14 @@
 import React from "react";
 import { CardContent } from "./ui/card";
 import { PlusCircle as AddIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const AddContentCard = React.forwardRef<HTMLButtonElement, ButtonProps>(function AddContentCard(props, ref) {
   const { className = "", ...rest } = props;
+
+  const t = useTranslations('resourcesPage.resourcesArticlesPage.addResourceArticleDialog');
 
   return (
     <button
@@ -17,7 +20,7 @@ const AddContentCard = React.forwardRef<HTMLButtonElement, ButtonProps>(function
     >
       <CardContent className="flex flex-col items-center justify-center h-48 sm:m-auto gap-3">
         <AddIcon className="h-12 w-12 text-[#65a164]" />
-        <p className="text-sm font-medium text-gray-700">Add New Article</p>
+        <p className="text-sm font-medium text-gray-700">{t('title')}</p>
       </CardContent>
     </button>
   );

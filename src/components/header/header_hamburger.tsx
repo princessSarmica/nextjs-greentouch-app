@@ -1,11 +1,14 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export const HeaderHamburger = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+    const t = useTranslations('header.navLinks');
 
   //console.log("HeaderHamburger component rendered");
   
@@ -28,19 +31,19 @@ export const HeaderHamburger = () => {
       {menuOpen && (
         <div className="lg:hidden absolute top-16 left-0 w-full bg-white shadow-md z-40 flex flex-col px-6 py-4 space-y-4 text-sm font-medium text-gray-700">
           <Link href="/discover-greentouch" onClick={() => setMenuOpen(false)}>
-            Discover GreenTouch
+            {t('discoverGreenTouch')}
           </Link>
           <Link href="/sessions" onClick={() => setMenuOpen(false)}>
-            Sessions
+            {t('sessions')}
           </Link>
           <Link href="/nature-video-gallery" onClick={() => setMenuOpen(false)}>
-            Nature Video Gallery
+            {t('natureVideoGallery')}
           </Link>
           <Link href="/news" onClick={() => setMenuOpen(false)}>
-            News
+            {t('news')}
           </Link>
           <Link href="/resources" onClick={() => setMenuOpen(false)}>
-            Resources
+            {t('resources')}
           </Link>
         </div>
       )}
