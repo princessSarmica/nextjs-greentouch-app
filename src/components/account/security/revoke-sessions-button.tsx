@@ -15,32 +15,43 @@ import {
   AlertDialogTrigger 
 } from "@/components/ui/alert-dialog";
 
-export default function RevokeOtherSessions(){
+interface accountSecurityTranslationsProps {
+  accountSecurityAlertDialogTranslations: {
+    button: string;
+    title: string;
+    description: string;
+    cancelButton: string;
+    actionButton: string;
+    successMessage: string;
+    errorMessage: string;
+  }
+}
 
+export default function RevokeOtherSessions({ accountSecurityAlertDialogTranslations }: accountSecurityTranslationsProps) {
   return (
     <div>
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <Button className="bg-red-500 hover:bg-red-600">Revoke Other Active Sessions</Button>
+          <Button className="bg-red-500 hover:bg-red-600">{accountSecurityAlertDialogTranslations.button}</Button>
         </AlertDialogTrigger>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogTitle>{accountSecurityAlertDialogTranslations.title}</AlertDialogTitle>
             <AlertDialogDescription>
-              Revoking all other active sessions will require you to sign in again on those devices.
+              {accountSecurityAlertDialogTranslations.description}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel asChild>
-              <Button variant="outline">Cancel</Button>
+              <Button variant="outline">{accountSecurityAlertDialogTranslations.cancelButton}</Button>
             </AlertDialogCancel>
             <AlertDialogAction
                   onClick={async () => {
                   const res = await fetch("/api/security/revoke-other-sessions", { method: "POST" });
                   if (res.ok) {
-                    toast.success("Other sessions revoked");
+                    toast.success(accountSecurityAlertDialogTranslations.successMessage);
                   } else {
-                    toast.error("Failed to revoke other sessions");
+                    toast.error(accountSecurityAlertDialogTranslations.errorMessage);
                     authClient.signOut({
                       fetchOptions: {
                         onError: () => {
@@ -52,7 +63,7 @@ export default function RevokeOtherSessions(){
                 }}
                 className="bg-red-500 hover:bg-red-600"
                   >
-                  Continue
+                  {accountSecurityAlertDialogTranslations.actionButton}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

@@ -100,6 +100,20 @@
     },
     "favoritesPage": {
       "noFavoritesMessage": "You have not added any sessions to your favorites yet."
+    },
+    "securityPage": {
+      "description": "Manage your session security. You can revoke active sessions on other devices here.",
+      "cardTitle": "Revoke Other Sessions",
+      "cardDescription": "Sign out all other active sessions to keep your account safe.",
+      "alertDialog": {
+        "button": "Revoke Other Active Sessions",
+        "title": "Are you absolutely sure?",
+        "description": "Revoking all other active sessions will require you to sign in again on those devices.",
+        "cancelButton": "Cancel",
+        "actionButton": "Continue",
+        "successMessage": "All other sessions have been successfully revoked.",
+        "errorMessage": "An error occurred while trying to revoke other sessions. Please try again."
+      }
     }
   },
   "homePage": {

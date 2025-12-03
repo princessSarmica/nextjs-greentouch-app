@@ -100,6 +100,20 @@
     },
     "favoritesPage": {
       "noFavoritesMessage": "Niste še dodali nobenih sej med priljubljene."
+    },
+    "securityPage": {
+      "description": "Upravljajte varnost svojih sej. Tukaj lahko prekličete aktivne seje na drugih napravah.",
+      "cardTitle": "Prekliči druge seje",
+      "cardDescription": "Odjavite se iz vseh drugih aktivnih sej, da bo vaš račun varen.",
+      "alertDialog": {
+        "button": "Prekliči druge aktivne seje",
+        "title": "Ali ste prepričani?",
+        "description": "Preklic vseh drugih aktivnih sej bo zahteval, da se na teh napravah ponovno prijavite.",
+        "cancelButton": "Prekliči",
+        "actionButton": "Nadaljuj",
+        "successMessage": "Vse druge seje so bile uspešno preklicane.",
+        "errorMessage": "Pri poskusu preklica drugih sej je prišlo do napake. Poskusite znova."
+      }
     }
   },
   "homePage": {
