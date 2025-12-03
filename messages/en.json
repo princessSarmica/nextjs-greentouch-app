@@ -32,7 +32,7 @@
       "formMessages": {
         "usernameTooShort": "Username must be at least 3 characters.",
         "usernameTooLong": "Username must be be 30 characters or fewer.",
-        "usernameInvalidCharacters": "Username may only contain letters, numbers, underscores, and hyphens.",
+        "usernameInvalidCharacters": "Username may only contain letters, numbers and underscores.",
         "passwordRequired": "Password is required.",
         "unknownError": "Something went wrong."
       }
@@ -70,13 +70,21 @@
         "confirmPasswordRequired": "Please confirm your password.",
         "usernameTooShort": "Username must be at least 3 characters.",
         "usernameTooLong": "Username must be be 30 characters or fewer.",
-        "usernameInvalidCharacters": "Username may only contain letters, numbers, underscores, and hyphens.",
+        "usernameInvalidCharacters": "Username may only contain letters, numbers and underscores.",
         "selectPositionRequired": "Please select your position.",
         "selectMotivationRequired": "Please select your motivation.",
         "selectUniversityRequired": "University is required.",
         "selectSpecializationRequired": "Specialization is required.",
         "passwordsDoNotMatch": "The passwords do not match",
-        "unknownError": "Something went wrong. Please try again."
+        "signUpSuccessful": "Registration successful! Welcome to GreenTouch.",
+        "unknownError": "Something went wrong. Please try again.",
+        "validation": {
+          "passwordRequired": "Password is required.",
+          "passwordMinLength": "Password must be at least 8 characters.",
+          "passwordLetter": "Password must contain at least one letter.",
+          "passwordNumber": "Password must contain at least one number.",
+          "passwordSpecialChar": "Password must contain at least one special character."
+        }
       }
     }
   },
@@ -96,10 +104,21 @@
       "yourAnswer": "Your answer"
     },
     "myDiaryPage": {
-      "noEntriesMessage": "You have not made any diary entries yet."
+      "noEntriesMessage": "You have not made any diary entries yet.",
+      "accountDiaryCard": {
+        "sessionIdMissingErrorMessage": "Session ID is missing. Make sure the session is already available.",
+        "sessionNameMissingErrorMessage": "Session name is missing. Make sure the session is already available.",
+        "saveErrorMessage": "An error occurred while saving the diary entry. Please try again.",
+        "successMessage": "Diary entry saved successfully."
+      }
     },
     "favoritesPage": {
-      "noFavoritesMessage": "You have not added any sessions to your favorites yet."
+      "noFavoritesMessage": "You have not added any sessions to your favorites yet.",
+      "favoriteIconButton": {
+        "sessionNameMissingErrorMessage": "Session name is missing. Make sure the session is already available.",
+        "unknownErrorMessage": "Something went wrong while updating favorite..",
+        "successMessage": "Session removed from favorites."
+      }
     },
     "securityPage": {
       "description": "Manage your session security. You can revoke active sessions on other devices here.",
@@ -192,7 +211,11 @@
       },
       "favoriteButton": {
         "addToFavorites": "Add to Favorites",
-        "inFavorites": "In Favorites"
+        "inFavorites": "In Favorites",
+        "sessionIdMissingErrorMessage": "Session ID is missing. Make sure the session is already available.",
+        "unknownErrorMessage": "Something went wrong while updating favorite.",
+        "sessionAddedToFavorites": "Session added to favorites.",
+        "sessionRemovedFromFavorites": "Session removed from favorites."
       },
       "natureConnectednessCard": {
         "cardTitle": "Nature Connectedness",
@@ -201,7 +224,11 @@
         "cardSubtitle": "Move the figure",
         "leftSliderLabel": "Fully disconnected from nature",
         "rightSliderLabel": "Closely connected to nature",
-        "actionButton": "Save changes"
+        "actionButton": "Save changes",
+        "sessionIdMissingErrorMessage": "Session ID is missing. Make sure the session is already available.",
+        "sessionAlreadyCompletedErrorMessage": "This session has already been completed. You cannot submit data again.",
+        "successMessage": "Nature connectedness rating saved successfully.",
+        "unknownErrorMessage": "An error occurred while saving your nature connectedness rating. Please try again."
       },
       "diaryCard": {
         "diaryNote": "DIARY NOTE",
@@ -210,7 +237,11 @@
         "cardDescription": "Once you have completed the session, please answer the following questions.",
         "cardSubtitle": "OPEN QUESTIONS",
         "noQuestionsAvailable": "No diary questions available for this session.",
-        "actionButton": "Save"
+        "actionButton": "Save",
+        "sessionIdMissingErrorMessage": "Session ID is missing. Make sure the session is already available.",
+        "sessionNameMissingErrorMessage": "Session name is missing. Make sure the session is already available.",
+        "successMessage": "Diary entry saved successfully.",
+        "unknownErrorMessage": "An error occurred while saving your diary entry. Please try again."
       },
       "surveyCard": {
         "cardTitle": "Survey",
@@ -245,7 +276,14 @@
           "learningChallenge": "I learnt something new / I challenged myself",
           "closerToNature": "I felt closer to nature"
         },
-        "actionButton": "Save"
+        "actionButton": "Save",
+        "messages": {
+          "sessionIdMissingErrorMessage": "Session ID is missing. Make sure the session is already available.",
+          "answerAllQuestionsErrorMessage": "Please answer all the questions before submitting the survey.",
+          "sessionAlreadyCompletedErrorMessage": "This session has already been completed. You cannot submit data again.",
+          "successMessage": "Survey responses saved successfully.",
+          "unknownErrorMessage": "An error occurred while saving your survey responses. Please try again."
+        }
       },
       "sessionCompletedCard": {
         "title": "Finished your session?",
@@ -257,7 +295,10 @@
           "description": "Data such as your nature connectedness and survey responses will be saved and can't be changed afterward.",
           "cancelButton": "Cancel",
           "actionButton": "Save"
-        }
+        },
+        "sessionIdMissingErrorMessage": "Session ID is missing. Make sure the session is already available.",
+        "unknownErrorMessage": "An error occurred while marking the session as completed. Please try again.",
+        "successMessage": "Session marked as completed successfully."
       },
       "sessionsAccordion": {
         "accordionItem1": {
@@ -751,7 +792,9 @@
       "labelArticleTitle": "Title",
       "labelArticleContent": "Content",
       "cancelButton": "Cancel",
-      "actionButton": "Save changes"
+      "actionButton": "Save changes",
+      "successMessage": "News article added successfully!",
+      "errorMessage": "An error occurred while adding the news article. Please try again."
     },
     "newsArticleCard": {
       "editNewsArticleDialog": {
@@ -760,13 +803,17 @@
         "labelArticleTitle": "Title",
         "labelArticleContent": "Content",
         "cancelButton": "Cancel",
-        "actionButton": "Save changes"
+        "actionButton": "Save changes",
+        "successMessage": "News article updated successfully!",
+        "errorMessage": "An error occurred while updating the news article. Please try again."
       },
       "deleteNewsArticleAlertDialog": {
         "title": "Delete News Article",
         "description": "Are you sure you want to delete this article? This action cannot be undone.",
         "cancelButton": "Cancel",
-        "actionButton": "Delete"
+        "actionButton": "Delete",
+        "successMessage": "News article deleted successfully!",
+        "errorMessage": "An error occurred while deleting the news article. Please try again."
       }
     },
     "newsArticleAdmin": {
@@ -776,7 +823,9 @@
         "title": "Edit Article",
         "cancelButton": "Cancel",
         "actionButton": "Save changes"
-      }
+      },
+      "successMessage": "News article updated successfully!",
+      "errorMessage": "An error occurred while updating the news article. Please try again."
     }
   },  
   "resourcesPage": {
@@ -809,7 +858,9 @@
         "labelArticleContent": "Content",
         "labelArticleLink": "Link",
         "cancelButton": "Cancel",
-        "actionButton": "Save changes"
+        "actionButton": "Save changes",
+        "successMessage": "Resources article added successfully!",
+        "errorMessage": "An error occurred while adding the resources article. Please try again."
       },
       "resourceArticleCard": {
         "readArticleButton": "Read Article",
@@ -823,13 +874,17 @@
           "labelArticleContent": "Content",
           "labelArticleLink": "Link",
           "cancelButton": "Cancel",
-          "actionButton": "Save changes"
+          "actionButton": "Save changes",
+          "successMessage": "Resources article updated successfully!",
+          "errorMessage": "An error occurred while updating the resources article. Please try again."
         },
         "deleteResourceArticleAlertDialog": {
           "title": "Delete Resources Article",
           "description": "Are you sure you want to delete this article? This action cannot be undone.",
           "cancelButton": "Cancel",
-          "actionButton": "Delete"
+          "actionButton": "Delete",
+          "successMessage": "Resources article deleted successfully!",
+          "errorMessage": "An error occurred while deleting the resources article. Please try again."
         }
       }
     }

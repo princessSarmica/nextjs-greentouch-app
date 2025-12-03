@@ -35,7 +35,10 @@ export default async function NewsArticlePage({params,}: {params: Promise<{ news
                         editNewsArticleDialog: {
                             title: t("editNewsArticleDialog.title"),
                             cancelButton: t("editNewsArticleDialog.cancelButton"),
-                            actionButton: t("editNewsArticleDialog.actionButton")}
+                            actionButton: t("editNewsArticleDialog.actionButton"),
+                        },
+                        successMessage: t("successMessage"),
+                        errorMessage: t("errorMessage")
                     }}
                     article={clientArticle} backHref="/news" 
                 />;

@@ -63,7 +63,15 @@ export default function SignUpPage() {
                                 selectUniversityRequired: t("signUpForm.formMessages.selectUniversityRequired"),
                                 selectSpecializationRequired: t("signUpForm.formMessages.selectSpecializationRequired"),
                                 passwordsDoNotMatch: t("signUpForm.formMessages.passwordsDoNotMatch"),
-                                unknownError: t("signUpForm.formMessages.unknownError")
+                                signUpSuccessful: t("signUpForm.formMessages.signUpSuccessful"),
+                                unknownError: t("signUpForm.formMessages.unknownError"),
+                                validation: {
+                                    passwordRequired: t("signUpForm.formMessages.validation.passwordRequired"),
+                                    passwordMinLength: t("signUpForm.formMessages.validation.passwordMinLength"),
+                                    passwordLetter: t("signUpForm.formMessages.validation.passwordLetter"),
+                                    passwordNumber: t("signUpForm.formMessages.validation.passwordNumber"),
+                                    passwordSpecialChar: t("signUpForm.formMessages.validation.passwordSpecialChar"),
+                                }
                             }
                         }}
                     />

@@ -73,6 +73,8 @@ export default async function ResourcesArticles() {
                                         labelArticleLink: t("addResourceArticleDialog.labelArticleLink"),
                                         cancelButton: t("addResourceArticleDialog.cancelButton"),
                                         actionButton: t("addResourceArticleDialog.actionButton"),
+                                        successMessage: t("addResourceArticleDialog.successMessage"),
+                                        errorMessage: t("addResourceArticleDialog.errorMessage")
                                     }}
                                     topics={topics.topics}
                                 />

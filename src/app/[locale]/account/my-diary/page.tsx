@@ -47,7 +47,11 @@ export default async function MyDiary() {
               noQuestionsAvailable: t("sessionsPage.additionalData.diaryCard.noQuestionsAvailable"),
               actionButton: t("sessionsPage.additionalData.diaryCard.actionButton"),
               title: t(`sessionsPage.greentouchSessions.${normalizedName}.title`),
-              diaryQuestions: diaryQuestions
+              diaryQuestions: diaryQuestions,
+              sessionIdMissingErrorMessage: t("accountPage.myDiaryPage.accountDiaryCard.sessionIdMissingErrorMessage"),
+              sessionNameMissingErrorMessage: t("accountPage.myDiaryPage.accountDiaryCard.sessionNameMissingErrorMessage"),
+              saveErrorMessage: t("accountPage.myDiaryPage.accountDiaryCard.saveErrorMessage"),
+              successMessage: t("accountPage.myDiaryPage.accountDiaryCard.successMessage")
             }}
             key={sessionData.greentouchSessionName}
             greentouchSessionId={sessionData.greentouchSessionId}

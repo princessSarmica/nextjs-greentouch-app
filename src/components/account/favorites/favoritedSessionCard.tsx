@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FavoriteIconButton from "./favoriteIconButton";
 
-function FavoritedSessionCard({greentouchSessionLocalName, greentouchSessionName, greentouchSessionDescription, greentouchSessionCoverPhoto }: { greentouchSessionLocalName: string; greentouchSessionName: string; greentouchSessionDescription: string; greentouchSessionCoverPhoto: string }) {
+function FavoritedSessionCard({FavoriteIconButtonTranslations, greentouchSessionLocalName, greentouchSessionName, greentouchSessionDescription, greentouchSessionCoverPhoto }: { FavoriteIconButtonTranslations: { sessionNameMissingErrorMessage: string; unknownErrorMessage: string; successMessage: string }, greentouchSessionLocalName: string; greentouchSessionName: string; greentouchSessionDescription: string; greentouchSessionCoverPhoto: string }) {
 
   const imageSrc = greentouchSessionCoverPhoto || "/article-default-picture.png";
 
@@ -30,7 +30,10 @@ function FavoritedSessionCard({greentouchSessionLocalName, greentouchSessionName
       </Link>
       <CardFooter className="flex justify-end">
         <div className="flex gap-4">
-            <FavoriteIconButton greentouchSessionName={greentouchSessionLocalName} />
+            <FavoriteIconButton 
+              FavoriteIconButtonTranslations={FavoriteIconButtonTranslations}
+              greentouchSessionName={greentouchSessionLocalName}
+            /> 
         </div>
       </CardFooter>
     </Card>

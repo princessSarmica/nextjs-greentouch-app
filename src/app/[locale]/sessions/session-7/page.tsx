@@ -76,6 +76,10 @@ export default async function SessionSevenPage() {
                         favoriteButtonTranslations={{
                             addToFavorites: t("additionalData.favoriteButton.addToFavorites"),
                             inFavorites: t("additionalData.favoriteButton.inFavorites"),
+                            sessionIdMissingErrorMessage: t("additionalData.favoriteButton.sessionIdMissingErrorMessage"),
+                            unknownErrorMessage: t("additionalData.favoriteButton.unknownErrorMessage"),
+                            sessionAddedToFavorites: t("additionalData.favoriteButton.sessionAddedToFavorites"),
+                            sessionRemovedFromFavorites: t("additionalData.favoriteButton.sessionRemovedFromFavorites")
                         }}
                         greentouchSessionId={dbSession?.id || ""}
                         initialIsFavorite={userData?.isFavorite ?? false}
@@ -110,7 +114,11 @@ export default async function SessionSevenPage() {
                     cardSubtitle: t("additionalData.natureConnectednessCard.cardSubtitle"),
                     leftSliderLabel: t("additionalData.natureConnectednessCard.leftSliderLabel"),
                     rightSliderLabel: t("additionalData.natureConnectednessCard.rightSliderLabel"),
-                    actionButton: t("additionalData.natureConnectednessCard.actionButton")
+                    actionButton: t("additionalData.natureConnectednessCard.actionButton"),
+                    sessionIdMissingErrorMessage: t("additionalData.natureConnectednessCard.sessionIdMissingErrorMessage"),
+                    sessionAlreadyCompletedErrorMessage: t("additionalData.natureConnectednessCard.sessionAlreadyCompletedErrorMessage"),
+                    successMessage: t("additionalData.natureConnectednessCard.successMessage"),
+                    unknownErrorMessage: t("additionalData.natureConnectednessCard.unknownErrorMessage")
                 }}
                 greentouchSessionId={dbSession?.id} 
                 greentouchSessionCompleted={userData?.sessionCompleted} 
@@ -206,7 +214,10 @@ export default async function SessionSevenPage() {
                         description: t("additionalData.sessionCompletedCard.dialog.description"),
                         cancelButton: t("additionalData.sessionCompletedCard.dialog.cancelButton"),
                         actionButton: t("additionalData.sessionCompletedCard.dialog.actionButton")
-                    }
+                    },
+                    sessionIdMissingErrorMessage: t("additionalData.sessionCompletedCard.sessionIdMissingErrorMessage"),
+                    unknownErrorMessage: t("additionalData.sessionCompletedCard.unknownErrorMessage"),
+                    successMessage: t("additionalData.sessionCompletedCard.successMessage")
                 }} 
                 greentouchSessionId={dbSession?.id} sessionCompleted={userData?.sessionCompleted} 
             />

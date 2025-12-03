@@ -51,6 +51,8 @@ function ResourcesCard({ article, isAdmin = false, topics }: { article: Resource
                             labelArticleLink: t("editResourceArticleDialog.labelArticleLink"),
                             cancelButton: t("editResourceArticleDialog.cancelButton"),
                             actionButton: t("editResourceArticleDialog.actionButton"),
+                            successMessage: t("editResourceArticleDialog.successMessage"),
+                            errorMessage: t("editResourceArticleDialog.errorMessage")
                         }}
                         resourcesArticleId={article.id} initialTopic={article.topic} initialTitle={article.title} initialContent={article.content} initialLink={article.link} existingTopics={topics}
                         />
@@ -60,6 +62,8 @@ function ResourcesCard({ article, isAdmin = false, topics }: { article: Resource
                             description: t("deleteResourceArticleAlertDialog.description"),
                             cancelButton: t("deleteResourceArticleAlertDialog.cancelButton"),
                             actionButton: t("deleteResourceArticleAlertDialog.actionButton"),
+                            successMessage: t("deleteResourceArticleAlertDialog.successMessage"),
+                            errorMessage: t("deleteResourceArticleAlertDialog.errorMessage")
                         }}
                         resourcesArticleId={article.id} />
                     </div>

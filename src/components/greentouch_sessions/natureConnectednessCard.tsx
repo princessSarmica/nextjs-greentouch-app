@@ -16,6 +16,10 @@ interface SaveNatureConnectednessProps {
         leftSliderLabel: string;
         rightSliderLabel: string;
         actionButton: string;
+        sessionIdMissingErrorMessage: string;
+        sessionAlreadyCompletedErrorMessage: string;
+        successMessage: string;
+        unknownErrorMessage: string;
     };
     greentouchSessionId?: string;
     greentouchSessionCompleted?: boolean;
@@ -32,13 +36,13 @@ function NatureConnectednessCard({ natureConnectednessCardTranslations, greentou
         setIsLoading(true); 
 
         if(!greentouchSessionId){
-            toast.error("Session ID is missing. Make sure the session is already available.");
+            toast.error(natureConnectednessCardTranslations.sessionIdMissingErrorMessage);
             setIsLoading(false);
             return;
         }
 
         if(greentouchSessionCompleted){
-            toast.error("This session has already been completed. You cannot submit data again.");
+            toast.error(natureConnectednessCardTranslations.sessionAlreadyCompletedErrorMessage);
             setIsLoading(false);
             return;
         }
@@ -47,11 +51,11 @@ function NatureConnectednessCard({ natureConnectednessCardTranslations, greentou
             const result = await saveUserNatureConnectedness(greentouchSessionId, sliderValue); 
 
             if(result.success){  
-                toast.success("Nature connectedness saved successfully."); 
+                toast.success(natureConnectednessCardTranslations.successMessage); 
             } 
         } catch (error) { 
                 console.error("Error saving nature connectedness:", error); 
-                toast.error("Failed to save nature connectedness."); 
+                toast.error(natureConnectednessCardTranslations.unknownErrorMessage); 
         } finally { 
             setIsLoading(false); 
         } 

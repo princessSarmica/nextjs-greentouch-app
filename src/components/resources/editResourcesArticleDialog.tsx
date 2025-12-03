@@ -35,6 +35,8 @@ interface EditResourcesArticleDialogProps {
         labelArticleLink: string;
         cancelButton: string;
         actionButton: string;
+        successMessage: string;
+        errorMessage: string;
     };
     initialTopic: string;
     resourcesArticleId: string;
@@ -89,11 +91,11 @@ export default function EditResourcesArticleDialog({ editResourceArticleDialogTr
                 setTitle(""); 
                 setContent(""); 
                 setLink("");
-                toast.success("Resources article updated successfully."); 
+                toast.success(editResourceArticleDialogTranslations.successMessage); 
             } 
         } catch (error) { 
                 console.error("Error posting resources article:", error); 
-                toast.error("Failed to update resources article."); 
+                toast.error(editResourceArticleDialogTranslations.errorMessage); 
         } finally { 
             setIsLoading(false); 
         } 

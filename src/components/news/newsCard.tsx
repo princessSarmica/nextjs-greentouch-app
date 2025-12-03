@@ -43,6 +43,8 @@ function NewsCard({ article, isAdmin = false }: { article: NewsArticle; isAdmin?
                   labelArticleContent: t("editNewsArticleDialog.labelArticleContent"),
                   cancelButton: t("editNewsArticleDialog.cancelButton"),
                   actionButton: t("editNewsArticleDialog.actionButton"),
+                  successMessage: t("editNewsArticleDialog.successMessage"),
+                  errorMessage: t("editNewsArticleDialog.errorMessage")
               }}
               newsArticleId={article.id} initialTitle={article.title} initialContent={article.content} 
               />
@@ -54,6 +56,8 @@ function NewsCard({ article, isAdmin = false }: { article: NewsArticle; isAdmin?
                   description: t("deleteNewsArticleAlertDialog.description"),
                   cancelButton: t("deleteNewsArticleAlertDialog.cancelButton"),
                   actionButton: t("deleteNewsArticleAlertDialog.actionButton"),
+                  successMessage: t("deleteNewsArticleAlertDialog.successMessage"),
+                  errorMessage: t("deleteNewsArticleAlertDialog.errorMessage")
               }}
               newsArticleId={article.id} 
               />

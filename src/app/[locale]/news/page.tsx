@@ -60,6 +60,8 @@ export default async function News() {
                                 labelArticleContent: t("addNewsArticleDialog.labelArticleContent"),
                                 cancelButton: t("addNewsArticleDialog.cancelButton"),
                                 actionButton: t("addNewsArticleDialog.actionButton"),
+                                successMessage: t("addNewsArticleDialog.successMessage"),
+                                errorMessage: t("addNewsArticleDialog.errorMessage"),
                             }}
                         />
                     )}

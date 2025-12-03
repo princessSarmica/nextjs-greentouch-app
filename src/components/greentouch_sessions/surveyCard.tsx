@@ -42,6 +42,13 @@ interface SurveyCardProps {
             closerToNature: string;
         };
         actionButton: string;
+        messages: {
+            sessionIdMissingErrorMessage: string;
+            answerAllQuestionsErrorMessage: string;
+            sessionAlreadyCompletedErrorMessage: string;
+            successMessage: string;
+            unknownErrorMessage: string;
+        };
     };
     greentouchSessionId?: string;
     initialOutdoorTasksResponse?: string;
@@ -99,12 +106,12 @@ export default function SurveyCard({
         e?.preventDefault();
 
         if (!greentouchSessionId) {
-            toast.error("Session ID is missing. Make sure the session is already available.");
+            toast.error(surveyCardTranslations.messages.sessionIdMissingErrorMessage);
             return;
         }
 
         if(!responses.outdoorTasks || !responses.indoorTasks || !responses.physicalHealth || !responses.mentalHealth || !responses.friendsFamily || !responses.learntSomethingNew || !responses.closerToNature) {
-            toast.error("Please answer all questions before submitting the survey.");
+            toast.error(surveyCardTranslations.messages.answerAllQuestionsErrorMessage);
             return;
         }
 
@@ -113,11 +120,11 @@ export default function SurveyCard({
             const result = await saveSurveyData(greentouchSessionId, responses.outdoorTasks, responses.indoorTasks, responses.physicalHealth, responses.mentalHealth, responses.friendsFamily, responses.learntSomethingNew, responses.closerToNature);
 
             if(result.success){
-                toast.success("Survey saved successfully.");
+                toast.success(surveyCardTranslations.messages.successMessage);
                 setInitialResponses(responses);
             }
         } catch (error) {
-            toast.error("Failed to save survey.");
+            toast.error(surveyCardTranslations.messages.unknownErrorMessage);
             console.error(error);
         } finally {
             setIsLoading(false);
@@ -289,7 +296,7 @@ export default function SurveyCard({
                 onClick={handleSubmit}
                 loading={isLoading}
             >
-                Save
+                {surveyCardTranslations.actionButton}
             </LoadingButton>
             </div>
         </div>

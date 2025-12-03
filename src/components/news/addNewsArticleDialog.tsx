@@ -28,6 +28,8 @@ interface AddNewsArticleDialogProps {
         labelArticleContent: string;
         cancelButton: string;
         actionButton: string;
+        successMessage: string;
+        errorMessage: string;
     };
 }
 
@@ -48,11 +50,11 @@ export default function AddNewsArticleDialog({addNewsArticleDialogTranslations} 
             if(result.success){ 
                 setTitle(""); 
                 setContent(""); 
-                toast.success("News article created successfully."); 
+                toast.success(addNewsArticleDialogTranslations.successMessage); 
             } 
         } catch (error) { 
                 console.error("Error posting news article:", error); 
-                toast.error("Failed to create news article."); 
+                toast.error(addNewsArticleDialogTranslations.errorMessage); 
         } finally { 
             setIsLoading(false); 
         } 

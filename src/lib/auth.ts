@@ -55,7 +55,13 @@ export const auth = betterAuth({
       before: createAuthMiddleware(async ctx => {
         if (ctx.path === "/sign-up/email") {
           const password = ctx.body.password;
-          const {error} = passwordSchema.safeParse(password);
+          const { error } = passwordSchema({
+            passwordRequired: "Password is required",
+            passwordMinLength: "Password is too short",
+            passwordLetter: "Password must contain a letter",
+            passwordNumber: "Password must contain a number",
+            passwordSpecialChar: "Password must contain a special character",
+          }).safeParse(password);
           if (error) {
             throw new APIError("BAD_REQUEST", { message: "Password not strong enough." });
           }
@@ -64,8 +70,8 @@ export const auth = betterAuth({
     },
     plugins: [username({
         displayUsernameValidator: (displayUsername) => {
-            // Allow only alphanumeric characters, underscores, and hyphens
-            return /^[a-zA-Z0-9_-]+$/.test(displayUsername)
+            // Allow only alphanumeric characters and underscores
+            return /^[a-zA-Z0-9_]+$/.test(displayUsername)
         }
     }), admin(), nextCookies()] // make sure this is the last plugin in the array
 });

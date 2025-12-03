@@ -23,6 +23,8 @@ interface DeleteNewsAlertDialogProps {
     description: string;
     cancelButton: string;
     actionButton: string;
+    successMessage: string;
+    errorMessage: string;
   };
   newsArticleId: string;
 }
@@ -39,11 +41,11 @@ export function DeleteNewsAlertDialog({ deleteNewsArticleDialogTranslations, new
         setIsDeleting(true);
         const result = await deleteNewsArticle(newsArticleId);
         if(result.success){
-            toast.success("News article deleted successfully.");
+            toast.success(deleteNewsArticleDialogTranslations.successMessage);
         } else throw new Error(result.error);
     } catch (error) {
         console.error("Error deleting news article:", error);
-        toast.error("Failed to delete news article.");
+        toast.error(deleteNewsArticleDialogTranslations.errorMessage);
     } finally {
         setIsDeleting(false);
     }

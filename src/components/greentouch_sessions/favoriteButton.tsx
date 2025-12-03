@@ -11,6 +11,10 @@ interface FavoriteButtonProps {
   favoriteButtonTranslations: {
     addToFavorites: string;
     inFavorites: string;
+    sessionIdMissingErrorMessage: string;
+    unknownErrorMessage: string;
+    sessionAddedToFavorites: string;
+    sessionRemovedFromFavorites: string;
   };
   greentouchSessionId: string;
   initialIsFavorite: boolean;
@@ -27,7 +31,7 @@ export default function FavoriteButton({favoriteButtonTranslations, greentouchSe
 
         if(!greentouchSessionId){
             setIsFavorite(!newFavoriteState);
-            toast.error("Session ID is missing. Make sure the session is already available.");
+            toast.error(favoriteButtonTranslations.sessionIdMissingErrorMessage);
             return;
         }
 
@@ -35,12 +39,12 @@ export default function FavoriteButton({favoriteButtonTranslations, greentouchSe
 
         if (!result.success) {
             setIsFavorite(!newFavoriteState);
-            toast.error("Something went wrong while updating favorite.");
+            toast.error(favoriteButtonTranslations.unknownErrorMessage);
         } else {
             toast.success(
             newFavoriteState
-                ? "Session added to favorites."
-                : "Session removed from favorites."
+                ? favoriteButtonTranslations.sessionAddedToFavorites
+                : favoriteButtonTranslations.sessionRemovedFromFavorites
             );
         }
     });

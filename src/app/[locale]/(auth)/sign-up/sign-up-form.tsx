@@ -65,7 +65,15 @@ interface SignUpFormProps {
             selectUniversityRequired: string;
             selectSpecializationRequired: string;
             passwordsDoNotMatch: string;
+            signUpSuccessful: string;
             unknownError: string;
+            validation: {
+                passwordRequired: string;
+                passwordMinLength: string;
+                passwordLetter: string;
+                passwordNumber: string;
+                passwordSpecialChar: string;
+            }
         }
     };
 }
@@ -79,11 +87,11 @@ export function SignUpForm({ signUpFormTranslations }: SignUpFormProps){
         email: z.email({
         message: `${signUpFormTranslations.formMessages.validEmailRequired}`,
         }),
-        password: passwordSchema,
+        password: passwordSchema (signUpFormTranslations.formMessages.validation),
         confirmPassword: z.string().min(1, { message: `${signUpFormTranslations.formMessages.confirmPasswordRequired}` }),
         username: z.string().min(3, { message: `${signUpFormTranslations.formMessages.usernameTooShort}` }).max(30).trim().refine((value) => {
-            // Allow only alphanumeric characters, underscores, and hyphens
-            return /^[a-zA-Z0-9_-]+$/.test(value);
+            // Allow only alphanumeric characters and underscores
+            return /^[a-zA-Z0-9_]+$/.test(value);
         }, {
             message: `${signUpFormTranslations.formMessages.usernameInvalidCharacters}`,
         }),
@@ -140,7 +148,7 @@ export function SignUpForm({ signUpFormTranslations }: SignUpFormProps){
         if(error) {
             setError(error.message || signUpFormTranslations.formMessages.unknownError)
         } else {
-            toast.success("Signed up successfully.");
+            toast.success(signUpFormTranslations.formMessages.signUpSuccessful);
             router.push("/"); // Redirect to home page after successful sign-up
         }
     }

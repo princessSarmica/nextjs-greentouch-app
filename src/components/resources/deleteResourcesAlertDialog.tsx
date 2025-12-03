@@ -23,6 +23,8 @@ interface DeleteResourcesAlertDialogProps {
     description: string;
     cancelButton: string;
     actionButton: string;
+    successMessage: string;
+    errorMessage: string;
   };
   resourcesArticleId: string;
 }
@@ -39,11 +41,11 @@ export function DeleteResourcesAlertDialog({ deleteResourceArticleDialogTranslat
         setIsDeleting(true);
         const result = await deleteResourcesArticle(resourcesArticleId);
         if(result.success){
-            toast.success("Resources article deleted successfully.");
+            toast.success(deleteResourceArticleDialogTranslations.successMessage);
         } else throw new Error(result.error);
     } catch (error) {
         console.error("Error deleting resources article:", error);
-        toast.error("Failed to delete resources article.");
+        toast.error(deleteResourceArticleDialogTranslations.errorMessage);
     } finally {
         setIsDeleting(false);
     }

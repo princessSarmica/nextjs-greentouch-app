@@ -36,6 +36,8 @@ export default function AddResourcesArticleDialog({
         labelArticleLink: string;
         cancelButton: string;
         actionButton: string;
+        successMessage: string;
+        errorMessage: string;
     };
     topics: string[];
 }) {
@@ -58,11 +60,11 @@ export default function AddResourcesArticleDialog({
                 setTitle("");
                 setContent("");
                 setLink("");
-                toast.success("Resources article created successfully.");
+                toast.success(addResourceArticleDialogTranslations.successMessage);
             }
         } catch (error) {
             console.error("Error posting resources article:", error);
-            toast.error("Failed to create resources article.");
+            toast.error(addResourceArticleDialogTranslations.errorMessage);
         } finally {
             setIsLoading(false);
         }

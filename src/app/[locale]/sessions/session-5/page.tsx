@@ -87,6 +87,10 @@ export default async function SessionFivePage() {
                         favoriteButtonTranslations={{
                             addToFavorites: t("additionalData.favoriteButton.addToFavorites"),
                             inFavorites: t("additionalData.favoriteButton.inFavorites"),
+                            sessionIdMissingErrorMessage: t("additionalData.favoriteButton.sessionIdMissingErrorMessage"),
+                            unknownErrorMessage: t("additionalData.favoriteButton.unknownErrorMessage"),
+                            sessionAddedToFavorites: t("additionalData.favoriteButton.sessionAddedToFavorites"),
+                            sessionRemovedFromFavorites: t("additionalData.favoriteButton.sessionRemovedFromFavorites")
                         }}
                         greentouchSessionId={dbSession?.id || ""}
                         initialIsFavorite={userData?.isFavorite ?? false}
@@ -121,7 +125,11 @@ export default async function SessionFivePage() {
                     cardSubtitle: t("additionalData.natureConnectednessCard.cardSubtitle"),
                     leftSliderLabel: t("additionalData.natureConnectednessCard.leftSliderLabel"),
                     rightSliderLabel: t("additionalData.natureConnectednessCard.rightSliderLabel"),
-                    actionButton: t("additionalData.natureConnectednessCard.actionButton")
+                    actionButton: t("additionalData.natureConnectednessCard.actionButton"),
+                    sessionIdMissingErrorMessage: t("additionalData.natureConnectednessCard.sessionIdMissingErrorMessage"),
+                    sessionAlreadyCompletedErrorMessage: t("additionalData.natureConnectednessCard.sessionAlreadyCompletedErrorMessage"),
+                    successMessage: t("additionalData.natureConnectednessCard.successMessage"),
+                    unknownErrorMessage: t("additionalData.natureConnectednessCard.unknownErrorMessage")
                 }}
                 greentouchSessionId={dbSession?.id} 
                 greentouchSessionCompleted={userData?.sessionCompleted} 
@@ -216,6 +224,10 @@ export default async function SessionFivePage() {
                     actionButton: t("additionalData.diaryCard.actionButton"),
                     localName: t("greentouchSessions.session5.localName"),
                     diaryQuestions: [t("greentouchSessions.session5.diaryQuestions.question1"), t("greentouchSessions.session5.diaryQuestions.question2")],
+                    sessionIdMissingErrorMessage: t("additionalData.diaryCard.sessionIdMissingErrorMessage"),
+                    sessionNameMissingErrorMessage: t("additionalData.diaryCard.sessionNameMissingErrorMessage"),
+                    successMessage: t("additionalData.diaryCard.successMessage"),
+                    unknownErrorMessage: t("additionalData.diaryCard.unknownErrorMessage")
                 }}
                 greentouchSessionId={dbSession?.id} greentouchSessionName={dbSession?.name} initialDiaryText={diaryEntry ?? undefined} 
             />
@@ -255,7 +267,14 @@ export default async function SessionFivePage() {
                         learningChallenge: t("additionalData.surveyCard.impactStatements.learningChallenge"),
                         closerToNature: t("additionalData.surveyCard.impactStatements.closerToNature"),
                     },
-                    actionButton: t("additionalData.surveyCard.actionButton")
+                    actionButton: t("additionalData.surveyCard.actionButton"),
+                    messages: {
+                        sessionIdMissingErrorMessage: t("additionalData.surveyCard.messages.sessionIdMissingErrorMessage"),
+                        answerAllQuestionsErrorMessage: t("additionalData.surveyCard.messages.answerAllQuestionsErrorMessage"),
+                        sessionAlreadyCompletedErrorMessage: t("additionalData.surveyCard.messages.sessionAlreadyCompletedErrorMessage"),
+                        successMessage: t("additionalData.surveyCard.messages.successMessage"),
+                        unknownErrorMessage: t("additionalData.surveyCard.messages.unknownErrorMessage"),
+                    }
                 }}
                 greentouchSessionId={dbSession?.id}
                 initialOutdoorTasksResponse={userData?.outdoorTasksCount ?? undefined}
@@ -280,7 +299,10 @@ export default async function SessionFivePage() {
                         description: t("additionalData.sessionCompletedCard.dialog.description"),
                         cancelButton: t("additionalData.sessionCompletedCard.dialog.cancelButton"),
                         actionButton: t("additionalData.sessionCompletedCard.dialog.actionButton")
-                    }
+                    },
+                    sessionIdMissingErrorMessage: t("additionalData.sessionCompletedCard.sessionIdMissingErrorMessage"),
+                    unknownErrorMessage: t("additionalData.sessionCompletedCard.unknownErrorMessage"),
+                    successMessage: t("additionalData.sessionCompletedCard.successMessage")
                 }} 
                 greentouchSessionId={dbSession?.id} sessionCompleted={userData?.sessionCompleted} 
             />

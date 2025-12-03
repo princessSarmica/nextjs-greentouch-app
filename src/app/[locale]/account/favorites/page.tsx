@@ -50,6 +50,11 @@ export default async function Favorites() {
               greentouchSessionName={session!.title}
               greentouchSessionDescription={session!.description}
               greentouchSessionCoverPhoto={session!.image}
+              FavoriteIconButtonTranslations={{
+                sessionNameMissingErrorMessage: t("accountPage.favoritesPage.favoriteIconButton.sessionNameMissingErrorMessage"),
+                unknownErrorMessage: t("accountPage.favoritesPage.favoriteIconButton.unknownErrorMessage"),
+                successMessage: t("accountPage.favoritesPage.favoriteIconButton.successMessage")
+              }}
             />
           ))}
         </div>

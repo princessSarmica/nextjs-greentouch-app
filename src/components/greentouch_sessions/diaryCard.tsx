@@ -17,6 +17,10 @@ interface SaveDiaryProps {
         actionButton: string;
         localName: string;
         diaryQuestions: string[];
+        sessionIdMissingErrorMessage: string;
+        sessionNameMissingErrorMessage: string;
+        successMessage: string;
+        unknownErrorMessage: string;
     };
     greentouchSessionId?: string;
     greentouchSessionName?: string;
@@ -42,13 +46,13 @@ function DiaryCard({ diaryCardTranslations, greentouchSessionId, greentouchSessi
         if (diaryTexts.every((t) => !t.trim())) return;
 
         if(!greentouchSessionId){
-            toast.error("Session ID is missing. Make sure the session is already available.");
+            toast.error(diaryCardTranslations.sessionIdMissingErrorMessage);
             setIsLoading(false);
             return;
         }
 
         if(!greentouchSessionName){
-            toast.error("Session name is missing. Make sure the session is already available.");
+            toast.error(diaryCardTranslations.sessionNameMissingErrorMessage);
             setIsLoading(false);
             return;
         }
@@ -59,11 +63,11 @@ function DiaryCard({ diaryCardTranslations, greentouchSessionId, greentouchSessi
             const result = await saveDiaryEntry(greentouchSessionId, greentouchSessionName, diaryTexts); 
 
             if(result.success){ 
-                toast.success("Diary entry saved successfully."); 
+                toast.success(diaryCardTranslations.successMessage); 
             } 
         } catch (error) { 
                 console.error("Error saving diary entry:", error); 
-                toast.error("Failed to save diary entry."); 
+                toast.error(diaryCardTranslations.unknownErrorMessage); 
         } finally { 
             setIsLoading(false); 
         } 
@@ -122,7 +126,7 @@ function DiaryCard({ diaryCardTranslations, greentouchSessionId, greentouchSessi
                 </div>
 
                 <div className="flex justify-end">
-                    <LoadingButton variant={"secondary"} type="submit" onClick={handleSubmit} disabled={!hasContent || !hasChanges || isLoading} loading={isLoading}>Save</LoadingButton>
+                    <LoadingButton variant={"secondary"} type="submit" onClick={handleSubmit} disabled={!hasContent || !hasChanges || isLoading} loading={isLoading}>{diaryCardTranslations.actionButton}</LoadingButton>
                 </div>
             </div>
         </section>

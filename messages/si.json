@@ -32,7 +32,7 @@
       "formMessages": {
         "usernameTooShort": "Uporabniško ime mora biti dolgo vsaj 3 znake.",
         "usernameTooLong": "Uporabniško ime mora biti dolgo največ 30 znakov.",
-        "usernameInvalidCharacters": "Uporabniško ime sme vsebovati le črke, številke, podčrtaje in vezaje.",
+        "usernameInvalidCharacters": "Uporabniško ime sme vsebovati le črke, številke in podčrtaje.",
         "passwordRequired": "Geslo je obvezno.",
         "unknownError": "Nekaj je šlo narobe."
       }
@@ -70,13 +70,21 @@
         "confirmPasswordRequired": "Prosimo, potrdite svoje geslo.",
         "usernameTooShort": "Uporabniško ime mora biti dolgo vsaj 3 znake.",
         "usernameTooLong": "Uporabniško ime mora biti dolgo največ 30 znakov.",
-        "usernameInvalidCharacters": "Uporabniško ime sme vsebovati le črke, številke, podčrtaje in vezaje.",
+        "usernameInvalidCharacters": "Uporabniško ime sme vsebovati le črke, številke in podčrtaje.",
         "selectPositionRequired": "Prosimo, izberite svoj položaj.",
         "selectMotivationRequired": "Prosimo, izberite svojo motivacijo.",
         "selectUniversityRequired": "Univerza je obvezna.",
         "selectSpecializationRequired": "Specializacija je obvezna.",
         "passwordsDoNotMatch": "Gesli se ne ujemata.",
-        "unknownError": "Nekaj je šlo narobe. Prosimo poskusite znova."
+        "signUpSuccessful": "Registracija uspešna! Dobrodošli v GreenTouch.",
+        "unknownError": "Nekaj je šlo narobe. Prosimo poskusite znova.",
+        "validation": {
+          "passwordRequired": "Geslo je obvezno.",
+          "passwordMinLength": "Geslo mora biti dolgo vsaj 8 znakov.",
+          "passwordLetter": "Geslo mora vsebovati vsaj eno črko.",
+          "passwordNumber": "Geslo mora vsebovati vsaj eno številko.",
+          "passwordSpecialChar": "Geslo mora vsebovati vsaj en poseben znak."
+        }
       }
     }
   },
@@ -96,10 +104,21 @@
       "yourAnswer": "Tvoj odgovor"
     },
     "myDiaryPage": {
-      "noEntriesMessage": "Niste še naredili nobenih vnosov v dnevnik."
+      "noEntriesMessage": "Niste še naredili nobenih vnosov v dnevnik.",
+      "accountDiaryCard": {
+        "sessionIdMissingErrorMessage": "ID seje manjka. Prepričajte se, da je seja že na voljo.",
+        "sessionNameMissingErrorMessage": "Ime seje manjka. Prepričajte se, da je seja že na voljo.",
+        "saveErrorMessage": "Pri shranjevanju vnosa v dnevnik je prišlo do napake. Poskusite znova.",
+        "successMessage": "Vnos v dnevnik je bil uspešno shranjen."
+      }
     },
     "favoritesPage": {
-      "noFavoritesMessage": "Niste še dodali nobenih sej med priljubljene."
+      "noFavoritesMessage": "Niste še dodali nobenih sej med priljubljene.",
+      "FavoriteIconButtonTranslations": {
+        "sessionNameMissingErrorMessage": "Ime seje manjka. Prepričajte se, da je seja že na voljo.",
+        "unknownErrorMessage": "Pri posodabljanju vsebine med priljubljene je prišlo do napake.",
+        "successMessage": "Seja je bila odstranjena iz seznama priljubljenih."
+      }
     },
     "securityPage": {
       "description": "Upravljajte varnost svojih sej. Tukaj lahko prekličete aktivne seje na drugih napravah.",
@@ -192,7 +211,11 @@
       },
       "favoriteButton": {
         "addToFavorites": "Dodaj med priljubljene",
-        "inFavorites": "Med priljubljenimi"
+        "inFavorites": "Med priljubljenimi",
+        "sessionIdMissingErrorMessage": "ID seje manjka. Prepričajte se, da je seja že na voljo.",
+        "unknownErrorMessage": "Pri posodabljanju vsebine med priljubljene je prišlo do napake.",
+        "sessionAddedToFavorites": "Seja je bila dodana med priljubljene.",
+        "sessionRemovedFromFavorites": "Seja je bila odstranjena iz priljubljenih."
       },
       "natureConnectednessCard": {
         "cardTitle": "Povezanost z naravo",
@@ -201,7 +224,11 @@
         "cardSubtitle": "Premaknite figurico",
         "leftSliderLabel": "Popolnoma nepovezan z naravo",
         "rightSliderLabel": "Tesno povezan z naravo",
-        "actionButton": "Shrani spremembe"
+        "actionButton": "Shrani spremembe",
+        "sessionIdMissingErrorMessage": "ID seje manjka. Prepričajte se, da je seja že na voljo.",
+        "sessionAlreadyCompletedErrorMessage": "Ta seja je že zaključena. Podatkov ni mogoče ponovno poslati.",
+        "successMessage": "Ocena povezanosti z naravo je bila uspešno shranjena.",
+        "unknownErrorMessage": "Pri shranjevanju ocene povezanosti z naravo je prišlo do napake. Poskusite znova."
       },
       "diaryCard": {
         "diaryNote": "DNEVNIK",
@@ -210,7 +237,11 @@
         "cardDescription": "Ko končaš z zapisom v svoj Dnevnik, prosim odgovori še na naslednja vprašanja.",
         "cardSubtitle": "ODPRTA VPRAŠANJA",
         "noQuestionsAvailable": "Za to sejo ni na voljo vprašanj za dnevnik.",
-        "actionButton": "Shrani"
+        "actionButton": "Shrani",
+        "sessionIdMissingErrorMessage": "ID seje manjka. Prepričajte se, da je seja že na voljo.",
+        "sessionNameMissingErrorMessage": "Ime seje manjka. Prepričajte se, da je seja že na voljo.",
+        "successMessage": "Vnos v dnevnik je bil uspešno shranjen.",
+        "unknownErrorMessage": "Pri shranjevanju vnosa v dnevnik je prišlo do napake. Poskusite znova."
       },
       "surveyCard": {
           "cardTitle": "Vprašalnik",
@@ -251,7 +282,15 @@
               "closerToNature": "Čutil/a sem bližino z naravo"
           },
 
-          "actionButton": "Shrani"
+          "actionButton": "Shrani",
+
+          "messages": {
+          "sessionIdMissingErrorMessage": "ID seje manjka. Prepričajte se, da je seja že na voljo.",
+          "answerAllQuestionsErrorMessage": "Prosimo, odgovorite na vsa vprašanja, preden oddate vprašalnik.",
+          "sessionAlreadyCompletedErrorMessage": "Ta seja je že bila zaključena. Podatkov ni mogoče ponovno oddati.",
+          "successMessage": "Odgovori na vprašalnik so bili uspešno shranjeni.",
+          "unknownErrorMessage": "Pri shranjevanju odgovorov na vprašalnik je prišlo do napake. Poskusite znova."
+        }
       },
       "sessionCompletedCard": {
         "title": "Ste končali svojo sejo?",
@@ -263,7 +302,10 @@
           "description": "Podatki, kot so vaša povezanost z naravo in odgovori na vprašalnik, bodo shranjeni in jih pozneje ni mogoče spremeniti.",
           "cancelButton": "Prekliči",
           "actionButton": "Shrani"
-        }
+        },
+        "sessionIdMissingErrorMessage": "ID seje manjka. Prepričajte se, da je seja že na voljo.",
+        "unknownErrorMessage": "Pri označevanju seje kot dokončane je prišlo do napake. Poskusite znova.",
+        "successMessage": "Seja je bila uspešno označena kot dokončana."
       },
       "sessionsAccordion": {
         "accordionItem1": {
@@ -755,7 +797,9 @@
       "labelArticleTitle": "Naslov",
       "labelArticleContent": "Vsebina",
       "cancelButton": "Prekliči",
-      "actionButton": "Shrani spremembe"
+      "actionButton": "Shrani spremembe",
+      "successMessage": "Novica je bila uspešno dodana!",
+      "errorMessage": "Pri dodajanju novice je prišlo do napake. Poskusi znova."
     },
     "newsArticleCard": {
       "editNewsArticleDialog": {
@@ -764,13 +808,17 @@
         "labelArticleTitle": "Naslov",
         "labelArticleContent": "Vsebina",
         "cancelButton": "Prekliči",
-        "actionButton": "Shrani spremembe"
+        "actionButton": "Shrani spremembe",
+        "successMessage": "Novica je bila uspešno posodobljena!",
+        "errorMessage": "Pri posodabljanju novice je prišlo do napake. Poskusi znova."
       },
       "deleteNewsArticleAlertDialog": {
         "title": "Izbriši novico",
         "description": "Ali si prepričan, da želiš izbrisati to novico? Tega dejanja ni mogoče razveljaviti.",
         "cancelButton": "Prekliči",
-        "actionButton": "Izbriši"
+        "actionButton": "Izbriši",
+        "successMessage": "Novica je bila uspešno izbrisana!",
+        "errorMessage": "Pri brisanju novice je prišlo do napake. Poskusi znova."
       }
     },
     "newsArticleAdmin": {
@@ -780,7 +828,9 @@
         "title": "Uredi novico",
         "cancelButton": "Prekliči",
         "actionButton": "Shrani spremembe"
-      }
+      },
+      "successMessage": "Novica je bila uspešno posodobljena!",
+      "errorMessage": "Pri posodabljanju novice je prišlo do napake. Poskusi znova."
     }
   },
   "resourcesPage": {
@@ -813,7 +863,9 @@
         "labelArticleContent": "Vsebina",
         "labelArticleLink": "Povezava",
         "cancelButton": "Prekliči",
-        "actionButton": "Shrani spremembe"
+        "actionButton": "Shrani spremembe",
+        "successMessage": "Članek je bil uspešno dodan!",
+        "errorMessage": "Pri dodajanju članka je prišlo do napake. Poskusi znova."
       },
       "resourceArticleCard": {
         "readArticleButton": "Preberi članek",
@@ -827,13 +879,17 @@
           "labelArticleContent": "Vsebina",
           "labelArticleLink": "Povezava",
           "cancelButton": "Prekliči",
-          "actionButton": "Shrani spremembe"
+          "actionButton": "Shrani spremembe",
+          "successMessage": "Članek je bil uspešno posodobljen!",
+          "errorMessage": "Pri posodabljanju članka je prišlo do napake. Poskusi znova."
         },
         "deleteResourceArticleAlertDialog": {
           "title": "Izbriši članek",
           "description": "Ali si prepričan, da želiš izbrisati ta članek? Tega dejanja ni mogoče razveljaviti.",
           "cancelButton": "Prekliči",
-          "actionButton": "Izbriši"
+          "actionButton": "Izbriši",
+          "successMessage": "Članek je bil uspešno izbrisan!",
+          "errorMessage": "Pri brisanju članka je prišlo do napake. Poskusi znova."
         }
       }
     }

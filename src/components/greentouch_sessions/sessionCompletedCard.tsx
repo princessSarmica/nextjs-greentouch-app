@@ -19,6 +19,9 @@ interface SaveDiaryProps {
             cancelButton: string;
             actionButton: string;
         };
+        successMessage: string;
+        unknownErrorMessage: string;
+        sessionIdMissingErrorMessage: string;
     };
     greentouchSessionId?: string;
     sessionCompleted?: boolean;
@@ -39,7 +42,7 @@ function SessionCompletedCard({ sessionCompletedCardTranslations, greentouchSess
         e?.preventDefault();
 
         if (!greentouchSessionId) {
-            toast.error("Session ID is missing. Make sure the session is already available.");
+            toast.error(sessionCompletedCardTranslations.sessionIdMissingErrorMessage);
             setIsLoading(false);
             return;
         }
@@ -51,13 +54,13 @@ function SessionCompletedCard({ sessionCompletedCardTranslations, greentouchSess
 
             if(result.success){ 
                 setIsCompleted(true);
-                toast.success("Session completed."); 
+                toast.success(sessionCompletedCardTranslations.successMessage); 
             } else {
                 toast.error(result.error);
             }
         } catch (error) { 
                 console.error("Error marking session as completed:", error); 
-                toast.error("Failed to mark session as completed."); 
+                toast.error(sessionCompletedCardTranslations.unknownErrorMessage); 
         } finally { 
             setIsLoading(false); 
         } 

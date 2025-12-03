@@ -30,6 +30,8 @@ export type NewsArticleAdminTranslations = {
         cancelButton: string;
         actionButton: string;
     };
+    successMessage: string;
+    errorMessage: string;
 };
 
 export default function NewsArticleAdmin({newsArticleAdminTranslations, article, backHref = "/news",}: {newsArticleAdminTranslations: NewsArticleAdminTranslations; article: NewsArticleClient; backHref?: string;}) {
@@ -97,16 +99,16 @@ export default function NewsArticleAdmin({newsArticleAdminTranslations, article,
                 setTitle(result.updatedArticle?.title ?? draftTitle);
                 setContent(result.updatedArticle?.content ?? draftContent);
 
-                toast.success("News article updated successfully.");
+                toast.success(newsArticleAdminTranslations.successMessage);
                 setIsEditing(false);
 
                 router.refresh();
             } else {
-                toast.error(result.error ?? "Failed to update news article.");
+                toast.error(result.error ?? newsArticleAdminTranslations.errorMessage);
             }
         } catch (e) {
             console.error(e);
-            toast.error("Failed to update news article.");
+            toast.error(newsArticleAdminTranslations.errorMessage);
         } finally {
             setIsLoading(false);
         }

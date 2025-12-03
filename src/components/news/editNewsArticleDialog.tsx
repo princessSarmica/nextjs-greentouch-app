@@ -30,6 +30,8 @@ interface EditNewsArticleDialogProps {
         labelArticleContent: string;
         cancelButton: string;
         actionButton: string;
+        successMessage: string;
+        errorMessage: string;
     };
     newsArticleId: string;
     initialTitle: string;
@@ -71,11 +73,11 @@ export default function EditNewsArticleDialog({ editNewsArticleDialogTranslation
             if(result.success){ 
                 setTitle(""); 
                 setContent(""); 
-                toast.success("News article updated successfully."); 
+                toast.success(editNewsArticleDialogTranslations.successMessage); 
             } 
         } catch (error) { 
                 console.error("Error posting news article:", error); 
-                toast.error("Failed to update news article."); 
+                toast.error(editNewsArticleDialogTranslations.errorMessage); 
         } finally { 
             setIsLoading(false); 
         } 

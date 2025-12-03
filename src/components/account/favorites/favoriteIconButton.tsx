@@ -7,27 +7,32 @@ import { removeFavoriteSession } from "@/actions/greentouch-session-user-data";
 import { Button } from "../../ui/button";
 
 interface FavoriteIconButtonProps {
+  FavoriteIconButtonTranslations: {
+    sessionNameMissingErrorMessage: string;
+    unknownErrorMessage: string;
+    successMessage: string;
+  },
   greentouchSessionName: string;
 }
 
-export default function FavoriteIconButton({greentouchSessionName}: FavoriteIconButtonProps) {
+export default function FavoriteIconButton({FavoriteIconButtonTranslations, greentouchSessionName}: FavoriteIconButtonProps) {
   const [isPending, startTransition] = useTransition();
 
   const handleClick = () => {
     startTransition(async () => {
 
         if(!greentouchSessionName){
-            toast.error("Session name is missing. Make sure the session is already available.");
+            toast.error(FavoriteIconButtonTranslations.sessionNameMissingErrorMessage);
             return;
         }
 
         const result = await removeFavoriteSession(greentouchSessionName);
 
         if (!result.success) {
-            toast.error("Something went wrong while updating favorite.");
+            toast.error(FavoriteIconButtonTranslations.unknownErrorMessage);
         } else {
             toast.success(
-                "Session removed from favorites."
+                FavoriteIconButtonTranslations.successMessage
             );
         }
     });

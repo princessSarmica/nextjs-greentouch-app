@@ -13,6 +13,10 @@ interface SaveDiaryProps {
         actionButton: string;
         title: string;
         diaryQuestions: string[];
+        sessionIdMissingErrorMessage: string;
+        sessionNameMissingErrorMessage: string;
+        saveErrorMessage: string;
+        successMessage: string;
     };
     greentouchSessionId?: string;
     greentouchSessionName?: string;
@@ -35,13 +39,13 @@ function AccountDiaryCard({ accountDiaryCardTranslations, greentouchSessionId, g
         if (diaryTexts.every((t) => !t.trim())) return;
 
         if(!greentouchSessionId){
-            toast.error("Session ID is missing. Make sure the session is already available.");
+            toast.error(accountDiaryCardTranslations.sessionIdMissingErrorMessage);
             setIsLoading(false);
             return;
         }
 
         if(!greentouchSessionName){
-            toast.error("Session name is missing. Make sure the session is already available.");
+            toast.error(accountDiaryCardTranslations.sessionNameMissingErrorMessage);
             setIsLoading(false);
             return;
         }
@@ -52,11 +56,11 @@ function AccountDiaryCard({ accountDiaryCardTranslations, greentouchSessionId, g
             const result = await saveDiaryEntry(greentouchSessionId, greentouchSessionName, diaryTexts); 
 
             if(result.success){ 
-                toast.success("Diary entry saved successfully."); 
+                toast.success(accountDiaryCardTranslations.successMessage); 
             } 
         } catch (error) { 
                 console.error("Error saving diary entry:", error); 
-                toast.error("Failed to save diary entry."); 
+                toast.error(accountDiaryCardTranslations.saveErrorMessage); 
         } finally { 
             setIsLoading(false); 
         } 
