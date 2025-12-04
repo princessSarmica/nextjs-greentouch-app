@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { navigationMenuTriggerStyleGhost } from "@/components/ui/navigation-menu";
+import { navigationHamburgerMenuTriggerStyleGhost } from "@/components/ui/navigation-menu";
 
 export const HeaderHamburger = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,7 +30,7 @@ export const HeaderHamburger = () => {
             {/* Discover */}
             <Link
               href="/discover-greentouch"
-              className={navigationMenuTriggerStyleGhost()}
+              className={navigationHamburgerMenuTriggerStyleGhost()}
               data-active={
                 pathname.startsWith("/discover-greentouch") || undefined
               }
@@ -42,7 +42,7 @@ export const HeaderHamburger = () => {
             {/* Sessions */}
             <Link
               href="/sessions"
-              className={navigationMenuTriggerStyleGhost()}
+              className={navigationHamburgerMenuTriggerStyleGhost()}
               data-active={pathname.startsWith("/sessions") || undefined}
               onClick={() => setMenuOpen(false)}
             >
@@ -52,7 +52,7 @@ export const HeaderHamburger = () => {
             {/* Nature Video Gallery */}
             <Link
               href="/nature-video-gallery"
-              className={navigationMenuTriggerStyleGhost()}
+              className={navigationHamburgerMenuTriggerStyleGhost()}
               data-active={
                 pathname.startsWith("/nature-video-gallery") || undefined
               }
@@ -64,7 +64,7 @@ export const HeaderHamburger = () => {
             {/* News */}
             <Link
               href="/news"
-              className={navigationMenuTriggerStyleGhost()}
+              className={navigationHamburgerMenuTriggerStyleGhost()}
               data-active={pathname.startsWith("/news") || undefined}
               onClick={() => setMenuOpen(false)}
             >
@@ -74,7 +74,7 @@ export const HeaderHamburger = () => {
             {/* Resources */}
             <Link
               href="/resources"
-              className={navigationMenuTriggerStyleGhost()}
+              className={navigationHamburgerMenuTriggerStyleGhost()}
               data-active={pathname.startsWith("/resources") || undefined}
               onClick={() => setMenuOpen(false)}
             >

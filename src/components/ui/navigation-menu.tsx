@@ -84,6 +84,23 @@ const navigationMenuTriggerStyleGhost = cva(
   "focus-visible:outline-none focus-visible:ring-0"
 );
 
+const navigationHamburgerMenuTriggerStyleGhost = cva(
+  // basic ghost style
+  "relative inline-flex items-center justify-center py-4 text-sm font-medium text-gray-700 " +
+  "transition-all duration-200 bg-transparent hover:bg-transparent focus:bg-transparent " +
+  "hover:text-green-600 " +
+
+  // green line below
+  "after:absolute after:bottom-0 after:left-0 after:h-[4px] after:w-0 after:bg-green-600 " +
+  "after:transition-all after:duration-300 " +
+  "hover:after:w-full data-[active=true]:after:w-full " +
+
+  // text color when active
+  "data-[active=true]:text-green-600 " +
+
+  // accessibility and focus
+  "focus-visible:outline-none focus-visible:ring-0"
+);
 
 function NavigationMenuTrigger({
   className,
@@ -205,4 +222,5 @@ export {
   navigationMenuTriggerStylePrimary,
   navigationMenuTriggerStyleSecondary,
   navigationMenuTriggerStyleGhost,
+  navigationHamburgerMenuTriggerStyleGhost,
 }
