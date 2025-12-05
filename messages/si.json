@@ -194,7 +194,8 @@
       "releaseDateStatus": {
         "previousSessionsCompletionRequired": "Za odklep novih sej je potrebno dokončati prejšnje seje.",
         "releaseDate": "Datum izdaje: ",
-        "comingSoon": "Kmalu na voljo"
+        "comingSoon": "Kmalu na voljo",
+        "needsToBeSet": "Datum izdaje je potrebno nastaviti"
       },
       "sessionStatus": {
         "completed": "Dokončano",

@@ -153,7 +153,7 @@ export default async function Sessions() {
                             {session.user.role === "admin" ? (
                                 <Link
                                     href={`/sessions/${greentouchSession.localName}`}
-                                    className="flex flex-col sm:flex-row flex-1 pb-10"
+                                    className="flex flex-col sm:flex-row flex-1"
                                 >
                                     {unlocked ? (
                                         <div className="relative w-full sm:w-52 md:w-54 lg:w-56 h-40 sm:h-46 flex-shrink-0">
@@ -194,7 +194,7 @@ export default async function Sessions() {
                                                         {t('additionalData.releaseDateStatus.releaseDate')} {formattedReleaseDate}
                                                     </p>
                                                 ) : (
-                                                    <p className="text-sm sm:text-base text-gray-600 italic">{t('additionalData.releaseDateStatus.comingSoon')}</p>
+                                                    <p className="text-sm sm:text-base text-gray-600 italic">{t('additionalData.releaseDateStatus.needsToBeSet')}</p>
                                                 )}
                                             </>
                                         )}

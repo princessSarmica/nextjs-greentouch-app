@@ -194,7 +194,8 @@
       "releaseDateStatus": {
         "previousSessionsCompletionRequired": "Previous sessions must be completed to unlock new ones.",
         "releaseDate": "Release Date: ",
-        "comingSoon": "Coming Soon"
+        "comingSoon": "Coming Soon",
+        "needsToBeSet": "Release Date needs to be set"
       },
       "sessionStatus": {
         "completed": "Completed",
