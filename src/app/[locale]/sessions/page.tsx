@@ -6,6 +6,7 @@ import { LockIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 
 interface SessionData {
   localName: string;
@@ -148,6 +149,7 @@ export default async function Sessions() {
                                     : "bg-gray-200 opacity-70 cursor-not-allowed"
                             }`}
                         >
+                            {/* if user is admin, show all sessions but indicate locked ones */}
                             {session.user.role === "admin" ? (
                                 <Link
                                     href={`/sessions/${greentouchSession.localName}`}
@@ -198,6 +200,7 @@ export default async function Sessions() {
                                         )}
                                     </div>
                                 </Link>
+                                // if user is not admin, but session is unlocked
                             ) : unlocked ? (
                                 <Link
                                     href={`/sessions/${greentouchSession.localName}`}
@@ -234,7 +237,10 @@ export default async function Sessions() {
                                         )}
                                     </div>
                                 </Link>
+                                // if user is not admin and session is locked
                             ) : (
+                                <HoverCard>
+                                <HoverCardTrigger asChild>
                                 <div className="flex flex-col sm:flex-row flex-1">
                                     <div className="relative w-full sm:w-52 md:w-54 lg:w-56 h-40 sm:h-46 flex-shrink-0">
                                         <Image
@@ -250,6 +256,10 @@ export default async function Sessions() {
                                             {greentouchSession.title}
                                                 <LockIcon className="w-4 h-4 text-gray-600" />
                                         </h2>
+                                        <p className="text-sm sm:text-base text-gray-600">
+                                            {greentouchSession.description}
+                                        </p>
+                                        <HoverCardContent>
                                         {releaseDateObj && releaseDateObj < new Date() ? (
                                             <p className="text-sm sm:text-base text-gray-600 italic">
                                                 {t('additionalData.releaseDateStatus.previousSessionsCompletionRequired')}
@@ -261,9 +271,12 @@ export default async function Sessions() {
                                         ) : (
                                             <p className="text-sm sm:text-base text-gray-600 italic">{t('additionalData.releaseDateStatus.comingSoon')}</p>
                                         )}
+                                        </HoverCardContent>
                                         <p className="text-sm sm:text-base mt-2 text-gray-600 font-semibold">{t('additionalData.sessionStatus.toBeCompleted')}</p>
                                     </div>
                                 </div>
+                                </HoverCardTrigger>
+                                </HoverCard>
                             )}
 
                             {/* Admin release date button */}
