@@ -290,8 +290,11 @@ export default async function Sessions() {
                                             description1: t("additionalData.setReleaseDateDialog.description1"),
                                             description2: t("additionalData.setReleaseDateDialog.description2"),
                                             labelDate: t("additionalData.setReleaseDateDialog.labelDate"),
+                                            pickDate: t("additionalData.setReleaseDateDialog.pickDate"),
                                             labelTime: t("additionalData.setReleaseDateDialog.labelTime"),
                                             actionButton: t("additionalData.setReleaseDateDialog.actionButton"),
+                                            successMessage: t("additionalData.setReleaseDateDialog.successMessage"),
+                                            errorMessage: t("additionalData.setReleaseDateDialog.errorMessage")
                                         }}
                                         sessionName={greentouchSession.localName}
                                     />

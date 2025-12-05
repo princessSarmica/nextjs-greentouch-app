@@ -207,8 +207,11 @@
         "description1": "Choose the date and time when ",
         "description2": " should become available.",
         "labelDate": "Date",
+        "pickDate": "Pick a date",
         "labelTime": "Time",
-        "actionButton": "Save"
+        "actionButton": "Save",
+        "successMessage": "Release date set successfully.",
+        "errorMessage": "An error occurred while setting the release date. Please try again."
       },
       "favoriteButton": {
         "addToFavorites": "Add to Favorites",

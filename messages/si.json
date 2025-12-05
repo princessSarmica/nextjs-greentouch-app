@@ -207,8 +207,11 @@
         "description1": "Izberi datum in čas, ko bo ",
         "description2": " na voljo.",
         "labelDate": "Datum",
+        "pickDate": "Izberi datum",
         "labelTime": "Čas",
-        "actionButton": "Shrani"
+        "actionButton": "Shrani",
+        "successMessage": "Datum izdaje je bil uspešno nastavljen.",
+        "errorMessage": "Pri nastavljanju datuma izdaje je prišlo do napake. Poskusite znova."
       },
       "favoriteButton": {
         "addToFavorites": "Dodaj med priljubljene",

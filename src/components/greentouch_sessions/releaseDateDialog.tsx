@@ -31,8 +31,11 @@ interface setReleaseDateDialogProps {
         description1: string;
         description2: string;
         labelDate: string;
+        pickDate: string;
         labelTime: string;
         actionButton: string;
+        successMessage: string;
+        errorMessage: string;
     },
     sessionName: string;
 }
@@ -54,11 +57,11 @@ export function ReleaseDateDialog({ setReleaseDateDialogTranslations, sessionNam
     startTransition(async () => {
       const result = await setGreentouchSessionReleaseDate(sessionName, finalDate);
       if (result.success) {
-        toast.success("Release date set successfully.");
+        toast.success(setReleaseDateDialogTranslations.successMessage);
         setOpen(false);
       } else {
-        console.error("Error posting news article:", error); 
-        toast.error("Failed to create news article."); 
+        console.error("Error setting release date:", error); 
+        toast.error(setReleaseDateDialogTranslations.errorMessage); 
       }
     });
   };
@@ -91,7 +94,7 @@ export function ReleaseDateDialog({ setReleaseDateDialogTranslations, sessionNam
                     className="w-full justify-start text-left font-normal"
                     >
                     <CalendarIcon className="mr-2 h-4 w-4" />
-                    {date ? format(date, "PPP") : "Pick a date"}
+                    {date ? format(date, "PPP") : setReleaseDateDialogTranslations.pickDate}
                     </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0" align="start">
