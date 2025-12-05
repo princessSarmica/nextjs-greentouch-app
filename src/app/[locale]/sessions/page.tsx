@@ -177,7 +177,7 @@ export default async function Sessions() {
                                         </div>
                                     )}
 
-                                    <div className="flex flex-col justify-center px-4 sm:px-6 py-4">
+                                    <div className="flex flex-col justify-center px-4 sm:px-6 py-4 pb-12">
                                         <h2 className="text-lg sm:text-xl font-semibold flex items-center gap-2">
                                             {greentouchSession.title}
                                             {!unlocked ? (
@@ -282,7 +282,7 @@ export default async function Sessions() {
                             {/* Admin release date button */}
                             {session.user.role === "admin" &&
                             greentouchSession.localName !== "demo-session" && (
-                                <div className="absolute bottom-3 right-3">
+                                <div className="absolute bottom-3 right-3 pt-4">
                                     <ReleaseDateDialog
                                         setReleaseDateDialogTranslations={{
                                             sessionTitle: (greentouchSession.title),
