@@ -123,7 +123,7 @@
       "noFavoritesMessage": "You have not added any sessions to your favorites yet.",
       "favoriteIconButton": {
         "sessionNameMissingErrorMessage": "Session name is missing. Make sure the session is already available.",
-        "unknownErrorMessage": "Something went wrong while updating favorite..",
+        "unknownErrorMessage": "Something went wrong while updating favorite.",
         "successMessage": "Session removed from favorites."
       }
     },

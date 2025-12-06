@@ -121,7 +121,7 @@
     },
     "favoritesPage": {
       "noFavoritesMessage": "Niste še dodali nobenih sej med priljubljene.",
-      "FavoriteIconButtonTranslations": {
+      "favoriteIconButton": {
         "sessionNameMissingErrorMessage": "Ime seje manjka. Prepričajte se, da je seja že na voljo.",
         "unknownErrorMessage": "Pri posodabljanju vsebine med priljubljene je prišlo do napake.",
         "successMessage": "Seja je bila odstranjena iz seznama priljubljenih."
