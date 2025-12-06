@@ -100,8 +100,15 @@
     },
     "profilePage": {
       "trackYourProgress": "Track your progress",
-      "natureConnectednessOverTime": "Nature Connectedness (rated 1-10)",
-      "yourAnswer": "Your answer"
+      "sessionsCompletionCard": {
+        "sessionsCompletionTitle": "Sessions Completion",
+        "completedSessions": "Completed Sessions",
+        "uncompletedSessions": "Uncompleted Sessions"
+      },
+      "natureConnectednessInfoCards": {
+        "natureConnectednessOverTime": "Nature Connectedness (rated 1-10)",
+        "yourAnswer": "Your answer"
+      }
     },
     "myDiaryPage": {
       "noEntriesMessage": "You have not made any diary entries yet.",

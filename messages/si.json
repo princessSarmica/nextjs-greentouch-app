@@ -100,8 +100,15 @@
     },
     "profilePage": {
       "trackYourProgress": "Spremljaj svoj napredek",
-      "natureConnectednessOverTime": "Povezanost z naravo (ocenjeno od 1 do 10)",
-      "yourAnswer": "Tvoj odgovor"
+      "sessionsCompletionCard": {
+        "sessionsCompletionTitle": "Stanje sej",
+        "completedSessions": "Zaključene seje",
+        "uncompletedSessions": "Nezaključene seje"
+      },
+      "natureConnectednessInfoCards": {
+        "natureConnectednessOverTime": "Povezanost z naravo (ocenjeno od 1 do 10)",
+        "yourAnswer": "Vaš odgovor"
+      }
     },
     "myDiaryPage": {
       "noEntriesMessage": "Niste še naredili nobenih vnosov v dnevnik.",

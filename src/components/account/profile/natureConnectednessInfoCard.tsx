@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 
 async function NatureConnectednessInfoCard({ natureConnectednessValue, greentouchSessionName, natureConnectednessCreatedAt }: { natureConnectednessValue: number; greentouchSessionName: string; natureConnectednessCreatedAt: Date }) {
 
-  const t = await getTranslations("accountPage.profilePage");
+  const t = await getTranslations("accountPage.profilePage.natureConnectednessInfoCards");
   const greenTouchessions = await getTranslations("sessionsPage.greentouchSessions");
   const sesssionTitle = greenTouchessions(`${greentouchSessionName.replace(/[^a-zA-Z0-9]/g, "")}.title`);
 
