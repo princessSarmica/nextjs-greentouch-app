@@ -224,6 +224,10 @@
         "successMessage": "Datum izdaje je bil uspešno nastavljen.",
         "errorMessage": "Pri nastavljanju datuma izdaje je prišlo do napake. Poskusite znova."
       },
+      "notAvailable": {
+        "title": "Ta seja še ni na voljo",
+        "description": "Vrni se na pregled sej, da vidiš razpoložljive seje."
+      },
       "favoriteButton": {
         "addToFavorites": "Dodaj med priljubljene",
         "inFavorites": "Med priljubljenimi",

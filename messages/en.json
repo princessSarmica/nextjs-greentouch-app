@@ -224,6 +224,10 @@
         "successMessage": "Release date set successfully.",
         "errorMessage": "An error occurred while setting the release date. Please try again."
       },
+      "notAvailable": {
+        "title": "This session is not yet available",
+        "description": "Return to sessions overview to see available sessions."
+      },
       "favoriteButton": {
         "addToFavorites": "Add to Favorites",
         "inFavorites": "In Favorites",

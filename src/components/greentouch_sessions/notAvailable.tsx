@@ -1,17 +1,40 @@
 import Link from "next/link";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function NotAvailable() {
+
+    const t = useTranslations("sessionsPage.additionalData.notAvailable");
+
     return (
         <main>
-            <div className="text-center pt-12 bg-[#f5f5f5] min-h-screen flex flex-col items-center justify-center">
-                <h1 className="text-2xl font-bold mb-4">This session is not yet available</h1>
+            <div className="relative text-center pt-12 bg-[#f5f5f5] min-h-screen flex flex-col items-center justify-center">
+                <h1 className="text-2xl font-bold mb-4">{t("title")}</h1>
 
                 <Link
                     href="/sessions"
                     className="text-[#1F566E] text-xl hover:underline font-medium mb-12"
                 >
-                    Return to Sessions list
+                    {t("description")}
                 </Link>
+
+                {/* Top-left tree */}
+                <Image
+                src="/tree.svg"
+                alt="Decorative tree top left"
+                width={25}
+                height={25}
+                className="absolute rotate-180 top-0 left-0 pointer-events-none w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]"
+                />
+        
+                {/* Bottom-right tree */}
+                <Image
+                src="/tree.svg"
+                alt="Decorative tree bottom right"
+                width={25}
+                height={25}
+                className="absolute bottom-0 right-0 pointer-events-none w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]"
+                />
 
             </div>
         </main>
