@@ -20,6 +20,10 @@
       "signOut": "Log Out"
     }
   },
+  "notFoundPage": {
+    "title": "The page you are looking for has hidden in the forest",
+    "returnHome": "Return Home"
+  },
   "signInPage": {
     "title": "Enter your account details and start exploring",
     "disclaimer": "In case of losing your username or password, please contact the server administrator for assistance.",
