@@ -127,13 +127,6 @@ export default function NewsArticleAdmin({newsArticleAdminTranslations, article,
 
             <section className="bg-white rounded-lg shadow-sm border border-gray-200 mt-6">
             <div className="relative p-5 md:p-8">
-                {!isEditing && isAdmin && (
-                <Button className="absolute right-5 top-5" onClick={onClickEdit} variant="default">
-                    <EditIcon className="h-4 w-4" />
-                    {newsArticleAdminTranslations.editNewsArticleDialog.title}
-                </Button>
-                )}
-
                 <nav className="mb-4 md:mb-6">
                 <Link
                     href={backHref}
@@ -187,6 +180,15 @@ export default function NewsArticleAdmin({newsArticleAdminTranslations, article,
                     <p className="mt-4 text-sm text-gray-500">{formattedDate}</p>
                     <article className="mt-5 text-gray-800 leading-7 whitespace-pre-line">{content}</article>
                 </>
+                )}
+
+                {!isEditing && isAdmin && (
+                <div className="flex items-center justify-end gap-4 pt-6">
+                    <Button onClick={onClickEdit} variant="outline">
+                        <EditIcon className="h-4 w-4" />
+                        {newsArticleAdminTranslations.editNewsArticleDialog.title}
+                    </Button>
+                </div>
                 )}
             </div>
             </section>
