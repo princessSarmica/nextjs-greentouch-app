@@ -4,7 +4,7 @@ import { useTransition } from "react";
 import { Heart } from "lucide-react";
 import { toast } from "sonner";
 import { removeFavoriteSession } from "@/actions/greentouch-session-user-data";
-import { Button } from "../../ui/button";
+import { LoadingButton } from "@/components/loading-button";
 
 interface FavoriteIconButtonProps {
   FavoriteIconButtonTranslations: {
@@ -39,16 +39,17 @@ export default function FavoriteIconButton({FavoriteIconButtonTranslations, gree
   };
 
   return (
-    <Button
+    <LoadingButton
         onClick={handleClick}
         disabled={isPending}
         variant="ghost"
+        loading={isPending}
         size="icon"
         className="p-2"
     >
         <Heart
             className="size-6 text-[#28a745] fill-[#28a745]"
         />
-    </Button>
+    </LoadingButton>
   );
 }
