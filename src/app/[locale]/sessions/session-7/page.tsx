@@ -121,6 +121,7 @@ export default async function SessionSevenPage() {
                     unknownErrorMessage: t("additionalData.natureConnectednessCard.unknownErrorMessage")
                 }}
                 greentouchSessionId={dbSession?.id} 
+                natureConnectednessValue={userData?.natureConnectedness ?? null}
                 greentouchSessionCompleted={userData?.sessionCompleted} 
             />
 

@@ -22,10 +22,11 @@ interface SaveNatureConnectednessProps {
         unknownErrorMessage: string;
     };
     greentouchSessionId?: string;
+    natureConnectednessValue?: number | null;
     greentouchSessionCompleted?: boolean;
 }
 
-function NatureConnectednessCard({ natureConnectednessCardTranslations, greentouchSessionId, greentouchSessionCompleted }: SaveNatureConnectednessProps) {
+function NatureConnectednessCard({ natureConnectednessCardTranslations, greentouchSessionId, natureConnectednessValue, greentouchSessionCompleted }: SaveNatureConnectednessProps) {
 
     const natureConnectednessExpansions = [natureConnectednessCardTranslations.leftSliderLabel, natureConnectednessCardTranslations.rightSliderLabel];
 
@@ -61,7 +62,9 @@ function NatureConnectednessCard({ natureConnectednessCardTranslations, greentou
         } 
     } 
 
-    const [sliderValue, setSliderValue] = useState(5)
+    const [sliderValue, setSliderValue] = useState(
+        natureConnectednessValue ?? 5
+    );
 
     return(
         <section className="w-full max-w-5xl mx-auto px-4">
