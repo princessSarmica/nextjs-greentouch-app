@@ -94,6 +94,15 @@
   },
   "accountPage": {
     "additionalData": {
+      "header": {
+        "noNameFound": "Vārds nav atrasts",
+        "noPositionFound": "Amats nav atrasts",
+        "positions": {
+          "student": "Students",
+          "academicStaff": "Akadēmiskais personāls",
+          "other": "Cits"
+        }
+      },
       "navbar": {
         "profile": "Profilu",
         "myDiary": "Mana dienasgrāmata",

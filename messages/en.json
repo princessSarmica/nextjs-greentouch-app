@@ -94,6 +94,15 @@
   },
   "accountPage": {
     "additionalData": {
+      "header": {
+        "noNameFound": "No name found",
+        "noPositionFound": "No position found",
+        "positions": {
+          "student": "Student",
+          "academicStaff": "Academic Staff",
+          "other": "Other"
+        }
+      },
       "navbar": {
         "profile": "Profile",
         "myDiary": "My Diary",

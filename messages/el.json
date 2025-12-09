@@ -94,13 +94,22 @@
   },
   "accountPage": {
     "additionalData": {
-      "navbar": {
-        "profile": "Προφίλ",
-        "myDiary": "Το ημερολόγιό μου",
-        "favorites": "Συμπάθειες",
-        "security": "Ασφάλεια",
-        "admin": "Διαχειριστής"
-      }
+        "header": {
+            "noNameFound": "Δεν βρέθηκε όνομα",
+            "noPositionFound": "Δεν βρέθηκε θέση",
+            "positions": {
+                "student": "Φοιτητής",
+                "academicStaff": "Ακαδημαϊκό προσωπικό",
+                "other": "Άλλο"
+            }
+        },
+        "navbar": {
+            "profile": "Προφίλ",
+            "myDiary": "Το ημερολόγιό μου",
+            "favorites": "Συμπάθειες",
+            "security": "Ασφάλεια",
+            "admin": "Διαχειριστής"
+        }
     },
     "profilePage": {
       "trackYourProgress": "Παρακολουθήστε την πρόοδό σας",

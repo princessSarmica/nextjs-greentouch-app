@@ -1,4 +1,5 @@
 import { getServerSession } from "@/lib/get-session";
+import { getTranslations } from "next-intl/server";
 import { redirect } from "next/navigation";
 import type { ReactNode } from "react";
 
@@ -10,8 +11,10 @@ export default async function AccountHeader({ children }: { children?: ReactNode
       redirect("/sign-in")
   }
 
-  const name = session?.user?.name ?? "No name found";
-  const position = (session?.user?.position ?? "No position found");
+  const t = await getTranslations('accountPage.additionalData');
+
+  const name = session?.user?.name ?? t("header.noNameFound");
+  const position = (session?.user?.position ?? t("header.noPositionFound"));
 
   return (
     <section className="w-full bg-[#f5f5f5]">
@@ -22,7 +25,9 @@ export default async function AccountHeader({ children }: { children?: ReactNode
 
             <div>
               <h1 className="text-2xl font-semibold text-foreground">{name}</h1>
-              <p className="text-base font-semibold text-foreground">{position}</p>
+              {position === "student" ? t("header.positions.student") : ""}
+              {position === "academic staff" ? t("header.positions.academicStaff") : ""}
+              {position === "other" ? t("header.positions.other") : ""}
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@ import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "sonner";
 
-const POSITIONS = ["student", "academic_staff", "other"] as const;
+const POSITIONS = ["student", "academic staff", "other"] as const;
 const MOTIVATIONS = ["personal_interest", "professional_interest", "personal_and_professional_interest"] as const;
 
 interface SignUpFormProps {
@@ -212,7 +212,7 @@ export function SignUpForm({ signUpFormTranslations }: SignUpFormProps){
                                     <label htmlFor="pos-student" className="text-sm">{signUpFormTranslations.labelStudent}</label>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <RadioGroupItem value="academic_staff" id="pos-academic" />
+                                    <RadioGroupItem value="academic staff" id="pos-academic" />
                                     <label htmlFor="pos-academic" className="text-sm">{signUpFormTranslations.labelAcademicStaff}</label>
                                 </div>
                                 <div className="flex items-center gap-2">

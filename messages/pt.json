@@ -94,6 +94,15 @@
   },
   "accountPage": {
     "additionalData": {
+      "header": {
+        "noNameFound": "Nome não encontrado",
+        "noPositionFound": "Cargo não encontrado",
+        "positions": {
+          "student": "Estudante",
+          "academicStaff": "Pessoal académico",
+          "other": "Outro"
+        }
+      },
       "navbar": {
         "profile": "Perfil",
         "myDiary": "O Meu Diário",

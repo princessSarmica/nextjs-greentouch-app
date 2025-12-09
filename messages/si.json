@@ -94,12 +94,21 @@
   },
   "accountPage": {
     "additionalData": {
-        "navbar": {
-        "profile": "Profil",
-        "myDiary": "Moj dnevnik",
-        "favorites": "Priljubljeno",
-        "security": "Varnost",
-        "admin": "Admin"
+      "header": {
+        "noNameFound": "Ime ni bilo najdeno",
+        "noPositionFound": "Položaj ni bil najden",
+        "positions": {
+          "student": "Študent",
+          "academicStaff": "Akademsko osebje",
+          "other": "Drugo"
+        }
+      },
+      "navbar": {
+      "profile": "Profil",
+      "myDiary": "Moj dnevnik",
+      "favorites": "Priljubljeno",
+      "security": "Varnost",
+      "admin": "Admin"
       }
     },
     "profilePage": {
