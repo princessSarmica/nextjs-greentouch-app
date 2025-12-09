@@ -28,6 +28,9 @@ export default function HeaderLanguageSwitcher() {
                 </SelectTrigger>
                 <SelectContent>
                     <SelectGroup>
+                        <SelectItem value="el">
+                            <Image src="/flag-el.svg" alt="Ελληνικά" width={20} height={15} /> EL
+                        </SelectItem>
                         <SelectItem value="en">
                             <Image src="/flag-en.svg" alt="English" width={20} height={15} /> EN
                         </SelectItem>
