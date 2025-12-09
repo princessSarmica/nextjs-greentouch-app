@@ -918,11 +918,60 @@
       }
     }
   },
+  "cookiesPage": {
+    "title": "Cookies",
+    "description": "Informações sobre os cookies utilizados pelo website GreenTouch e como geri-los.",
+
+    "section1Title": "1. O que são cookies?",
+    "section1Text": "Os cookies são pequenos ficheiros de texto armazenados no seu dispositivo pelos websites, com o objetivo de reconhecer o dispositivo, melhorar o funcionamento do site e guardar as suas preferências. O seu armazenamento é controlado pelo navegador — pode restringi-los ou desativá-los a qualquer momento.",
+
+    "section2Title": "2. Porque utilizamos cookies?",
+    "section2Intro": "Os cookies são essenciais para o funcionamento correto dos serviços online. Com a sua ajuda:",
+    "section2ListItem1": "permitimos o login e o funcionamento da sessão do utilizador,",
+    "section2ListItem2": "guardamos as suas preferências de idioma,",
+    "section2ListItem3": "melhoramos a experiência do utilizador,",
+    "section2ListItem4": "garantimos segurança e funcionamento estável da aplicação.",
+    "section2Note": "O GreenTouch NÃO utiliza cookies para publicidade ou criação de perfis. Os cookies também NÃO permitem identificar pessoalmente os visitantes.",
+
+    "section3Title": "3. Tipos de cookies que utilizamos",
+    "section3A": "A. Cookies estritamente necessários",
+    "section3AText": "Estes cookies são necessários para o funcionamento básico da aplicação GreenTouch. Sem eles, o serviço não funcionaria corretamente.",
+
+    "cookieTableHeaderName": "Nome do cookie",
+    "cookieTableHeaderPurpose": "Finalidade",
+    "cookieTableHeaderValidity": "Validade",
+    "cookieDataPurpose": "Armazena dados da sessão do utilizador (login, autenticação).",
+    "cookieTokenPurpose": "Garante identificação segura do utilizador e mantém o estado de login.",
+    "cookieLocalePurpose": "Armazena o idioma selecionado no website.",
+    "cookieValiditySession": "Sessão",
+    "cookieValidityYear": "1 ano",
+    "cookieNote": "Nota: Todos os cookies acima são cookies de primeira parte (propriedade do GreenTouch).",
+
+    "section3B": "B. Cookies analíticos",
+    "section3BText": "Se os adicionarmos no futuro (ex.: Plausible ou Google Analytics), serão listados aqui. Atualmente NÃO utilizamos cookies analíticos ou de marketing.",
+
+    "section4Title": "4. Consentimento",
+    "section4Text1": "Como utilizamos apenas cookies estritamente necessários, o consentimento não é exigido por lei.",
+    "section4Text2": "Se no futuro forem adicionados cookies analíticos ou de marketing, pediremos consentimento explícito antes da sua utilização.",
+
+    "section5Title": "5. Como gerir os cookies?",
+    "section5Text": "Pode alterar as definições de cookies no seu navegador a qualquer momento. Pode restringir, eliminar ou desativar totalmente os cookies. Se desativar os cookies necessários, o GreenTouch poderá não funcionar corretamente.",
+
+    "browserInstructions": "Instruções para gerir cookies nos navegadores mais populares:",
+    "chrome": "Chrome — gestão de cookies",
+    "firefox": "Firefox — gestão de cookies",
+    "safari": "Safari — gestão de cookies",
+    "edge": "Edge — gestão de cookies",
+    "opera": "Opera — gestão de cookies",
+
+    "footerNote": "Nota: Esta página descreve o estado atual dos cookies. Se alterarmos ou adicionarmos novos cookies, o conteúdo será atualizado."
+  },
   "footer": {
     "information": "Informação",
     "terms": "Termos",
     "privacyPolicy": "Política de Privacidade",
     "support": "Apoio",
+    "cookies": "Cookies",
     "connect": "Liga-te",
     "europeanFunding": "Este projeto é financiado pela UE."
   }

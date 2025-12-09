@@ -923,11 +923,60 @@
       }
     }
   },
+  "cookiesPage": {
+    "title": "Piškotki",
+    "description": "Informacije o piškotkih, ki jih uporablja spletna stran GreenTouch, in o tem, kako z njimi upravljati.",
+
+    "section1Title": "1. Kaj so piškotki?",
+    "section1Text": "Piškotki so majhne besedilne datoteke, ki jih spletne strani shranijo v vašo napravo z namenom prepoznavanja naprave, izboljšanja delovanja strani in shranjevanja vaših nastavitev. Njihovo shranjevanje nadzoruje vaš brskalnik — kadar koli jih lahko omejite ali onemogočite.",
+
+    "section2Title": "2. Zakaj uporabljamo piškotke?",
+    "section2Intro": "Piškotki so ključni za pravilno delovanje spletnih storitev. Z njihovo pomočjo:",
+    "section2ListItem1": "omogočimo prijavo in delovanje uporabniške seje,",
+    "section2ListItem2": "shranimo vaše jezikovne nastavitve,",
+    "section2ListItem3": "izboljšujemo uporabniško izkušnjo,",
+    "section2ListItem4": "zagotavljamo varnost in stabilno delovanje aplikacije.",
+    "section2Note": "GreenTouch NE uporablja piškotkov za oglaševanje ali profiliranje. Piškotki prav tako NE omogočajo osebne identifikacije obiskovalcev.",
+
+    "section3Title": "3. Vrste piškotkov, ki jih uporabljamo",
+    "section3A": "A. Nujno potrebni piškotki",
+    "section3AText": "Ti piškotki so potrebni za osnovno delovanje GreenTouch aplikacije. Brez njih storitev ne bi delovala pravilno.",
+
+    "cookieTableHeaderName": "Ime piškotka",
+    "cookieTableHeaderPurpose": "Namen",
+    "cookieTableHeaderValidity": "Veljavnost",
+    "cookieDataPurpose": "Shranjuje podatke o uporabniški seji (prijava, avtentikacija).",
+    "cookieTokenPurpose": "Zagotavlja varno identifikacijo uporabnika in ohranja prijavno stanje.",
+    "cookieLocalePurpose": "Shranjuje izbrani jezik spletnega mesta.",
+    "cookieValiditySession": "Seja",
+    "cookieValidityYear": "1 leto",
+    "cookieNote": "Opomba: Vsi zgornji piškotki so 1st-party (lastni piškotki GreenToucha).",
+
+    "section3B": "B. Analitični piškotki",
+    "section3BText": "Če jih v prihodnosti dodamo (npr. Plausible ali Google Analytics), bodo navedeni tukaj. Trenutno NE uporabljamo analitičnih ali marketinških piškotkov.",
+
+    "section4Title": "4. Privolitev",
+    "section4Text1": "Ker uporabljamo samo nujno potrebne piškotke, privolitev po zakonodaji ni potrebna.",
+    "section4Text2": "Če bomo v prihodnje dodali analitične ali marketinške piškotke, bomo pred uporabo zahtevali izrecno privolitev.",
+
+    "section5Title": "5. Kako upravljati s piškotki?",
+    "section5Text": "Nastavitve piškotkov lahko kadar koli spremenite v svojem brskalniku. Piškotke lahko omejite, izbrišete ali popolnoma onemogočite. Če onemogočite nujne piškotke, GreenTouch morda ne bo deloval pravilno.",
+
+    "browserInstructions": "Navodila za upravljanje piškotkov v priljubljenih brskalnikih:",
+    "chrome": "Chrome — upravljanje piškotkov",
+    "firefox": "Firefox — upravljanje piškotkov",
+    "safari": "Safari — upravljanje piškotkov",
+    "edge": "Edge — upravljanje piškotkov",
+    "opera": "Opera — upravljanje piškotkov",
+
+    "footerNote": "Opomba: Ta stran opisuje trenutno stanje piškotkov. Če bomo piškotke spremenili ali dodali nove, bomo vsebino posodobili."
+  },
   "footer": {
     "information": "Informacije",
     "terms": "Pogoji",
     "privacyPolicy": "Politika zasebnosti",
     "support": "Podpora",
+    "cookies": "Piškotki",
     "connect": "Poveži se",
     "europeanFunding": "Ta projekt financira EU."
   }

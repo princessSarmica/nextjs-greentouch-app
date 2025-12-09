@@ -918,11 +918,60 @@
       }
     }
   },
+  "cookiesPage": {
+    "title": "Sīkfaili",
+    "description": "Informācija par sīkfailiem, ko izmanto GreenTouch vietne, un to pārvaldīšanu.",
+
+    "section1Title": "1. Kas ir sīkfaili?",
+    "section1Text": "Sīkfaili ir nelieli teksta faili, kurus vietnes saglabā jūsu ierīcē, lai atpazītu ierīci, uzlabotu vietnes funkcionalitāti un saglabātu jūsu izvēles. To glabāšanu kontrolē jūsu pārlūkprogramma — jūs varat tos ierobežot vai atspējot jebkurā laikā.",
+
+    "section2Title": "2. Kāpēc mēs izmantojam sīkfailus?",
+    "section2Intro": "Sīkfaili ir būtiski tiešsaistes pakalpojumu pareizai darbībai. Ar to palīdzību:",
+    "section2ListItem1": "nodrošinām pieteikšanos un lietotāja sesijas darbību,",
+    "section2ListItem2": "saglabājam jūsu valodas iestatījumus,",
+    "section2ListItem3": "uzlabojam lietotāja pieredzi,",
+    "section2ListItem4": "nodrošinām drošību un stabilu lietotnes darbību.",
+    "section2Note": "GreenTouch neizmanto sīkfailus reklāmai vai lietotāju profilēšanai. Sīkfaili arī neļauj identificēt apmeklētājus personīgi.",
+
+    "section3Title": "3. Sīkfailu veidi, ko izmantojam",
+    "section3A": "A. Nepieciešamie sīkfaili",
+    "section3AText": "Šie sīkfaili ir nepieciešami GreenTouch pamata darbībai. Bez tiem pakalpojums nevarētu pareizi darboties.",
+
+    "cookieTableHeaderName": "Sīkfaila nosaukums",
+    "cookieTableHeaderPurpose": "Mērķis",
+    "cookieTableHeaderValidity": "Derīgums",
+    "cookieDataPurpose": "Saglabā lietotāja sesijas datus (pieteikšanās, autentifikācija).",
+    "cookieTokenPurpose": "Nodrošina drošu lietotāja identifikāciju un saglabā pieteikšanās stāvokli.",
+    "cookieLocalePurpose": "Saglabā vietnes izvēlēto valodu.",
+    "cookieValiditySession": "Sesija",
+    "cookieValidityYear": "1 gads",
+    "cookieNote": "Piezīme: Visi iepriekš minētie sīkfaili ir pirmās puses (GreenTouch sīkfaili).",
+
+    "section3B": "B. Analītiskie sīkfaili",
+    "section3BText": "Ja nākotnē pievienosim analītikas rīkus (piem., Plausible vai Google Analytics), tie tiks uzskaitīti šeit. Pašlaik mēs neizmantojam analītiskos vai mārketinga sīkfailus.",
+
+    "section4Title": "4. Piekrišana",
+    "section4Text1": "Tā kā mēs izmantojam tikai nepieciešamos sīkfailus, piekrišana nav juridiski nepieciešama.",
+    "section4Text2": "Ja nākotnē pievienosim analītiskos vai mārketinga sīkfailus, pirms to izmantošanas pieprasīsim skaidru piekrišanu.",
+
+    "section5Title": "5. Kā pārvaldīt sīkfailus?",
+    "section5Text": "Jūs varat jebkurā laikā mainīt pārlūkprogrammas sīkfailu iestatījumus — tos ierobežot, dzēst vai pilnībā atspējot. Ja atspējosiet nepieciešamos sīkfailus, GreenTouch var nedarboties pareizi.",
+
+    "browserInstructions": "Norādījumi sīkfailu pārvaldībai populārās pārlūkprogrammās:",
+    "chrome": "Chrome — sīkfailu pārvaldība",
+    "firefox": "Firefox — sīkfailu pārvaldība",
+    "safari": "Safari — sīkfailu pārvaldība",
+    "edge": "Edge — sīkfailu pārvaldība",
+    "opera": "Opera — sīkfailu pārvaldība",
+
+    "footerNote": "Piezīme: Šī lapa apraksta pašreizējos sīkfailu iestatījumus. Ja pievienosim jaunus sīkfailus vai mainīsim esošos, informācija tiks atjaunināta."
+  },
   "footer": {
     "information": "Informācija",
     "terms": "Noteikumiem",
     "privacyPolicy": "Privātuma politika",
     "support": "Atbalsta",
+    "cookies": "Sīkfaili",
     "connect": "Savienot",
     "europeanFunding": "Šo projektu finansē ES."
   }

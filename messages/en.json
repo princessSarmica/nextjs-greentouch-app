@@ -918,11 +918,60 @@
       }
     }
   },
+  "cookiesPage": {
+    "title": "Cookies",
+    "description": "Information about the cookies used by the GreenTouch website and how to manage them.",
+
+    "section1Title": "1. What are cookies?",
+    "section1Text": "Cookies are small text files stored on your device by websites to recognize your device, improve site functionality, and store your preferences. Their storage is controlled by your browser — you can restrict or disable them at any time.",
+
+    "section2Title": "2. Why do we use cookies?",
+    "section2Intro": "Cookies are essential for the proper functioning of online services. With their help:",
+    "section2ListItem1": "we enable login and user session functionality,",
+    "section2ListItem2": "we store your language preferences,",
+    "section2ListItem3": "we improve the user experience,",
+    "section2ListItem4": "we ensure security and stable operation of the application.",
+    "section2Note": "GreenTouch does NOT use cookies for advertising or user profiling. Cookies also do NOT enable personal identification of visitors.",
+
+    "section3Title": "3. Types of cookies we use",
+    "section3A": "A. Strictly necessary cookies",
+    "section3AText": "These cookies are required for the basic operation of the GreenTouch application. Without them, the service would not function properly.",
+
+    "cookieTableHeaderName": "Cookie name",
+    "cookieTableHeaderPurpose": "Purpose",
+    "cookieTableHeaderValidity": "Validity",
+    "cookieDataPurpose": "Stores user session data (login, authentication).",
+    "cookieTokenPurpose": "Ensures secure user identification and maintains the login state.",
+    "cookieLocalePurpose": "Stores the selected website language.",
+    "cookieValiditySession": "Session",
+    "cookieValidityYear": "1 year",
+    "cookieNote": "Note: All above cookies are 1st-party (GreenTouch-owned cookies).",
+
+    "section3B": "B. Analytics cookies",
+    "section3BText": "If we add them in the future (e.g., Plausible or Google Analytics), they will be listed here. Currently, we do NOT use analytics or marketing cookies.",
+
+    "section4Title": "4. Consent",
+    "section4Text1": "Since we only use strictly necessary cookies essential for website operation, consent is not required by law.",
+    "section4Text2": "If we add analytics or marketing cookies in the future, we will request explicit consent before using them.",
+
+    "section5Title": "5. How to manage cookies?",
+    "section5Text": "You can change your cookie settings in your browser at any time. You can restrict, delete, or completely disable cookies. If you disable required cookies, GreenTouch may not function correctly.",
+
+    "browserInstructions": "Instructions for managing cookies in popular browsers:",
+    "chrome": "Chrome — manage cookies",
+    "firefox": "Firefox — manage cookies",
+    "safari": "Safari — manage cookies",
+    "edge": "Edge — manage cookies",
+    "opera": "Opera — manage cookies",
+
+    "footerNote": "Note: This page explains the current cookie settings. If we change or add cookies, we will update this content."
+  },
   "footer": {
     "information": "Information",
     "terms": "Terms",
     "privacyPolicy": "Privacy Policy",
     "support": "Support",
+    "cookies": "Cookies",
     "connect": "Connect",
     "europeanFunding": "This project is funded by the EU."
   }

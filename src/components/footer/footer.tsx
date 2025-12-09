@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -15,13 +16,9 @@ export default function Footer() {
           <div className="w-64 h-px bg-[#f5f5f5] mb-2" />
           <ul className="flex flex-col gap-2 text-sm text-[#f5f5f5]">
             <li>
-              <a>{t('terms')}</a>
-            </li>
-            <li>
-              <a>{t('privacyPolicy')}</a>
-            </li>
-            <li>
-              <a>{t('support')}</a>
+              <Link href="/cookies">
+                {t('cookies')}
+              </Link>
             </li>
           </ul>
         </div>
