@@ -211,6 +211,10 @@
       "title": "Sessões"
     },
     "additionalData": {
+      "reminderSection": {
+        "title": "Lembrete!",
+        "message": "Ao iniciar sessão na sua conta, pode desbloquear as restantes 7 sessões para participar."
+      },
       "releaseDateStatus": {
         "previousSessionsCompletionRequired": "As sessões anteriores devem ser concluídas para desbloquear novas.",
         "releaseDate": "Data de Lançamento: ",

@@ -211,6 +211,10 @@
       "title": "Sessions"
     },
     "additionalData": {
+      "reminderSection": {
+        "title": "Reminder!",
+        "message": "By signing in to your account, you can unlock the remaining 7 sessions to participate in."
+      },
       "releaseDateStatus": {
         "previousSessionsCompletionRequired": "Previous sessions must be completed to unlock new ones.",
         "releaseDate": "Release Date: ",

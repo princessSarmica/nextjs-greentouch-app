@@ -211,6 +211,10 @@
       "title": "Seje"
     },
     "additionalData": {
+      "reminderSection": {
+        "title": "Opomnik!",
+        "message": "Z prijavo v svoj račun lahko odklenete preostalih 7 sej, v katerih lahko sodelujete."
+      },
       "releaseDateStatus": {
         "previousSessionsCompletionRequired": "Za odklep novih sej je potrebno dokončati prejšnje seje.",
         "releaseDate": "Datum izdaje: ",

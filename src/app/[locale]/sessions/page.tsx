@@ -37,31 +37,41 @@ export default async function Sessions() {
                 </section>
 
                 {/* Hero section */}
-                <section className="w-full max-w-5xl px-4 pt-20 pb-20 mx-auto">
+                <section className="w-full max-w-5xl px-4 pt-20 pb-10 mx-auto">
                     <div className="flex flex-col gap-6">
-                    {greentouchSessions.filter(s => s.localName === "demo-session").map((greentouchSession) => (
-                        <Link
-                        key={greentouchSession.localName}
-                        href={`/sessions/${greentouchSession.localName}`}
-                        className="flex flex-col sm:flex-row items-stretch bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden"
-                        >
-                        {/* Image section – raztegnjena do robov */}
-                        <div className="relative w-full sm:w-52 md:w-54 lg:w-56 h-40 sm:h-46 flex-shrink-0">
-                            <Image
-                            src={greentouchSession.image}
-                            alt={greentouchSession.title}
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 768px) 100vw, 33vw"
-                            />
+                        {greentouchSessions.filter(s => s.localName === "demo-session").map((greentouchSession) => (
+                            <Link
+                            key={greentouchSession.localName}
+                            href={`/sessions/${greentouchSession.localName}`}
+                            className="flex flex-col sm:flex-row items-stretch bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden"
+                            >
+                            {/* Image section – raztegnjena do robov */}
+                            <div className="relative w-full sm:w-52 md:w-54 lg:w-56 h-40 sm:h-46 flex-shrink-0">
+                                <Image
+                                src={greentouchSession.image}
+                                alt={greentouchSession.title}
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 33vw"
+                                />
+                            </div>
+                            {/* Text section */}
+                            <div className="flex flex-col justify-center px-6 py-4">
+                                <h2 className="text-lg sm:text-xl font-semibold">{greentouchSession.title}</h2>
+                                <p className="text-sm sm:text-base text-gray-600">{greentouchSession.description}</p>
+                            </div>
+                            </Link>
+                        ))}
+                    </div>
+
+                    {/* Reminder section */}
+                    <div className="w-full max-w-5xl mt-10 py-6 mx-auto bg-gradient-to-r from-[#0A3730] to-[#1F6E4C] text-white rounded-xl shadow hover:shadow-md transition overflow-hidden">
+                        <div className="px-6 text-start">
+                            <h2 className="text-lg sm:text-xl font-semibold mb-4">{t('additionalData.reminderSection.title')}</h2>
+                            <p className="text-sm sm:text-base opacity-90">
+                            {t('additionalData.reminderSection.message')}
+                            </p>
                         </div>
-                        {/* Text section */}
-                        <div className="flex flex-col justify-center px-6 py-4">
-                            <h2 className="text-lg sm:text-xl font-semibold">{greentouchSession.title}</h2>
-                            <p className="text-sm sm:text-base text-gray-600">{greentouchSession.description}</p>
-                        </div>
-                        </Link>
-                    ))}
                     </div>
                 </section>
             </main>

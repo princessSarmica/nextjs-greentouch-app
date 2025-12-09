@@ -211,6 +211,10 @@
       "title": "Sesijas"
     },
     "additionalData": {
+      "reminderSection": {
+        "title": "Atgādinājums!",
+        "message": "Piesakoties savā kontā, jūs varat atbloķēt atlikušās 7 sesijas, kurās varat piedalīties."
+      },
       "releaseDateStatus": {
         "previousSessionsCompletionRequired": "Iepriekšējās sesijas ir jāpabeidz, lai atbloķētu jaunas sesijas.",
         "releaseDate": "Izlaišanas datums: ",
