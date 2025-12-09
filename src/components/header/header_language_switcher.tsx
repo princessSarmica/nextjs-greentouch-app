@@ -34,6 +34,9 @@ export default function HeaderLanguageSwitcher() {
                         <SelectItem value="lv">
                             <Image src="/flag-lv.svg" alt="Latviešu" width={20} height={15} /> LV
                         </SelectItem>
+                        <SelectItem value="pt">
+                            <Image src="/flag-pt.svg" alt="Português" width={20} height={15} /> PT
+                        </SelectItem>
                         <SelectItem value="si">
                             <Image src="/flag-si.svg" alt="Slovenščina" width={20} height={15} /> SI
                         </SelectItem>

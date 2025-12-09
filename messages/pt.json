@@ -1,0 +1,921 @@
+{
+  "header": {
+    "navLinks": {
+      "discoverGreenTouch": "Descubra o GreenTouch",
+      "sessions": "Sessões",
+      "natureVideoGallery": "Galeria de Vídeos da Natureza",
+      "news": "Notícias",
+      "resources": "Recursos"
+    },
+    "authButtons": {
+      "signUp": "Registo",
+      "signIn": "Iniciar sessão"
+    },
+    "userDropdown": {
+      "profile": "Perfil",
+      "myDiary": "O Meu Diário",
+      "favorites": "Favoritos",
+      "security": "Segurança",
+      "admin": "Administração",
+      "signOut": "Encerrar sessão"
+    }
+  },
+  "notFoundPage": {
+    "title": "A página que procuras está escondida na floresta",
+    "returnHome": "Regresso a Casa"
+  },
+  "signInPage": {
+    "title": "Introduza os dados da sua conta e comece a explorar",
+    "disclaimer": "Caso perca o seu nome de utilizador ou palavra-passe, por favor contacte o administrador do servidor para obter assistência.",
+    "signInForm": {
+      "labelUsername": "Nome de utilizador",
+      "labelPassword": "Palavra-passe",
+      "buttonSignIn": "Iniciar sessão",
+      "noAccountText": "Não tens conta?",
+      "signUpLink": "Registar-me",
+      "formMessages": {
+        "usernameTooShort": "O nome de utilizador deve ter pelo menos 3 caracteres.",
+        "usernameTooLong": "O nome de utilizador deve ter 30 caracteres ou menos.",
+        "usernameInvalidCharacters": "O nome de utilizador pode conter apenas letras, números e sublinhados.",
+        "passwordRequired": "É necessária palavra-passe.",
+        "unknownError": "Algo correu mal."
+      }
+    }
+  },
+  "signUpPage": {
+    "title": "Inscreva-se no programa",
+    "labelRequired": "* é necessário para preencher",
+    "signUpForm": {
+      "labelName": "Nome",
+      "labelSurname": "Apelido",
+      "labelPosition": "A sua posição",
+      "labelStudent": "Aluno",
+      "labelAcademicStaff": "Corpo docente",
+      "labelOther": "Outros",
+      "labelUniversityTitle": "Título da universidade onde estudas/trabalhas",
+      "labelUniversity": "Universidade",
+      "labelFieldOfWork": "Área de estudo/trabalho",
+      "labelSpecialization": "Especialização",
+      "labelMotivation": "A sua motivação para participar no GreenTouch",
+      "labelPersonalInterest": "Interesse pessoal",
+      "labelProfessionalInterest": "Interesse Profissional",
+      "labelBothOfThem": "Ambos",
+      "labelEmail": "Email",
+      "labelUsername": "Nome de utilizador",
+      "labelPassword": "Palavra-passe",
+      "labelConfirmPassword": "Confirmar Palavra-Passe",
+      "buttonSignUp": "Enviar",
+      "haveAccountText": "Já tem uma conta?",
+      "signInLink": "Iniciar sessão",
+      "formMessages": {
+        "firstNameRequired": "O primeiro nome é obrigatório.",
+        "lastNameRequired": "Apelido é obrigatório.",
+        "validEmailRequired": "Por favor, introduza um endereço de email válido.",
+        "confirmPasswordRequired": "Por favor, confirme a sua palavra-passe.",
+        "usernameTooShort": "O nome de utilizador deve ter pelo menos 3 caracteres.",
+        "usernameTooLong": "O nome de utilizador deve ter 30 caracteres ou menos.",
+        "usernameInvalidCharacters": "O nome de utilizador pode conter apenas letras, números e sublinhados.",
+        "selectPositionRequired": "Por favor, selecione a sua posição.",
+        "selectMotivationRequired": "Por favor, escolhe a tua motivação.",
+        "selectUniversityRequired": "É obrigatória a universidade.",
+        "selectSpecializationRequired": "É necessária especialização.",
+        "passwordsDoNotMatch": "As palavras-passe não coincidem",
+        "signUpSuccessful": "Registo bem-sucedido! Bem-vindo à GreenTouch.",
+        "unknownError": "Algo correu mal. Por favor, tente novamente.",
+        "validation": {
+          "passwordRequired": "É necessária palavra-passe.",
+          "passwordMinLength": "A palavra-passe deve ter pelo menos 8 caracteres.",
+          "passwordLetter": "A palavra-passe deve conter pelo menos uma letra.",
+          "passwordNumber": "A palavra-passe deve conter pelo menos um número.",
+          "passwordSpecialChar": "A palavra-passe deve conter pelo menos um carácter especial."
+        }
+      }
+    }
+  },
+  "accountPage": {
+    "additionalData": {
+      "navbar": {
+        "profile": "Perfil",
+        "myDiary": "O Meu Diário",
+        "favorites": "Favoritos",
+        "security": "Segurança",
+        "admin": "Administração"
+      }
+    },
+    "profilePage": {
+      "trackYourProgress": "Acompanha o teu progresso",
+      "sessionsCompletionCard": {
+        "sessionsCompletionTitle": "Conclusão das Sessões",
+        "completedSessions": "Sessões Concluídas",
+        "uncompletedSessions": "Sessões Inconclusas"
+      },
+      "natureConnectednessInfoCards": {
+        "natureConnectednessOverTime": "Conexão com a Natureza (classificação 1-10)",
+        "yourAnswer": "A tua resposta"
+      }
+    },
+    "myDiaryPage": {
+      "noEntriesMessage": "Ainda não fizeste nenhuma entrada no diário.",
+      "accountDiaryCard": {
+        "sessionIdMissingErrorMessage": "O ID da sessão está em falta. Certifica-te de que a sessão já está disponível.",
+        "sessionNameMissingErrorMessage": "O nome da sessão está em falta. Certifica-te de que a sessão já está disponível.",
+        "saveErrorMessage": "Ocorreu um erro ao guardar a entrada do diário. Por favor, tente novamente.",
+        "successMessage": "Entrada do diário guardada com sucesso."
+      }
+    },
+    "favoritesPage": {
+      "noFavoritesMessage": "Ainda não adicionaste nenhuma sessão aos teus favoritos.",
+      "favoriteIconButton": {
+        "sessionNameMissingErrorMessage": "O nome da sessão está em falta. Certifica-te de que a sessão já está disponível.",
+        "unknownErrorMessage": "Algo correu mal ao atualizar o favorito.",
+        "successMessage": "Sessão removida dos favoritos."
+      }
+    },
+    "securityPage": {
+      "description": "Gere a segurança da tua sessão. Pode revogar sessões ativas noutros dispositivos aqui.",
+      "cardTitle": "Revogar Outras Sessões",
+      "cardDescription": "Desligue todas as outras sessões ativas para manter a sua conta segura.",
+      "alertDialog": {
+        "button": "Revogar Outras Sessões Ativas",
+        "title": "Tens a certeza absoluta?",
+        "description": "Revogar todas as outras sessões ativas vai obrigar a iniciar sessão novamente nesses dispositivos.",
+        "cancelButton": "Cancelar",
+        "actionButton": "Continuar",
+        "successMessage": "Todas as outras sessões foram revogadas com sucesso.",
+        "errorMessage": "Ocorreu um erro ao tentar revogar outras sessões. Por favor, tente novamente."
+      }
+    }
+  },
+  "homePage": {
+    "heroSection": {
+      "title": "Reconecte-se com a Natureza, Relaxe a Mente",
+      "description": "A GreenTouch oferece exercícios guiados de autorreflexão, desafios ao ar livre e dicas para uma vida sustentável para o ajudar a reduzir o stress, desenvolver resiliência mental e conectar-se com a natureza.",
+      "buttonGetStarted": "Ver Atividades GreenTouch"
+    },
+    "projectPartnersSection": {
+      "title": "Os nossos parceiros de projeto"
+    }
+  },
+  "discoverGreenTouchPage": {
+    "header": {
+      "title": "Bem-vindo à GreenTouch"
+    },
+    "heroSection" : {
+      "heroText": "A GreenTouch é toda sobre ajudá-lo a conectar-se com a natureza, aumentar o seu bem-estar e construir um futuro mais sustentável — tudo através de ferramentas digitais interativas e experiências práticas. O nosso projeto de parceria de cooperação Erasmus+, \"GreenTouch: EcoMind Development for Higher Education Future\" (ID do Projeto: 2023-1-LV01-KA220-HED-000154847), reúne universidades e especialistas de toda a Europa para criar formas inovadoras de integrar a natureza na educação e no quotidiano.",
+      "card1": {
+        "title": "Quem está por trás do GreenTouch?",
+        "paragraph1": "Somos uma equipa de educadores, investigadores e inovadores apaixonados de:",
+        "list": [
+          "Universidade Stradiņš de Riga (Letónia)",
+          "Universidade de Maribor (Eslovénia)",
+          "FOREHUB LDA (Portugal)",
+          "Universidade de Tecnologia de Chipre (Chipre)"
+        ]
+      },
+      "card2": {
+        "title": "Qual é a nossa missão?",
+        "paragraph1": "Queremos facilitar o envolvimento significativo de alunos, educadores e comunidades com a natureza.",
+        "paragraph2": "Isto significa:",
+        "list": [
+          "Desenvolver o GreenTouch, uma ferramenta digital repleta de exercícios interativos, vídeos e tarefas criativas.",
+          "Criar um curso eletrónico EcoMind que combina teoria com experiências ao ar livre.",
+          "Construir uma rede para partilhar ideias, investigação e boas práticas para o bem-estar baseado na natureza."
+        ],
+        "paragraph3": "Junta-te a nós! Acompanha e participa nas nossas atividades!"
+      }
+    },
+    "projectPhilosophySection": {
+      "title": "Filosofia do projeto",
+      "paragraph1": "O projeto GreenTouch baseia-se na ideia de que a ligação com a natureza melhora o bem-estar, promove a resiliência e apoia a sustentabilidade. Acreditamos que a natureza desempenha um papel vital na saúde mental, emocional e social, e mesmo pequenos momentos de ligação podem ter um impacto duradouro.",
+      "paragraph2": "Ao integrar experiências baseadas na natureza com a inovação digital, tornamos esta ligação acessível a indivíduos em ambientes diversos, ajudando-os a construir uma relação mais profunda com o mundo natural.",
+      "paragraph3": "Através de investigação, educação e ferramentas interativas, o GreenTouch promove a ligação e o bem-estar com a natureza, incentivando estilos de vida sustentáveis e abordagens holísticas à saúde mental.",
+      "paragraph4": "Curioso sobre a ciência por trás disto? Explore investigação sobre o impacto da natureza no bem-estar, na ligação com a natureza e nas intervenções digitais baseadas na natureza."
+    },
+    "ecoMindSection": {
+      "title": "EcoMind",
+      "paragraph1": "Prepare-se para o próximo curso <b>EcoMind</b>, que será lançado em <b>2026</b> como parte do projeto <b>Erasmus+ GreenTouch</b>. Este curso proporcionará uma oportunidade para aprofundar a sua ligação com a natureza através de um conhecimento abrangente e uma maior responsabilidade ecológica.",
+      "paragraph2": "O curso também explorará como a mudança da sociedade moderna em relação à natureza levou a uma desconexão que afeta tanto a saúde humana como a ecológica. Quer queira enriquecer os seus estudos, integrar estes conhecimentos no seu estilo de vida ou avançar na sua carreira, este curso irá guiá-lo para uma ligação mais consciente e sustentável com a natureza."
+    }
+  },
+  "sessionsPage": {
+    "header": {
+      "title": "Sessões"
+    },
+    "additionalData": {
+      "releaseDateStatus": {
+        "previousSessionsCompletionRequired": "As sessões anteriores devem ser concluídas para desbloquear novas.",
+        "releaseDate": "Data de Lançamento: ",
+        "comingSoon": "Brevemente",
+        "needsToBeSet": "A data de lançamento precisa de ser definida"
+      },
+      "sessionStatus": {
+        "completed": "Concluído",
+        "inProgress": "Em Progresso",
+        "toBeCompleted": "A Concluir"
+      },
+      "setReleaseDateDialog": {
+        "title": "Data de Lançamento do Conjunto",
+        "description1": "Escolha a data e a hora em que ",
+        "description2": " deverá ficar disponível.",
+        "labelDate": "Data",
+        "pickDate": "Escolhe uma data",
+        "labelTime": "Hora",
+        "actionButton": "Guardar",
+        "successMessage": "Data de lançamento definida com sucesso.",
+        "errorMessage": "Ocorreu um erro ao definir a data de lançamento. Por favor, tente novamente."
+      },
+      "notAvailable": {
+        "title": "Esta sessão ainda não está disponível",
+        "description": "Voltar à visão geral das sessões para ver as sessões disponíveis."
+      },
+      "favoriteButton": {
+        "addToFavorites": "Adicionar a Favoritos",
+        "inFavorites": "Em Favoritos",
+        "sessionIdMissingErrorMessage": "O ID da sessão está em falta. Certifica-te de que a sessão já está disponível.",
+        "unknownErrorMessage": "Algo correu mal ao atualizar o favorito.",
+        "sessionAddedToFavorites": "Sessão adicionada aos favoritos.",
+        "sessionRemovedFromFavorites": "Sessão removida dos favoritos."
+      },
+      "natureConnectednessCard": {
+        "cardTitle": "Ligação com a natureza",
+        "requiredLabel": "Obrigatório para concluir",
+        "cardDescription": "Vamos recolher os vossos sentimentos subjetivos de ligação com a natureza de sessão em sessão, que serão compilados no Rastreador de Conexão com a Natureza para que ambos possamos acompanhar ao longo do tempo.",
+        "cardSubtitle": "Move a figura",
+        "leftSliderLabel": "Totalmente desligado da natureza",
+        "rightSliderLabel": "Intimamente ligado à natureza",
+        "actionButton": "Alterações de gravação",
+        "sessionIdMissingErrorMessage": "O ID da sessão está em falta. Certifica-te de que a sessão já está disponível.",
+        "sessionAlreadyCompletedErrorMessage": "Esta sessão já foi concluída. Não pode submeter dados novamente.",
+        "successMessage": "Classificação de ligação com a natureza salva com sucesso.",
+        "unknownErrorMessage": "Ocorreu um erro ao guardar a sua classificação de ligação com a natureza. Por favor, tenta novamente."
+      },
+      "diaryCard": {
+        "diaryNote": "NOTA DO DIÁRIO",
+        "cardTitle": "Diário",
+        "requiredLabel": "Obrigatório para concluir",
+        "cardDescription": "Depois de concluir a sessão, por favor responda às seguintes perguntas.",
+        "cardSubtitle": "PERGUNTAS ABERTAS",
+        "noQuestionsAvailable": "Não há perguntas sobre o diário disponíveis para esta sessão.",
+        "actionButton": "Guardar",
+        "sessionIdMissingErrorMessage": "O ID da sessão está em falta. Certifique-se de que a sessão já está disponível.",
+        "sessionNameMissingErrorMessage": "O nome da sessão está em falta. Certifique-se de que a sessão já está disponível.",
+        "successMessage": "Entrada do diário guardada com sucesso.",
+        "unknownErrorMessage": "Ocorreu um erro ao guardar a sua entrada no diário. Por favor, tenta novamente."
+      },
+      "surveyCard": {
+        "cardTitle": "Levantamento",
+        "requiredLabel": "Obrigatório para concluir",
+        "cardDescription": "Quando terminar de escrever no seu Diário, por favor responda às seguintes perguntas.",
+        "cardSubtitle": "PERGUNTAS ENCERRADAS",
+        "cardSubdescription1": "Quantas vezes dedicaste tempo durante esta sessão ...",
+        "frequencyScale": {
+            "never": "Nunca",
+            "once": "Uma vez",
+            "twice": "Duas vezes",
+            "threeTimes": "Três vezes",
+            "moreThanThreeTimes": "Mais de três vezes"
+        },
+        "frequencyQuestions": {
+            "outdoorTasks": "Quantas vezes fizeste tarefas ao ar livre?",
+            "indoorTasks": "Quantas vezes fizeste tarefas dentro de casa?"
+        },
+        "cardSubdescription2": "Senti-me...",
+        "agreementScale": {
+          "stronglyDisagree": "Discordo fortemente",
+          "disagree": "Discordo",
+          "neutral": "Nem concordo nem discordo",
+          "agree": "Concordo",
+          "stronglyAgree": "Concordo plenamente",
+          "notApplicable": "Não aplicável"
+        },
+        "impactStatements": {
+          "physicalHealth": "Foi bom para a minha saúde física",
+          "mentalHealth": "Foi bom para a minha saúde mental",
+          "socialOpportunity": "Foi uma boa oportunidade para passar tempo com amigos ou família",
+          "learningChallenge": "Aprendi algo novo / desafiei-me a mim próprio",
+          "closerToNature": "Senti-me mais próxima da natureza"
+        },
+        "actionButton": "Guardar",
+        "messages": {
+          "sessionIdMissingErrorMessage": "O ID da sessão está em falta. Certifica-te de que a sessão já está disponível.",
+          "answerAllQuestionsErrorMessage": "Por favor, responda a todas as perguntas antes de submeter o inquérito.",
+          "sessionAlreadyCompletedErrorMessage": "Esta sessão já foi concluída. Não pode submeter dados novamente.",
+          "successMessage": "Respostas ao inquérito guardadas com sucesso.",
+          "unknownErrorMessage": "Ocorreu um erro ao guardar as suas respostas ao inquérito. Por favor, tente novamente."
+        }
+      },
+      "sessionCompletedCard": {
+        "title": "Terminaste a tua sessão?",
+        "description": "Assinala esta sessão como concluída e passa para outras sessões.",
+        "markAsCompleted": "Marcar como concluído",
+        "completed": "Concluído",
+        "dialog": {
+          "title": "Assinala esta sessão como concluída?",
+          "description": "Dados como a sua natureza, ligação e respostas ao inquérito serão guardados e não poderão ser alterados posteriormente.",
+          "cancelButton": "Cancelar",
+          "actionButton": "Guardar"
+        },
+        "sessionIdMissingErrorMessage": "O ID da sessão está em falta. Certifica-te de que a sessão já está disponível.",
+        "notAllSectionsCompletedErrorMessage": "Por favor, complete todas as secções obrigatórias antes de marcar a sessão como concluída.",
+        "unknownErrorMessage": "Ocorreu um erro ao marcar a sessão como concluída. Por favor, tente novamente.",
+        "successMessage": "Sessão marcada como concluída com sucesso."
+      },
+      "sessionsAccordion": {
+        "accordionItem1": {
+          "title": "Porque manter um diário?",
+          "content": "Escrever no seu diário ajuda-o a tirar todos os benefícios de usar o GreenTouch. Apoia uma maior autoconsciência e permite-lhe refletir e acompanhar os seus pensamentos e sentimentos ao longo do tempo."
+        },
+        "accordionItem2": {
+          "title": "Como funciona?",
+          "content": "As suas entradas no diário são pessoais e só visíveis para si. Eles ganharam; não podem ser partilhados com outros, embora a equipa de investigação os ace para análise anónima e confidencial. Tu' Os LL recebem estímulos reflexivos durante as sessões, mas também são livres para registar quaisquer pensamentos, emoções ou perceções — especialmente do tempo passado na natureza."
+        },
+        "accordionItem3": {
+          "title": "E se eu não escrever no diário?",
+          "content": "É necessária uma entrada no diário, mesmo que breve, para avançar para a próxima sessão."
+        }
+      }
+    },
+    "greentouchSessions": {
+      "demoSession": {
+        "localName": "demo-session",
+        "title": "Sessão de Demonstração",
+        "titleCapitals": "SESSÃO DE DEMONSTRAÇÃO",
+        "description": "Um vislumbre do programa GreenTouch",
+        "labelGoal": "Objetivo:",
+        "paragraph1": "Oferecer uma introdução curta e acessível à experiência GreenTouch, permitindo aos participantes explorar um momento consciente na natureza e refletir sobre a sua ligação antes de iniciar o programa completo.",
+        "welcomeTitle": "Bem-vindo à GreenTouch",
+        "welcomeParagraph1": "Esta curta sessão dá-lhe uma ideia do programa antes de começar a sua jornada.",
+        "outdoorTaskCard": {
+          "cardTitle": "Tarefa ao Ar Livre",
+          "requiredLabel": "Obrigatório para concluir",
+          "taskTitle": "Tarefa",
+          "taskDescription": "Aqui está um breve resumo da sua tarefa (ouça atentamente as indicações do vídeo):",
+          "step1": "Passo 1",
+          "step1taskInstructions": "Faça uma caminhada consciente durante pelo menos cinco minutos. Move-te devagar, reparando em imagens, cheiros e sons.",
+          "step2": "Passo 2",
+          "step2taskInstructions": "Escolhe um objeto natural que chame a tua atenção. Observe a sua cor, textura, cheiro e som durante dez ou mais minutos. Envolve-se em reflexão silenciosa.",
+          "step3": "Passo 3",
+          "step3taskInstructions": "Faça uma caminhada reflexiva de pelo menos cinco minutos. Considere o que esta experiência lhe diz sobre a sua ligação com a natureza."
+        },
+        "reflectionCard": {
+          "cardTitle": "Reflexão",
+          "paragraph1": "A tua pergunta para reflexão:",
+          "reflectionQuestion": "Como foi esta experiência para mim? O que é que reparei?",
+          "paragraph2": "Depois de concluir a tarefa, escreva quaisquer pensamentos num caderno ou no telemóvel. Depois de se inscrever no programa, poderá registar as suas reflexões no seu diário pessoal da GreenTouch.",
+          "endMessage": "Boa sorte e aproveita!"
+        },
+        "image": "/demo-session.png",
+        "breadcrumbItem1": "Sessões",
+        "breadcrumbItem2": "Sessão de Demonstração",
+        "rightNavigationLink": "Ir para a Sessão 1"
+      },
+      "session1": {
+        "localName": "session-1",
+        "title": "Sessão 1",
+        "titleCapitals": "SESSÃO 1",
+        "description": "Notar sentidos, pensamentos, sentimentos e memórias relacionados com a natureza",
+        "labelGoal": "Objetivo:",
+        "paragraph1": "Despertar uma consciência suave ao notar as suas respostas sensoriais, emocionais e cognitivas num ambiente natural.",
+        "welcomeTitle": "Bem-vindo à Sessão 1 do GreenTouch!",
+        "welcomeParagraph1": "Entre na sua jornada de ligação com a natureza. Esta sessão foca-se em explorar a sua ligação pessoal com a natureza através da consciência sensorial, pensamentos e sentimentos.",
+        "welcomeParagraph2": "Antes de avançar, coloque a figura humana onde sente que está atualmente no seu caminho para se conectar com a natureza.",
+        "outdoorTaskCard": {
+          "cardTitle": "Tarefa ao Ar Livre",
+          "requiredLabel": "Obrigatório para concluir",
+          "taskTitle": "Tarefa",
+          "taskDescription": "Aqui está um breve resumo da sua tarefa (ouça atentamente as indicações do vídeo):",
+          "step1taskInstructions": "Tenha atenção a quaisquer pensamentos, sentimentos ou memórias que surjam ao se imergir num ambiente natural. Considere o que se destaca na sua experiência de estar na natureza. Nos próximos três dias, continue a notar as suas respostas à natureza e anote-as no seu diário GreenTouch.",
+          "endMessage": "Boa sorte e aproveita!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Tarefa Indoor",
+          "requiredLabel": "Alternativa",
+          "taskDescription": "Aqui está uma tarefa alternativa usando a galeria de vídeos da natureza se sair ao ar livre for desafiante. Conclua a tarefa e escreva sobre ela no seu diário.",
+          "taskInstructions": "Veja um vídeo de qualquer secção (Água, Terra, Fogo, Ar ou Animais) e concentre-se nos seus sentidos — o que vê, ouve e sente enquanto vê? Deixe que as imagens e os sons guiem os seus pensamentos, memórias e emoções, notando como o seu corpo reage à experiência.",
+          "natureVideoGalleryLink": "Galeria de Vídeos da Natureza"        
+        },
+        "image": "/session-1.png",
+        "breadcrumbItem1": "Sessões",
+        "breadcrumbItem2": "Sessão 1",
+        "leftNavigationLink": "Voltar à Sessão de Demonstração",
+        "rightNavigationLink": "Ir para a Sessão 2",
+        "diaryQuestions": {
+          "question1": "Ao mergulhar num ambiente natural, que pensamentos, sentimentos ou memórias surgem?"
+        }
+      },
+      "session2": {
+        "localName": "session-2",
+        "title": "Sessão 2",
+        "titleCapitals": "SESSÃO 2",
+        "description": "Explorar um objeto natural agradável",
+        "labelGoal": "Objetivo:",
+        "paragraph1": "Para aprofundar a sua atenção plena e ligação com a natureza, observando e refletindo de perto sobre um único objeto natural.",
+        "welcomeTitle": "Bem-vindo à Sessão 2 do GreenTouch!",
+        "welcomeParagraph1": "Volta a entrar na tua experiência na natureza. Esta sessão foca-se em como as interações simples com a natureza podem melhorar a atenção plena e aprofundar a sua ligação ao mundo natural.",
+        "welcomeParagraph2": "Antes de avançar, coloque a figura humana onde sente que está atualmente no seu caminho para se conectar com a natureza.",
+        "outdoorTaskCard": {
+          "cardTitle": "Tarefa ao Ar Livre",
+          "requiredLabel": "Obrigatório para concluir",
+          "taskTitle": "Tarefa",
+          "taskDescription": "Aqui está um breve resumo da sua tarefa (ouça atentamente as indicações do vídeo):",
+          "step1": "Passo 1",
+          "step1taskInstructions": "Caminhada consciente. Observa lentamente o que te rodeia, reparando em imagens, cheiros e sons.",
+          "step2": "Passo 2",
+          "step2taskInstructions": "Encontre um objeto natural que chame a sua atenção. Dedique tempo a explorar os seus detalhes — toque, cor, textura e aroma — enquanto se envolve em reflexão silenciosa.",
+          "step3": "Passo 3",
+          "step3taskInstructions": "Caminhada reflexiva. Considere o que esta experiência revela sobre a sua relação com a natureza. Pergunta de reflexão: O que é que esta experiência me diz sobre mim e sobre a natureza?",
+          "endMessage": "Boa sorte e aproveita!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Tarefa Indoor",
+          "requiredLabel": "Alternativa",
+          "taskDescription": "Aqui está uma tarefa alternativa usando a galeria de vídeos da natureza se sair ao ar livre for desafiante. Conclua a tarefa e escreva sobre ela no seu diário.",
+          "taskInstructions": "Escolhe um vídeo da secção Terra e foca-te num elemento específico da cena, como uma árvore, rocha ou elemento paisagístico. Observe os seus detalhes — cores, texturas, formas — e reflita sobre como este objeto natural o faz sentir e o que revela sobre a sua ligação à natureza.",        
+          "natureVideoGalleryLink": "Galeria de Vídeos da Natureza"        
+        },
+        "image": "/session-2.png",
+        "breadcrumbItem1": "Sessões",
+        "breadcrumbItem2": "Sessão 2",
+        "leftNavigationLink": "Voltar à Sessão 1",
+        "rightNavigationLink": "Go to Session 3",
+        "diaryQuestions": {
+            "question1": "O que é que esta experiência me diz sobre mim e sobre a natureza?"
+        }
+      },
+      "session3": {
+        "localName": "session-3",
+        "title": "Sessão 3",
+        "titleCapitals": "SESSÃO 3",
+        "description": "Imergir nos sons da natureza",
+        "labelGoal": "Objetivo:",
+        "paragraph1": "Explorar como os sons naturais influenciam o seu estado mental e emocional, promovendo uma presença mais profunda e calma.",
+        "welcomeTitle": "Bem-vindo à Sessão 3 do GreenTouch!",
+        "welcomeParagraph1": "Volta a entrar na tua experiência na natureza. Esta sessão foca-se nos sons da natureza e em como eles influenciam os seus pensamentos e sentimentos.",
+        "welcomeParagraph2": "Antes de avançar, coloque a figura humana onde sente que está atualmente no seu caminho para se conectar com a natureza.",
+        "outdoorTaskCard": {
+          "cardTitle": "Tarefa ao Ar Livre",
+          "requiredLabel": "Obrigatório para concluir",
+          "taskTitle": "Tarefa",
+          "taskDescription": "Aqui está um breve resumo da sua tarefa (ouça atentamente as indicações do vídeo):",
+          "step1": "Passo 1",
+          "step1taskInstructions": "Caminhada consciente. Observa lentamente o que te rodeia, notando imagens, cheiros e sons.",
+          "step2": "Passo 2",
+          "step2taskInstructions": "Sente-se ou fique de pé num lugar confortável. Ouça atentamente os sons à sua volta. Escolha um som natural que lhe traga sensações agradáveis — pássaros, vento, água — e concentre-se nele durante cinco minutos. Repare em quaisquer pensamentos ou emoções que isso evoque.",
+          "step3": "Passo 3",
+          "step3taskInstructions": "Caminhada reflexiva. Considere o que esta experiência revela sobre a sua relação com a natureza. Pergunta de reflexão: Como é que os sons da natureza afetam os meus pensamentos e sentimentos?",
+          "endMessage": "Boa sorte e aproveita!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Tarefa Indoor",
+          "requiredLabel": "Alternativa",
+          "taskDescription": "Aqui está uma tarefa alternativa usando a galeria de vídeos da natureza se sair ao ar livre for desafiante. Conclua a tarefa e escreva sobre ela no seu diário.",
+          "taskInstructions": "Veja um vídeo da secção Water ou Air e feche os olhos enquanto ouve os sons, com ou sem acompanhamento musical. Preste atenção a como estes sons naturais influenciam os seus pensamentos e emoções — acalmam-no, energizam ou trazem de volta memórias?",
+          "natureVideoGalleryLink": "Galeria de Vídeos da Natureza"                
+        },
+        "image": "/session-3.png",
+        "breadcrumbItem1": "Sessões",
+        "breadcrumbItem2": "Sessão 3",
+        "leftNavigationLink": "Voltar à Sessão 2",
+        "rightNavigationLink": "Ir para a Sessão 4",
+        "diaryQuestions": {
+            "question1": "Como é que os sons da natureza afetam os meus pensamentos e sentimentos?"
+        }
+      },
+      "session4": {
+        "localName": "session-4",
+        "title": "Sessão 4",
+        "titleCapitals": "SESSÃO 4",
+        "description": "Observação das pessoas na natureza",
+        "labelGoal": "Objetivo:",
+        "paragraph1": "Refletir sobre o impacto do ambiente social no seu tempo e experiência na natureza, e tomar consciência das suas preferências pessoais.",
+        "welcomeTitle": "Bem-vindo à Sessão 4 do GreenTouch!",
+        "welcomeParagraph1": "Volta a entrar na tua experiência na natureza. Esta sessão foca-se em como o ambiente social influencia o tempo que passa na natureza.",
+        "welcomeParagraph2": "Antes de avançar, coloque a figura humana onde sente que está atualmente no seu caminho para se conectar com a natureza.",
+        "outdoorTaskCard": {
+          "cardTitle": "Tarefa ao Ar Livre",
+          "requiredLabel": "Obrigatório para concluir",
+          "taskTitle": "Tarefa",
+          "taskDescription": "Aqui está um breve resumo da sua tarefa (ouça atentamente as indicações do vídeo):",
+          "step1": "Passo 1",
+          "step1taskInstructions": "Caminhada consciente. Observa lentamente o que te rodeia, notando imagens, cheiros e sons.",
+          "step2": "Passo 2",
+          "step2taskInstructions": "Observa as pessoas na natureza. Encontra um local onde possas observar como os outros interagem com o ambiente. Repara nas suas atividades—caminhar, sentar-se, brincar. Reflita sobre os seus próprios hábitos. Gostas da natureza sozinho ou com outras pessoas?",
+          "step3": "Passo 3",
+          "step3taskInstructions": "Caminhada reflexiva. Considere o que esta experiência revela sobre a sua relação com a natureza. Pergunta de reflexão: Como é que o meu ambiente social influencia o tempo que passo na natureza?",
+          "endMessage": "Boa sorte e aproveita!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Tarefa Indoor",
+          "requiredLabel": "Alternativa",
+          "taskDescription": "Aqui está uma tarefa alternativa usando a galeria de vídeos da natureza se sair ao ar livre for desafiante. Conclua a tarefa e escreva sobre ela no seu diário.",
+          "taskInstructions": "Escolha um vídeo que inclua pessoas a interagir com a natureza, como caminhar numa floresta, sentar-se junto a um rio ou observar animais. Observe o seu comportamento — como é que se envolvem com o ambiente? Reflita sobre como a presença dos outros influencia a sua própria perceção da natureza.",
+          "natureVideoGalleryLink": "Galeria de Vídeos da Natureza"        
+        },
+        "image": "/session-4.png",
+        "breadcrumbItem1": "Sessões",
+        "breadcrumbItem2": "Sessão 4",
+        "leftNavigationLink": "Voltar à Sessão 3",
+        "rightNavigationLink": "Ir para a Sessão 5",
+        "diaryQuestions": {
+            "question1": "Como é que o meu ambiente social influencia o tempo que passo na natureza?"
+        }
+      },
+      "session5": {
+        "localName": "session-5",
+        "title": "Sessão 5",
+        "titleCapitals": "SESSÃO 5",
+        "description": "Respirar com um objeto natural",
+        "labelGoal": "Objetivo:",
+        "paragraph1": "Reconhecer barreiras pessoais à ligação com a natureza e praticar a respiração consciente como forma de as ultrapassar suavemente.",
+        "welcomeTitle": "Bem-vindos à Sessão 5 do GreenTouch!",
+        "welcomeParagraph1": "Volta a entrar na tua experiência na natureza. Esta sessão foca-se nas barreiras que podem impedir-te de passar tempo na natureza e em como as ultrapassar.",
+        "welcomeParagraph2": "Antes de avançar, coloque a figura humana onde sente que está atualmente no seu caminho para se conectar com a natureza.",
+        "outdoorTaskCard": {
+          "cardTitle": "Tarefa ao Ar Livre",
+          "requiredLabel": "Obrigatório para concluir",
+          "taskTitle": "Tarefa",
+          "taskDescription": "Aqui está um breve resumo da sua tarefa (ouça atentamente as indicações do vídeo):",
+          "step1": "Passo 1",
+          "step1taskInstructions": "Caminhada consciente. Observa lentamente o que te rodeia, notando imagens, cheiros e sons.",
+          "step2": "Passo 2",
+          "step2taskInstructions": "Encontra um objeto natural e respira com ele. Segura-o nas mãos, sente a sua textura e sincroniza a respiração com ele—inspira durante quatro segundos, expira durante sete. Observe como isto afeta o seu sentido de ligação.",
+          "step3": "Passo 3",
+          "step3taskInstructions": "Caminhada reflexiva. Considere o que esta experiência revela sobre a sua relação com a natureza. Perguntas de reflexão: Que obstáculos me impedem de passar tempo na natureza e como posso ultrapassá-los? Que soluções me parecem realistas para o meu estilo de vida?",
+          "endMessage": "Boa sorte e aproveita!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Tarefa Indoor",
+          "requiredLabel": "Alternativa",
+          "taskDescription": "Aqui está uma tarefa alternativa usando a galeria de vídeos da natureza se sair ao ar livre for desafiante. Conclua a tarefa e escreva sobre ela no seu diário.",
+          "taskInstructions": "Escolha um vídeo da secção Terra ou da secção Água e foque-se num objeto natural dentro da cena, como uma rocha, uma árvore ou um riacho que corre. Enquanto observa, pratica 4-7 respirações — inspira durante quatro segundos, expira durante sete — imaginando que tu e o objeto estão a respirar juntos, trocando energia a cada respiração. Depois do vídeo, reflita sobre como esta experiência te fez sentir e considera o que poderá impedir-te de te conectares com a natureza na vida real, bem como formas de ultrapassar essas barreiras.",        
+          "natureVideoGalleryLink": "Galeria de Vídeos da Natureza"
+        },
+        "image": "/session-5.png",
+        "breadcrumbItem1": "Sessões",
+        "breadcrumbItem2": "Sessão 5",
+        "leftNavigationLink": "De volta à Sessão 4",
+        "rightNavigationLink": "Ir para a Sessão 6",
+        "diaryQuestions": {
+            "question1": "Que obstáculos me impedem de passar tempo na natureza, e como posso superá-los?",
+            "question2": "Quais soluções me parecem realistas para o meu estilo de vida?"
+        }
+      },
+      "session6": {
+        "localName": "session-6",
+        "title": "Sessão 6",
+        "titleCapitals": "SESSÃO 6",
+        "description": "Dançar com a natureza",
+        "labelGoal": "Objetivo:",
+        "paragraph1": "Expressar a sua ligação com a natureza através do movimento e estabelecer uma intenção pessoal de fortalecer essa relação ao longo do tempo.",
+        "welcomeTitle": "Bem-vindos à Sessão 6 do GreenTouch!",
+        "welcomeParagraph1": "Volta a entrar na tua experiência na natureza. Esta sessão foca-se em definir a intenção de integrar a natureza na sua vida.",
+        "welcomeParagraph2": "Antes de avançar, coloque a figura humana onde sente que está atualmente no seu caminho para se ligar à natureza.",
+        "outdoorTaskCard": {
+          "cardTitle": "Tarefa ao Ar Livre",
+          "requiredLabel": "Obrigatório para concluir",
+          "taskTitle": "Tarefa",
+          "taskDescription": "Aqui está um breve resumo da sua tarefa (ouça atentamente as indicações do vídeo):",
+          "step1": "Passo 1",
+          "step1taskInstructions": "Caminhada consciente. Observa lentamente o que te rodeia, reparando em imagens, cheiros e sons.",
+          "step2": "Passo 2",
+          "step2taskInstructions": "Escolha uma árvore ou planta e observe os seus movimentos. Espelhe o seu movimento com as mãos ou o corpo — mova-se livremente, como se dançasse com a natureza. Repara como isto te faz sentir.",
+          "step3": "Passo 3",
+          "step3taskInstructions": "Caminhada reflexiva. Considere o que esta experiência revela sobre a sua relação com a natureza. Pergunta de reflexão: O que me comprometeria a fazer nos próximos três meses para passar mais tempo na natureza?",
+          "endMessage": "Boa sorte e aproveita!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Tarefa Indoor",
+          "requiredLabel": "Alternativa",
+          "taskDescription": "Aqui está uma tarefa alternativa usando a galeria de vídeos da natureza se sair ao ar livre for desafiante. Conclua a tarefa e escreva sobre ela no seu diário.",
+          "taskInstructions": "Selecione um vídeo da secção Fogo, Água ou Ar e concentre-se no movimento dentro dele — ondas, chamas, vento ou animais a correr. Tenta espelhar esses movimentos com as mãos ou o corpo, deixando-te fluir ao ritmo da natureza e refletindo sobre como este movimento te faz sentir.",        
+          "natureVideoGalleryLink": "Galeria de Vídeos da Natureza"
+        },
+        "image": "/session-6.png",
+        "breadcrumbItem1": "Sessões",
+        "breadcrumbItem2": "Sessão 6",
+        "leftNavigationLink": "Voltar à Sessão 5",
+        "rightNavigationLink": "Ir para a Sessão 7",
+        "diaryQuestions": {
+            "question1": "O que é que me comprometeria a fazer nos próximos três meses para passar mais tempo na natureza?"
+        }
+      },
+      "session7": {
+        "localName": "session-7",
+        "title": "Sessão 7",
+        "titleCapitals": "SESSÃO 7",
+        "description": "Encontrar um espaço seguro na natureza",
+        "labelGoal": "Objetivo:",
+        "paragraph1": "Descobrir ou imaginar um espaço natural onde se sinta seguro, calmo e ancorado — um santuário pessoal para futuras reconexões.",
+        "welcomeTitle": "Bem-vindo à Sessão 7 do GreenTouch!",
+        "welcomeParagraph1": "Volta a entrar na tua experiência na natureza. Esta sessão foca-se em encontrar um espaço seguro e confortável na natureza, onde se sinta em casa.",
+        "welcomeParagraph2": "Antes de avançar, coloque a figura humana onde sente que está atualmente no seu caminho para se conectar com a natureza.",
+        "outdoorTaskCard": {
+          "cardTitle": "Tarefa ao Ar Livre",
+          "requiredLabel": "Obrigatório para concluir",
+          "taskTitle": "Tarefa",
+          "taskDescription": "Aqui está um breve resumo da sua tarefa (ouça atentamente as indicações do vídeo):",
+          "step1": "Passo 1",
+          "step1taskInstructions": "Caminhada consciente. Observa lentamente o que te rodeia, notando imagens, cheiros e sons.",
+          "step2": "Passo 2",
+          "step2taskInstructions": "Encontre um espaço natural que se sinta seguro e convidativo. Passa tempo lá, reparando em como diferentes áreas te fazem sentir — aberta, fechada, pacífica. Permita-se experienciar plenamente o espaço.",
+          "step3": "Passo 3",
+          "step3taskInstructions": "Caminhada reflexiva. Considere o que esta experiência revela sobre a sua relação com a natureza.",
+          "endMessage": "Boa sorte e aproveita!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Tarefa Indoor",
+          "requiredLabel": "Alternativa",
+          "taskDescription": "Aqui está uma tarefa alternativa usando a galeria de vídeos da natureza se sair ao ar livre for desafiante. Conclua a tarefa e escreva sobre ela no seu diário.",
+          "taskInstructions": "Escolhe um vídeo de qualquer secção que te faça sentir calmo e confortável, como se fosse o teu retiro pessoal. Imagine entrar neste ambiente, sentir a sua energia protetora e notar como o seu corpo reage quando está imerso neste espaço positivo.",
+          "natureVideoGalleryLink": "Galeria de Vídeos da Natureza"
+        },
+        "image": "/session-7.png",
+        "breadcrumbItem1": "Sessões",
+        "breadcrumbItem2": "Sessão 7",
+        "leftNavigationLink": "De volta à Sessão 6"
+      }
+    }
+  },
+  "natureVideoGalleryPage": {
+    "header": {
+      "title": "Galeria de Vídeos da Natureza"
+    },
+    "heroSection": {
+      "paragraph1": "Bem-vindo à Galeria de Vídeos da Natureza GreenTouch!",
+      "paragraph2": "Aqui, encontrará uma coleção de sons e vistas da natureza, cada um a destacar a beleza única de diferentes elementos naturais. Quer seja atraído pelo fluxo calmo da água ou pela energia animada dos rios e cascatas, a galeria tem algo para todos os estados de espírito. O fogo crepita e brilha para aquecer o teu espírito, o ar sussurra através das folhas e agita os ramos, e a terra ganha vida com o suave estalar de passos e o vibrante sussurrar da vegetação. Experimente os animais na sua sinfonia natural, desde os cantos e o canto dos pássaros até ao zumbido das abelhas ocupadas.",
+      "paragraph3": "Use estas gravações para trazer o exterior para dentro, perfeito para relaxar, estudar ou melhorar atividades naturais interiores. Explore, guarde as suas faixas favoritas no seu diário e deixe que a essência da natureza traga momentos de paz e inspiração ao seu dia. Desfrute da magia única de cada elemento e deixe-a refrescar a sua mente e espírito.",
+      "label1": "Categorias",
+      "label2": "Ver mais"
+    },
+    "categoryPage": {
+      "breadcrumbItem1": "Galeria de Vídeos da Natureza",
+      "soundsWithMusicTitle": "Sons com Música",
+      "soundsWithoutMusicTitle": "Sons sem Música",
+      "withMusicLabel": "COM MÚSICA",
+      "withoutMusicLabel": "SEM MÚSICA",
+      "categories": {
+        "water": {
+          "title": "Água",
+          "heroSection": {
+            "paragraph1": "Porque é que gostamos de água? Contém uma magia ancestral, que chama a alma com os seus ritmos calmantes. A água contribui profundamente para o nosso bem-estar, dissolvendo a tensão e convidando à tranquilidade. Quer caminhe junto ao oceano, esteja sentado no suave som da chuva ou maravilhado com o rugido de uma cascata, somos embalados pela calma e admiração. Cada riacho, onda e gota torna-se uma canção de renovação. Sinta a serenidade dos riachos frescos a lavar pés cansados e ouça o suave gorgolejar de um riacho — momentos que nos ancoram no presente, inspirando atenção plena e paz. Ouvir a música da água é sentir-se restaurado, embalado no abraço suave da natureza.", 
+            "paragraph2": "Desfrute dos sons e vistas da natureza, seja sozinhos ou acompanhados por música."
+          },
+          "videos": [
+            {
+              "title": "Fluxo suave",
+              "description": "Entra na tranquilidade e ouve os suaves sussurros de um riacho a dançar sobre pedras lisas, embalando-te com a sua melodia serena",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=fK1MdfyVV0o",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=q9PIoMiuuKQ"
+            },
+            {
+              "title": "Ondas oceânicas",
+              "description":
+                "Deixa os teus pensamentos vaguear enquanto as ondas rítmicas do oceano abraçam a costa, uma poderosa mas reconfortante sinfonia da natureza",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=CFoYa1EEUQs",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=t9S1ialTSpE"
+            },
+            {
+              "title": "Cascata",
+              "description":
+                "Fique maravilhado enquanto a poderosa cascata desce com uma força revigorante, os seus ecos enchendo o ar de energia bruta",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=vBvBOrjVgT4",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=OHnlqo7QieE"
+            }
+          ]
+        },
+
+        "fire": {
+          "title": "Fogo",
+          "heroSection": {
+            "paragraph1": "O fogo incorpora calor, vitalidade e uma dança hipnotizante de luz. Adoramos o fogo pelo seu calor e pelas histórias que guarda no seu brilho trémulo. O seu crepitar desperta memórias de momentos partilhados, despertando nostalgia e admiração. O fogo acende conforto e vitalidade, atraindo-nos para a sua dança hipnótica. Imagine estar sentado junto a uma fogueira sob um dossel de estrelas, sentindo o seu calor acalmar o frio da noite, ou observando brasas fumegantes a pulsar como um batimento cardíaco na escuridão silenciosa. Até a pequena e constante chama de uma vela sussurra paz à alma. Os sons do fogo embalam-nos, evocando sentimentos de segurança, reflexão e alegria. Ouvi-la convida a um calor que chega ao fundo, tocando o espírito.",
+            "paragraph2": "Desfrute dos sons e vistas da natureza, seja sozinhos ou acompanhados por música."
+          },
+          "videos": [
+            {
+              "title": "Fogueira crepitante",
+              "description": "Reúnam-se e desfrutem do crepitar quente e acolhedor da fogueira, onde cada estalo e sibilo conta uma história de conforto e nostalgia",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=dOl65rSHhxw",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=YxQjCtvMpN8"
+            },
+            {
+              "title": "Fogo de artifício a chiar",
+              "description": "Vê a noite ganhar vida com o crepitar explosivo dos fogos de artifício, cada explosão a cintilar como uma celebração no céu",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=Ld-Grq9kUzo",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=vVmaddeotBc"
+            },
+            {
+              "title": "Chama de vela",
+              "description": "Relaxa com o delicado tremeluzir da chama de uma vela, o seu som subtil um lembrete de paz nos momentos mais simples",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=f_F7Gz8nChg",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=ZwXK3My8cpk"
+            }
+          ]
+        },
+
+        "air": {
+          "title": "Aéreo",
+          "heroSection": {
+            "paragraph1": "O ar, invisível mas profundo, dá vida ao nosso mundo. Adoramos-no pelos seus sussurros, pela carícia da brisa na pele quente e pela varrida selvagem e excitante das rajadas. O ar contribui para o nosso bem-estar com o seu toque puro e energizante, limpando a mente e elevando o espírito. Ouve o canto do vento nas árvores, as folhas a farfalhar com histórias que acalmam e despertam a curiosidade. Sinos de vento, delicados e melódicos, criam momentos de serena admiração. Sente a relva a mover-se com o vento num prado aberto, uma suave sinfonia para a alma. No seu abraço, experimentamos alegria, liberdade e uma profunda ligação à vasta extensão da vida.",
+            "paragraph2": "Desfrute dos sons e vistas da natureza, seja sozinhos ou acompanhados por música."
+          },
+          "videos": [
+            {
+              "title": "Folhas a farfalhar",
+              "description": "Passeia debaixo das árvores e ouve as folhas a esvoaçar como segredos sussurrados no suave abraço da brisa",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=XwBe2Cvl2-k",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=JTBBP2AYpQg"
+            },
+            {
+              "title": "Vento uivante",
+              "description": "Fique no topo das falésias e sinta a força do vento a uivar por um desfiladeiro, uma canção selvagem e indomada que ecoa o poder da natureza",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=3SM3fjhlI1E",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=C8DYOG9vOEw"
+            },
+            {
+              "title": "Vento na relva",
+              "description": "Descansa num prado aberto e ouve o vento a soprar pelas ervas altas, uma canção suave que acalma a mente",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=c3IznVa9YPk",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=peRSFmdX6ho"
+            }
+          ]
+        },
+
+        "earth": {
+          "title": "Terra",
+          "heroSection": {
+            "paragraph1": "A Terra detém um poder constante e nutritivo que amamos profundamente. Contribui para o nosso bem-estar através da sua presença estabilizadora, ligando-nos às nossas raízes e aos ciclos da vida. O som de passos a esmagar folhas ou a ecoar nas pedras ressoa com um sentido primal de pertença. Enquanto caminhamos pelos caminhos da floresta, o aroma rico do solo e do crescimento verde envolve-nos, infundindo-nos de paz. Ouça o ranger dos ramos antigos acima e sinta o profundo conforto que traz. O suave farfalhar da Terra sob os pés e a sua resiliência silenciosa convidam-nos a parar, refletir e encontrar equilíbrio. A terra abraça-nos, lembrando-nos de estabilidade, renovação e de estar em casa.",
+            "paragraph2": "Desfrute dos sons e vistas da natureza, seja sozinhos ou acompanhados por música."
+          },
+          "videos": [
+            {
+              "title": "Manto de folhas",
+              "description": "Envolto na natureza, o suave farfalhar das folhas forma uma sinfonia particular que convida a parar, respirar e conectar-se com o momento presente",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY"
+            },
+            {
+              "title": "Passos nas folhas",
+              "description": "Caminhe pelo chão da floresta e deixe que o estalar das folhas sob os seus pés o lembre dos ciclos suaves da natureza e das histórias que cada estação deixa para trás",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY"
+            },
+            {
+              "title": "Passos em pedras",
+              "description": "Percorre um caminho pedregoso e ouve o som rítmico dos teus passos, cada eco a ancorar-te, a ligar-te ao espírito intemporal e duradouro da terra",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=RzXQb2zrP54",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY"
+            }
+          ]
+        },
+
+        "animals": {
+          "title": "Animais",
+          "heroSection": {
+            "paragraph1": "Porque é que amamos as criaturas que enchem a floresta e o campo? Os seus sons dão vida à paisagem, despertando alegria e ligação. Os animais contribuem para o nosso bem-estar ao lembrar-nos do vibrante batimento cardíaco da natureza. Ouve os subtis sussurros do movimento entre a vegetação — cada som uma história de mistério e energia. Os chamados distantes dos pássaros invisíveis evocam admiração, enquanto as abelhas zumbiam com propósito diligente, o seu zumbido um canto suave e persistente. Imagine sentar-se junto a um lago ao entardecer enquanto os sapos coaxam em harmonia, ou acordar ao coro matinal dos pássaros, a receber o dia com alegria. Estes momentos elevam e inspiram, ressoando com uma essência partilhada da vida.",
+            "paragraph2": "Desfrute dos sons e vistas da natureza, seja sozinhos ou acompanhados por música."
+          },
+          "videos": [
+            {
+              "title": "Abelhas zumbindo",
+              "description": "Fecha os olhos e ouve o zumbido satisfeito das abelhas a dançar entre as flores, um lembrete suave da harmonia da natureza",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=WiwK6mxsOzw",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=YFwFFDFjIzc"
+            },
+            {
+              "title": "Sapo coaxa",
+              "description": "Deixa que os coaxar profundos e rítmicos das rãs te acompanhem junto à margem da água, uma serenata natural enquanto o sol se põe",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=NwbfPUVtpuk",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=hMsPl53ztaM"
+            },
+            {
+              "title": "Canto dos pássaros",
+              "description": "Recebam o coro da manhã enquanto os pássaros cantam as suas canções vibrantes, cada chamado a pintar o ar de alegria",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=QhgdlSbdwgo",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=2pYeRg16Vxc"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "newsPage": {
+    "header": {
+      "title": "Notícias e Eventos"
+    },
+    "heroSection": {
+      "paragraph1": "Acompanhe a jornada partilhada através do projeto GreenTouch, que reuniu workshops enriquecedores e experiências imersivas ao ar livre. Esta iniciativa uniu docentes e estudantes da Letónia, Portugal, Chipre e Eslovénia numa rede colaborativa, promovendo a consciência ecológica e uma ligação mais profunda com a natureza.",
+      "label1": "Descobrir"
+    },
+    "addNewsArticleDialog": {
+      "title": "Adicionar Novo Artigo",
+      "description": "Preencha os dados do artigo de notícias que pretende adicionar.",
+      "labelArticleTitle": "Título",
+      "labelArticleContent": "Conteúdo",
+      "cancelButton": "Cancelar",
+      "actionButton": "Alterações de gravação",
+      "successMessage": "Artigo de notícias adicionado com sucesso!",
+      "errorMessage": "Ocorreu um erro ao adicionar o artigo de notícias. Por favor, tente novamente."
+    },
+    "newsArticleCard": {
+      "editNewsArticleDialog": {
+        "title": "Editar artigo",
+        "description": "Preencha os detalhes do artigo de notícias que pretende editar.",
+        "labelArticleTitle": "Título",
+        "labelArticleContent": "Conteúdo",
+        "cancelButton": "Cancelar",
+        "actionButton": "Alterações de gravação",
+        "successMessage": "Artigo de notícias atualizado com sucesso!",
+        "errorMessage": "Ocorreu um erro durante a atualização do artigo de notícias. Por favor, tente novamente."
+      },
+      "deleteNewsArticleAlertDialog": {
+        "title": "Apagar Artigo de Notícias",
+        "description": "Tem a certeza de que quer apagar este artigo? Esta ação não pode ser desfeita.",
+        "cancelButton": "Cancelar",
+        "actionButton": "Eliminar",
+        "successMessage": "Artigo de notícia eliminado com sucesso!",
+        "errorMessage": "Ocorreu um erro ao apagar o artigo de notícias. Por favor, tente novamente."
+      }
+    },
+    "newsArticleAdmin": {
+      "breadcrumbItem1": "Notícias e Eventos",
+      "backButton": "Voltar",
+      "editNewsArticleDialog": {
+        "title": "Editar artigo",
+        "cancelButton": "Cancelar",
+        "actionButton": "Alterações de gravação"
+      },
+      "successMessage": "Artigo de notícias atualizado com sucesso!",
+      "errorMessage": "Ocorreu um erro durante a atualização do artigo de notícias. Por favor, tente novamente."
+    }
+  },  
+  "resourcesPage": {
+    "header": {
+      "title": "Recursos"
+    },
+    "heroSection": {
+      "paragraph1": "Prepare-se para explorar os recursos que estamos a desenvolver como parte do projeto GreenTouch e considere como podem enriquecer a sua prática profissional. Quer seja membro do corpo docente, educador não formal ou profissional nas profissões de ajuda, estes recursos foram concebidos para fomentar uma ligação mais profunda à natureza e integrar a consciência ecológica no seu trabalho.",
+      "paragraph2": "Incentivamos especialmente psicólogos, profissionais de saúde e profissionais de saúde mental e bem-estar a aproveitar estes recursos para melhorar abordagens terapêuticas e promover cuidados holísticos.",
+      "paragraph3": "Esperamos inspirá-lo e capacitá-lo a trazer responsabilidade ecológica e bem-estar para o seu panorama profissional."
+    },
+    "card1": {
+      "title": "Artigos",
+      "paragraph1": "Explore conhecimentos mais aprofundados lendo artigos científicos revistos por pares sobre o papel da natureza e da ligação com a natureza, bem como intervenções baseadas na natureza e digitais baseadas na natureza. Aprofunde investigações que destacam os benefícios e impactos que estas abordagens têm no bem-estar e na consciencialização ecológica.",
+      "button": "Explorar Artigos ->"
+    },
+    "resourcesArticlesPage": {
+      "breadcrumbItem1": "Recursos",
+      "breadcrumbItem2": "Artigos",
+      "header": {
+        "title": "Artigos"
+      },
+      "addResourceArticleDialog": {
+        "title": "Adicionar Novo Artigo",
+        "description": "Preencha os detalhes do artigo de recursos que pretende adicionar.",
+        "labelArticleTopic": "Tema",
+        "labelArticleTopicPlaceholder": "Selecionar ou adicionar tema...",
+        "labelArticleTopicCommandInput": "Pesquise ou escreva para adicionar...",
+        "labelArticleTitle": "Título",
+        "labelArticleContent": "Conteúdo",
+        "labelArticleLink": "Link",
+        "cancelButton": "Cancelar",
+        "actionButton": "Alterações de gravação",
+        "successMessage": "Artigo de recursos adicionado com sucesso!",
+        "errorMessage": "Ocorreu um erro ao adicionar o artigo de recursos. Por favor, tente novamente."
+      },
+      "resourceArticleCard": {
+        "readArticleButton": "Ler o artigo",
+        "editResourceArticleDialog": {
+          "title": "Editar artigo",
+          "description": "Preencha os detalhes do artigo de recursos que pretende editar.",
+          "labelArticleTopic": "Tema",
+          "labelArticleTopicPlaceholder": "Selecionar ou adicionar tema...",
+          "labelArticleTopicCommandInput": "Pesquise ou escreva para adicionar...",
+          "labelArticleTitle": "Título",
+          "labelArticleContent": "Conteúdo",
+          "labelArticleLink": "Link",
+          "cancelButton": "Cancelar",
+          "actionButton": "Alterações de gravação",
+          "successMessage": "Artigo de recursos atualizado com sucesso!",
+          "errorMessage": "Ocorreu um erro durante a atualização do artigo de recursos. Por favor, tente novamente."
+        },
+        "deleteResourceArticleAlertDialog": {
+          "title": "Artigo Eliminar Recursos",
+          "description": "Tem a certeza de que quer apagar este artigo? Esta ação não pode ser desfeita.",
+          "cancelButton": "Cancelar",
+          "actionButton": "Eliminar",
+          "successMessage": "Artigo de Recursos eliminado com sucesso!",
+          "errorMessage": "Ocorreu um erro ao eliminar o artigo de recursos. Por favor, tente novamente."
+        }
+      }
+    }
+  },
+  "footer": {
+    "information": "Informação",
+    "terms": "Termos",
+    "privacyPolicy": "Política de Privacidade",
+    "support": "Apoio",
+    "connect": "Liga-te",
+    "europeanFunding": "Este projeto é financiado pela UE."
+  }
+}
+
