@@ -38,7 +38,6 @@ function DiaryCard({ diaryCardTranslations, greentouchSessionId, greentouchSessi
 
     const questions = diaryCardTranslations.diaryQuestions;
 
-
     const handleSubmit = async (e?: React.FormEvent) => {
         
         e?.preventDefault()

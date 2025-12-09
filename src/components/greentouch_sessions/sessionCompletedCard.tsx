@@ -20,6 +20,7 @@ interface SaveDiaryProps {
             actionButton: string;
         };
         successMessage: string;
+        notAllSectionsCompletedErrorMessage: string;
         unknownErrorMessage: string;
         sessionIdMissingErrorMessage: string;
     };
@@ -28,7 +29,6 @@ interface SaveDiaryProps {
 }
 
 function SessionCompletedCard({ sessionCompletedCardTranslations, greentouchSessionId, sessionCompleted }: SaveDiaryProps) {
-
     const [isLoading, setIsLoading] = useState(false);
     const [isCompleted, setIsCompleted] = useState<boolean>(false);
 

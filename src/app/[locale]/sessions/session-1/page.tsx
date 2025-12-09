@@ -291,10 +291,12 @@ export default async function SessionOnePage() {
                         actionButton: t("additionalData.sessionCompletedCard.dialog.actionButton")
                     },
                     sessionIdMissingErrorMessage: t("additionalData.sessionCompletedCard.sessionIdMissingErrorMessage"),
+                    notAllSectionsCompletedErrorMessage: t("additionalData.sessionCompletedCard.notAllSectionsCompletedErrorMessage"),
                     unknownErrorMessage: t("additionalData.sessionCompletedCard.unknownErrorMessage"),
                     successMessage: t("additionalData.sessionCompletedCard.successMessage")
                 }} 
-                greentouchSessionId={dbSession?.id} sessionCompleted={userData?.sessionCompleted} 
+                greentouchSessionId={dbSession?.id} 
+                sessionCompleted={userData?.sessionCompleted} 
             />
 
             <section className="w-full max-w-5xl mx-auto px-4 p-8 mb-10 mt-10">

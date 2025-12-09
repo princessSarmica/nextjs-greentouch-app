@@ -316,6 +316,7 @@
           "actionButton": "Save"
         },
         "sessionIdMissingErrorMessage": "Session ID is missing. Make sure the session is already available.",
+        "notAllSectionsCompletedErrorMessage": "Please complete all required sections before marking the session as completed.",
         "unknownErrorMessage": "An error occurred while marking the session as completed. Please try again.",
         "successMessage": "Session marked as completed successfully."
       },

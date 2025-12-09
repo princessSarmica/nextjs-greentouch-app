@@ -323,6 +323,7 @@
           "actionButton": "Shrani"
         },
         "sessionIdMissingErrorMessage": "ID seje manjka. Prepričajte se, da je seja že na voljo.",
+        "notAllSectionsCompletedErrorMessage": "Prosimo, dokončajte vse zahtevane odseke, preden označite sejo kot dokončano.",
         "unknownErrorMessage": "Pri označevanju seje kot dokončane je prišlo do napake. Poskusite znova.",
         "successMessage": "Seja je bila uspešno označena kot dokončana."
       },
