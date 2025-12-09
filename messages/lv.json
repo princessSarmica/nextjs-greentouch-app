@@ -1,0 +1,921 @@
+{
+  "header": {
+    "navLinks": {
+      "discoverGreenTouch": "Atklājiet GreenTouch",
+      "sessions": "Sesijas",
+      "natureVideoGallery": "Dabas video galerija",
+      "news": "Ziņas",
+      "resources": "Resursu"
+    },
+    "authButtons": {
+      "signUp": "Reģistrēties",
+      "signIn": "Pieteikties"
+    },
+    "userDropdown": {
+      "profile": "Profilu",
+      "myDiary": "Mana dienasgrāmata",
+      "favorites": "Izlases",
+      "security": "Drošība",
+      "admin": "Admin",
+      "signOut": "Izrakstīties"
+    }
+  },
+  "notFoundPage": {
+    "title": "Meklētā lapa ir paslēpta mežā",
+    "returnHome": "Atgriezties mājās"
+  },
+  "signInPage": {
+    "title": "Ievadiet sava konta informāciju un sāciet izpēti",
+    "disclaimer": "Lietotājvārda vai paroles nozaudēšanas gadījumā, lūdzu, sazinieties ar servera administratoru, lai saņemtu palīdzību.",
+    "signInForm": {
+      "labelUsername": "Lietotājvārds",
+      "labelPassword": "Parole",
+      "buttonSignIn": "Pieteikties",
+      "noAccountText": "Jums nav konta?",
+      "signUpLink": "Piedalīties",
+      "formMessages": {
+        "usernameTooShort": "Lietotājvārdam jābūt vismaz 3 rakstzīmēm.",
+        "usernameTooLong": "Lietotājvārdam jābūt ne vairāk kā 30 rakstzīmēm.",
+        "usernameInvalidCharacters": "Lietotājvārds var saturēt tikai burtus, ciparus un pasvītrojumus.",
+        "passwordRequired": "Parole ir nepieciešama.",
+        "unknownError": "Kaut kas nogāja greizi."
+      }
+    }
+  },
+  "signUpPage": {
+    "title": "Reģistrējieties programmai",
+    "labelRequired": "* ir nepieciešams, lai aizpildītu",
+    "signUpForm": {
+      "labelName": "Vārds",
+      "labelSurname": "Uzvārds",
+      "labelPosition": "Jūsu amats",
+      "labelStudent": "Students",
+      "labelAcademicStaff": "Akadēmiskais personāls",
+      "labelOther": "Otrs",
+      "labelUniversityTitle": "Universitātes, kurā studējat/strādājat, nosaukums",
+      "labelUniversity": "Universitāte",
+      "labelFieldOfWork": "Studiju/darba virziens",
+      "labelSpecialization": "Specializācija",
+      "labelMotivation": "Jūsu motivācija piedalīties GreenTouch",
+      "labelPersonalInterest": "Personīgās intereses",
+      "labelProfessionalInterest": "Profesionālās intereses",
+      "labelBothOfThem": "Abi",
+      "labelEmail": "E-pasts",
+      "labelUsername": "Lietotājvārds",
+      "labelPassword": "Parole",
+      "labelConfirmPassword": "Apstiprināt Parole",
+      "buttonSignUp": "Iesniegt",
+      "haveAccountText": "Jums jau ir konts?",
+      "signInLink": "Pieteikties",
+      "formMessages": {
+        "firstNameRequired": "Vārds ir obligāts.",
+        "lastNameRequired": "Uzvārds ir obligāts.",
+        "validEmailRequired": "Lūdzu, ievadiet derīgu e-pasta adresi.",
+        "confirmPasswordRequired": "Lūdzu, apstipriniet savu paroli.",
+        "usernameTooShort": "Lietotājvārdam jābūt vismaz 3 rakstzīmēm.",
+        "usernameTooLong": "Lietotājvārdam jābūt ne vairāk kā 30 rakstzīmēm.",
+        "usernameInvalidCharacters": "Lietotājvārds var saturēt tikai burtus, ciparus un pasvītrojumus.",
+        "selectPositionRequired": "Lūdzu, izvēlieties savu amatu.",
+        "selectMotivationRequired": "Lūdzu, izvēlieties savu motivāciju.",
+        "selectUniversityRequired": "Nepieciešama universitāte.",
+        "selectSpecializationRequired": "Nepieciešama specializācija.",
+        "passwordsDoNotMatch": "Paroles nesakrīt",
+        "signUpSuccessful": "Reģistrācija veiksmīga! Laipni lūdzam GreenTouch.",
+        "unknownError": "Kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz.",
+        "validation": {
+          "passwordRequired": "Parole ir nepieciešama.",
+          "passwordMinLength": "Parolei jābūt vismaz 8 rakstzīmēm.",
+          "passwordLetter": "Parolei jābūt vismaz vienam burtam.",
+          "passwordNumber": "Parolei jābūt vismaz vienam skaitlim.",
+          "passwordSpecialChar": "Parolei jābūt vismaz vienai speciālai rakstzīmei."
+        }
+      }
+    }
+  },
+  "accountPage": {
+    "additionalData": {
+      "navbar": {
+        "profile": "Profilu",
+        "myDiary": "Mana dienasgrāmata",
+        "favorites": "Izlases",
+        "security": "Drošība",
+        "admin": "Admin"
+      }
+    },
+    "profilePage": {
+      "trackYourProgress": "Sekojiet līdzi savam progresam",
+      "sessionsCompletionCard": {
+        "sessionsCompletionTitle": "Sesiju pabeigšana",
+        "completedSessions": "Pabeigtās sesijas",
+        "uncompletedSessions": "Nepabeigtas sesijas"
+      },
+      "natureConnectednessInfoCards": {
+        "natureConnectednessOverTime": "Dabas saikne (novērtēts ar 1-10)",
+        "yourAnswer": "Jūsu atbilde"
+      }
+    },
+    "myDiaryPage": {
+      "noEntriesMessage": "Jūs vēl neesat veicis dienasgrāmatas ierakstus.",
+      "accountDiaryCard": {
+        "sessionIdMissingErrorMessage": "Trūkst sesijas ID. Pārliecinieties, vai sesija jau ir pieejama.",
+        "sessionNameMissingErrorMessage": "Trūkst sesijas nosaukuma. Pārliecinieties, vai sesija jau ir pieejama.",
+        "saveErrorMessage": "Saglabājot dienasgrāmatas ierakstu, radās kļūda. Lūdzu, mēģiniet vēlreiz.",
+        "successMessage": "Dienasgrāmatas ieraksts veiksmīgi saglabāts."
+      }
+    },
+    "favoritesPage": {
+      "noFavoritesMessage": "Jūs vēl neesat pievienojis nevienu sesiju izlasei.",
+      "favoriteIconButton": {
+        "sessionNameMissingErrorMessage": "Trūkst sesijas nosaukuma. Pārliecinieties, vai sesija jau ir pieejama.",
+        "unknownErrorMessage": "Atjauninot iecienītāko, kaut kas nogāja greizi.",
+        "successMessage": "Sesija noņemta no izlases."
+      }
+    },
+    "securityPage": {
+      "description": "Pārvaldiet sesijas drošību. Aktīvās sesijas citās ierīcēs varat atsaukt šeit.",
+      "cardTitle": "Citu sesiju atsaukšana",
+      "cardDescription": "Izrakstieties no visām pārējām aktīvajām sesijām, lai saglabātu konta drošību.",
+      "alertDialog": {
+        "button": "Citu aktīvo sesiju atsaukšana",
+        "title": "Vai esat pilnīgi pārliecināts?",
+        "description": "Lai atsauktu visas pārējās aktīvās sesijas, jums būs vēlreiz jāpierakstās šajās ierīcēs.",
+        "cancelButton": "Atcelt",
+        "actionButton": "Turpināt",
+        "successMessage": "Visas pārējās sesijas ir veiksmīgi atsauktas.",
+        "errorMessage": "Mēģinot atsaukt citas sesijas, radās kļūda. Lūdzu, mēģiniet vēlreiz."
+      }
+    }
+  },
+  "homePage": {
+    "heroSection": {
+      "title": "Atkal savienojieties ar dabu, atslābiniet prātu",
+      "description": "GreenTouch piedāvā vadītus pašrefleksijas vingrinājumus, āra izaicinājumus un ilgtspējīgas dzīves padomus, lai palīdzētu samazināt stresu, veidot garīgo izturību un sazināties ar dabu.",
+      "buttonGetStarted": "Skatīt GreenTouch aktivitātes"
+    },
+    "projectPartnersSection": {
+      "title": "Mūsu projekta partneri"
+    }
+  },
+  "discoverGreenTouchPage": {
+    "header": {
+      "title": "Laipni lūdzam GreenTouch"
+    },
+    "heroSection" : {
+      "heroText": "GreenTouch mērķis ir palīdzēt jums sazināties ar dabu, uzlabot jūsu labklājību un veidot ilgtspējīgāku nākotni, izmantojot interaktīvus digitālos rīkus un praktisku pieredzi. Mūsu Erasmus+ sadarbības partnerības projekts \"GreenTouch: EcoMind Development for Higher Education Future\" (projekta ID: 2023-1-LV01-KA220-HED-000154847) apvieno universitātes un ekspertus no visas Eiropas, lai radītu inovatīvus veidus, kā integrēt dabu izglītībā un ikdienas dzīvē.",
+      "card1": {
+        "title": "Kas ir aiz GreenTouch?",
+        "paragraph1": "Mēs esam kaislīgu pedagogu, pētnieku un novatoru komanda no:",
+        "list": [
+          "Rīgas Stradiņa universitāte (Latvija)",
+          "Mariboras Universitāte (Slovēnija)",
+          "FOREHUB LDA (Portugāle)",
+          "Kipras Tehnoloģiju universitāte (Kipra)"
+        ]
+      },
+      "card2": {
+        "title": "Kāda ir mūsu misija?",
+        "paragraph1": "Mēs vēlamies atvieglot studentiem, pedagogiem un kopienām jēgpilnu sadarbību ar dabu.",
+        "paragraph2": "Tas nozīmē:",
+        "list": [
+          "GreenTouch, digitālā rīka izstrāde, kas satur interaktīvus vingrinājumus, video un radošus uzdevumus.",
+          "EcoMind e-kursa izveide, kas apvieno teoriju ar āra pieredzi.",
+          "Tīkla izveide, lai dalītos ar idejām, pētījumiem un labāko praksi dabā balstītai labklājībai."
+        ],
+        "paragraph3": "Pievienojieties mums! Sekojiet līdzi un piedalieties mūsu aktivitātēs!"
+      }
+    },
+    "projectPhilosophySection": {
+      "title": "Projektu filozofija",
+      "paragraph1": "GreenTouch projekts ir balstīts uz ideju, ka saikne ar dabu uzlabo labklājību, veicina izturību un atbalsta ilgtspēju. Mēs uzskatām, ka dabai ir būtiska loma garīgajā, emocionālajā un sociālajā veselībā, un pat nelieliem saiknes brīžiem var būt ilgstoša ietekme.",
+      "paragraph2": "Integrējot dabā balstītu pieredzi ar digitālajām inovācijām, mēs padarām šo saikni pieejamu cilvēkiem dažādās vidēs, palīdzot viņiem veidot dziļākas attiecības ar dabas pasauli.",
+      "paragraph3": "Izmantojot pētniecību, izglītību un interaktīvus rīkus, GreenTouch veicina saikni ar dabu un labklājību, veicinot ilgtspējīgu dzīvesveidu un holistisku pieeju garīgajai veselībai.",
+      "paragraph4": "Vai vēlaties uzzināt zinātni, kas ir aiz tā? Izpētiet pētījumus par dabas ietekmi uz labklājību, dabas saikni un digitālām dabā balstītām intervencēm."
+    },
+    "ecoMindSection": {
+      "title": "Ekoprāts",
+      "paragraph1": "Sagatavojieties gaidāmajam <b>EcoMind e-kursam</b>, kas tiks uzsākts <b>2026</b> kā daļa no <b>Erasmus+ GreenTouch projekta</b>. Šis kurss sniegs iespēju padziļināt saikni ar dabu, izmantojot visaptverošas zināšanas un paaugstinātu ekoloģisko atbildību.",
+      "paragraph2": "Kursā tiks pētīts arī tas, kā mūsdienu sabiedrības pāreja no dabas ir novedusi pie atvienošanās, kas ietekmē gan cilvēku, gan ekoloģisko veselību. Neatkarīgi no tā, vai vēlaties bagātināt studijas, integrēt šīs atziņas savā dzīvesveidā vai attīstīt savu karjeru, šis kurss palīdzēs jums ceļā uz apzinātāku, ilgtspējīgāku saikni ar dabu."
+    }
+  },
+  "sessionsPage": {
+    "header": {
+      "title": "Sesijas"
+    },
+    "additionalData": {
+      "releaseDateStatus": {
+        "previousSessionsCompletionRequired": "Iepriekšējās sesijas ir jāpabeidz, lai atbloķētu jaunas sesijas.",
+        "releaseDate": "Izlaišanas datums: ",
+        "comingSoon": "Drīz būšu",
+        "needsToBeSet": "Ir jānosaka izlaišanas datums"
+      },
+      "sessionStatus": {
+        "completed": "Pabeigta",
+        "inProgress": "Notiek",
+        "toBeCompleted": "Jāaizpilda"
+      },
+      "setReleaseDateDialog": {
+        "title": "Iestatiet izlaišanas datumu",
+        "description1": "Izvēlieties datumu un laiku, kad ",
+        "description2": " būtu jākļūst pieejamam.",
+        "labelDate": "Datums",
+        "pickDate": "Izvēlieties datumu",
+        "labelTime": "Laiks",
+        "actionButton": "Glābt",
+        "successMessage": "Veiksmīgi iestatīts izlaišanas datums.",
+        "errorMessage": "Iestatot izlaišanas datumu, radās kļūda. Lūdzu, mēģiniet vēlreiz."
+      },
+      "notAvailable": {
+        "title": "Šī sesija vēl nav pieejama",
+        "description": "Atgriezieties sesiju kopsavilkumā, lai skatītu pieejamās sesijas."
+      },
+      "favoriteButton": {
+        "addToFavorites": "Pievienot izlasei",
+        "inFavorites": "Sadaļā Izlase",
+        "sessionIdMissingErrorMessage": "Trūkst sesijas ID. Pārliecinieties, vai sesija jau ir pieejama.",
+        "unknownErrorMessage": "Atjauninot iecienītāko, kaut kas nogāja greizi.",
+        "sessionAddedToFavorites": "Sesija pievienota izlasei.",
+        "sessionRemovedFromFavorites": "Sesija noņemta no izlases."
+      },
+      "natureConnectednessCard": {
+        "cardTitle": "Dabas saikne",
+        "requiredLabel": "Nepieciešams, lai aizpildītu",
+        "cardDescription": "Mēs apkoposim jūsu subjektīvās sajūtas par saikni ar dabu no sesijas uz sesiju, kas tiks apkopotas Nature Connectedness Tracker, lai gan jūs, gan mēs varētu izsekot laika gaitā.",
+        "cardSubtitle": "Pārvietojiet figūru",
+        "leftSliderLabel": "Pilnībā atvienots no dabas",
+        "rightSliderLabel": "Cieši saistīts ar dabu",
+        "actionButton": "Izmaiņu saglabāšana",
+        "sessionIdMissingErrorMessage": "Trūkst sesijas ID. Pārliecinieties, vai sesija jau ir pieejama.",
+        "sessionAlreadyCompletedErrorMessage": "Šī sesija jau ir pabeigta. Jūs nevarat iesniegt datus vēlreiz.",
+        "successMessage": "Sekmīgi saglabāts dabas saiknes vērtējums.",
+        "unknownErrorMessage": "Saglabājot dabas savienojuma novērtējumu, radās kļūda. Lūdzu, mēģiniet vēlreiz."
+      },
+      "diaryCard": {
+        "diaryNote": "DIENASGRĀMATAS PIEZĪME",
+        "cardTitle": "Dienasgrāmata",
+        "requiredLabel": "Nepieciešams, lai aizpildītu",
+        "cardDescription": "Kad esat pabeidzis sesiju, lūdzu, atbildiet uz šādiem jautājumiem.",
+        "cardSubtitle": "ATVĒRTIE JAUTĀJUMI",
+        "noQuestionsAvailable": "Šai sesijai nav pieejami jautājumi par dienasgrāmatu.",
+        "actionButton": "Glābt",
+        "sessionIdMissingErrorMessage": "Trūkst sesijas ID. Pārliecinieties, vai sesija jau ir pieejama.",
+        "sessionNameMissingErrorMessage": "Trūkst sesijas nosaukuma. Pārliecinieties, vai sesija jau ir pieejama.",
+        "successMessage": "Dienasgrāmatas ieraksts veiksmīgi saglabāts.",
+        "unknownErrorMessage": "Saglabājot dienasgrāmatas ierakstu, radās kļūda. Lūdzu, mēģiniet vēlreiz."
+      },
+      "surveyCard": {
+        "cardTitle": "Aptauju",
+        "requiredLabel": "Nepieciešams, lai aizpildītu",
+        "cardDescription": "Kad esat pabeidzis rakstīt dienasgrāmatā, lūdzu, atbildiet uz šādiem jautājumiem.",
+        "cardSubtitle": "SLĒGTIE JAUTĀJUMI",
+        "cardSubdescription1": "Cik reizes šīs sesijas laikā jūs veltījāt laiku ...",
+        "frequencyScale": {
+            "never": "Nekad",
+            "once": "Kad",
+            "twice": "Divreiz",
+            "threeTimes": "Trīs reizes",
+            "moreThanThreeTimes": "Vairāk nekā trīs reizes"
+        },
+        "frequencyQuestions": {
+            "outdoorTasks": "Cik reizes jūs veicāt āra uzdevumus?",
+            "indoorTasks": "Cik reižu jūs veicāt iekštelpu uzdevumus?"
+        },
+        "cardSubdescription2": "Es jutos ...",
+        "agreementScale": {
+          "stronglyDisagree": "Pilnīgi nepiekrītu",
+          "disagree": "Nepiekrītu",
+          "neutral": "Ne piekrītu, ne nepiekrītu",
+          "agree": "Piekrist",
+          "stronglyAgree": "Pilnīgi piekrītu",
+          "notApplicable": "Nav attiecināms"
+        },
+        "impactStatements": {
+          "physicalHealth": "Tas bija labi manai fiziskajai veselībai",
+          "mentalHealth": "Tas bija labi manai garīgajai veselībai",
+          "socialOpportunity": "Tā bija laba iespēja pavadīt laiku kopā ar draugiem vai ģimeni",
+          "learningChallenge": "Es uzzināju kaut ko jaunu / Es izaicināju sevi",
+          "closerToNature": "Es jutos tuvāk dabai"
+        },
+        "actionButton": "Glābt",
+        "messages": {
+          "sessionIdMissingErrorMessage": "Trūkst sesijas ID. Pārliecinieties, vai sesija jau ir pieejama.",
+          "answerAllQuestionsErrorMessage": "Lūdzu, atbildiet uz visiem jautājumiem pirms aptaujas iesniegšanas.",
+          "sessionAlreadyCompletedErrorMessage": "Šī sesija jau ir pabeigta. Jūs nevarat iesniegt datus vēlreiz.",
+          "successMessage": "Aptaujas atbildes veiksmīgi saglabātas.",
+          "unknownErrorMessage": "Saglabājot aptaujas atbildes, radās kļūda. Lūdzu, mēģiniet vēlreiz."
+        }
+      },
+      "sessionCompletedCard": {
+        "title": "Pabeigta sesija?",
+        "description": "Atzīmējiet šo sesiju kā pabeigtu un pārejiet uz citām sesijām.",
+        "markAsCompleted": "Atzīmēt kā pabeigtu",
+        "completed": "Pabeigta",
+        "dialog": {
+          "title": "Atzīmēt šo sesiju kā pabeigtu?",
+          "description": "Dati, piemēram, jūsu saikne ar dabu un aptaujas atbildes, tiks saglabāti un pēc tam tos nevarēs mainīt.",
+          "cancelButton": "Atcelt",
+          "actionButton": "Glābt"
+        },
+        "sessionIdMissingErrorMessage": "Trūkst sesijas ID. Pārliecinieties, vai sesija jau ir pieejama.",
+        "notAllSectionsCompletedErrorMessage": "Lūdzu, aizpildiet visas nepieciešamās sadaļas, pirms atzīmējiet sesiju kā pabeigtu.",
+        "unknownErrorMessage": "Atzīmējot sesiju kā pabeigtu, radās kļūda. Lūdzu, mēģiniet vēlreiz.",
+        "successMessage": "Sesija, kas atzīmēta kā veiksmīgi pabeigta."
+      },
+      "sessionsAccordion": {
+        "accordionItem1": {
+          "title": "Kāpēc saglabāt dienasgrāmatu?",
+          "content": "Rakstīšana dienasgrāmatā palīdz jums izmantot visas GreenTouch izmantošanas priekšrocības. Tas atbalsta dziļāku pašapziņu un ļauj laika gaitā pārdomāt un izsekot savām domām un jūtām."
+        },
+        "accordionItem2": {
+          "title": "Kā tas darbojas?",
+          "content": "Jūsu dienasgrāmatas ieraksti ir personiski un redzami tikai jums. Viņi uzvarēja; t kopīgot ar citiem, lai gan pētnieku komanda piekļūs tiem analīzei anonīmā, konfidenciālā formā. Jūs' sesiju laikā saņems reflektējošus norādījumus, bet var arī brīvi ierakstīt visas domas, emocijas vai atziņas, īpaši no dabā pavadītā laika."
+        },
+        "accordionItem3": {
+          "title": "Ko darīt, ja es nerakstu dienasgrāmatā?",
+          "content": "Lai pārietu uz nākamo sesiju, ir nepieciešams dienasgrāmatas ieraksts, pat īss.."
+        }
+      }
+    },
+    "greentouchSessions": {
+      "demoSession": {
+        "localName": "demo-session",
+        "title": "Demo sesija",
+        "titleCapitals": "DEMONSTRĀCIJAS SESIJA",
+        "description": "GreenTouch programmas garša",
+        "labelGoal": "Mērķis:",
+        "paragraph1": "Piedāvāt īsu un pieejamu ievadu GreenTouch pieredzē, ļaujot dalībniekiem izpētīt apzinātu mirkli dabā un pārdomāt savu saikni pirms pilnas programmas uzsākšanas.",
+        "welcomeTitle": "Laipni lūdzam GreenTouch",
+        "welcomeParagraph1": "Šī īsā sesija sniedz jums programmas garšu, pirms sākat savu ceļojumu.",
+        "outdoorTaskCard": {
+          "cardTitle": "Āra uzdevums",
+          "requiredLabel": "Nepieciešams, lai aizpildītu",
+          "taskTitle": "Uzdevums",
+          "taskDescription": "Šeit ir īss jūsu uzdevuma kopsavilkums (uzmanīgi klausieties video norādes):",
+          "step1": "1. darbība",
+          "step1taskInstructions": "Veiciet apzinātu pastaigu vismaz piecas minūtes. Pārvietojieties lēnām, pamanot skatus, smaržas un skaņas.",
+          "step2": "2. darbība",
+          "step2taskInstructions": "Izvēlieties dabisku objektu, kas piesaista jūsu uzmanību. Novērojiet tā krāsu, tekstūru, smaržu un skaņu desmit vai vairāk minūtes. Iesaistieties klusās pārdomās.",
+          "step3": "3. darbība",
+          "step3taskInstructions": "Vismaz piecas minūtes dodieties pārdomātā pastaigā. Apdomā, ko šī pieredze tev stāsta par tavu saikni ar dabu."
+        },
+        "reflectionCard": {
+          "cardTitle": "Pārdomas",
+          "paragraph1": "Jūsu jautājums pārdomām:",
+          "reflectionQuestion": "Kāda bija šī pieredze man? Ko es pamanīju?",
+          "paragraph2": "Pēc uzdevuma pabeigšanas pierakstiet visas domas piezīmju grāmatiņā vai tālrunī. Kad esat reģistrējies programmā, jūs varēsiet ierakstīt savas pārdomas savā personīgajā GreenTouch dienasgrāmatā.",
+          "endMessage": "Veiksmi un baudu!"
+        },
+        "image": "/demo-session.png",
+        "breadcrumbItem1": "Sesijas",
+        "breadcrumbItem2": "Demo sesija",
+        "rightNavigationLink": "Pāriet uz 1. sesiju"
+      },
+      "session1": {
+        "localName": "session-1",
+        "title": "1. sesija",
+        "titleCapitals": "1. SESIJA",
+        "description": "Ar dabu saistītu sajūtu, domu, jūtu un atmiņu pamanīšana",
+        "labelGoal": "Mērķis:",
+        "paragraph1": "Pamodināt maigu apziņu, pamanot jūsu sensorās, emocionālās un kognitīvās reakcijas dabiskā vidē.",
+        "welcomeTitle": "Laipni lūdzam GreenTouch 1. sesijā!",
+        "welcomeParagraph1": "Dodieties savā ceļojumā, lai sazinātos ar dabu. Šī sesija koncentrējas uz jūsu personīgās saiknes ar dabu izpēti, izmantojot maņu apziņu, domas un jūtas.",
+        "welcomeParagraph2": "Pirms virzieties uz priekšu, novietojiet cilvēka figūru tur, kur jūtat, ka pašlaik esat ceļā uz saikni ar dabu.",
+        "outdoorTaskCard": {
+          "cardTitle": "Āra uzdevums",
+          "requiredLabel": "Nepieciešams, lai aizpildītu",
+          "taskTitle": "Uzdevums",
+          "taskDescription": "Šeit ir īss jūsu uzdevuma kopsavilkums (uzmanīgi klausieties video norādes):",
+          "step1taskInstructions": "Ņemiet vērā visas domas, sajūtas vai atmiņas, kas rodas, iegremdējoties dabiskā vidē. Apsveriet, kas izceļas jūsu pieredzē, atrodoties dabā. Nākamo trīs dienu laikā turpiniet pamanīt savas reakcijas uz dabu un pierakstiet tās savā GreenTouch dienasgrāmatā.",
+          "endMessage": "Veiksmi un baudu!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Iekštelpu uzdevums",
+          "requiredLabel": "Alternatīvu",
+          "taskDescription": "Šeit ir alternatīvs uzdevums, izmantojot dabas video galeriju, ja došanās ārā ir sarežģīta. Pabeidziet uzdevumu un ierakstiet par to savā dienasgrāmatā.",
+          "taskInstructions": "Noskatieties video no jebkuras sadaļas (Ūdens, Zeme, Uguns, Gaiss vai Dzīvnieki) un koncentrējieties uz savām maņām — ko jūs redzat, dzirdat un jūtat skatoties? Ļaujiet attēliem un skaņām vadīt jūsu domas, atmiņas un emocijas, pamanot, kā jūsu ķermenis reaģē uz pieredzi.",
+          "natureVideoGalleryLink": "Dabas video galerija"        
+        },
+        "image": "/session-1.png",
+        "breadcrumbItem1": "Sesijas",
+        "breadcrumbItem2": "1. sesija",
+        "leftNavigationLink": "Atpakaļ uz demo sesiju",
+        "rightNavigationLink": "Pāriet uz 2. sesiju",
+        "diaryQuestions": {
+          "question1": "Kādas domas, sajūtas vai atmiņas rodas, iegremdējoties dabiskā vidē?"
+        }
+      },
+      "session2": {
+        "localName": "session-2",
+        "title": "2. sesija",
+        "titleCapitals": "2. SESIJA",
+        "description": "Patīkama dabas objekta izpēte",
+        "labelGoal": "Mērķis:",
+        "paragraph1": "Padziļināt savu apzinātību un saikni ar dabu, rūpīgi vērojot un pārdomājot vienu dabas objektu.",
+        "welcomeTitle": "Laipni lūdzam GreenTouch 2. sesijā!",
+        "welcomeParagraph1": "Atkal ieejiet savā dabas pieredzē. Šī sesija koncentrējas uz to, kā vienkārša mijiedarbība ar dabu var uzlabot apzinātību un padziļināt saikni ar dabas pasauli.",
+        "welcomeParagraph2": "Pirms virzieties uz priekšu, novietojiet cilvēka figūru tur, kur jūtat, ka pašlaik esat ceļā uz saikni ar dabu.",
+        "outdoorTaskCard": {
+          "cardTitle": "Āra uzdevums",
+          "requiredLabel": "Nepieciešams, lai aizpildītu",
+          "taskTitle": "Uzdevums",
+          "taskDescription": "Šeit ir īss jūsu uzdevuma kopsavilkums (uzmanīgi klausieties video norādes):",
+          "step1": "1. darbība",
+          "step1taskInstructions": "Apzināta pastaiga. Lēnām vērojiet apkārtni, pamanot skatus, smaržas un skaņas.",
+          "step2": "2. darbība",
+          "step2taskInstructions": "Atrodiet dabisku objektu, kas piesaista jūsu uzmanību. Pavadiet laiku, izpētot tās detaļas — pieskārienu, krāsu, tekstūru un smaržu —, vienlaikus iesaistoties klusās pārdomās.",
+          "step3": "3. darbība",
+          "step3taskInstructions": "Atstarojoša pastaiga. Apdomā, ko šī pieredze atklāj par tavām attiecībām ar dabu. Pārdomu jautājums: Ko šī pieredze man stāsta par sevi un dabu?",
+          "endMessage": "Veiksmi un baudu!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Iekštelpu uzdevums",
+          "requiredLabel": "Alternatīvu",
+          "taskDescription": "Šeit ir alternatīvs uzdevums, izmantojot dabas video galeriju, ja došanās ārā ir sarežģīta. Pabeidziet uzdevumu un ierakstiet par to savā dienasgrāmatā.",
+          "taskInstructions": "Izvēlieties videoklipu sadaļā Zeme un koncentrējieties uz konkrētu ainas elementu, piemēram, koku, akmeni vai ainavas elementu. Vērojiet tā detaļas – krāsas, faktūras, formas – un pārdomājiet, kā šis dabas objekts liek jums justies un ko tas atklāj par jūsu saikni ar dabu.",        
+          "natureVideoGalleryLink": "Dabas video galerija"        
+        },
+        "image": "/session-2.png",
+        "breadcrumbItem1": "Sesijas",
+        "breadcrumbItem2": "2. sesija",
+        "leftNavigationLink": "Atpakaļ uz 1. sesiju",
+        "rightNavigationLink": "Pāriet uz 3. sesiju",
+        "diaryQuestions": {
+            "question1": "Ko šī pieredze man stāsta par sevi un dabu?"
+        }
+      },
+      "session3": {
+        "localName": "session-3",
+        "title": "3. sesija",
+        "titleCapitals": "3. SESIJA",
+        "description": "Iegremdēšana dabas skaņās",
+        "labelGoal": "Mērķis:",
+        "paragraph1": "Izpētīt, kā dabas skaņas ietekmē jūsu garīgo un emocionālo stāvokli, veicinot dziļāku klātbūtni un mieru.",
+        "welcomeTitle": "Laipni lūdzam GreenTouch 3. sesijā!",
+        "welcomeParagraph1": "Atkal ieejiet savā dabas pieredzē. Šī sesija koncentrējas uz dabas skaņām un to, kā tās ietekmē jūsu domas un jūtas.",
+        "welcomeParagraph2": "Pirms virzieties uz priekšu, novietojiet cilvēka figūru tur, kur jūtat, ka pašlaik esat ceļā uz saikni ar dabu.",
+        "outdoorTaskCard": {
+          "cardTitle": "Āra uzdevums",
+          "requiredLabel": "Nepieciešams, lai aizpildītu",
+          "taskTitle": "Uzdevums",
+          "taskDescription": "Šeit ir īss jūsu uzdevuma kopsavilkums (uzmanīgi klausieties video norādes):",
+          "step1": "1. darbība",
+          "step1taskInstructions": "Apzināta pastaiga. Lēnām vērojiet apkārtni, pamanot skatus, smaržas un skaņas.",
+          "step2": "2. darbība",
+          "step2taskInstructions": "Sēdiet vai stāviet ērtā vietā. Uzmanīgi klausieties apkārtējās skaņas. Izvēlieties dabisku skaņu, kas rada patīkamas sajūtas - putnus, vēju, ūdeni - un koncentrējieties uz to piecas minūtes. Ievērojiet visas domas vai emocijas, ko tas izraisa.",
+          "step3": "3. darbība",
+          "step3taskInstructions": "Atstarojoša pastaiga. Apdomā, ko šī pieredze atklāj par tavām attiecībām ar dabu. Pārdomu jautājums: Kā dabas skaņas ietekmē manas domas un jūtas?",
+          "endMessage": "Veiksmi un baudu!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Iekštelpu uzdevums",
+          "requiredLabel": "Alternatīvu",
+          "taskDescription": "Šeit ir alternatīvs uzdevums, izmantojot dabas video galeriju, ja došanās ārā ir sarežģīta. Pabeidziet uzdevumu un ierakstiet par to savā dienasgrāmatā.",
+          "taskInstructions": "Noskatieties video no sadaļas Ūdens vai Gaisa sadaļas un aizveriet acis, klausoties skaņas, ar vai bez mūzikas pavadījuma. Pievērsiet uzmanību tam, kā šīs dabiskās skaņas ietekmē jūsu domas un emocijas - vai tās nomierina, enerģiju vai atceras?",
+          "natureVideoGalleryLink": "Dabas video galerija"                
+        },
+        "image": "/session-3.png",
+        "breadcrumbItem1": "Sesijas",
+        "breadcrumbItem2": "3. sesija",
+        "leftNavigationLink": "Atpakaļ uz 2. sesiju",
+        "rightNavigationLink": "Pāriet uz 4. sesiju",
+        "diaryQuestions": {
+            "question1": "Kā dabas skaņas ietekmē manas domas un jūtas?"
+        }
+      },
+      "session4": {
+        "localName": "session-4",
+        "title": "4. sesija",
+        "titleCapitals": "4. SESIJA",
+        "description": "Cilvēku novērošana dabā",
+        "labelGoal": "Mērķis:",
+        "paragraph1": "Pārdomāt sociālās vides ietekmi uz jūsu laiku un pieredzi dabā, kā arī apzināties savas personīgās vēlmes.",
+        "welcomeTitle": "Laipni lūdzam GreenTouch 4. sesijā!",
+        "welcomeParagraph1": "Atkal ieejiet savā dabas pieredzē. Šī sesija koncentrējas uz to, kā sociālā vide ietekmē laiku, ko pavadāt dabā.",
+        "welcomeParagraph2": "Pirms virzieties uz priekšu, novietojiet cilvēka figūru tur, kur jūtat, ka pašlaik esat ceļā uz saikni ar dabu.",
+        "outdoorTaskCard": {
+          "cardTitle": "Āra uzdevums",
+          "requiredLabel": "Nepieciešams, lai aizpildītu",
+          "taskTitle": "Uzdevums",
+          "taskDescription": "Šeit ir īss jūsu uzdevuma kopsavilkums (uzmanīgi klausieties video norādes):",
+          "step1": "1. darbība",
+          "step1taskInstructions": "Apzināta pastaiga. Lēnām vērojiet apkārtni, pamanot skatus, smaržas un skaņas.",
+          "step2": "2. darbība",
+          "step2taskInstructions": "Novērojiet cilvēkus dabā. Atrodiet vietu, kur varat skatīties, kā citi mijiedarbojas ar vidi. Ievērojiet viņu aktivitātes — staigāšanu, sēdēšanu, rotaļāšanos. Pārdomājiet savus ieradumus. Vai jūs baudāt dabu vienatnē vai kopā ar citiem?",
+          "step3": "3. darbība",
+          "step3taskInstructions": "Atstarojoša pastaiga. Apdomā, ko šī pieredze atklāj par tavām attiecībām ar dabu. Pārdomu jautājums: Kā mana sociālā vide ietekmē laiku, ko pavadu dabā?",
+          "endMessage": "Veiksmi un baudu!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Iekštelpu uzdevums",
+          "requiredLabel": "Alternatīvu",
+          "taskDescription": "Šeit ir alternatīvs uzdevums, izmantojot dabas video galeriju, ja došanās ārā ir sarežģīta. Pabeidziet uzdevumu un ierakstiet par to savā dienasgrāmatā.",
+          "taskInstructions": "Izvēlieties videoklipu, kurā redzami cilvēki, kas mijiedarbojas ar dabu, piemēram, pastaigājas mežā, sēž pie upes vai vēro dzīvniekus. Novērojiet viņu uzvedību - kā viņi mijiedarbojas ar vidi? Pārdomājiet, kā citu klātbūtne ietekmē jūsu pašu uztveri par dabu.",
+          "natureVideoGalleryLink": "Dabas video galerija"        
+        },
+        "image": "/session-4.png",
+        "breadcrumbItem1": "Sesijas",
+        "breadcrumbItem2": "4. sesija",
+        "leftNavigationLink": "Atpakaļ uz 3. sesiju",
+        "rightNavigationLink": "Pāriet uz 5. sesiju",
+        "diaryQuestions": {
+            "question1": "Kā mana sociālā vide ietekmē laiku, ko pavadu dabā?"
+        }
+      },
+      "session5": {
+        "localName": "session-5",
+        "title": "5. sesija",
+        "titleCapitals": "5. SESIJA",
+        "description": "Elpošana ar dabisku objektu",
+        "labelGoal": "Mērķis:",
+        "paragraph1": "Atpazīt personīgos šķēršļus dabas saiknei un praktizēt apzinātu elpošanu, lai tos maigi pārvarētu.",
+        "welcomeTitle": "Laipni lūdzam GreenTouch 5. sesijā!",
+        "welcomeParagraph1": "Atkal ieejiet savā dabas pieredzē. Šī sesija koncentrējas uz šķēršļiem, kas var traucēt pavadīt laiku dabā, un to, kā tos pārvarēt.",
+        "welcomeParagraph2": "Pirms virzieties uz priekšu, novietojiet cilvēka figūru tur, kur jūtat, ka pašlaik esat ceļā uz saikni ar dabu.",
+        "outdoorTaskCard": {
+          "cardTitle": "Āra uzdevums",
+          "requiredLabel": "Nepieciešams, lai aizpildītu",
+          "taskTitle": "Uzdevums",
+          "taskDescription": "Šeit ir īss jūsu uzdevuma kopsavilkums (uzmanīgi klausieties video norādes):",
+          "step1": "1. darbība",
+          "step1taskInstructions": "Apzināta pastaiga. Lēnām vērojiet apkārtni, pamanot skatus, smaržas un skaņas.",
+          "step2": "2. darbība",
+          "step2taskInstructions": "Atrodiet dabisku objektu un elpojiet ar to. Turiet to rokās, sajūtiet tā tekstūru un sinhronizējiet elpu ar to - ieelpojiet četras sekundes, izelpojiet septiņas. Novērojiet, kā tas ietekmē jūsu saiknes sajūtu.",
+          "step3": "3. darbība",
+          "step3taskInstructions": "Atstarojoša pastaiga. Apdomā, ko šī pieredze atklāj par tavām attiecībām ar dabu. Pārdomu jautājumi: Kādi šķēršļi man traucē pavadīt laiku dabā un kā es tos varu pārvarēt? Kādi risinājumi šķiet reāli manam dzīvesveidam?",
+          "endMessage": "Veiksmi un baudu!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Iekštelpu uzdevums",
+          "requiredLabel": "Alternatīvu",
+          "taskDescription": "Šeit ir alternatīvs uzdevums, izmantojot dabas video galeriju, ja došanās ārā ir sarežģīta. Pabeidziet uzdevumu un ierakstiet par to savā dienasgrāmatā.",
+          "taskInstructions": "Izvēlieties videoklipu sadaļā Zeme vai Ūdens un koncentrējieties uz dabas objektu ainā, piemēram, klinti, koku vai plūstošu straumi. Skatoties, praktizējiet 4-7 elpošanu - ieelpojiet četras sekundes, izelpojiet septiņas - iedomājoties, ka jūs un objekts elpojat kopā, apmainoties ar enerģiju ar katru elpu. Pēc videoklipa pārdomājiet, kā šī pieredze lika jums justies, un apsveriet, kas varētu traucēt jums sazināties ar dabu reālajā dzīvē, kā arī veidus, kā pārvarēt šos šķēršļus.",        
+          "natureVideoGalleryLink": "Dabas video galerija"
+        },
+        "image": "/session-5.png",
+        "breadcrumbItem1": "Sesijas",
+        "breadcrumbItem2": "5. sesija",
+        "leftNavigationLink": "Atpakaļ uz 4. sesiju",
+        "rightNavigationLink": "Pāriet uz 6. sesiju",
+        "diaryQuestions": {
+            "question1": "Kādi šķēršļi man traucē pavadīt laiku dabā un kā es tos varu pārvarēt?",
+            "question2": "Kādi risinājumi šķiet reāli manam dzīvesveidam?"
+        }
+      },
+      "session6": {
+        "localName": "session-6",
+        "title": "6. sesija",
+        "titleCapitals": "6. SESIJA",
+        "description": "Dejošana ar dabu",
+        "labelGoal": "Mērķis:",
+        "paragraph1": "Izteikt savu saikni ar dabu caur kustību un noteikt personīgu nodomu stiprināt šīs attiecības laika gaitā.",
+        "welcomeTitle": "Laipni lūdzam GreenTouch 6. sesijā!",
+        "welcomeParagraph1": "Atkal ieejiet savā dabas pieredzē. Šī sesija koncentrējas uz nodomu integrēt dabu savā dzīvē.",
+        "welcomeParagraph2": "Pirms virzieties uz priekšu, novietojiet cilvēka figūru tur, kur jūtat, ka pašlaik esat ceļā uz saikni ar dabu.",
+        "outdoorTaskCard": {
+          "cardTitle": "Āra uzdevums",
+          "requiredLabel": "Nepieciešams, lai aizpildītu",
+          "taskTitle": "Uzdevums",
+          "taskDescription": "Šeit ir īss jūsu uzdevuma kopsavilkums (uzmanīgi klausieties video norādes):",
+          "step1": "1. darbība",
+          "step1taskInstructions": "Apzināta pastaiga. Lēnām vērojiet apkārtni, pamanot skatus, smaržas un skaņas.",
+          "step2": "2. darbība",
+          "step2taskInstructions": "Izvēlieties koku vai augu un novērojiet tā kustības. Spoguļojiet tās kustību ar rokām vai ķermeni - brīvi kustēties, it kā dejotu ar dabu. Ievērojiet, kā tas liek jums justies.",
+          "step3": "3. darbība",
+          "step3taskInstructions": "Atstarojoša pastaiga. Apdomā, ko šī pieredze atklāj par tavām attiecībām ar dabu. Pārdomu jautājums: Ko es apņemtos darīt nākamo trīs mēnešu laikā, lai pavadītu vairāk laika dabā?",
+          "endMessage": "Veiksmi un baudu!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Iekštelpu uzdevums",
+          "requiredLabel": "Alternatīvu",
+          "taskDescription": "Šeit ir alternatīvs uzdevums, izmantojot dabas video galeriju, ja došanās ārā ir sarežģīta. Pabeidziet uzdevumu un ierakstiet par to savā dienasgrāmatā.",
+          "taskInstructions": "Atlasiet videoklipu sadaļā Uguns, ūdens vai gaiss un koncentrējieties uz kustību tajā — viļņiem, liesmām, vēju vai plūstošiem dzīvniekiem. Mēģiniet atspoguļot šīs kustības ar rokām vai ķermeni, ļaujot sev plūst ar dabas ritmu, un pārdomājiet, kā šī kustība liek jums justies.",        
+          "natureVideoGalleryLink": "Dabas video galerija"
+        },
+        "image": "/session-6.png",
+        "breadcrumbItem1": "Sesijas",
+        "breadcrumbItem2": "6. sesija",
+        "leftNavigationLink": "Atpakaļ uz 5. sesiju",
+        "rightNavigationLink": "Pāriet uz 7. sesiju",
+        "diaryQuestions": {
+            "question1": "Ko es apņemtos darīt nākamo trīs mēnešu laikā, lai vairāk laika pavadītu dabā?"
+        }
+      },
+      "session7": {
+        "localName": "session-7",
+        "title": "7. sesija",
+        "titleCapitals": "7. SESIJA",
+        "description": "Drošas telpas atrašana dabā",
+        "labelGoal": "Mērķis:",
+        "paragraph1": "Atklāt vai iztēloties dabisku telpu, kurā jūtaties droši, mierīgi un piezemēti - personīga svētnīca turpmākai atkalsaiknei.",
+        "welcomeTitle": "Laipni lūdzam GreenTouch 7. sesijā!",
+        "welcomeParagraph1": "Atkal ieejiet savā dabas pieredzē. Šī sesija koncentrējas uz drošas un ērtas vietas atrašanu dabā, kur jūtaties kā mājās.",
+        "welcomeParagraph2": "Pirms virzieties uz priekšu, novietojiet cilvēka figūru tur, kur jūtat, ka pašlaik esat ceļā uz saikni ar dabu.",
+        "outdoorTaskCard": {
+          "cardTitle": "Āra uzdevums",
+          "requiredLabel": "Nepieciešams, lai aizpildītu",
+          "taskTitle": "Uzdevums",
+          "taskDescription": "Šeit ir īss jūsu uzdevuma kopsavilkums (uzmanīgi klausieties video norādes):",
+          "step1": "1. darbība",
+          "step1taskInstructions": "Apzināta pastaiga. Lēnām vērojiet apkārtni, pamanot skatus, smaržas un skaņas.",
+          "step2": "2. darbība",
+          "step2taskInstructions": "Atrodiet dabisku telpu, kas jūtas droša un aicinoša. Pavadiet tur laiku, pamanot, kā dažādas zonas liek jums justies - atvērtas, slēgtas, mierīgas. Ļaujiet sev pilnībā izjust telpu.",
+          "step3": "3. darbība",
+          "step3taskInstructions": "Atstarojoša pastaiga. Apdomā, ko šī pieredze atklāj par tavām attiecībām ar dabu.",
+          "endMessage": "Veiksmi un baudu!"
+        },
+        "indoorTaskCard": {
+          "cardTitle": "Iekštelpu uzdevums",
+          "requiredLabel": "Alternatīvu",
+          "taskDescription": "Šeit ir alternatīvs uzdevums, izmantojot dabas video galeriju, ja došanās ārā ir sarežģīta. Pabeidziet uzdevumu un ierakstiet par to savā dienasgrāmatā.",
+          "taskInstructions": "Izvēlieties video no jebkuras sadaļas, kas liek jums justies mierīgi un ērti, it kā tā būtu jūsu personīgā atkāpšanās. Iedomājieties, ka iekāpjat šajā vidē, sajūtat tās aizsargājošo enerģiju un pamanāt, kā jūsu ķermenis reaģē, iegremdējoties šajā pozitīvajā telpā.",
+          "natureVideoGalleryLink": "Dabas video galerija"
+        },
+        "image": "/session-7.png",
+        "breadcrumbItem1": "Sesijas",
+        "breadcrumbItem2": "7. sesija",
+        "leftNavigationLink": "Atpakaļ uz 6. sesiju"
+      }
+    }
+  },
+  "natureVideoGalleryPage": {
+    "header": {
+      "title": "Dabas video galerija"
+    },
+    "heroSection": {
+      "paragraph1": "Laipni lūdzam GreenTouch dabas video galerijā!",
+      "paragraph2": "Šeit jūs atradīsiet dabas skaņu un apskates objektu kolekciju, no kuriem katrs parāda dažādu dabas elementu unikālo skaistumu. Neatkarīgi no tā, vai jūs piesaista nomierinoša ūdens plūsma vai upju un ūdenskritumu dzīvīgā enerģija, galerijā ir kaut kas katram noskaņojumam. Uguns sprakšķ un spīd, lai sasildītu jūsu garu, gaiss čukst caur lapām un rūda zarus, un zeme atdzīvinās ar maigu soļu gurkstēšanu un dinamisku krūmu čīkstēšanu. Izbaudiet dzīvniekus to dabiskajā simfonijā, sākot no dzīvnieku zvaniem un putnu dziesmām līdz aizņemtu bišu dūņai.",
+      "paragraph3": "Izmantojiet šos ierakstus, lai ienestu ārā iekšā, ideāli piemērots atpūtai, mācībām vai dabas aktivitāšu uzlabošanai iekštelpās. Izpētiet, saglabājiet savas iecienītākās dziesmas savā dienasgrāmatā un ļaujiet dabas būtībai ienest miera un iedvesmas mirkļus jūsu dienā. Izbaudiet katra elementa unikālo burvību un ļaujiet tai atsvaidzināt jūsu prātu un garu.",
+      "label1": "Kategorijas",
+      "label2": "Skatīt vairāk"
+    },
+    "categoryPage": {
+      "breadcrumbItem1": "Dabas video galerija",
+      "soundsWithMusicTitle": "Skaņas ar mūziku",
+      "soundsWithoutMusicTitle": "Skaņas bez mūzikas",
+      "withMusicLabel": "AR MŪZIKU",
+      "withoutMusicLabel": "BEZ MŪZIKAS",
+      "categories": {
+        "water": {
+          "title": "Ūdens",
+          "heroSection": {
+            "paragraph1": "Kāpēc mēs mīlam ūdeni? Tajā ir sena maģija, kas ar saviem nomierinošajiem ritmiem aicina dvēseli. Ūdens dziļi veicina mūsu labsajūtu, izšķīdinot spriedzi un aicinot mieru. Neatkarīgi no tā, vai staigājam gar okeānu, sēžam lietus maigā pļāpāšanā vai apbrīnojam ūdenskrituma rēkšanu, mēs esam mierīgi un bijīgi. Katra straume, vilnis un piliens kļūst par atjaunošanas dziesmu. Sajūtiet vēsu strautu mieru, kas skalo nogurušās kājas, un dzirdējiet maigu strauta gurgulēšanu - mirkļus, kas mūs iezemē tagadnē, iedvesmojot apzinātību un mieru. Klausoties ūdens mūziku, jūtaties atjaunots, šūpulis dabas maigajā apskāvienā.", 
+            "paragraph2": "Izbaudiet dabas skaņas un skatus vienatnē vai mūzikas pavadījumā."
+          },
+          "videos": [
+            {
+              "title": "Maiga straume",
+              "description": "Ieejiet mierā un klausieties maigos strauta čukstus, kad tas dejo pa gludiem akmeņiem, apmierinot jūs ar savu mierīgo melodiju",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=fK1MdfyVV0o",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=q9PIoMiuuKQ"
+            },
+            {
+              "title": "Okeāna viļņi",
+              "description":
+                "Ļaujiet savām domām dreifēt, kad okeāna ritmiskie viļņi aptver krastu, spēcīgu, bet nomierinošu dabas simfoniju",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=CFoYa1EEUQs",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=t9S1ialTSpE"
+            },
+            {
+              "title": "Ūdenskritums",
+              "description":
+                "Stāviet bijībā, kad varenais ūdenskritums steidzas lejā ar uzmundrinošu spēku, tā atbalsis piepilda gaisu ar neapstrādātu enerģiju",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=vBvBOrjVgT4",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=OHnlqo7QieE"
+            }
+          ]
+        },
+
+        "fire": {
+          "title": "Uguns",
+          "heroSection": {
+            "paragraph1": "Uguns iemieso siltumu, vitalitāti un valdzinošu gaismas deju. Mēs mīlam uguni par tās siltumu un stāstiem, ko tā glabā mirgojošā mirdzumā. Tās sprakšķēšana izraisa atmiņas par kopīgiem mirkļiem, izraisot nostalģiju un brīnumu. Uguns iededz komfortu un vitalitāti, ievelkot mūs savā hipnotiskajā dejā. Iedomājieties, ka sēžat pie ugunskura zem zvaigžņu nojumes, jūtot, kā tā siltums nomierina nakts aukstumu, vai vērojiet, kā gruzdošas ogles pulsē kā sirdsdarbība klusā tumsā. Pat sveces mazā, vienmērīgā liesma čukst mieru dvēselei. Uguns skaņas mūs šūpo, izraisot drošības, pārdomu un prieka sajūtu. Klausoties to, tiek aicināts siltums, kas sniedzas dziļi, pieskaroties garam.",
+            "paragraph2": "Izbaudiet dabas skaņas un skatus vienatnē vai mūzikas pavadījumā."
+          },
+          "videos": [
+            {
+              "title": "Krakšķojošs ugunskurs",
+              "description": "Sapulcējieties apkārt un izbaudiet siltu, mājīgu ugunskura sprakšķēšanu, kur katrs pops un šņācējs stāsta par komfortu un nostalģiju",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=dOl65rSHhxw",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=YxQjCtvMpN8"
+            },
+            {
+              "title": "Sizzling uguņošana",
+              "description": "Skatieties, kā nakts atdzīvinās ar sprādzienbīstamu uguņošanu, katra no tām mirdz kā svētki debesīs",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=Ld-Grq9kUzo",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=vVmaddeotBc"
+            },
+            {
+              "title": "Sveces liesma",
+              "description": "Atpūtieties ar smalku sveces liesmas mirgošanu, tās smalkā skaņa atgādina par mieru visvienkāršākajos brīžos",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=f_F7Gz8nChg",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=ZwXK3My8cpk"
+            }
+          ]
+        },
+
+        "air": {
+          "title": "Gaiss",
+          "heroSection": {
+            "paragraph1": "Gaiss, neredzams, bet dziļš, ieelpo dzīvību mūsu pasaulē. Mēs to mīlam par čukstiem, vēja glāstu uz siltas ādas un mežonīgo, uzmundrinošo brāzmu slaucīšanu. Gaiss veicina mūsu labsajūtu ar tīru, enerģisku pieskārienu, attīra prātu un paceļ garu. Dzirdējiet vēja dziesmu kokos, lapas, kas čīkst ar stāstiem, kas nomierina un rosina zinātkāri. Vēja zvani, smalki un melodiski, rada mierīga brīnuma mirkļus. Sajūtiet, kā zāle kustas kopā ar vēju atklātā pļavā, maiga simfonija dvēselei. Tās apskāvienā mēs piedzīvojam prieku, brīvību un dziļu saikni ar dzīves plašumu.",
+            "paragraph2": "Izbaudiet dabas skaņas un skatus vienatnē vai mūzikas pavadījumā."
+          },
+          "videos": [
+            {
+              "title": "Rūstošās lapas",
+              "description": "Pastaigājieties zem kokiem un dzirdiet, kā lapas plīvo kā čukstēti noslēpumi maigā vēja apskāvienā",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=XwBe2Cvl2-k",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=JTBBP2AYpQg"
+            },
+            {
+              "title": "Vējš",
+              "description": "Stāviet klinšu virsotnē un sajūtiet vēja spēku, kas gaudo caur kanjonu, mežonīgu, nepieradinātu dziesmu, kas atbalsojas dabas varenībā",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=3SM3fjhlI1E",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=C8DYOG9vOEw"
+            },
+            {
+              "title": "Vējš zālē",
+              "description": "Atpūtieties atklātā pļavā un klausieties, kā vējš slaucās cauri augstām zālēm, maiga dziesma, kas nomierina prātu",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=c3IznVa9YPk",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=peRSFmdX6ho"
+            }
+          ]
+        },
+
+        "earth": {
+          "title": "Zemes",
+          "heroSection": {
+            "paragraph1": "Zemei ir stabils, audzinošs spēks, kuru mēs dziļi mīlam. Tas veicina mūsu labklājību, izmantojot savu iezemēto klātbūtni, savienojot mūs ar mūsu saknēm un dzīves cikliem. Soļu skaņa, kas kraukšķ lapas vai atbalsojas uz akmeņiem, rezonē ar pirmatnējo piederības sajūtu. Ejot pa meža takām, bagātīgā augsnes un zaļās augšanas smarža mūs ieskauj, iedvesmojot mūs ar mieru. Klausieties seno zaru čīkstēšanu virs galvas un sajūtiet dziļo komfortu, ko tas sniedz. Zemes maigā čīkstēšana zem kājām un klusā izturība aicina mūs apstāties, pārdomāt un atrast līdzsvaru. Zeme apskauj, atgādinot mums par stabilitāti, atjaunošanos un būšanu mājās.",
+            "paragraph2": "Izbaudiet dabas skaņas un skatus vienatnē vai mūzikas pavadījumā."
+          },
+          "videos": [
+            {
+              "title": "Lapu sega",
+              "description": "Dabas ieskautā maigā lapu čīkstēšana veido īpašu simfoniju, kas aicina apstāties, elpot un savienoties ar pašreizējo mirkli",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY"
+            },
+            {
+              "title": "Pēdas uz lapām",
+              "description": "Pastaigājieties pa meža grīdu un ļaujiet lapu kraukšķēšanai zem kājām atgādināt par dabas maigajiem cikliem un stāstiem, ko katra sezona atstāj aiz sevis",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY"
+            },
+            {
+              "title": "Pēdas uz akmeņiem",
+              "description": "Ejiet pa akmeņainu ceļu un klausieties ritmisku soļu skaņu, katra atbalss jūs iezemē, savienojot jūs ar mūžīgo, ilgstošo zemes garu",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=RzXQb2zrP54",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=oXL3vYh0qAY"
+            }
+          ]
+        },
+
+        "animals": {
+          "title": "Dzīvniekiem",
+          "heroSection": {
+            "paragraph1": "Kāpēc mēs mīlam radības, kas piepilda mežu un lauku? Viņu skaņas piepilda ainavu ar dzīvību, radot prieku un saikni. Dzīvnieki veicina mūsu labsajūtu, atgādinot mums par dabas dinamisko sirdsdarbību. Dzirdējiet smalkās kustības čūskas caur krūmu - katra skaņa ir stāsts par noslēpumu un enerģiju. Neredzamo putnu tālie zvani izraisa brīnumu, bet bites ar uzcītīgu mērķi dūmo, maigi, neatlaidīgi dziesmu. Iedomājieties, ka krēslā sēžat pie dīķa, kad vardes harmoniski čīkst, vai pamostieties putnu rīta korī, priecīgi sagaidot dienu. Šie mirkļi pacilā un iedvesmo, rezonējot ar kopīgu dzīves būtību.",
+            "paragraph2": "Izbaudiet dabas skaņas un skatus vienatnē vai mūzikas pavadījumā."
+          },
+          "videos": [
+            {
+              "title": "Buzzing bites",
+              "description": "Aizveriet acis un dzirdējiet bišu dūņu, kas dejo starp ziediem, maigu atgādinājumu par dabas harmoniju",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=WiwK6mxsOzw",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=YFwFFDFjIzc"
+            },
+            {
+              "title": "Vardes čīkstēšana",
+              "description": "Ļaujiet dziļajai, ritmiskajai varžu čīkstēšanai pavadīt jūs pie ūdens malas, dabiska serenāde saulei rietot",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=NwbfPUVtpuk",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=hMsPl53ztaM"
+            },
+            {
+              "title": "Birdsong",
+              "description": "Sveiciet rīta kori, kad putni dzied savas dinamiskās dziesmas, katrs zvans glezno gaisu ar prieku",
+              "youtubeUrlWithoutMusic": "https://www.youtube.com/watch?v=QhgdlSbdwgo",
+              "youtubeUrlWithMusic": "https://www.youtube.com/watch?v=2pYeRg16Vxc"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "newsPage": {
+    "header": {
+      "title": "Jaunumi un notikumi"
+    },
+    "heroSection": {
+      "paragraph1": "Sekojiet līdzi ceļojumam, kas dalīts GreenTouch projektā, kas apvienoja bagātinošas darbnīcas un aizraujošu āra pieredzi. Šī iniciatīva apvienoja mācībspēkus un studentus no Latvijas, Portugāles, Kipras un Slovēnijas sadarbības tīklā, veicinot ekoloģisko izpratni un dziļāku saikni ar dabu.",
+      "label1": "Atklāt"
+    },
+    "addNewsArticleDialog": {
+      "title": "Pievienot jaunu rakstu",
+      "description": "Aizpildiet detalizētu informāciju par ziņu rakstu, kuru vēlaties pievienot.",
+      "labelArticleTitle": "Nosaukums",
+      "labelArticleContent": "Saturu",
+      "cancelButton": "Atcelt",
+      "actionButton": "Izmaiņu saglabāšana",
+      "successMessage": "Ziņu raksts pievienots veiksmīgi!",
+      "errorMessage": "Pievienojot ziņu rakstu, radās kļūda. Lūdzu, mēģiniet vēlreiz."
+    },
+    "newsArticleCard": {
+      "editNewsArticleDialog": {
+        "title": "Rediģēt rakstu",
+        "description": "Aizpildiet detalizētu informāciju par ziņu rakstu, kuru vēlaties rediģēt.",
+        "labelArticleTitle": "Nosaukums",
+        "labelArticleContent": "Saturu",
+        "cancelButton": "Atcelt",
+        "actionButton": "Izmaiņu saglabāšana",
+        "successMessage": "Ziņu raksts veiksmīgi atjaunināts!",
+        "errorMessage": "Atjauninot ziņu rakstu, radās kļūda. Lūdzu, mēģiniet vēlreiz."
+      },
+      "deleteNewsArticleAlertDialog": {
+        "title": "Dzēst ziņu rakstu",
+        "description": "Vai tiešām vēlaties izdzēst šo rakstu? Šo darbību nevar atsaukt.",
+        "cancelButton": "Atcelt",
+        "actionButton": "Dzēst",
+        "successMessage": "Ziņu raksts veiksmīgi izdzēsts!",
+        "errorMessage": "Dzēšot ziņu rakstu, radās kļūda. Lūdzu, mēģiniet vēlreiz."
+      }
+    },
+    "newsArticleAdmin": {
+      "breadcrumbItem1": "Jaunumi un notikumi",
+      "backButton": "Mugura",
+      "editNewsArticleDialog": {
+        "title": "Rediģēt rakstu",
+        "cancelButton": "Atcelt",
+        "actionButton": "Izmaiņu saglabāšana"
+      },
+      "successMessage": "Ziņu raksts veiksmīgi atjaunināts!",
+      "errorMessage": "Atjauninot ziņu rakstu, radās kļūda. Lūdzu, mēģiniet vēlreiz."
+    }
+  },  
+  "resourcesPage": {
+    "header": {
+      "title": "Resursu"
+    },
+    "heroSection": {
+      "paragraph1": "Gatavojieties izpētīt resursus, kurus mēs izstrādājam GreenTouch projekta ietvaros, un apsveriet, kā tie varētu bagātināt jūsu profesionālo praksi. Neatkarīgi no tā, vai esat fakultātes loceklis, neformālais pedagogs vai praktiķis palīdzošajās profesijās, šie resursi ir paredzēti, lai veicinātu dziļāku saikni ar dabu un integrētu ekoloģisko izpratni savā darbā.",
+      "paragraph2": "Mēs īpaši mudinām topošos un praktizējošos psihologus, veselības aprūpes speciālistus un garīgās veselības un labklājības nozares pārstāvjus izmantot šos resursus, lai uzlabotu terapeitiskās pieejas un veicinātu holistisku aprūpi.",
+      "paragraph3": "Mēs ceram iedvesmot un dot jums iespēju ieviest ekoloģisko atbildību un labklājību savā profesionālajā vidē."
+    },
+    "card1": {
+      "title": "Raksti",
+      "paragraph1": "Izpētiet padziļinātākas zināšanas, lasot recenzētus zinātniskos rakstus par dabas lomu un dabas saikni, kā arī dabā balstītas un digitālas dabas intervences. Iedziļinieties pētījumos, kas izceļ šo pieeju ieguvumus un ietekmi uz labklājību un ekoloģisko izpratni.",
+      "button": "Izpētīt rakstus ->"
+    },
+    "resourcesArticlesPage": {
+      "breadcrumbItem1": "Resursu",
+      "breadcrumbItem2": "Raksti",
+      "header": {
+        "title": "Raksti"
+      },
+      "addResourceArticleDialog": {
+        "title": "Pievienot jaunu rakstu",
+        "description": "Aizpildiet detalizētu informāciju par resursu rakstu, kuru vēlaties pievienot.",
+        "labelArticleTopic": "Temats",
+        "labelArticleTopicPlaceholder": "Izvēlieties vai pievienojiet tēmu...",
+        "labelArticleTopicCommandInput": "Meklēt vai ierakstīt, lai pievienotu...",
+        "labelArticleTitle": "Nosaukums",
+        "labelArticleContent": "Saturu",
+        "labelArticleLink": "Saikne",
+        "cancelButton": "Atcelt",
+        "actionButton": "Izmaiņu saglabāšana",
+        "successMessage": "Resursu raksts pievienots veiksmīgi!",
+        "errorMessage": "Pievienojot resursu rakstu, radās kļūda. Lūdzu, mēģiniet vēlreiz."
+      },
+      "resourceArticleCard": {
+        "readArticleButton": "Lasīt rakstu",
+        "editResourceArticleDialog": {
+          "title": "Rediģēt rakstu",
+          "description": "Aizpildiet detalizētu informāciju par resursu rakstu, kuru vēlaties rediģēt.",
+          "labelArticleTopic": "Temats",
+          "labelArticleTopicPlaceholder": "Izvēlieties vai pievienojiet tēmu...",
+          "labelArticleTopicCommandInput": "Meklēt vai ierakstīt, lai pievienotu...",
+          "labelArticleTitle": "Nosaukums",
+          "labelArticleContent": "Saturu",
+          "labelArticleLink": "Saikne",
+          "cancelButton": "Atcelt",
+          "actionButton": "Izmaiņu saglabāšana",
+          "successMessage": "Resursu raksts veiksmīgi atjaunināts!",
+          "errorMessage": "Atjauninot resursu rakstu, radās kļūda. Lūdzu, mēģiniet vēlreiz."
+        },
+        "deleteResourceArticleAlertDialog": {
+          "title": "Dzēst resursu rakstu",
+          "description": "Vai tiešām vēlaties izdzēst šo rakstu? Šo darbību nevar atsaukt.",
+          "cancelButton": "Atcelt",
+          "actionButton": "Dzēst",
+          "successMessage": "Resursu raksts veiksmīgi izdzēsts!",
+          "errorMessage": "Dzēšot resursu rakstu, radās kļūda. Lūdzu, mēģiniet vēlreiz."
+        }
+      }
+    }
+  },
+  "footer": {
+    "information": "Informācija",
+    "terms": "Noteikumiem",
+    "privacyPolicy": "Privātuma politika",
+    "support": "Atbalsta",
+    "connect": "Savienot",
+    "europeanFunding": "Šo projektu finansē ES."
+  }
+}
+
