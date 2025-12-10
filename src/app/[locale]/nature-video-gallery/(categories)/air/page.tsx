@@ -13,7 +13,7 @@ export default async function AirPage() {
   }
 
   // Simulate a short delay for loading state
-  //await new Promise((resolve) => setTimeout(resolve, 10000));
+  // await new Promise((resolve) => setTimeout(resolve, 10000));
 
   return <NatureGalleryPage slug="air" />;
 }
