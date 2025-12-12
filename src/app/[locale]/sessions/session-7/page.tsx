@@ -11,6 +11,7 @@ import { getAllCompletedGreentouchSessions, getCurrentGreentouchSessionUserData 
 import FavoriteButton from "@/components/greentouch_sessions/favoriteButton";
 import SessionCompletedCard from "@/components/greentouch_sessions/sessionCompletedCard";
 import { getTranslations } from "next-intl/server";
+import { SessionPageProvider } from "@/components/greentouch_sessions/sessionPageContext";
 
 export default async function SessionSevenPage() {
     
@@ -40,6 +41,22 @@ export default async function SessionSevenPage() {
     }
 
     return(
+        <SessionPageProvider 
+            initialData={{
+                natureConnectednessValue: userData?.natureConnectedness ?? null,
+                diaryEntry: userData?.diaryEntry ?? null,
+                surveyData: {
+                outdoorTasksCount: userData?.outdoorTasksCount ?? undefined,
+                indoorTasksCount: userData?.indoorTasksCount ?? undefined,
+                physicalHealthResponse: userData?.physicalHealthResponse ?? undefined,
+                mentalHealthResponse: userData?.mentalHealthResponse ?? undefined,
+                friendsFamilyResponse: userData?.friendsFamilyResponse ?? undefined,
+                learntSomethingNewResponse: userData?.learntSomethingNewResponse ?? undefined,
+                closerToNatureResponse: userData?.closerToNatureResponse ?? undefined,
+                },
+                sessionCompleted: userData?.sessionCompleted ?? false,
+            }}
+        >
         <main className="flex flex-col items-center justify-start w-full min-h-screen bg-[#f5f5f5] text-gray-900">
 
             {/* Hero section (textual content) */}
@@ -121,8 +138,6 @@ export default async function SessionSevenPage() {
                     unknownErrorMessage: t("additionalData.natureConnectednessCard.unknownErrorMessage")
                 }}
                 greentouchSessionId={dbSession?.id} 
-                natureConnectednessValue={userData?.natureConnectedness ?? null}
-                greentouchSessionCompleted={userData?.sessionCompleted} 
             />
 
             {/* Outdoor Task Card */}
@@ -222,7 +237,7 @@ export default async function SessionSevenPage() {
                     successMessage: t("additionalData.sessionCompletedCard.successMessage")
                 }} 
                 greentouchSessionId={dbSession?.id}
-                sessionCompleted={userData?.sessionCompleted} 
+                greentouchSessionName={dbSession?.name}
             />
 
             <section className="w-full max-w-5xl mx-auto px-4 p-8 mb-10 mt-10">
@@ -242,5 +257,6 @@ export default async function SessionSevenPage() {
             </section>
 
         </main>
+        </SessionPageProvider>
     )
 }

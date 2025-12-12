@@ -13,6 +13,7 @@ import FavoriteButton from "@/components/greentouch_sessions/favoriteButton";
 import SurveyCard from "@/components/greentouch_sessions/surveyCard";
 import SessionCompletedCard from "@/components/greentouch_sessions/sessionCompletedCard";
 import { getTranslations } from "next-intl/server";
+import { SessionPageProvider } from "@/components/greentouch_sessions/sessionPageContext";
 
 export default async function SessionFivePage() {
     
@@ -30,8 +31,6 @@ export default async function SessionFivePage() {
 
     const userData = dbSession ? await getCurrentGreentouchSessionUserData(dbSession.id) : null;
     
-    const diaryEntry = userData?.diaryEntry ?? null;
-
     const now = new Date();
     const releaseDate = dbSession?.releaseDate ? new Date(dbSession.releaseDate) : null;
 
@@ -44,6 +43,22 @@ export default async function SessionFivePage() {
     }
 
     return(
+        <SessionPageProvider 
+            initialData={{
+                natureConnectednessValue: userData?.natureConnectedness ?? null,
+                diaryEntry: userData?.diaryEntry ?? null,
+                surveyData: {
+                outdoorTasksCount: userData?.outdoorTasksCount ?? undefined,
+                indoorTasksCount: userData?.indoorTasksCount ?? undefined,
+                physicalHealthResponse: userData?.physicalHealthResponse ?? undefined,
+                mentalHealthResponse: userData?.mentalHealthResponse ?? undefined,
+                friendsFamilyResponse: userData?.friendsFamilyResponse ?? undefined,
+                learntSomethingNewResponse: userData?.learntSomethingNewResponse ?? undefined,
+                closerToNatureResponse: userData?.closerToNatureResponse ?? undefined,
+                },
+                sessionCompleted: userData?.sessionCompleted ?? false,
+            }}
+        >
         <main className="flex flex-col items-center justify-start w-full min-h-screen bg-[#f5f5f5] text-gray-900">
 
             {/* Hero section (textual content) */}
@@ -131,9 +146,7 @@ export default async function SessionFivePage() {
                     successMessage: t("additionalData.natureConnectednessCard.successMessage"),
                     unknownErrorMessage: t("additionalData.natureConnectednessCard.unknownErrorMessage")
                 }}
-                greentouchSessionId={dbSession?.id} 
-                natureConnectednessValue={userData?.natureConnectedness ?? null}
-                greentouchSessionCompleted={userData?.sessionCompleted} 
+                greentouchSessionId={dbSession?.id}
             />
 
             {/* Outdoor Task Card */}
@@ -230,7 +243,7 @@ export default async function SessionFivePage() {
                     successMessage: t("additionalData.diaryCard.successMessage"),
                     unknownErrorMessage: t("additionalData.diaryCard.unknownErrorMessage")
                 }}
-                greentouchSessionId={dbSession?.id} greentouchSessionName={dbSession?.name} initialDiaryText={diaryEntry ?? undefined} 
+                greentouchSessionId={dbSession?.id} greentouchSessionName={dbSession?.name} 
             />
 
             {/* Survey Card */}
@@ -278,14 +291,6 @@ export default async function SessionFivePage() {
                     }
                 }}
                 greentouchSessionId={dbSession?.id}
-                initialOutdoorTasksResponse={userData?.outdoorTasksCount ?? undefined}
-                initialIndoorTasksResponse={userData?.indoorTasksCount ?? undefined}
-                initialPhysicalHealthResponse={userData?.physicalHealthResponse ?? undefined}
-                initialMentalHealthResponse={userData?.mentalHealthResponse ?? undefined}
-                initialFriendsFamilyResponse={userData?.friendsFamilyResponse ?? undefined}
-                initialLearntSomethingNewResponse={userData?.learntSomethingNewResponse ?? undefined}
-                initialCloserToNatureResponse={userData?.closerToNatureResponse ?? undefined}
-                greentouchSessionCompleted={userData?.sessionCompleted}
             />
 
             {/* Session Completed Card */}
@@ -307,7 +312,7 @@ export default async function SessionFivePage() {
                     successMessage: t("additionalData.sessionCompletedCard.successMessage")
                 }} 
                 greentouchSessionId={dbSession?.id}
-                sessionCompleted={userData?.sessionCompleted} 
+                greentouchSessionName={dbSession?.name}
             />
 
             <section className="w-full max-w-5xl mx-auto px-4 p-8 mb-10 mt-10">
@@ -334,5 +339,6 @@ export default async function SessionFivePage() {
             </section>
 
         </main>
+        </SessionPageProvider>
     )
 }

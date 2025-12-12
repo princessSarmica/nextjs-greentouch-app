@@ -29,6 +29,10 @@ export async function saveUserNatureConnectedness(greentouchSessionId: string, v
             where: { greentouchSessionId_userId: { greentouchSessionId, userId } },
         });
 
+        if (existingData && existingData.sessionCompleted) {
+            return { success: false, error: "Session already completed." };
+        }
+
         if (existingData) {
             await prisma.greentouchSessionUserData.update({
                 where: { greentouchSessionId_userId: { greentouchSessionId, userId } },
@@ -216,6 +220,11 @@ export async function saveSurveyData(greentouchSessionId: string, outdoorTasksCo
         const existingData = await prisma.greentouchSessionUserData.findUnique({
             where: { greentouchSessionId_userId: { greentouchSessionId, userId } },
         });
+
+        if (existingData && existingData.sessionCompleted) {
+            return { success: false, error: "Session already completed." };
+        }
+
         if (existingData) {
             await prisma.greentouchSessionUserData.update({
                 where: { greentouchSessionId_userId: { greentouchSessionId, userId } },

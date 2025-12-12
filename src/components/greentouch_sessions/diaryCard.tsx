@@ -2,10 +2,11 @@
 
 import { NotebookIcon } from "lucide-react";
 import { Textarea } from "../ui/textarea";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { LoadingButton } from "../loading-button";
 import { toast } from "sonner";
 import { saveDiaryEntry } from "@/actions/greentouch-session-user-data";
+import { useSessionPage } from "./sessionPageContext";
 
 interface SaveDiaryProps {
     diaryCardTranslations:{
@@ -24,58 +25,61 @@ interface SaveDiaryProps {
     };
     greentouchSessionId?: string;
     greentouchSessionName?: string;
-    initialDiaryText?: string[];
 }
 
-function DiaryCard({ diaryCardTranslations, greentouchSessionId, greentouchSessionName, initialDiaryText }: SaveDiaryProps) {
+export default function DiaryCard({ diaryCardTranslations, greentouchSessionId, greentouchSessionName }: SaveDiaryProps) {
 
-    const [diaryTexts, setDiaryTexts] = useState<string[]>(initialDiaryText ?? []);
+    // 1) GLOBAL STATE from SessionPageContext
+    const {
+        diaryEntry,
+        setDiaryEntry,
+    } = useSessionPage();
+
+    // 2) Local draft (for editing without immediate update of global state)
+    const [draftTexts, setDraftTexts] = useState<string[]>(diaryEntry ?? []);
     const [isLoading, setIsLoading] = useState(false);
 
+    // Synchronize draft with global state
     useEffect(() => {
-        setDiaryTexts(initialDiaryText ?? []);
-    }, [initialDiaryText]);
+        setDraftTexts(diaryEntry ?? []);
+    }, [diaryEntry]);
 
     const questions = diaryCardTranslations.diaryQuestions;
 
     const handleSubmit = async (e?: React.FormEvent) => {
-        
-        e?.preventDefault()
+        e?.preventDefault();
 
-        if (diaryTexts.every((t) => !t.trim())) return;
-
-        if(!greentouchSessionId){
+        if (!greentouchSessionId) {
             toast.error(diaryCardTranslations.sessionIdMissingErrorMessage);
-            setIsLoading(false);
             return;
         }
 
-        if(!greentouchSessionName){
+        if (!greentouchSessionName) {
             toast.error(diaryCardTranslations.sessionNameMissingErrorMessage);
-            setIsLoading(false);
             return;
         }
 
-        setIsLoading(true); 
-        
-        try { 
-            const result = await saveDiaryEntry(greentouchSessionId, greentouchSessionName, diaryTexts); 
+        setIsLoading(true);
 
-            if(result.success){ 
-                toast.success(diaryCardTranslations.successMessage); 
-            } 
-        } catch (error) { 
-                console.error("Error saving diary entry:", error); 
-                toast.error(diaryCardTranslations.unknownErrorMessage); 
-        } finally { 
-            setIsLoading(false); 
-        } 
-    }
+        try {
+            const result = await saveDiaryEntry(greentouchSessionId, greentouchSessionName, draftTexts);
+            if (result.success) {
+                toast.success(diaryCardTranslations.successMessage);
+                // 🔹 update globalnega state-a
+                setDiaryEntry([...draftTexts]);
+            }
+        } catch (error) {
+            console.error("Error saving diary entry:", error);
+            toast.error(diaryCardTranslations.unknownErrorMessage);
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
-    const hasChanges = diaryTexts.some((t, i) => t !== (initialDiaryText?.[i] ?? ""))
-    const hasContent = diaryTexts.some((t) => t.trim())
+    const hasChanges = draftTexts.some((t, i) => t !== (diaryEntry?.[i] ?? ""));
+    const hasContent = draftTexts.some((t) => t.trim());
 
-    return(
+    return (
         <section className="w-full max-w-5xl mx-auto px-4">
             <div className="bg-white rounded-lg shadow p-8">
                 <div className="flex items-center gap-2 mb-6">
@@ -86,13 +90,9 @@ function DiaryCard({ diaryCardTranslations, greentouchSessionId, greentouchSessi
                     </span>
                 </div>
 
-                <p className="text-base mb-4 text-gray-700">
-                    {diaryCardTranslations.cardDescription}
-                </p>
+                <p className="text-base mb-4 text-gray-700">{diaryCardTranslations.cardDescription}</p>
 
-                <p className="text-sm font-semibold mt-10 text-green-800">
-                    {diaryCardTranslations.cardSubtitle}
-                </p>
+                <p className="text-sm font-semibold mt-10 text-green-800">{diaryCardTranslations.cardSubtitle}</p>
 
                 {/* Line divider */}
                 <section className="w-full">
@@ -102,22 +102,20 @@ function DiaryCard({ diaryCardTranslations, greentouchSessionId, greentouchSessi
                 <div className="space-y-6 mb-6">
                     {questions && questions.length > 0 ? (
                         questions.map((q, index) => (
-                        <div key={index}>
-                            <p className="text-gray-800 font-medium mb-2">
-                                {q}
-                            </p>
-                            <Textarea
-                                id={`content-${index}`}
-                                name={`content-${index}`}
-                                value={diaryTexts[index] ?? ""}
-                                onChange={(e) => {
-                                    const newTexts = [...diaryTexts];
-                                    newTexts[index] = e.target.value;
-                                    setDiaryTexts(newTexts);
-                                }}
-                                disabled={isLoading}
-                            />
-                        </div>
+                            <div key={index}>
+                                <p className="text-gray-800 font-medium mb-2">{q}</p>
+                                <Textarea
+                                    id={`content-${index}`}
+                                    name={`content-${index}`}
+                                    value={draftTexts[index] ?? ""}
+                                    onChange={(e) => {
+                                        const newTexts = [...draftTexts];
+                                        newTexts[index] = e.target.value;
+                                        setDraftTexts(newTexts);
+                                    }}
+                                    disabled={isLoading}
+                                />
+                            </div>
                         ))
                     ) : (
                         <p className="text-gray-500 italic">{diaryCardTranslations.noQuestionsAvailable}</p>
@@ -125,11 +123,17 @@ function DiaryCard({ diaryCardTranslations, greentouchSessionId, greentouchSessi
                 </div>
 
                 <div className="flex justify-end">
-                    <LoadingButton variant={"secondary"} type="submit" onClick={handleSubmit} disabled={!hasContent || !hasChanges || isLoading} loading={isLoading}>{diaryCardTranslations.actionButton}</LoadingButton>
+                    <LoadingButton
+                        variant="secondary"
+                        type="submit"
+                        onClick={handleSubmit}
+                        disabled={!hasContent || !hasChanges || isLoading}
+                        loading={isLoading}
+                    >
+                        {diaryCardTranslations.actionButton}
+                    </LoadingButton>
                 </div>
             </div>
         </section>
-    )
+    );
 }
-
-export default DiaryCard;
