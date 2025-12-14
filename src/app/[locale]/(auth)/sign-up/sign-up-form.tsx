@@ -19,7 +19,6 @@ import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useState } from "react";
 import { passwordSchema } from "@/lib/validation";
-import { useRouter } from "next/navigation";
 import { PasswordInput } from "@/components/password-input";
 import { LoadingButton } from "@/components/loading-button";
 import Link from "next/link";
@@ -113,8 +112,6 @@ export function SignUpForm({ signUpFormTranslations }: SignUpFormProps){
 
     const [error, setError] = useState<string | null>(null);
 
-    const router = useRouter();
-
     const form = useForm<SignUpFormValues>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -149,7 +146,7 @@ export function SignUpForm({ signUpFormTranslations }: SignUpFormProps){
             setError(error.message || signUpFormTranslations.formMessages.unknownError)
         } else {
             toast.success(signUpFormTranslations.formMessages.signUpSuccessful);
-            router.push("/"); // Redirect to home page after successful sign-up
+            window.location.replace("/") // Redirect to home page after successful sign-up
         }
     }
 

@@ -21,7 +21,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { LoadingButton } from "@/components/loading-button";
 import { PasswordInput } from "@/components/password-input";
-import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 
 interface SignInFormProps {
@@ -61,8 +60,6 @@ export function SignInForm({ signInFormTranslations }: SignInFormProps) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
-    const router = useRouter();
-
     const form = useForm<SignInFormValues>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -86,7 +83,7 @@ export function SignInForm({ signInFormTranslations }: SignInFormProps) {
         if (error) {
             setError(error.message || signInFormTranslations.formMessages.unknownError)
         } else {
-            router.push("/");  
+            window.location.replace("/")
         }
     }
 

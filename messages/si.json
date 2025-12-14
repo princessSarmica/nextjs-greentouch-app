@@ -27,6 +27,10 @@
   "signInPage": {
     "title": "Vnesite podatke svojega računa in začnite raziskovati",
     "disclaimer": "V primeru izgube uporabniškega imena ali gesla se obrnite na skrbnika strežnika za pomoč.",
+    "alreadySignedIn": {
+      "title": "Že ste prijavljeni",
+      "description": "Če želite zamenjati račun, se najprej odjavite."
+    },
     "signInForm": {
       "labelUsername": "Uporabniško ime",
       "labelPassword": "Geslo",
@@ -45,6 +49,10 @@
   "signUpPage": {
     "title": "Registriraj se za program",
     "labelRequired": "* je obvezno za izpolnitev",
+    "alreadySignedUp": {
+      "title": "Videti je, da že imate račun",
+      "description": "Če želite ustvariti nov račun, se najprej odjavite."
+    },
     "signUpForm": {
       "labelName": "Ime",
       "labelSurname": "Priimek",

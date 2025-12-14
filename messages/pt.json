@@ -27,6 +27,10 @@
   "signInPage": {
     "title": "Introduza os dados da sua conta e comece a explorar",
     "disclaimer": "Caso perca o seu nome de utilizador ou palavra-passe, por favor contacte o administrador do servidor para obter assistência.",
+    "alreadySignedIn": {
+      "title": "Já iniciou sessão",
+      "description": "Se quiser mudar de conta, termine a sessão primeiro."
+    },
     "signInForm": {
       "labelUsername": "Nome de utilizador",
       "labelPassword": "Palavra-passe",
@@ -45,6 +49,10 @@
   "signUpPage": {
     "title": "Inscreva-se no programa",
     "labelRequired": "* é necessário para preencher",
+    "alreadySignedUp": {
+      "title": "Parece que já tem uma conta",
+      "description": "Se quiser criar uma nova conta, termine a sessão primeiro."
+    },
     "signUpForm": {
       "labelName": "Nome",
       "labelSurname": "Apelido",

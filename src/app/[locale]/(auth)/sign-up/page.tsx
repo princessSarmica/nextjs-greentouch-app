@@ -1,16 +1,26 @@
 import type { Metadata } from "next";
 import { SignUpForm } from "./sign-up-form";
-import { useTranslations } from "next-intl";
+import AlreadySignedUp from "./alreadySignedUp";
+import { getServerSession } from "@/lib/get-session";
+import { getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Sign up",
 };
 
-export default function SignUpPage() {
+export default async function SignUpPage() {
 
     //console.log("Sign up Page rendered");
 
-    const t = useTranslations("signUpPage");
+    const session = await getServerSession();
+         
+    if(session) {
+        return (
+            <AlreadySignedUp />
+        )
+    }
+
+    const t = await getTranslations("signUpPage");
 
     return (
         <main className="min-h-screen bg-[#f5f5f5]">

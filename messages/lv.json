@@ -27,6 +27,10 @@
   "signInPage": {
     "title": "Ievadiet sava konta informāciju un sāciet izpēti",
     "disclaimer": "Lietotājvārda vai paroles nozaudēšanas gadījumā, lūdzu, sazinieties ar servera administratoru, lai saņemtu palīdzību.",
+    "alreadySignedIn": {
+      "title": "Jūs jau esat pierakstījies",
+      "description": "Ja vēlaties mainīt kontu, lūdzu, vispirms izrakstieties."
+    },
     "signInForm": {
       "labelUsername": "Lietotājvārds",
       "labelPassword": "Parole",
@@ -45,6 +49,10 @@
   "signUpPage": {
     "title": "Reģistrējieties programmai",
     "labelRequired": "* ir nepieciešams, lai aizpildītu",
+    "alreadySignedUp": {
+      "title": "Izskatās, ka jums jau ir konts",
+      "description": "Ja vēlaties izveidot jaunu kontu, lūdzu, vispirms izrakstieties."
+    },
     "signUpForm": {
       "labelName": "Vārds",
       "labelSurname": "Uzvārds",

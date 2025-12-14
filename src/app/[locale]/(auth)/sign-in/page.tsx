@@ -1,17 +1,27 @@
 import Image from "next/image";
 import { Metadata } from "next";
 import { SignInForm } from "./sign-in-form";
-import { useTranslations } from "next-intl";
+import { getServerSession } from "@/lib/get-session";
+import AlreadySignedIn from "./alreadySignedIn";
+import { getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Sign in",
 };
 
-export default function SignInPage() {
+export default async function SignInPage() {
 
 	//console.log("Sign in Page rendered");
 
-	const t = useTranslations("signInPage");
+	const session = await getServerSession();
+	 
+	if(session) {
+		return (
+			<AlreadySignedIn />
+		)
+	}
+
+	const t = await getTranslations("signInPage");
 
     return (
 			<main className="bg-[#f5f5f5]"> 

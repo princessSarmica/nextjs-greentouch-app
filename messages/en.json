@@ -27,6 +27,10 @@
   "signInPage": {
     "title": "Enter your account details and start exploring",
     "disclaimer": "In case of losing your username or password, please contact the server administrator for assistance.",
+    "alreadySignedIn": {
+      "title": "You are already signed in",
+      "description": "If you want to switch accounts, please sign out first."
+    },
     "signInForm": {
       "labelUsername": "Username",
       "labelPassword": "Password",
@@ -45,6 +49,10 @@
   "signUpPage": {
     "title": "Register for the program",
     "labelRequired": "* is required to fill",
+    "alreadySignedUp": {
+      "title": "It appears like you already have an account",
+      "description": "If you want to create a new account, please sign out first."
+    },
     "signUpForm": {
       "labelName": "Name",
       "labelSurname": "Surname",
