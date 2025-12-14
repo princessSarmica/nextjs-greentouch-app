@@ -2,7 +2,7 @@
 
 import { LeafIcon } from "lucide-react";
 import { Slider } from "../ui/slider";
-import { LoadingButton } from "../loading-button";
+import { LoadingButton } from "../loadingButton";
 import { useState } from "react";
 import { toast } from "sonner";
 import { saveUserNatureConnectedness } from "@/actions/greentouch-session-user-data";

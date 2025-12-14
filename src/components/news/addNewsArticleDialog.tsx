@@ -17,7 +17,7 @@ import { Textarea } from "../ui/textarea";
 import { useState } from "react"; 
 import { toast } from "sonner"; 
 import AddContentCard from "../addContentCard";
-import { LoadingButton } from "../loading-button";
+import { LoadingButton } from "../loadingButton";
 import { createNewsArticle } from "@/actions/news-article";
 
 interface AddNewsArticleDialogProps {

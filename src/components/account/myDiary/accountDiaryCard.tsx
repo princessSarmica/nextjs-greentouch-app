@@ -2,7 +2,7 @@
 
 import { Textarea } from "../../ui/textarea";
 import { useEffect, useState } from "react";
-import { LoadingButton } from "../../loading-button";
+import { LoadingButton } from "../../loadingButton";
 import { toast } from "sonner";
 import { saveDiaryEntry } from "@/actions/greentouch-session-user-data";
 

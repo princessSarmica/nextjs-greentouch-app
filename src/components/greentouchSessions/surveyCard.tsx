@@ -3,7 +3,7 @@
 import { ClipboardCheckIcon } from "lucide-react";
 import { useState, useEffect, useMemo } from "react";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { LoadingButton } from "../loading-button";
+import { LoadingButton } from "../loadingButton";
 import { toast } from "sonner";
 import { saveSurveyData } from "@/actions/greentouch-session-user-data";
 import { useSessionPage } from "./sessionPageContext";

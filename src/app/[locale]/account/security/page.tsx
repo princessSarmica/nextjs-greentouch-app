@@ -1,4 +1,4 @@
-import RevokeOtherSessions from "@/components/account/security/revoke-sessions-button";
+import RevokeOtherSessions from "@/components/account/security/revokeSessionsButton";
 import { getServerSession } from "@/lib/get-session";
 import { getTranslations } from "next-intl/server";
 import { redirect } from "next/navigation";

@@ -1,8 +1,8 @@
 "use client";
 
 import { authClient } from "@/lib/auth-client";
-import AuthButtons from "./auth-buttons";
-import UserDropdown from "./user-dropdown";
+import AuthButtons from "./authButtons";
+import UserDropdown from "./userDropdown";
 import { Loader2 } from "lucide-react";
 
 export default function UserButton(){

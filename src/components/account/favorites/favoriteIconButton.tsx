@@ -4,7 +4,7 @@ import { useTransition } from "react";
 import { Heart } from "lucide-react";
 import { toast } from "sonner";
 import { removeFavoriteSession } from "@/actions/greentouch-session-user-data";
-import { LoadingButton } from "@/components/loading-button";
+import { LoadingButton } from "@/components/loadingButton";
 
 interface FavoriteIconButtonProps {
   FavoriteIconButtonTranslations: {

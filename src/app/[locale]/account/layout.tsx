@@ -1,6 +1,6 @@
-import AccountHeader from "@/components/account/account-header";
-import AccountNavbar from "@/components/account/account-navbar";
-import AccountPicture from "@/components/account/account-picture";
+import AccountHeader from "@/components/account/accountHeader";
+import AccountNavbar from "@/components/account/accountNavbar";
+import AccountPicture from "@/components/account/accountPicture";
 import { getTranslations } from "next-intl/server";
 
 export default async function Layout ({children}: Readonly<{children: React.ReactNode;}>)  {

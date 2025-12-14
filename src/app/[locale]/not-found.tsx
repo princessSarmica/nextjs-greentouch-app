@@ -1,4 +1,4 @@
-import NotFoundLeafCounter from "@/components/notFoundLeafCounter";
+import NotFoundLeafCounter from "@/components/notFound/notFoundLeafCounter";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 

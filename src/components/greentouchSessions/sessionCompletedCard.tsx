@@ -1,7 +1,7 @@
 "use client";
 
 import {useState } from "react";
-import { LoadingButton } from "../loading-button";
+import { LoadingButton } from "../loadingButton";
 import { toast } from "sonner";
 import { sessionIsCompleted } from "@/actions/greentouch-session-user-data";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";

@@ -19,8 +19,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import Link from "next/link";
-import { LoadingButton } from "@/components/loading-button";
-import { PasswordInput } from "@/components/password-input";
+import { LoadingButton } from "@/components/loadingButton";
+import { PasswordInput } from "@/components/auth/passwordInput";
 import { authClient } from "@/lib/auth-client";
 
 interface SignInFormProps {

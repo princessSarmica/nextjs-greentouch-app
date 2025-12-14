@@ -1,6 +1,6 @@
 import { getAllGreentouchSessions } from "@/actions/greentouch-session";
 import { getAllCompletedGreentouchSessions } from "@/actions/greentouch-session-user-data";
-import { ReleaseDateDialog } from "@/components/greentouch_sessions/releaseDateDialog";
+import { ReleaseDateDialog } from "@/components/greentouchSessions/releaseDateDialog";
 import { getServerSession } from "@/lib/get-session";
 import { LockIcon } from "lucide-react";
 import Image from "next/image";

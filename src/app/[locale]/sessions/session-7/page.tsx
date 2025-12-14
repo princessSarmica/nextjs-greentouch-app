@@ -3,15 +3,15 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { HouseIcon, TreeDeciduous } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SessionsAccordion } from "@/components/greentouch_sessions/sessions-accordion";
+import { SessionsAccordion } from "@/components/greentouchSessions/sessionsAccordion";
 import { getGreentouchSessionByName } from "@/actions/greentouch-session";
-import NotAvailable from "@/components/greentouch_sessions/notAvailable";
-import NatureConnectednessCard from "@/components/greentouch_sessions/natureConnectednessCard";
+import NotAvailable from "@/components/greentouchSessions/notAvailable";
+import NatureConnectednessCard from "@/components/greentouchSessions/natureConnectednessCard";
 import { getAllCompletedGreentouchSessions, getCurrentGreentouchSessionUserData } from "@/actions/greentouch-session-user-data";
-import FavoriteButton from "@/components/greentouch_sessions/favoriteButton";
-import SessionCompletedCard from "@/components/greentouch_sessions/sessionCompletedCard";
+import FavoriteButton from "@/components/greentouchSessions/favoriteButton";
+import SessionCompletedCard from "@/components/greentouchSessions/sessionCompletedCard";
 import { getTranslations } from "next-intl/server";
-import { SessionPageProvider } from "@/components/greentouch_sessions/sessionPageContext";
+import { SessionPageProvider } from "@/components/greentouchSessions/sessionPageContext";
 
 export default async function SessionSevenPage() {
     

@@ -16,7 +16,7 @@ import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea"; 
 import { useEffect, useState } from "react"; 
 import { toast } from "sonner"; 
-import { LoadingButton } from "../loading-button";
+import { LoadingButton } from "../loadingButton";
 import { updateResourcesArticle } from "@/actions/resources-article";
 import {
   Pencil as EditIcon,

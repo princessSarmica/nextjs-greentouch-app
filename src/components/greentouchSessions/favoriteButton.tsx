@@ -5,7 +5,7 @@ import { Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { favoriteSession } from "@/actions/greentouch-session-user-data";
-import { LoadingButton } from "../loading-button";
+import { LoadingButton } from "../loadingButton";
 
 interface FavoriteButtonProps {
   favoriteButtonTranslations: {

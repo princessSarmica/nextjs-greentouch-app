@@ -3,17 +3,17 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { HouseIcon, TreeDeciduous } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SessionsAccordion } from "@/components/greentouch_sessions/sessions-accordion";
-import NotAvailable from "@/components/greentouch_sessions/notAvailable";
+import { SessionsAccordion } from "@/components/greentouchSessions/sessionsAccordion";
+import NotAvailable from "@/components/greentouchSessions/notAvailable";
 import { getGreentouchSessionByName } from "@/actions/greentouch-session";
-import NatureConnectednessCard from "@/components/greentouch_sessions/natureConnectednessCard";
-import DiaryCard from "@/components/greentouch_sessions/diaryCard";
+import NatureConnectednessCard from "@/components/greentouchSessions/natureConnectednessCard";
+import DiaryCard from "@/components/greentouchSessions/diaryCard";
 import { getAllCompletedGreentouchSessions, getCurrentGreentouchSessionUserData } from "@/actions/greentouch-session-user-data";
-import FavoriteButton from "@/components/greentouch_sessions/favoriteButton";
-import SurveyCard from "@/components/greentouch_sessions/surveyCard";
-import SessionCompletedCard from "@/components/greentouch_sessions/sessionCompletedCard";
+import FavoriteButton from "@/components/greentouchSessions/favoriteButton";
+import SurveyCard from "@/components/greentouchSessions/surveyCard";
+import SessionCompletedCard from "@/components/greentouchSessions/sessionCompletedCard";
 import { getTranslations } from "next-intl/server";
-import { SessionPageProvider } from "@/components/greentouch_sessions/sessionPageContext";
+import { SessionPageProvider } from "@/components/greentouchSessions/sessionPageContext";
 
 export default async function SessionFourPage() {
     

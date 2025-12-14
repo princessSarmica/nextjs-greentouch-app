@@ -1,8 +1,8 @@
-import { HeaderHamburger } from "./header_hamburger";
-import { HeaderLogo } from "./header_logo";
-import UserButton from "./user-button";
-import HeaderNavbar from "./header_navbar";
-import HeaderLanguageSwitcher from "./header_language_switcher";
+import { HeaderHamburger } from "./headerHamburger";
+import { HeaderLogo } from "./headerLogo";
+import UserButton from "./userButton";
+import HeaderNavbar from "./headerNavbar";
+import HeaderLanguageSwitcher from "./headerLanguageSwitcher";
 
 export default function Header() {
 

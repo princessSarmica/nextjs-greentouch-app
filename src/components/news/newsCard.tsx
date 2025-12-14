@@ -2,7 +2,7 @@ import { Card, CardContent, CardFooter } from "../ui/card";
 import Image from "next/image";
 import { NewsArticle } from "@prisma/client";
 import Link from "next/link";
-import { DeleteNewsAlertDialog } from "../deleteNewsAlertDialog";
+import { DeleteNewsAlertDialog } from "./deleteNewsAlertDialog";
 import EditNewsArticleDialog from "./editNewsArticleDialog";
 import { useTranslations } from "next-intl";
 

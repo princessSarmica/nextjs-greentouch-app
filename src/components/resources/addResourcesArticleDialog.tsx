@@ -18,7 +18,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { createResourcesArticle } from "@/actions/resources-article";
 import AddContentCard from "../addContentCard";
-import { LoadingButton } from "../loading-button";
+import { LoadingButton } from "../loadingButton";
 import ComboboxTopic from "../ui/combobox-topic";
 
 export default function AddResourcesArticleDialog({

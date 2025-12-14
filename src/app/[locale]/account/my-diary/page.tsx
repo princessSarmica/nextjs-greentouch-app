@@ -1,7 +1,7 @@
 import { getServerSession } from "@/lib/get-session";
 import { redirect } from "next/navigation";
 import { getAllDiaryEntries } from "@/actions/greentouch-session-user-data";
-import AccountDiaryCard from "@/components/account/my-diary/accountDiaryCard";
+import AccountDiaryCard from "@/components/account/myDiary/accountDiaryCard";
 import { getTranslations } from "next-intl/server";
 
 export default async function MyDiary() {

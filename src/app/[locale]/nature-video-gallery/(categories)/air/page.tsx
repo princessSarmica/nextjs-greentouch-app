@@ -1,4 +1,4 @@
-import NatureGalleryPage from "@/components/natureVideoGalleryCategoryPage";
+import NatureGalleryPage from "@/components/natureVideoGallery/natureVideoGalleryCategoryPage";
 import { getServerSession } from "@/lib/get-session";
 import { redirect } from "next/navigation";
 

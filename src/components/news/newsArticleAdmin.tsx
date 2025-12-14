@@ -7,7 +7,7 @@ import { authClient } from "@/lib/auth-client";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
-import { LoadingButton } from "../loading-button";
+import { LoadingButton } from "../loadingButton";
 import { toast } from "sonner";
 import { updateNewsArticle } from "@/actions/news-article";
 import { useRouter } from "next/navigation";

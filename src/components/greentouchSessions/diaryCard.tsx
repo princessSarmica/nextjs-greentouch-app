@@ -3,7 +3,7 @@
 import { NotebookIcon } from "lucide-react";
 import { Textarea } from "../ui/textarea";
 import { useState, useEffect } from "react";
-import { LoadingButton } from "../loading-button";
+import { LoadingButton } from "../loadingButton";
 import { toast } from "sonner";
 import { saveDiaryEntry } from "@/actions/greentouch-session-user-data";
 import { useSessionPage } from "./sessionPageContext";
