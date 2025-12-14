@@ -962,7 +962,6 @@
     "cookieLocalePurpose": "Shranjuje izbrani jezik spletnega mesta.",
     "cookieValiditySession": "Seja",
     "cookieValidityYear": "1 leto",
-    "cookieNote": "Opomba: Vsi zgornji piškotki so 1st-party (lastni piškotki GreenToucha).",
 
     "section3B": "B. Analitični piškotki",
     "section3BText": "Če jih v prihodnosti dodamo (npr. Plausible ali Google Analytics), bodo navedeni tukaj. Trenutno NE uporabljamo analitičnih ali marketinških piškotkov.",

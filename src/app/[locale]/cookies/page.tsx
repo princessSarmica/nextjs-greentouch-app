@@ -75,10 +75,6 @@ export default async function CookiesPage() {
             </table>
           </div>
 
-          <p className="mt-3 text-sm text-slate-600">
-            <strong>{t("cookieNote")}</strong>
-          </p>
-
           {/* B. ANALYTICS */}
           <h3 className="!font-semibold mt-10">{t("section3B")}</h3>
           <p>{t("section3BText")}</p>
