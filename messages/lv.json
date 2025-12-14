@@ -27,7 +27,8 @@
   "errorPage": {
     "title": "Kaut kas nogāja greizi",
     "description": "Notika negaidīta kļūda. Lūdzu, mēģiniet vēlreiz vēlāk.",
-    "returnHome": "Atgriezties sākumlapā"
+    "returnHome": "Atgriezties sākumlapā",
+    "buttonTryAgain": "Mēģiniet vēlreiz"
   },
   "signInPage": {
     "title": "Ievadiet sava konta informāciju un sāciet izpēti",

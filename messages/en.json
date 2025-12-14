@@ -27,7 +27,8 @@
   "errorPage": {
     "title": "Something went wrong",
     "description": "An unexpected error has occurred. Please try again later.",
-    "returnHome": "Return Home"
+    "returnHome": "Return Home",
+    "buttonTryAgain": "Try again"
   },
   "signInPage": {
     "title": "Enter your account details and start exploring",

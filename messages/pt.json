@@ -27,7 +27,8 @@
   "errorPage": {
     "title": "Algo correu mal",
     "description": "Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.",
-    "returnHome": "Voltar à página inicial"
+    "returnHome": "Voltar à página inicial",
+    "buttonTryAgain": "Tente novamente"
   },
   "signInPage": {
     "title": "Introduza os dados da sua conta e comece a explorar",

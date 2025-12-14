@@ -27,7 +27,8 @@
   "errorPage": {
     "title": "Nekaj je šlo narobe",
     "description": "Prišlo je do nepričakovane napake. Prosimo, poskusite znova kasneje.",
-    "returnHome": "Nazaj na domačo stran"
+    "returnHome": "Nazaj na domačo stran",
+    "buttonTryAgain": "Poskusi znova"
   },
   "signInPage": {
     "title": "Vnesite podatke svojega računa in začnite raziskovati",
