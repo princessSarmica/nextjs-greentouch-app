@@ -24,6 +24,11 @@
     "title": "Stran, ki jo iščete, se je skrila v gozdu",
     "returnHome": "Pojdi domov"
   },
+  "errorPage": {
+    "title": "Nekaj je šlo narobe",
+    "description": "Prišlo je do nepričakovane napake. Prosimo, poskusite znova kasneje.",
+    "returnHome": "Nazaj na domačo stran"
+  },
   "signInPage": {
     "title": "Vnesite podatke svojega računa in začnite raziskovati",
     "disclaimer": "V primeru izgube uporabniškega imena ali gesla se obrnite na skrbnika strežnika za pomoč.",

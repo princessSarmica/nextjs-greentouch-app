@@ -24,6 +24,11 @@
     "title": "Meklētā lapa ir paslēpta mežā",
     "returnHome": "Atgriezties mājās"
   },
+  "errorPage": {
+    "title": "Kaut kas nogāja greizi",
+    "description": "Notika negaidīta kļūda. Lūdzu, mēģiniet vēlreiz vēlāk.",
+    "returnHome": "Atgriezties sākumlapā"
+  },
   "signInPage": {
     "title": "Ievadiet sava konta informāciju un sāciet izpēti",
     "disclaimer": "Lietotājvārda vai paroles nozaudēšanas gadījumā, lūdzu, sazinieties ar servera administratoru, lai saņemtu palīdzību.",

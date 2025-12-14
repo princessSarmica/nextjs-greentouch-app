@@ -24,6 +24,11 @@
     "title": "A página que procuras está escondida na floresta",
     "returnHome": "Regresso a Casa"
   },
+  "errorPage": {
+    "title": "Algo correu mal",
+    "description": "Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.",
+    "returnHome": "Voltar à página inicial"
+  },
   "signInPage": {
     "title": "Introduza os dados da sua conta e comece a explorar",
     "disclaimer": "Caso perca o seu nome de utilizador ou palavra-passe, por favor contacte o administrador do servidor para obter assistência.",
