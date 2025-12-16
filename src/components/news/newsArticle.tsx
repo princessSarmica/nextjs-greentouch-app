@@ -1,6 +1,8 @@
 import { getNewsArticle } from "@/actions/news-article";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 export default async function NewsArticle({params}: { params: Promise<{ newsArticleId: string }> }) {
 
@@ -8,6 +10,11 @@ export default async function NewsArticle({params}: { params: Promise<{ newsArti
   
     const newsArticleId = (await params).newsArticleId;
     const article = await getNewsArticle(newsArticleId);
+    if (!article) {
+        notFound();
+    }
+
+    const t = await getTranslations("newsPage.newsArticle");
 
     // Date formatting
     const formattedDate = new Intl.DateTimeFormat("en-GB", {
@@ -22,7 +29,7 @@ export default async function NewsArticle({params}: { params: Promise<{ newsArti
 
             <div className="text-sm text-gray-500 mb-2">
                 <Link href="/news" className="text-[#1F566E] hover:underline font-medium">
-                    News and Events
+                    {t("breadcrumbItem1")}
                 </Link>
                 <span className="mx-2">&gt;</span>
                 <span>{article.title}</span>
@@ -39,7 +46,7 @@ export default async function NewsArticle({params}: { params: Promise<{ newsArti
                         className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900"
                     >
                         <ArrowLeft className="size-4" />
-                        Back
+                        {t("backButton")}
                     </Link>
                 </nav>
 

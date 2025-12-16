@@ -127,6 +127,7 @@
     },
     "profilePage": {
       "trackYourProgress": "Sekojiet līdzi savam progresam",
+      "fetchErrorMessage": "Iegūstot profila datus, radās kļūda. Lūdzu, mēģiniet vēlreiz.",
       "sessionsCompletionCard": {
         "sessionsCompletionTitle": "Sesiju pabeigšana",
         "completedSessions": "Pabeigtās sesijas",
@@ -142,12 +143,14 @@
       "accountDiaryCard": {
         "sessionIdMissingErrorMessage": "Trūkst sesijas ID. Pārliecinieties, vai sesija jau ir pieejama.",
         "sessionNameMissingErrorMessage": "Trūkst sesijas nosaukuma. Pārliecinieties, vai sesija jau ir pieejama.",
+        "fetchErrorMessage": "Iegūstot dienasgrāmatas ierakstus, radās kļūda. Lūdzu, mēģiniet vēlreiz.",
         "saveErrorMessage": "Saglabājot dienasgrāmatas ierakstu, radās kļūda. Lūdzu, mēģiniet vēlreiz.",
         "successMessage": "Dienasgrāmatas ieraksts veiksmīgi saglabāts."
       }
     },
     "favoritesPage": {
       "noFavoritesMessage": "Jūs vēl neesat pievienojis nevienu sesiju izlasei.",
+      "fetchErrorMessage": "Iegūstot iecienītās sesijas, radās kļūda. Lūdzu, mēģiniet vēlreiz.",
       "favoriteIconButton": {
         "sessionNameMissingErrorMessage": "Trūkst sesijas nosaukuma. Pārliecinieties, vai sesija jau ir pieejama.",
         "unknownErrorMessage": "Atjauninot iecienītāko, kaut kas nogāja greizi.",
@@ -862,6 +865,10 @@
         "successMessage": "Ziņu raksts veiksmīgi izdzēsts!",
         "errorMessage": "Dzēšot ziņu rakstu, radās kļūda. Lūdzu, mēģiniet vēlreiz."
       }
+    },
+    "newsArticle": {
+      "breadcrumbItem1": "Jaunumi un notikumi",
+      "backButton": "Atpakaļ"
     },
     "newsArticleAdmin": {
       "breadcrumbItem1": "Jaunumi un notikumi",

@@ -26,7 +26,10 @@ export async function getCurrentGreentouchSessionUserData(greentouchSessionId: s
 export async function saveUserNatureConnectedness(greentouchSessionId: string, value: number) {
     try {   
         const session = await getServerSession();
-        if (!session) throw new Error("User not authenticated");
+        if (!session) {
+            console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
+        }
 
         const userId = session.user.id;
 
@@ -63,7 +66,10 @@ export async function saveUserNatureConnectedness(greentouchSessionId: string, v
 export async function getAllCompletedSessionsNumberInfo() {
     try {
         const session = await getServerSession();
-        if (!session) throw new Error("User not authenticated");
+        if (!session) {
+            console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
+        }
 
         const userId = session.user.id;
 
@@ -71,17 +77,20 @@ export async function getAllCompletedSessionsNumberInfo() {
             where: { userId, sessionCompleted: true },
         });
 
-        return completedSessions;
+        return {success: true, completedSessions};
     } catch (error) {
         console.error("Error fetching completed sessions number info:", error);
-        throw new Error("Failed to fetch completed sessions number info");
+        return {success: false, completedSessions: 0, error: "Failed to fetch completed sessions number info."};
     }
 }
 
 export async function getAllNatureConnectednessInfo() {
     try {
         const session = await getServerSession();
-        if (!session) throw new Error("User not authenticated");
+        if (!session) {
+          console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
+        }
 
         const userId = session.user.id;
         const userData = await prisma.greentouchSessionUserData.findMany({
@@ -94,22 +103,25 @@ export async function getAllNatureConnectednessInfo() {
             orderBy: { greentouchSession: { name: 'asc' } },
         });
 
-        return userData.map((data, index) => ({
+        return {success: true, userData: userData.map((data, index) => ({
             id: index,
             greentouchSessionName: data.greentouchSession.name,
             natureConnectednessValue: data.natureConnectedness ?? 0,
             natureConnectednessCreatedAt: data.natureConnectednessCreatedAt,
-        }));
+        }))};
     } catch (error) {
         console.error("Error fetching nature connectedness info:", error);
-        throw new Error("Failed to fetch nature connectedness info");
+        return {success: false, error: "Failed to fetch nature connectedness info."};
     }
 }
 
 export async function saveDiaryEntry(greentouchSessionId: string, greentouchSessionName: string, diaryTexts: string[]) {
     try {
         const session = await getServerSession();
-        if (!session) throw new Error("User not authenticated");
+        if (!session) {
+          console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
+        }
 
         const userId = session.user.id;
 
@@ -143,7 +155,10 @@ export async function saveDiaryEntry(greentouchSessionId: string, greentouchSess
 export async function getAllDiaryEntries() {
     try {
         const session = await getServerSession();
-        if (!session) throw new Error("User not authenticated");
+        if (!session) {
+            console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
+        }
 
         const userId = session.user.id;
 
@@ -157,21 +172,24 @@ export async function getAllDiaryEntries() {
             orderBy: { greentouchSession: { name: 'asc' } },
         });
 
-        return userData.map((item) => ({
+        return {success: true, userData: userData.map((item) => ({
             greentouchSessionId: item.greentouchSessionId,
             greentouchSessionName: item.greentouchSession.name,
             initialDiaryText: item.diaryEntry,
-        }));
+        }))};
     } catch (error) {
         console.error("Error fetching diary entries:", error);
-        throw new Error("Failed to fetch diary entries");
+        return {success: false, error: "Failed to fetch diary entries."};
     }
 }
 
 export async function favoriteSession(greentouchSessionId: string, isFavorite: boolean) {
     try {
         const session = await getServerSession();
-        if (!session) throw new Error("User not authenticated");
+        if (!session) {
+          console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
+        }
         const userId = session.user.id;
 
         const existingData = await prisma.greentouchSessionUserData.findUnique({
@@ -203,7 +221,10 @@ export async function favoriteSession(greentouchSessionId: string, isFavorite: b
 export async function getAllFavoriteSessions() {
     try {
         const session = await getServerSession();
-        if (!session) throw new Error("User not authenticated");
+        if (!session) {
+            console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
+        }
 
         const userId = session.user.id;
 
@@ -212,17 +233,20 @@ export async function getAllFavoriteSessions() {
             orderBy: { name: 'asc' },
         });
 
-        return favoriteSessions;
+        return {success: true, favoriteSessions};
     } catch (error) {
         console.error("Error fetching favorite sessions:", error);
-        throw new Error("Failed to fetch favorite sessions");
+        return {success: false, error: "Failed to fetch favorite sessions."};
     }
 }
 
 export async function removeFavoriteSession(greentouchSessionName: string) {
     try {
         const session = await getServerSession();
-        if (!session) throw new Error("User not authenticated");
+        if (!session) {
+          console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
+        }
         const userId = session.user.id;
         await prisma.greentouchSessionUserData.updateMany({
             where: { greentouchSession: { name: greentouchSessionName }, userId },
@@ -239,7 +263,10 @@ export async function removeFavoriteSession(greentouchSessionName: string) {
 export async function saveSurveyData(greentouchSessionId: string, outdoorTasksCount: string, indoorTasksCount: string, physicalHealthResponse: string, mentalHealthResponse: string, friendsFamilyResponse: string, learntSomethingNewResponse: string, closerToNatureResponse: string) {
     try {
         const session = await getServerSession();
-        if (!session) throw new Error("User not authenticated");
+        if (!session) {
+          console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
+        }
         const userId = session.user.id;
 
         const existingData = await prisma.greentouchSessionUserData.findUnique({
@@ -282,14 +309,17 @@ export async function saveSurveyData(greentouchSessionId: string, outdoorTasksCo
         return { success: true };
     } catch (error) {
         console.error("Error saving survey data:", error);
-        throw new Error("Failed to save survey data.");
+        return { success: false, error: "Failed to save survey data." };
     }
 }
 
 export async function sessionIsCompleted(greentouchSessionId: string) {
     try {
         const session = await getServerSession();
-        if (!session) throw new Error("User not authenticated");
+        if (!session) {
+            console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
+        }
         const userId = session.user.id;
 
         const existingData = await prisma.greentouchSessionUserData.findUnique({
@@ -302,7 +332,8 @@ export async function sessionIsCompleted(greentouchSessionId: string) {
         });
 
         if (existingData?.sessionCompleted) {
-            throw new Error("Session already completed");
+            console.error("Session already completed");
+            return {success:false, error: "Session already completed"};
         }
 
         const sessionName = sessionRecord?.name ?? "";
@@ -330,7 +361,8 @@ export async function sessionIsCompleted(greentouchSessionId: string) {
                 revalidatePath(`/sessions/`);
                 return { success: true };
             } else {
-                throw new Error("Cannot complete session. All required data not provided.");
+                console.error("Cannot complete session. User data not found.");
+                return {success:false, error: "User data not found"};
             }
         } else {
             // For other sessions, just require natureConnectedness
@@ -344,7 +376,8 @@ export async function sessionIsCompleted(greentouchSessionId: string) {
                 revalidatePath(`/sessions/`);
                 return { success: true };
             } else {
-                throw new Error("Cannot complete session. User data not found.");
+                console.error("Cannot complete session. Nature connectedness data not found.");
+                return {success:false, error: "Nature connectedness data not found"};
             }
         }
     } catch (error) {

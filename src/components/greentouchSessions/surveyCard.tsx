@@ -139,6 +139,9 @@ export default function SurveyCard({ surveyCardTranslations, greentouchSessionId
                     closerToNatureResponse: responses.closerToNature,
                 });
             }
+            else {
+                toast.error(surveyCardTranslations.messages.unknownErrorMessage);
+            }
         } catch (error) {
             console.error(error);
             toast.error(surveyCardTranslations.messages.unknownErrorMessage);

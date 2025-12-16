@@ -8,12 +8,14 @@ export async function createNewsArticle(title: string, content: string) {
     try {
         const session = await getServerSession();
 
-        if(!session) {
-             throw new Error("Unauthenticated");
+        if (!session) {
+            console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
         }
         
         if(session.user.role !== "admin") {
-            throw new Error("Unauthorized");
+            console.error("Unauthorized access attempt");
+            return {success:false, error: "Unauthorized"};
         }
 
         const userId = session.user.id;
@@ -41,7 +43,7 @@ export async function getNewsArticle(id: string) {
         })
 
         if (!newsArticle) {
-            throw new Error("News article not found");
+            return null;
         }
 
         return newsArticle;
@@ -69,12 +71,14 @@ export async function updateNewsArticle(id: string, title: string, content: stri
     try {
         const session = await getServerSession();
 
-        if(!session) {
-            throw new Error("Unauthenticated");
+        if (!session) {
+            console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
         }
 
         if(session.user.role !== "admin") {
-            throw new Error("Unauthorized");
+            console.error("Unauthorized access attempt");
+            return {success:false, error: "Unauthorized"};
         }
 
         const newsArticle = await prisma.newsArticle.findUnique({
@@ -82,7 +86,7 @@ export async function updateNewsArticle(id: string, title: string, content: stri
         })
 
         if (!newsArticle) {
-            throw new Error("News article not found");
+            return { success: false, error: "News article not found" };
         }
 
         const updatedArticle = await prisma.newsArticle.update({
@@ -102,12 +106,14 @@ export async function deleteNewsArticle(newsArticleId: string) {
     try {
         const session = await getServerSession();
 
-        if(!session) {
-            throw new Error("Unauthenticated");
+        if (!session) {
+            console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
         }
         
         if(session.user.role !== "admin") {
-            throw new Error("Unauthorized");
+            console.error("Unauthorized access attempt");
+            return {success:false, error: "Unauthorized"};
         }
 
         const newsArticle = await prisma.newsArticle.findUnique({
@@ -115,7 +121,7 @@ export async function deleteNewsArticle(newsArticleId: string) {
         })
 
         if (!newsArticle) {
-            throw new Error("News article not found");
+            return { success: false, error: "News article not found" };
         }
 
         await prisma.newsArticle.delete({

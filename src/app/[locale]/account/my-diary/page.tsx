@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { getAllDiaryEntries } from "@/actions/greentouch-session-user-data";
 import AccountDiaryCard from "@/components/account/myDiary/accountDiaryCard";
 import { getTranslations } from "next-intl/server";
+import { toast } from "sonner";
 
 export default async function MyDiary() {
   const session = await getServerSession();
@@ -14,8 +15,12 @@ export default async function MyDiary() {
   const t = await getTranslations();
 
   const allSessionData = await getAllDiaryEntries();
+  if (allSessionData.success === false) {
+    console.error("Error fetching diary entries:", allSessionData.error);
+    toast.error(t("accountPage.myDiaryPage.fetchErrorMessage"));
+  }
 
-  if (!allSessionData.length) {
+  if (!allSessionData.userData?.length) {
     return (
       <div className="text-center pt-12">
         <p className="text-gray-500 italic">
@@ -27,7 +32,7 @@ export default async function MyDiary() {
 
   return (
     <div className="w-full max-w-5xl mx-auto py-12 space-y-12">
-      {allSessionData.map((sessionData) => {
+      {allSessionData.userData.map((sessionData) => {
         const normalizedName = sessionData.greentouchSessionName.replace(/[^a-zA-Z0-9]/g, "");
 
         const diaryQuestions = [

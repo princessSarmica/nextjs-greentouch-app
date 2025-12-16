@@ -127,6 +127,7 @@
     },
     "profilePage": {
       "trackYourProgress": "Track your progress",
+      "fetchErrorMessage":"An error occurred while fetching profile data. Please try again.",
       "sessionsCompletionCard": {
         "sessionsCompletionTitle": "Sessions Completion",
         "completedSessions": "Completed Sessions",
@@ -142,12 +143,14 @@
       "accountDiaryCard": {
         "sessionIdMissingErrorMessage": "Session ID is missing. Make sure the session is already available.",
         "sessionNameMissingErrorMessage": "Session name is missing. Make sure the session is already available.",
+        "fetchErrorMessage": "An error occurred while fetching diary entries. Please try again.",
         "saveErrorMessage": "An error occurred while saving the diary entry. Please try again.",
         "successMessage": "Diary entry saved successfully."
       }
     },
     "favoritesPage": {
       "noFavoritesMessage": "You have not added any sessions to your favorites yet.",
+      "fetchErrorMessage":"An error occurred while fetching favorite sessions. Please try again.",
       "favoriteIconButton": {
         "sessionNameMissingErrorMessage": "Session name is missing. Make sure the session is already available.",
         "unknownErrorMessage": "Something went wrong while updating favorite.",
@@ -862,6 +865,10 @@
         "successMessage": "News article deleted successfully!",
         "errorMessage": "An error occurred while deleting the news article. Please try again."
       }
+    },
+    "newsArticle": {
+      "breadcrumbItem1": "News and Events",
+      "backButton": "Back"
     },
     "newsArticleAdmin": {
       "breadcrumbItem1": "News and Events",

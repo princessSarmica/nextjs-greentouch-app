@@ -127,6 +127,7 @@
     },
     "profilePage": {
       "trackYourProgress": "Acompanha o teu progresso",
+      "fetchErrorMessage": "Ocorreu um erro ao obter os dados do perfil. Por favor, tente novamente.",
       "sessionsCompletionCard": {
         "sessionsCompletionTitle": "Conclusão das Sessões",
         "completedSessions": "Sessões Concluídas",
@@ -142,12 +143,14 @@
       "accountDiaryCard": {
         "sessionIdMissingErrorMessage": "O ID da sessão está em falta. Certifica-te de que a sessão já está disponível.",
         "sessionNameMissingErrorMessage": "O nome da sessão está em falta. Certifica-te de que a sessão já está disponível.",
+        "fetchErrorMessage": "Ocorreu um erro ao obter as entradas do diário. Por favor, tente novamente.",
         "saveErrorMessage": "Ocorreu um erro ao guardar a entrada do diário. Por favor, tente novamente.",
         "successMessage": "Entrada do diário guardada com sucesso."
       }
     },
     "favoritesPage": {
       "noFavoritesMessage": "Ainda não adicionaste nenhuma sessão aos teus favoritos.",
+      "fetchErrorMessage": "Ocorreu um erro ao obter as sessões favoritas. Por favor, tente novamente.",
       "favoriteIconButton": {
         "sessionNameMissingErrorMessage": "O nome da sessão está em falta. Certifica-te de que a sessão já está disponível.",
         "unknownErrorMessage": "Algo correu mal ao atualizar o favorito.",
@@ -862,6 +865,10 @@
         "successMessage": "Artigo de notícia eliminado com sucesso!",
         "errorMessage": "Ocorreu um erro ao apagar o artigo de notícias. Por favor, tente novamente."
       }
+    },
+    "newsArticle": {
+      "breadcrumbItem1": "Notícias e Eventos",
+      "backButton": "Voltar"
     },
     "newsArticleAdmin": {
       "breadcrumbItem1": "Notícias e Eventos",

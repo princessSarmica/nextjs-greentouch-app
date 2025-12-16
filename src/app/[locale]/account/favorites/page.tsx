@@ -3,6 +3,7 @@ import FavoritedSessionCard from "@/components/account/favorites/favoritedSessio
 import { getServerSession } from "@/lib/get-session";
 import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
+import { toast } from "sonner";
 
 export default async function Favorites() {
   const session = await getServerSession();
@@ -14,8 +15,12 @@ export default async function Favorites() {
   const t = await getTranslations();
 
   const favoritedSessions = await getAllFavoriteSessions();
+  if (favoritedSessions.success === false) {
+    console.error("Error fetching favorite sessions:", favoritedSessions.error);
+    toast.error(t("accountPage.favoritesPage.fetchErrorMessage"));
+  }
 
-  if (!favoritedSessions.length) {
+  if (!favoritedSessions.favoriteSessions?.length) {
     return (
       <div className="text-center pt-12">
         <p className="text-gray-500 italic">
@@ -25,7 +30,7 @@ export default async function Favorites() {
     );
   }
 
-  const favoriteSessionDetails = favoritedSessions
+  const favoriteSessionDetails = favoritedSessions.favoriteSessions
   .map((fav) => {
     const normalizedName = fav.name.replace(/[^a-zA-Z0-9]/g, "");
 

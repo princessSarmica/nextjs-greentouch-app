@@ -8,12 +8,14 @@ export async function setGreentouchSessionReleaseDate(name: string, releaseDate:
   try {
     const session = await getServerSession();
 
-    if(!session) {
-        throw new Error("Unauthenticated");
+    if (!session) {
+        console.error("User not authenticated");
+        return {success:false, error: "User not authenticated"};
     }
     
     if(session.user.role !== "admin") {
-        throw new Error("Unauthorized");
+        console.error("Unauthorized access attempt");
+        return {success:false, error: "Unauthorized"};
     }
 
     const greentouchSession = await prisma.greentouchSession.upsert({

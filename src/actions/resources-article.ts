@@ -8,12 +8,14 @@ export async function createResourcesArticle(topic: string, title: string, conte
     try {
         const session = await getServerSession();
 
-        if(!session) {
-            throw new Error("Unauthenticated");
+        if (!session) {
+            console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
         }
         
         if(session.user.role !== "admin") {
-            throw new Error("Unauthorized");
+            console.error("Unauthorized access attempt");
+            return {success:false, error: "Unauthorized"};
         }
 
         const userId = session.user.id;
@@ -55,11 +57,13 @@ export async function updateResourcesArticle(id: string, topic: string, title: s
         const session = await getServerSession();
 
         if(!session) {
-            throw new Error("Unauthenticated");
+            console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
         }
 
         if(session.user.role !== "admin") {
-            throw new Error("Unauthorized");
+            console.error("Unauthorized access attempt");
+            return {success:false, error: "Unauthorized"};
         }
 
         const resourcesArticle = await prisma.resourcesArticle.findUnique({
@@ -67,7 +71,7 @@ export async function updateResourcesArticle(id: string, topic: string, title: s
         })
 
         if (!resourcesArticle) {
-            throw new Error("Resources article not found");
+            return { success: false, error: "Resources article not found" };
         }
 
         const updatedArticle = await prisma.resourcesArticle.update({
@@ -88,11 +92,12 @@ export async function deleteResourcesArticle(resourcesArticleId: string) {
         const session = await getServerSession();
 
         if(!session) {
-            throw new Error("Unauthenticated");
+            console.error("User not authenticated");
+            return {success:false, error: "User not authenticated"};
         }
         
         if(session.user.role !== "admin") {
-            throw new Error("Unauthorized");
+            console.error("Unauthorized access attempt");
         }
 
         const resourcesArticle = await prisma.resourcesArticle.findUnique({
@@ -100,7 +105,7 @@ export async function deleteResourcesArticle(resourcesArticleId: string) {
         })
 
         if (!resourcesArticle) {
-            throw new Error("Resources article not found");
+            return { success: false, error: "Resources article not found" };
         }
 
         await prisma.resourcesArticle.delete({

@@ -1,6 +1,6 @@
 import { getNewsArticle } from "@/actions/news-article";
 import { getServerSession } from "@/lib/get-session";
-import { redirect } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import NewsArticleAdmin, { NewsArticleClient } from "@/components/news/newsArticleAdmin";
 import NewsArticle from "@/components/news/newsArticle";
 import { getTranslations } from "next-intl/server";
@@ -17,6 +17,9 @@ export default async function NewsArticlePage({params,}: {params: Promise<{ news
 
     const { newsArticleId } = await params;
     const article = await getNewsArticle(newsArticleId);
+    if (!article) {
+        notFound();
+    }
 
     const clientArticle: NewsArticleClient = {
         id: article.id,
