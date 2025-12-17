@@ -57,7 +57,7 @@ export function DeleteNewsAlertDialog({ deleteNewsArticleDialogTranslations, new
         <Button
           variant="ghost"
           size="sm"
-          className="text-muted-foreground hover:text-red-500 -mr-2"
+          className="text-muted-foreground -mr-2"
         >
           {isDeleting ? (
             <Loader2Icon className="size-6 animate-spin" />
