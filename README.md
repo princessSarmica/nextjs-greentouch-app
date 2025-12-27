@@ -1,10 +1,10 @@
-# greentouch-app
+# nextjs-greentouch-app 🌿
 
 GreenTouch is a web application built with **Next.js** that focuses on improving student mental health through guided exercises, multimedia content, and reflective activities.
 
 ---
 
-## Getting Started
+## Getting Started 🧩
 
 ### Prerequisites
 
@@ -16,7 +16,7 @@ Before running the project, make sure you have the following installed:
 
 ---
 
-## Installation & Setup
+## Installation & Setup ⚙️🛠️
 
 ### 1. Clone the repository
 
@@ -82,7 +82,7 @@ For production deployments, this should match the public URL of your application
 
 ---
 
-## Running the Application with Docker
+## Running the Application with Docker 🐋
 
 Once all environment variables are configured, you can build and run the application using Docker.
 
@@ -106,7 +106,7 @@ After the containers start successfully, the application will be available at th
 
 ---
 
-## Development Server (Optional)
+## Development Server (Optional) 🌐
 
 If you prefer to run the application without Docker during development, you can start the Next.js development server:
 
