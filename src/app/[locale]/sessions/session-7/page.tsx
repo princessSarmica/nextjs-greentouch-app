@@ -248,7 +248,7 @@ export default async function SessionSevenPage() {
             <section className="w-full max-w-5xl mx-auto px-4">
                 <div className="flex justify-start items-center mb-10 underline">
                     <Link
-                    href="/sessions/session-1"
+                    href="/sessions/session-6"
                     className="text-[#1F566E] hover:underline font-medium flex items-center gap-1"
                     >
                     {t('greentouchSessions.session7.leftNavigationLink')}
