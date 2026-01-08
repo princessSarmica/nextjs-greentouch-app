@@ -50,7 +50,7 @@ export default async function RootLayout({
         <div className="flex flex-col min-h-screen">
           <NextIntlClientProvider>
             <Header />
-              <main>{children}</main>
+              <main className="flex-1 min-h-screen">{children}</main>
             <Footer />
           </NextIntlClientProvider>
         </div>
