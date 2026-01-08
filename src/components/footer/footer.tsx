@@ -29,7 +29,7 @@ export default function Footer() {
           <div className="w-64 h-px bg-[#f5f5f5] mb-2" />
           <div className="flex gap-4 min-h-[24px]">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/people/GreenTouch-Erasmus/61568551981583/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -37,7 +37,7 @@ export default function Footer() {
               <Image src="/facebook-icon.svg" alt="Facebook" width={24} height={24} />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/greentoucherasmus/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -45,7 +45,7 @@ export default function Footer() {
               <Image src="/instagram-icon.svg" alt="Instagram" width={24} height={24} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/greentouch-erasmus"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
