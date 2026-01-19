@@ -1,7 +1,5 @@
 import { getServerSession } from "@/lib/get-session";
-import { redirect } from "next/navigation";
 import { getAllNewsArticles } from "@/actions/news-article";
-
 import NewsCard from "@/components/news/newsCard";
 import AddNewsArticleDialog from "@/components/news/addNewsArticleDialog";
 import { getTranslations } from "next-intl/server";
@@ -9,10 +7,6 @@ import { getTranslations } from "next-intl/server";
 export default async function News() {
     const session = await getServerSession();
  
-    if(!session) {
-        redirect("/sign-in")
-    }
-
     const isAdmin = session?.user?.role === "admin";
 
     const t = await getTranslations('newsPage');

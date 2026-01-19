@@ -1,15 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { redirect } from "next/navigation";
-import { getServerSession } from "@/lib/get-session";
 import { getTranslations } from "next-intl/server";
 
 export default async function NatureVideoGallery() {
-  const session = await getServerSession();
-
-  if (!session) {
-    redirect("/sign-in");
-  }
 
   const t = await getTranslations("natureVideoGalleryPage");
 

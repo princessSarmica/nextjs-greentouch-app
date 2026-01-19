@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { redirect } from "next/navigation";
-import { getServerSession } from "@/lib/get-session";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
@@ -8,12 +6,6 @@ import { getTranslations } from "next-intl/server";
 export default async function Resources() {
 
   //console.log("Resources Page rendered");
-
-  const session = await getServerSession();
-
-  if(!session) {
-      redirect("/sign-in")
-  }
 
   const t = await getTranslations('resourcesPage');
 

@@ -1,6 +1,6 @@
 import { getNewsArticle } from "@/actions/news-article";
 import { getServerSession } from "@/lib/get-session";
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import NewsArticleAdmin, { NewsArticleClient } from "@/components/news/newsArticleAdmin";
 import NewsArticle from "@/components/news/newsArticle";
 import { getTranslations } from "next-intl/server";
@@ -8,10 +8,6 @@ import { getTranslations } from "next-intl/server";
 export default async function NewsArticlePage({params,}: {params: Promise<{ newsArticleId: string }>;}) {
     
     const session = await getServerSession();
-
-    if (!session) { 
-        redirect("/sign-in"); 
-    }
 
     const t = await getTranslations("newsPage.newsArticleAdmin");
 
@@ -28,7 +24,7 @@ export default async function NewsArticlePage({params,}: {params: Promise<{ news
         createdAt: new Date(article.createdAt).toISOString(),
     };
 
-    if (session.user?.role !== "admin") {
+    if (!session || session.user?.role !== "admin") {
         return <NewsArticle params={params} />;
     } else {
         return <NewsArticleAdmin 

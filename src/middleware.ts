@@ -12,11 +12,6 @@ export async function middleware(request: NextRequest) {
 	const pathname = request.nextUrl.pathname;
 
 	const protectedRoutes = [
-		"/nature-video-gallery",
-		"/nature-video-gallery/",
-		"/nature-video-gallery/(.*)",
-		"/news",
-		"/resources",
 		"/account",
 	];
 

@@ -5,14 +5,9 @@ import { getServerSession } from "@/lib/get-session";
 import { ResourcesArticle } from "@prisma/client";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
-import { redirect } from "next/navigation";
  
 export default async function ResourcesArticles() {
     const session = await getServerSession();
- 
-    if(!session) {
-        redirect("/sign-in")
-    }
 
     const isAdmin = session?.user?.role === "admin";
 
