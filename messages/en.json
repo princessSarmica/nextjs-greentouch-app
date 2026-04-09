@@ -1,7 +1,7 @@
 {
   "header": {
     "navLinks": {
-      "discoverGreenTouch": "Discover GreenTouch",
+      "discoverGreenTouch": "About the Project",
       "sessions": "Sessions",
       "natureVideoGallery": "Nature Video Gallery",
       "news": "News",
@@ -94,7 +94,7 @@
         "selectUniversityRequired": "University is required.",
         "selectSpecializationRequired": "Specialization is required.",
         "passwordsDoNotMatch": "The passwords do not match",
-        "signUpSuccessful": "Registration successful! Welcome to GreenTouch.",
+        "signUpSuccessful": "Registration successful! Welcome to GreenTouch!",
         "unknownError": "Something went wrong. Please try again.",
         "validation": {
           "passwordRequired": "Password is required.",
@@ -184,7 +184,7 @@
   },
   "discoverGreenTouchPage": {
     "header": {
-      "title": "Welcome to GreenTouch"
+      "title": "Welcome to GreenTouch!"
     },
     "heroSection" : {
       "heroText": "GreenTouch is all about helping you connect with nature, boost your well-being, and build a more sustainable future—all through interactive digital tools and hands-on experiences. Our Erasmus+ cooperation partnership project, \"GreenTouch: EcoMind Development for Higher Education Future\" (Project ID: 2023-1-LV01-KA220-HED-000154847), brings together universities and experts from across Europe to create innovative ways to integrate nature into education and everyday life.",
@@ -194,7 +194,7 @@
         "list": [
           "Riga Stradiņš University (Latvia)",
           "University of Maribor (Slovenia)",
-          "FOREHUB LDA (Portugal)",
+          "FTHub (FOREHUB LDA) (Portugal)",
           "Cyprus University of Technology (Cyprus)"
         ]
       },
@@ -211,7 +211,7 @@
       }
     },
     "projectPhilosophySection": {
-      "title": "Projects philosophy",
+      "title": "Our philosophy",
       "paragraph1": "The GreenTouch project is built on the idea that connecting with nature enhances well-being, fosters resilience, and supports sustainability. We believe that nature plays a vital role in mental, emotional, and social health, and even small moments of connection can have a lasting impact.",
       "paragraph2": "By integrating nature-based experiences with digital innovation, we make this connection accessible to individuals in diverse environments, helping them build a deeper relationship with the natural world.",
       "paragraph3": "Through research, education, and interactive tools, GreenTouch promotes nature connectedness and well-being, encouraging sustainable lifestyles and holistic approaches to mental health.",
@@ -283,7 +283,7 @@
         "diaryNote": "DIARY NOTE",
         "cardTitle": "Diary",
         "requiredLabel": "Required to complete",
-        "cardDescription": "Once you have completed the session, please answer the following questions.",
+        "cardDescription": "Please note that each session is recommended to span at least three days. Once you have completed the session, please answer the following questions.",
         "cardSubtitle": "OPEN QUESTIONS",
         "noQuestionsAvailable": "No diary questions available for this session.",
         "actionButton": "Save",
@@ -306,8 +306,8 @@
             "moreThanThreeTimes": "More than three times"
         },
         "frequencyQuestions": {
-            "outdoorTasks": "How many times did you do outdoor tasks?",
-            "indoorTasks": "How many times did you do indoor tasks?"
+            "outdoorTasks": "to outdoor tasks?",
+            "indoorTasks": "to indoor tasks?"
         },
         "cardSubdescription2": "I felt …",
         "agreementScale": {
@@ -319,11 +319,11 @@
           "notApplicable": "Not applicable"
         },
         "impactStatements": {
-          "physicalHealth": "It was good for my physical health",
-          "mentalHealth": "It was good for my mental health",
-          "socialOpportunity": "It was a good opportunity to spend time with friends or family",
+          "physicalHealth": "it was good for my physical health",
+          "mentalHealth": "it was good for my mental health",
+          "socialOpportunity": "it was a good opportunity to spend time with friends or family",
           "learningChallenge": "I learnt something new / I challenged myself",
-          "closerToNature": "I felt closer to nature"
+          "closerToNature": "closer to nature"
         },
         "actionButton": "Save",
         "messages": {
@@ -357,7 +357,7 @@
         },
         "accordionItem2": {
           "title": "How does it work?",
-          "content": "Your diary entries are personal and only visible to you. They won&apos;t be shared with others, though the research team will access them for analysis in anonymous, confidential form. You&apos;ll receive reflective prompts during sessions but are also free to record any thoughts, emotions, or insights—especially from time spent in nature."
+          "content": "Your diary entries are personal and only visible to you. They won’t be shared with others, though the research team will access them for analysis in anonymous, confidential form. You’ll receive reflective prompts during sessions but are also free to record any thoughts, emotions, or insights—especially from time spent in nature."
         },
         "accordionItem3": {
           "title": "What if I don't write in the diary?",
@@ -370,10 +370,10 @@
         "localName": "demo-session",
         "title": "Demo Session",
         "titleCapitals": "DEMO SESSION",
-        "description": "A taste of the GreenTouch program",
+        "description": "Getting to know GreenTouch",
         "labelGoal": "Goal:",
         "paragraph1": "To offer a short and accessible introduction to the GreenTouch experience, allowing participants to explore a mindful moment in nature and reflect on their connection before starting the full program.",
-        "welcomeTitle": "Welcome to GreenTouch",
+        "welcomeTitle": "Welcome to GreenTouch!",
         "welcomeParagraph1": "This short session gives you a taste of the program before you begin your journey.",
         "outdoorTaskCard": {
           "cardTitle": "Outdoor Task",
@@ -887,7 +887,7 @@
       "title": "Resources"
     },
     "heroSection": {
-      "paragraph1": "Get ready to explore the resources we are developing as part of the GreenTouch project and consider how they could enrich your professional practice. Whether you are a faculty member, non-formal educator, or practitioner in the helping professions, these resources are designed to foster a deeper connection to nature and integrate ecological awareness into your work.",
+      "paragraph1": "Get ready to explore the resources we are collecting as part of the GreenTouch project and consider how they could enrich your professional practice. Whether you are a faculty member, non-formal educator, or practitioner in the helping professions, these resources are designed to foster a deeper connection to nature and integrate ecological awareness into your work.",
       "paragraph2": "We especially encourage prospective and practicing psychologists, healthcare professionals, and those in the mental health and well-being sectors to leverage these resources to enhance therapeutic approaches and promote holistic care.",
       "paragraph3": "We hope to inspire and empower you to bring ecological responsibility and well-being into your professional landscape."
     },
