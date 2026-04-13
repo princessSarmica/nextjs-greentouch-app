@@ -1,11 +1,11 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-export default function DiscoverGreenTouch() {
+export default function AboutTheProject() {
 
-  //console.log("Discover GreenTouch Page rendered");
+  //console.log("About The Project Page rendered");
 
-  const t = useTranslations('discoverGreenTouchPage');
+  const t = useTranslations('aboutTheProjectPage');
 
   return (
     <main className="w-full text-gray-900 bg-[#f5f5f5]  min-h-screen">
@@ -53,9 +53,6 @@ export default function DiscoverGreenTouch() {
                 <li>{t('heroSection.card2.list.1')}</li>
                 <li>{t('heroSection.card2.list.2')}</li>
               </ul>
-              <p className="mt-4 text-base">
-                {t('heroSection.card2.paragraph3')}
-              </p>
             </div>
           </div>
 
@@ -85,9 +82,6 @@ export default function DiscoverGreenTouch() {
             </p>
             <p className="text-base mb-8">
               {t('projectPhilosophySection.paragraph3')}
-            </p>
-            <p className="text-base mb-8">
-              {t('projectPhilosophySection.paragraph4')}
             </p>
           </div>
 

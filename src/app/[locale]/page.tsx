@@ -41,7 +41,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
               {t('heroSection.description')}
             </p>
             <Button asChild variant={"default"} className="px-6 py-6">
-              <Link href="/discover-greentouch">{t('heroSection.buttonGetStarted')}</Link>
+              <Link href="/about-the-project">{t('heroSection.buttonGetStarted')}</Link>
             </Button>
           </div>
         </section>
@@ -50,10 +50,18 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
       <section className="bg-[#0A3730] w-full py-12 px-6 flex flex-col items-center">
         <h2 className="text-white text-xl font-semibold mb-12">{t('projectPartnersSection.title')}</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-18 items-center justify-center">
-          <Image src="/riga-uni.svg" alt="Riga University" width={180} height={180} />
-          <Image src="/maribor-uni.svg" alt="University of Maribor" width={180} height={180} />
-          <Image src="/forest-therapy-hub.svg" alt="Forest Therapy Hub" width={180} height={180} />
-          <Image src="/cyprus-uni.svg" alt="Cyprus University" width={180} height={180} />
+          <Link href="https://www.rsu.lv ">
+            <Image src="/riga-uni.svg" alt="Riga University" width={180} height={180} />
+          </Link>
+          <Link href="https://feri.um.si/">
+            <Image src="/maribor-uni.svg" alt="University of Maribor" width={180} height={180} />
+          </Link>
+          <Link href="https://foresttherapyhub.com/ ">
+            <Image src="/forest-therapy-hub.svg" alt="Forest Therapy Hub" width={180} height={180} />
+          </Link>
+          <Link href="https://www.cut.ac.cy/?languageId=1">
+            <Image src="/cyprus-uni.svg" alt="Cyprus University" width={180} height={180} />
+          </Link>
         </div>
       </section>
     </main>

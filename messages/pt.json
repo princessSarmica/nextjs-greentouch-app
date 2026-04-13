@@ -1,7 +1,7 @@
 {
   "header": {
     "navLinks": {
-      "discoverGreenTouch": "Sobre o projeto",
+      "aboutTheProject": "Sobre o projeto",
       "sessions": "Sessões",
       "natureVideoGallery": "Galeria de Vídeos da Natureza",
       "news": "Notícias",
@@ -170,6 +170,9 @@
         "successMessage": "Todas as outras sessões foram revogadas com sucesso.",
         "errorMessage": "Ocorreu um erro ao tentar revogar outras sessões. Por favor, tente novamente."
       }
+    },
+    "adminPage": {
+      "description": "Página de Administração"
     }
   },
   "homePage": {
@@ -182,7 +185,7 @@
       "title": "Os nossos parceiros de projeto"
     }
   },
-  "discoverGreenTouchPage": {
+  "aboutTheProjectPage": {
     "header": {
       "title": "Bem-vindo à GreenTouch!"
     },

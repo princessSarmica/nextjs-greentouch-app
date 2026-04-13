@@ -21,8 +21,8 @@ export default function HeaderNavbar(){
           <NavigationMenu viewport={false} className="w-full max-w-none items-stretch justify-center">
             <NavigationMenuList className="flex items-stretch justify-start gap-4 px-8">
               <NavigationMenuItem>
-                <NavigationMenuLinkGhost asChild className={navigationMenuTriggerStyleGhost()} data-active={pathname.startsWith("/discover-greentouch") || undefined}>
-                  <Link href="/discover-greentouch">{t('discoverGreenTouch')}</Link>
+                <NavigationMenuLinkGhost asChild className={navigationMenuTriggerStyleGhost()} data-active={pathname.startsWith("/about-the-project") || undefined}>
+                  <Link href="/about-the-project">{t('aboutTheProject')}</Link>
                 </NavigationMenuLinkGhost>
               </NavigationMenuItem>
               <NavigationMenuItem>

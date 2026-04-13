@@ -1,7 +1,7 @@
 {
   "header": {
     "navLinks": {
-      "discoverGreenTouch": "Par projektu",
+      "aboutTheProject": "Par projektu",
       "sessions": "Sesijas",
       "natureVideoGallery": "Dabas video galerija",
       "news": "Jaunumi",
@@ -170,6 +170,9 @@
         "successMessage": "Visas pārējās sesijas ir veiksmīgi atsauktas.",
         "errorMessage": "Mēģinot atsaukt citas sesijas, radās kļūda. Lūdzu, mēģiniet vēlreiz."
       }
+    },
+    "adminPage": {
+      "description": "Admin Page"
     }
   },
   "homePage": {
@@ -182,7 +185,7 @@
       "title": "Mūsu projekta partneri"
     }
   },
-  "discoverGreenTouchPage": {
+  "aboutTheProjectPage": {
     "header": {
       "title": "Laipni lūdzam GreenTouch!"
     },

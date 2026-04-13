@@ -1,7 +1,7 @@
 {
   "header": {
     "navLinks": {
-      "discoverGreenTouch": "About the Project",
+      "aboutTheProject": "About the Project",
       "sessions": "Sessions",
       "natureVideoGallery": "Nature Video Gallery",
       "news": "News",
@@ -170,6 +170,9 @@
         "successMessage": "All other sessions have been successfully revoked.",
         "errorMessage": "An error occurred while trying to revoke other sessions. Please try again."
       }
+    },
+    "adminPage": {
+      "description": "Admin Page"
     }
   },
   "homePage": {
@@ -182,7 +185,7 @@
       "title": "Our project partners"
     }
   },
-  "discoverGreenTouchPage": {
+  "aboutTheProjectPage": {
     "header": {
       "title": "Welcome to GreenTouch!"
     },

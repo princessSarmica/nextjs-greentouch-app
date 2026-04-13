@@ -1,7 +1,7 @@
 {
   "header": {
     "navLinks": {
-      "discoverGreenTouch": "Ανακαλύψτε το GreenTouch",
+      "aboutTheProject": "Ανακαλύψτε το GreenTouch",
       "sessions": "Συνεδρίες",
       "natureVideoGallery": "Συλλογή βίντεο για τη φύση",
       "news": "Νέα",
@@ -170,6 +170,9 @@
         "successMessage": "Όλες οι άλλες συνεδρίες έχουν ανακληθεί επιτυχώς.",
         "errorMessage": "Παρουσιάστηκε σφάλμα κατά την προσπάθεια ανάκλησης άλλων περιόδων λειτουργίας. Παρακαλώ προσπαθήστε ξανά."
       }
+    },
+    "adminPage": {
+      "description": "Σελίδα Διαχείρισης"
     }
   },
   "homePage": {
@@ -182,7 +185,7 @@
       "title": "Οι εταίροι του έργου μας"
     }
   },
-  "discoverGreenTouchPage": {
+  "aboutTheProjectPage": {
     "header": {
       "title": "Καλώς ήρθατε στο GreenTouch!"
     },

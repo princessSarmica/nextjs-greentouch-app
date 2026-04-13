@@ -1,7 +1,7 @@
 {
   "header": {
     "navLinks": {
-      "discoverGreenTouch": "O projektu",
+      "aboutTheProject": "O projektu",
       "sessions": "Seje",
       "natureVideoGallery": "Videogalerija narave",
       "news": "Novice",
@@ -170,6 +170,9 @@
         "successMessage": "Vse druge seje so bile uspešno preklicane.",
         "errorMessage": "Pri poskusu preklica drugih sej je prišlo do napake. Poskusite znova."
       }
+    },
+    "adminPage": {
+      "description": "Admin Stran"
     }
   },
   "homePage": {
@@ -182,7 +185,7 @@
       "title": "Naši projektni partnerji"
     }
   },
-  "discoverGreenTouchPage": {
+  "aboutTheProjectPage": {
     "header": {
       "title": "Dobrodošli v GreenTouch!"
     },
