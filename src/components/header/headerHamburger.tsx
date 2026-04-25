@@ -27,16 +27,16 @@ export const HeaderHamburger = () => {
       {menuOpen && (
         <div className="lg:hidden absolute top-16 left-0 w-full bg-white shadow-md">
           <nav className="flex flex-col px-4 text-left items-start w-full">
-            {/* Discover */}
+            {/* About The Project */}
             <Link
-              href="/discover-greentouch"
+              href="/about-the-project"
               className={navigationHamburgerMenuTriggerStyleGhost()}
               data-active={
-                pathname.startsWith("/discover-greentouch") || undefined
+                pathname.startsWith("/about-the-project") || undefined
               }
               onClick={() => setMenuOpen(false)}
             >
-              {t("discoverGreenTouch")}
+              {t("aboutTheProject")}
             </Link>
 
             {/* Sessions */}
