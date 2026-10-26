@@ -98,6 +98,7 @@ export async function deleteResourcesArticle(resourcesArticleId: string) {
         
         if(session.user.role !== "admin") {
             console.error("Unauthorized access attempt");
+            return {success:false, error: "Unauthorized"};
         }
 
         const resourcesArticle = await prisma.resourcesArticle.findUnique({

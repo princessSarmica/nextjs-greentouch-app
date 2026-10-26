@@ -33,10 +33,10 @@ export default function Error({error, reset,}:
             </Link>
 
             <Button
-                onClick={
-                    // Attempt to recover by trying to re-render the invoices route
-                    () => reset()
-                }
+                onClick={() => {
+                    reset();
+                    window.location.reload();
+                }}
             >
                 {t("buttonTryAgain")}
             </Button>

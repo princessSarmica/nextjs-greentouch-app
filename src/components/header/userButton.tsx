@@ -21,5 +21,10 @@ export default function UserButton(){
         return <AuthButtons />;
     }
 
-    return <UserDropdown user={user} onSignOut={() => authClient.signOut({ fetchOptions: { onSuccess: () => {window.location.replace("/sign-in")}, onError: () => {window.location.replace("/sign-in")} } })} />;
+    return <UserDropdown user={user} onSignOut={() => authClient.signOut({ 
+        fetchOptions: { 
+            onSuccess: () => {window.location.replace("/sign-in")}, 
+            onError: () => {window.location.replace("/sign-in")} 
+        } 
+    })} />;
 }

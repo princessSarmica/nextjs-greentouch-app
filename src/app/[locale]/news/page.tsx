@@ -5,6 +5,7 @@ import AddNewsArticleDialog from "@/components/news/addNewsArticleDialog";
 import { getTranslations } from "next-intl/server";
  
 export default async function News() {
+
     const session = await getServerSession();
  
     const isAdmin = session?.user?.role === "admin";

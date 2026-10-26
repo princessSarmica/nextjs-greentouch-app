@@ -68,8 +68,6 @@ export default function NatureConnectednessCard({
             if (result.success) {
                 toast.success(natureConnectednessCardTranslations.successMessage);
 
-                // 3) <<< TUKAJ JE KLJUČNO >>>
-                // Ko server uspešno shrani, posodobimo globalni state:
                 setNatureConnectednessValue(sliderValue);
             }
         } catch (error) {
